@@ -1,0 +1,1 @@
+UPLOAD_FOLDER = "uploaded_images"
