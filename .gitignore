@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Stopping the upload of the uploaded_image folder
+uploaded_image/
