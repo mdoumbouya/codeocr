@@ -131,3 +131,4 @@ dmypy.json
 
 # Stopping the upload of the uploaded_image folder
 uploaded_image/
+app/static/uploaded_images/
