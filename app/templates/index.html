@@ -24,16 +24,17 @@
             <input class="btn btn-primary" type="submit" name="submit" value="Upload and process image">
           </form>
         </div>
-      </div>
+        
+        {% if code_picture %}
+        <p class="text-center">Uploaded Image</p>
+
+        <img src="{{code_picture}}" alt="Upload" style="max-width: 100%; max-height: 425px; object-fit: contain;">
       
-      {% if compilation_results %}
-      <div class="row mt-4">
-        <div class="col-12">
-          <h2>Compilation Results:</h2>
-          <pre>{{compilation_results}}</pre>
-        </div>
+        {% else %}
+        <h1>Something Went Wrong...</h1>
+        {% endif %}
+
       </div>
-      {% endif %}
 
       {% if source_code %}
       <div class="row mt-4">
@@ -44,8 +45,18 @@
       </div>
       {% endif %}
       
+      {% if compilation_results %}
+      <div class="row mt-4">
+        <div class="col-12">
+          <h2>Compilation Results:</h2>
+          <pre>{{compilation_results}}</pre>
+        </div>
+      </div>
+      {% endif %}
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="/static/js/app.js"></script>
   </body>
 </html>

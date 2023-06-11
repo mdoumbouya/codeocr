@@ -1,1 +1,1 @@
-UPLOAD_FOLDER = "uploaded_images"
+UPLOAD_FOLDER = "app/static/uploaded_images"
