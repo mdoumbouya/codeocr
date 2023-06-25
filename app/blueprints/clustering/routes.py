@@ -6,4 +6,6 @@ import json
 import requests
 import numpy as np
 import matplotlib.pyplot as plt
-from code_ocr_utils import detect_lines
+from clustering_utils import *
+
+gcloud_vision_client = vision.ImageAnnotatorClient.from_service_account_json("keys/gcloud-sacct-cred.json")
