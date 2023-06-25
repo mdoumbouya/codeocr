@@ -6,6 +6,12 @@
     <title>Code OCR Demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
+  <script>
+    var code_picture = "{{code_picture}}";
+    var run_code_url = "{{ url_for('ocr_compiler.run_code') }}";
+  </script>    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <body>
     <div class="container mt-5">
       <div class="row">
@@ -29,30 +35,38 @@
         <p class="text-center">Uploaded Image</p>
 
         <img src="{{code_picture}}" alt="Upload" style="max-width: 100%; max-height: 425px; object-fit: contain;">
-      
-        {% else %}
-        <h1>Something Went Wrong...</h1>
         {% endif %}
 
       </div>
 
+      {% if annotated_image %}
+        <p class="text-center">Annotated Image</p>
+        <img
+          src="data:image/jpg;base64,{{ annotated_image }}"
+          alt="Annotated Image"
+          style="max-width: 100%; max-height: 720px; object-fit: contain;"
+        />
+      {% endif %}
+
       {% if source_code %}
       <div class="row mt-4">
         <div class="col-12">
-          <h2>Source Code:</h2>
-          <textarea class="form-control" style="height:300px;" readonly>{{source_code}}</textarea>
+          <form method="post" action="{{ url_for('ocr_compiler.run_code') }}" enctype="multipart/form-data">
+            <h2>Source Code:</h2>
+            <textarea class="form-control" name="source_code" style="height:300px;" readonly>{{source_code}}</textarea>
+            <button type="button" class="btn btn-primary" id="run-button">Run the Code</button>
+          </form>
         </div>
       </div>
       {% endif %}
       
-      {% if compilation_results %}
       <div class="row mt-4">
         <div class="col-12">
           <h2>Compilation Results:</h2>
-          <pre>{{compilation_results}}</pre>
+          <pre id="compilation-results"></pre>
         </div>
       </div>
-      {% endif %}
+      
 
     </div>
 
