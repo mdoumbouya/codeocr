@@ -1,7 +1,10 @@
 import os
 from flask import Flask
-from app.blueprints.ocr_compiler import bp as ocr_bp
+
 from pathlib import Path
+
+from app.blueprints.ocr_compiler import bp as ocr_bp
+from app.blueprints.advanced_ocr import bp as advanced_ocr_bp
 
 
 def create_app():
@@ -16,5 +19,6 @@ def create_app():
 
     # Register the OCR Compiler Blueprint
     app.register_blueprint(ocr_bp)
+    app.register_blueprint(advanced_ocr_bp)
 
     return app

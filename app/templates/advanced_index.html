@@ -17,7 +17,7 @@
     <header>
       <nav class="navbar">
         <div class="container">
-          <a class="navbar-brand" href="/">Code OCR Demo</a>
+          <a class="navbar-brand" href="/">Code OCR Demo <span style="font-style: italic; color: cyan;">Advanced Mode</span></a>
           <div class="navbar-options">
             <a class="navbar-option" href="/">Basic</a>
             <a class="navbar-option" href="/advanced">Advanced</a>
@@ -38,37 +38,44 @@
         </div>
         
         {% if code_picture %}
-        <p class="text-center">Uploaded Image</p>
-
-        <img src="{{code_picture}}" alt="Upload" style="max-width: 100%; max-height: 425px; object-fit: contain;">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="text-center">Uploaded Image</p>
+                <img src="{{code_picture}}" alt="Upload" class="img-fluid">
+            </div>
+            <div class="col-lg-6">
+                <p class="text-center">Visualized Lines</p>
+                <img src="data:image/jpeg;base64,{{ visualized_lines }}" alt="Visualized Lines" class="img-fluid"/>
+            </div>
+        </div>
         {% endif %}
 
-      </div>
-
-      {% if annotated_image %}
-        <p class="text-center">Annotated Image</p>
-        <img
-          src="data:image/jpg;base64,{{ annotated_image }}"
-          alt="Annotated Image"
-          style="max-width: 100%; max-height: 720px; object-fit: contain;"
-        />
-      {% endif %}
 
       {% if source_code %}
       <div class="row mt-4">
+            <!-- Histogram -->
+            <div class="col-lg-6">{{ histogram }}</div>
+            
+            <!-- Clustering -->
+            <div class="col-lg-6">{{ clustering }}</div>
+        </div>
+
         <div class="col-12">
           <form method="post" action="{{ url_for('ocr_compiler.run_code') }}" enctype="multipart/form-data">
             <h2>Source Code:</h2>
-            <textarea class="form-control" name="source_code" style="height:300px;" readonly>{{source_code}}</textarea>
+            <textarea class="form-control" name="source_code" style="height:300px;">{{source_code}}</textarea>
+            <br>
             <button type="button" class="btn btn-primary" id="run-button">Run the Code</button>
+            <br><br>
           </form>
         </div>
+        
+        <h2>Compilation Results:</h2>
       </div>
       {% endif %}
       
       <div class="row mt-4">
         <div class="col-12">
-          <h2>Compilation Results:</h2>
           <pre id="compilation-results"></pre>
         </div>
       </div>
