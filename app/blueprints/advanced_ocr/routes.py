@@ -8,7 +8,7 @@ from google.cloud import vision
 import uuid
 from flask import jsonify
 from dotenv import load_dotenv
-from app.blueprints.ocr_compiler import bp
+from app.blueprints.advanced_ocr import bp
 
 from app.global_utils import *
 import requests
@@ -29,10 +29,10 @@ print("Open AI KEY TEST")
 
 print("OPENAI_API_KEY:", OPENAI_API_KEY)
 
-@bp.route("/", methods=["GET", "POST"])
-def index():
+@bp.route("/advanced", methods=["GET", "POST"])
+def advanced():
     if request.method == 'GET':
-        return render_template("index.html")
+        return render_template("advanced_index.html")
     else:
         print("Inside the function")
         print(os.getenv("OPENAI_KEY"))
@@ -42,7 +42,7 @@ def index():
         file.save(file_path)
         code_picture = os.path.join("..", "static", "uploaded_images", filename)
         
-        source_code = ocr_code(file_path)
+        source_code, histogram, clustering, visualized_lines = ocr_code(file_path)
         
         source_code = post_process_output(source_code)
         
@@ -50,9 +50,12 @@ def index():
         print("Below is the source to the subject image:")
         print(code_picture)
         return render_template(
-            "index.html",
+            "advanced_index.html",
             source_code=source_code,
             code_picture=code_picture,
+            histogram=Markup(histogram),
+            clustering=Markup(clustering),
+            visualized_lines=visualized_lines,
         )
 
 
@@ -67,14 +70,11 @@ def ocr_code(image_path):
         "app_key": MATHPIX_APP_KEY,
         "Content-type": "application/json",
     }
-
+    
     data = {
-        "src": "data:image/jpeg;base64," + b64_image,
-        "formats": ["text", "data"],
-        "data_options": {
-            "include_asciimath": True
-        },
-        "include_line_data": True
+    "src": "data:image/jpeg;base64," + b64_image,
+    "formats": ["text"],
+    "include_line_data": True
     }
     
     response = requests.post("https://api.mathpix.com/v3/text", json=data, headers=headers)
@@ -82,10 +82,19 @@ def ocr_code(image_path):
     if response.status_code == 200:
         json_response = response.json()
         source_code = json_response.get("text", "")
+        
+        min_x, labels, data = cluster_indentation(json_response)
+        histogram = plot_histogram(min_x)
+        clustering = plot_clustering(min_x, labels)
+        visualized_lines = visualize_lines(data, image_path=str(image_path))
     else:
         source_code = ""
+        histogram = ""
+        clustering = ""
+        visualized_lines = ""
+        
     
-    return source_code
+    return source_code, histogram, clustering, visualized_lines
 
 
 
@@ -102,7 +111,7 @@ def post_process_output(input_text):
         },
         {
             "role": "user",
-            "content": "Fix the typos in Python text; however, don't do anything about the indentation. Just go to a new line at every \\n. Fix typos in strings, or vars name inside text. Dont return anything else the corrected Python text, as in dont return any preceding text, or return any ending text, JUST THE Python Code",
+            "content": "Fix the typos in Python text; however, don't do anything about the indentation. Just go to a new line at every \\n. Fix typos in strings, or vars name inside text. Dont return anything else tha n the corrected Python text, as in dont return any preceding text, or return any ending text, return JUST THE Python Code",
         },
     ]
 
