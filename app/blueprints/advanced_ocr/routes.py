@@ -44,7 +44,9 @@ def advanced():
         
         source_code, histogram, clustering, visualized_lines = ocr_code(file_path)
         
-        source_code = post_process_output(source_code)
+        source_code = hard_postprocess(language_model_correction(source_code))
+        
+        
         
         print(" ")
         print("Below is the source to the subject image:")
@@ -98,7 +100,7 @@ def ocr_code(image_path):
 
 
 
-def post_process_output(input_text):
+def language_model_correction(input_text):
     print("Into the post process gpt function")
     messages = [
         {
@@ -142,6 +144,24 @@ def post_process_output(input_text):
     except Exception as e:
         print(f"Error: {e}")
         return ""
+
+
+def hard_postprocess(txt):
+    print(txt)
+    first_tilda = txt.find("```")
+    print("first_tilda", first_tilda)
+    if first_tilda != -1:
+        second_tilda = txt.find("```", first_tilda + 1)
+        print("second_tilda", second_tilda)
+        if second_tilda != -1:
+            print("Checking the string after the first tilda")
+            print(txt[first_tilda + 3: first_tilda + 9])
+            if txt[first_tilda + 3: first_tilda + 9] == "python":
+                return txt[first_tilda + 9:second_tilda]
+            else:
+                return txt[first_tilda + 3:second_tilda]
+
+
 
 @bp.route('/run_code', methods=['POST'])
 def run_code():
