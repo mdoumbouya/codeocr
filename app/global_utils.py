@@ -6,117 +6,130 @@ import cv2
 import requests
 import base64
 import io
-
-# Clustering functions
-import numpy as np
-from sklearn.cluster import MeanShift, estimate_bandwidth
-from google.cloud import vision_v1
-
-def detect_lines(response):
-    x_values = []
-    y_values = []
-
-    # Get the text_annotations from the response object
-    text_annotations = response.text_annotations
-
-    # Loop through each text annotation
-    for annotation in text_annotations:
-        vertices = annotation.bounding_poly.vertices
-
-        # Loop through each vertex
-        for vertex in vertices:
-            x_values.append(vertex.x)
-        y_values.append((vertices[0].y + vertices[3].y) / 2)  # Taking average of y-coordinates of first and third vertex
-
-    # Convert y_values to numpy array and reshape for sklearn
-    y_values_np = np.array(y_values).reshape(-1, 1)
-
-    # Estimate the optimal bandwidth
-    # bandwidth = estimate_bandwidth(y_values_np, quantile=0.05)  You can adjust the quantile parameter based on your data
-
-    # Define the Mean Shift model with the estimated bandwidth
-    mean_shift = MeanShift(bandwidth=20)
-
-    # Fit the model
-    mean_shift.fit(y_values_np)
-
-    # Get cluster centers
-    cluster_centers = mean_shift.cluster_centers_
-
-    # Get labels for each point
-    labels = mean_shift.labels_
-
-    # Create a new dictionary to store the line_id values
-    line_ids = {}
-    for ix, line_id in enumerate(labels):
-        line_ids[ix] = line_id  # Use the index as the key
-
-    return response, line_ids  # Return both the response object and the line_ids dictionary
-  
-  
-
-def annotate_image(image_path, response):
-    response, line_ids = detect_lines(response)  # Receive both the response object and the line_ids dictionary
-
-    # Load the image
-    image = cv2.imread(image_path)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
-    # Draw bounding boxes around entire lines
-    # Get the text_annotations from the response object
-    text_annotations = response.text_annotations
-
-    # Loop through each text annotation
-    for ix, annotation in enumerate(text_annotations):
-        vertices = annotation.bounding_poly.vertices
-        line_id = line_ids[ix]  # Get the line_id from the line_ids dictionary using the index
-        line_color = LINE_COLORS[line_id % len(LINE_COLORS)]
-
-        # Create an array of points for the bounding box
-        pts = np.array([[vertex.x, vertex.y] for vertex in vertices[0:2]], np.int32)  # Use dot notation to access x and y properties
-        pts = pts.reshape((-1,1,2))
-
-        # Draw the bounding box on the image
-        cv2.polylines(image, [pts], True, line_color, 3)
-
-    # Save the image with bounding boxes
-    is_success, im_buf_arr = cv2.imencode(".jpg", image)
-    byte_im = im_buf_arr.tobytes()
-    img_str = base64.b64encode(byte_im).decode('utf-8')
-
-    return img_str
+import plotly.graph_objs as go
+import plotly.offline as po
+from flask import Markup
 
 
-
-LINE_COLORS = [
-    (255, 0, 0),       # red
-    (255, 128, 0),     # orange
-    (255, 255, 0),     # yellow
-    (128, 255, 0),     # lime
-    (0, 255, 0),       # green
-    (0, 255, 128),     # spring green
-    (0, 255, 255),     # cyan
-    (0, 128, 255),     # azure
-    (0, 0, 255),       # blue
-    (128, 0, 255),     # violet
-    (255, 0, 255),     # magenta
-    (255, 0, 128),     # rose
-    (255, 64, 0),      # tangerine
-    (255, 192, 0),     # golden yellow
-    (192, 255, 0),     # spring lime
-    (0, 255, 64),      # bright green
-    (0, 255, 192),     # mint green
-    (0, 192, 255),     # bright azure
-    (0, 64, 255),      # sky blue
-    (64, 0, 255),      # indigo
-    (255, 0, 64),      # deep pink
-    (255, 128, 128),   # coral
-    (255, 255, 128),   # pastel yellow
-    (128, 255, 128),   # pastel green
-    (128, 255, 255),   # pastel cyan
-    (128, 128, 255),   # pastel blue
-    (255, 128, 255),   # pastel magenta
-    (255, 64, 128),    # salmon
-    (255, 192, 128),   # peach
-    (192, 255, 128)    # honeydew
+LINE_COLORS =  [
+    ((0, 0, 255), 'rgb(255, 0, 0)'),       # red
+    ((0, 255, 0), 'rgb(0, 255, 0)'),       # green
+    ((255, 0, 0), 'rgb(0, 0, 255)'),       # blue
+    ((255, 0, 255), 'rgb(255, 0, 255)'),   # magenta
+    ((192, 255, 0), 'rgb(0, 255, 192)'),   # mint green
+    ((64, 0, 255), 'rgb(255, 0, 64)'),     # deep pink
+    ((128, 255, 255), 'rgb(255, 255, 128)'), # pastel yellow
+    ((128, 255, 128), 'rgb(128, 255, 128)'), # pastel green
+    ((255, 255, 128), 'rgb(128, 255, 255)'), # pastel cyan
+    ((255, 255, 0), 'rgb(0, 255, 255)'),   # cyan
+    ((255, 165, 0), 'rgb(0, 165, 255)'),   # orange
+    ((255, 105, 180), 'rgb(180, 105, 255)'), # hot pink
+    ((255, 64, 0), 'rgb(0, 64, 255)'),     # deep orange
+    ((0, 165, 255), 'rgb(255, 165, 0)'),   # light blue
+    ((60, 179, 113), 'rgb(113, 179, 60)'), # medium sea green
+    ((238, 130, 238), 'rgb(238, 130, 238)'), # violet
+    ((245, 222, 179), 'rgb(179, 222, 245)'), # wheat
+    ((210, 105, 30), 'rgb(30, 105, 210)'), # chocolate
+    ((127, 255, 0), 'rgb(0, 255, 127)'),   # chartreuse
+    ((255, 140, 0), 'rgb(0, 140, 255)'),   # dark orange
+    ((32, 178, 170), 'rgb(170, 178, 32)'), # light sea green
 ]
+
+
+
+
+def get_line_color(cluster_id, library='cv2'):
+    color = LINE_COLORS[cluster_id % len(LINE_COLORS)]
+    return color[0] if library == 'cv2' else color[1]
+
+
+def cluster_indentation(response_data):
+    
+    data = response_data
+
+    min_x = []
+    included_line_data = []
+
+    for line in data["line_data"]:
+        if 'cnt' in line:
+            if line["included"] == True:
+                cnt = line["cnt"]
+                min_point = min(cnt, key=lambda point: point[0])
+                min_point_idx = line["cnt"].index(min_point)
+                min_x.append(min_point[0])
+                line["min_point_idx"] = min_point_idx
+                included_line_data.append(line)
+
+    data["line_data"] = included_line_data
+        
+    min_x_np = np.array(min_x).reshape(-1, 1)
+
+    mean_shift = MeanShift(bandwidth=30)
+
+    mean_shift.fit(min_x_np)
+
+    labels = mean_shift.labels_
+    
+    print(len(labels))
+    print(len(data["line_data"]))
+        
+    for i, line in enumerate(data["line_data"]):
+        line["cluster_id"] = labels[i]
+        
+    return min_x, labels, data
+
+
+
+def visualize_lines(data, image_path):
+    
+    # Load the image
+    image = cv2.imread(image_path, cv2.IMREAD_COLOR)
+
+    # Get the image height and width
+    image_height = data['image_height']
+    image_width = data['image_width']
+
+    # Create an empty mask image
+    #mask = np.zeros((image_height, image_width, 3), dtype=np.uint8)
+
+    
+    for line in data["line_data"]:
+        if "cnt" in line:
+            
+            cnt = np.array(line["cnt"], dtype=np.int32)
+            cnt = cnt.reshape((-1, 1, 2))
+            cv2.polylines(image, [cnt], True, (255, 0, 0), 2)
+            
+            circle_point = tuple(line["cnt"][line["min_point_idx"]])
+            
+            cv2.circle(image, circle_point, 14, get_line_color(line["cluster_id"], 'cv2'), -1)
+        
+    # Combine the original image and mask
+    #combined_image = cv2.addWeighted(image, 0.7, mask, 0.3, 0)
+    
+    # Show the combined image
+    
+    # Convert image to base64 to use it as source in an HTML img tag
+    retval, buffer = cv2.imencode('.jpg', image)
+    jpg_as_text = base64.b64encode(buffer).decode('utf-8')
+
+    return jpg_as_text
+
+
+
+def plot_histogram(min_x):
+    data = [go.Histogram(x=min_x)]
+    layout = go.Layout(title='Distribution of min_x values')
+    fig = go.Figure(data=data, layout=layout)
+    return po.plot(fig, output_type='div')    # Return as a div to embed in HTML
+
+
+def plot_clustering(min_x, labels):
+    data = [go.Scatter(x=min_x, y=labels, mode='markers',
+                        marker=dict(color=[get_line_color(label, 'plotly') for label in labels],
+                                    size=8, line=dict(width=1)))]
+    layout = go.Layout(title='Clustering results of Mean Shift', xaxis=dict(title='min_x'),
+                        yaxis=dict(title='Cluster ID'))
+    fig = go.Figure(data=data, layout=layout)
+    return po.plot(fig, output_type='div')    # Return as a div to embed in HTML
+    

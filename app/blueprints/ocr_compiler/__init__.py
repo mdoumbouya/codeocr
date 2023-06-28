@@ -5,3 +5,4 @@ from flask import Blueprint
 bp = Blueprint('ocr_compiler', __name__)
 
 from app.blueprints.ocr_compiler import routes
+
