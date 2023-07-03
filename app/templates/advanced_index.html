@@ -35,16 +35,18 @@
             </div>
             <input class="btn btn-primary" type="submit" name="submit" value="Upload and process image">
           </form>
+          <br>
+          <br>
         </div>
         
         {% if code_picture %}
         <div class="row">
-            <div class="col-lg-6">
-                <p class="text-center">Uploaded Image</p>
+            <div class="col-lg-6" style="text-align:center">
+                <h3>Uploaded Image</h3>
                 <img src="{{code_picture}}" alt="Upload" class="img-fluid">
             </div>
-            <div class="col-lg-6">
-                <p class="text-center">Visualized Lines</p>
+            <div class="col-lg-6" style="text-align:center">
+                <h3>Visualized Lines</h3>
                 <img src="data:image/jpeg;base64,{{ visualized_lines }}" alt="Visualized Lines" class="img-fluid"/>
             </div>
         </div>
@@ -62,8 +64,16 @@
 
         <div class="col-12">
           <form method="post" action="{{ url_for('ocr_compiler.run_code') }}" enctype="multipart/form-data">
-            <h2>Source Code:</h2>
-            <textarea class="form-control" name="source_code" style="height:300px;">{{source_code}}</textarea>
+            <div class="row">
+              <div class="col-lg-6" style="text-align:center">
+                <h3>Mathpix Output</h3>
+                <textarea class="form-control" name="mathpix_output" style="height:300px;">{{mathpix_output}}</textarea>
+              </div>
+              <div class="col-lg-6" style="text-align:center">
+                <h3>Source Code</h3>
+                <textarea class="form-control" name="source_code" style="height:300px;">{{source_code}}</textarea>
+              </div>
+            </div>
             <br>
             <button type="button" class="btn btn-primary" id="run-button">Run the Code</button>
             <br><br>
