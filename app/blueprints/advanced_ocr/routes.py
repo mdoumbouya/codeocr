@@ -17,6 +17,9 @@ import openai
 
 import json
 
+import io
+import contextlib
+
 
 load_dotenv()
 
@@ -44,7 +47,11 @@ def advanced():
         
         source_code, histogram, clustering, visualized_lines = ocr_code(file_path)
         
-        source_code = hard_postprocess(language_model_correction(source_code))
+        mathpix_output = source_code
+        
+        # source_code = clear_response(language_model_correction(source_code))
+        
+        # test = final_processing(source_code)
         
         
         
@@ -58,6 +65,7 @@ def advanced():
             histogram=Markup(histogram),
             clustering=Markup(clustering),
             visualized_lines=visualized_lines,
+            mathpix_output=mathpix_output,
         )
 
 
@@ -83,12 +91,33 @@ def ocr_code(image_path):
     
     if response.status_code == 200:
         json_response = response.json()
-        source_code = json_response.get("text", "")
-        
         min_x, labels, data = cluster_indentation(json_response)
+        print("Printing the initial form of data")
+        for elem in data:
+            if elem == "line_data":
+                for ix, line in enumerate(data[elem]):
+                    print("")
+                    print(ix + 1)
+                
+                    print(line)
+            else:
+                print(data[elem])
+        
+        source_code, data = process_indentation(data)
         histogram = plot_histogram(min_x)
         clustering = plot_clustering(min_x, labels)
         visualized_lines = visualize_lines(data, image_path=str(image_path))
+        print("Printing the final form of data")
+        for elem in data:
+            if elem == "line_data":
+                for ix, line in enumerate(data[elem]):
+                    print("")
+                    print(ix + 1)
+                
+                    print(line)
+            else:
+                print(data[elem])
+            
     else:
         source_code = ""
         histogram = ""
@@ -105,15 +134,23 @@ def language_model_correction(input_text):
     messages = [
         {
             "role": "system",
-            "content": "You are a helpful assistant who helps translate Python in latex to Python code.",
+            "content": "You are a helpful assistant who helps translate result of handwritten python code from Mathpix API to Python code.",
         },
         {
             "role": "user",
-            "content": f"This is an output of matrix API, which outputs latex from an image of handwriting. This is the output it provided from a handwritten code: {input_text}",
+            "content": f"This is an cleaned output of mathpix API, which outputs latex from an image of handwriting. This is the output it provided from a handwritten code: {input_text}",
         },
         {
             "role": "user",
-            "content": "Fix the typos in Python text; however, don't do anything about the indentation. Just go to a new line at every \\n. Fix typos in strings, or vars name inside text. Dont return anything else tha n the corrected Python text, as in dont return any preceding text, or return any ending text, return JUST THE Python Code",
+            "content": "Fix all sorts of typos in the code, inluding the string; Just fix all the mistakes that a OCR engine can make.",
+        },
+        {
+            "role": "user",
+            "content": "return exactly the same number of lines as the input, including comments in python code, and do not change the order of the lines, or increase the number of lines.",
+        },
+        {
+            "role": "user",
+            "content": "keep the code layout exactly as it is, do not tamper with the indentation",
         },
     ]
 
@@ -124,7 +161,7 @@ def language_model_correction(input_text):
     }
 
     payload = {
-        "model": "gpt-4",
+        "model": "gpt-4-0613",
         "messages": messages,
         "max_tokens": 2042,
     }
@@ -136,6 +173,7 @@ def language_model_correction(input_text):
         if response.status_code == 200:
             print("GPT worked")
             response_json = response.json()
+            print(response_json)
             result = response_json["choices"][0]["message"]["content"].strip()
             return result
         else:
@@ -146,20 +184,6 @@ def language_model_correction(input_text):
         return ""
 
 
-def hard_postprocess(txt):
-    print(txt)
-    first_tilda = txt.find("```")
-    print("first_tilda", first_tilda)
-    if first_tilda != -1:
-        second_tilda = txt.find("```", first_tilda + 1)
-        print("second_tilda", second_tilda)
-        if second_tilda != -1:
-            print("Checking the string after the first tilda")
-            print(txt[first_tilda + 3: first_tilda + 9])
-            if txt[first_tilda + 3: first_tilda + 9] == "python":
-                return txt[first_tilda + 9:second_tilda]
-            else:
-                return txt[first_tilda + 3:second_tilda]
 
 
 
@@ -167,13 +191,24 @@ def hard_postprocess(txt):
 def run_code():
     source_code = request.form.get('source_code')
     code_picture = request.form.get('code_picture')
+
+    # create a StringIO object to capture stdout
+    stdout = io.StringIO()
+
     try:
-        exec_globals = {}
-        exec_locals = {}
-        exec(source_code, exec_globals, exec_locals)
-        compilation_results = exec_locals
-        return jsonify({"compilation_results": str(compilation_results), "source_code": source_code, "code_picture": code_picture})
+        # Redirect stdout to the StringIO object
+        with contextlib.redirect_stdout(stdout):
+            exec(source_code)
+
+        # Get the stdout value from StringIO object
+        compilation_results = stdout.getvalue()
+
+        return jsonify({"compilation_results": compilation_results, 
+                        "source_code": source_code, 
+                        "code_picture": code_picture})
 
     except Exception as e:
         compilation_results = str(e)
-        return jsonify({"compilation_results": compilation_results, "source_code": source_code, "code_picture": code_picture})
+        return jsonify({"compilation_results": compilation_results, 
+                        "source_code": source_code, 
+                        "code_picture": code_picture})
