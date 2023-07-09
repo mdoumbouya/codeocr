@@ -80,8 +80,8 @@ def cluster_indentation(response_data):
 
     labels = mean_shift.labels_
     
-    print(len(labels))
-    print(len(data["line_data"]))
+    # print(len(labels))
+    # print(len(data["line_data"]))
         
     for i, line in enumerate(data["line_data"]):
         line["cluster_id"] = labels[i]
@@ -163,7 +163,7 @@ def process_indentation(data):
         
     for cluster_id in label_coord:
         label_avg[cluster_id] = avg_list(label_coord[cluster_id])
-        print("Cluster " + str(cluster_id) + " avg: " + str(label_avg[cluster_id]))
+        # print("Cluster " + str(cluster_id) + " avg: " + str(label_avg[cluster_id]))
         
     label_avg = dict(sorted(label_avg.items(), key=lambda item: item[1]))
     
@@ -182,7 +182,7 @@ def process_indentation(data):
 
             tab_multiplier = label_avg_lst.index(line["cluster_id"])
             
-            print("Tab Multiplier: " + str(tab_multiplier))
+            # print("Tab Multiplier: " + str(tab_multiplier))
             
             text = line["text"]
             text = text.replace('\n', '')
@@ -190,26 +190,27 @@ def process_indentation(data):
             text = text.replace('\t', '')
             text = text.replace('\\', '')
             
-            text = LM_correction(full_code, text)
-            
-            text = clear_response(text)
-            
-            line["text"] = text
             
             text = text.strip()
             
-            print("Particular Line Text")
-            print(text)
-            print((tab * tab_multiplier) + text + '\n')
+            #Updates the data on the line
+            line["text"] = text
+            
+            # print("Particular Line Text")
+            # print(text)
+            # print((tab * tab_multiplier) + text + '\n')
             
             result += (tab * tab_multiplier) + text + '\n'
             
-            time.sleep(2)
+            # if len(data["line_data"]) > 15:
+            #     print("Sleeping for 2 seconds, ebcause too many api calls might block the app")
+            #     time.sleep(2)
+            # time.sleep(2)
             
             
         
-    print("Resulting Text")
-    print(result)
+    # print("Resulting Text")
+    # print(result)
     
     return result, data
 
@@ -222,52 +223,40 @@ def final_processing(txt):
     print("Raw txt" + txt)
     
     raw_line_list = txt.split('\n')
-    print("raw_line_list: " + str(raw_line_list))
+    # print("raw_line_list: " + str(raw_line_list))
     
     txt = txt.strip()
-    print("stripped txt: " + txt)
+    # print("stripped txt: " + txt)
     stripped_line_list = txt.split('\n')
-    print("stripped_line_list: " + str(stripped_line_list))
+    # print("stripped_line_list: " + str(stripped_line_list))
     
-    print("Raw list length" + str(len(raw_line_list)))
-    print("Stripped list length" + str(len(stripped_line_list)))
+    # print("Raw list length" + str(len(raw_line_list)))
+    # print("Stripped list length" + str(len(stripped_line_list)))
     
     return 0
     
     
-    
-def LM_correction(full_code, line):
+
+# Will use it when necessary. 
+def LM_correction(input_text):
     print("Into the post process gpt function")
     messages = [
         {
             "role": "system",
-            "content": "You are a helpful assistant who helps translate result of handwritten python code from Mathpix API to Python code.",
+            "content": "You are a helpful assistant who helps translate OCR result of handwritten python code from Mathpix API to Python code.",
         },
         {
             "role": "user",
-            "content": f"""here is the whole code for context but dont use it for anything else
-                        {full_code}
-                        
-                        Here is a line from the output of Mathpix API, it can be either plain text, code, or a comment. Different rule applies for different situaiton.  
-                        {line} 
-                        
-                        Some instructions
-                        if it's just a plain line of text, then return just the text with corrections in spelling or some mistake that an ocr might make. 
-                        
-                        if it's code
-                        1. Fix all sorts of typos in the line of code, including the string; 
-                        2.  "return exactly the same number of lines as the input, including comments in Python code, and do not change the order of the lines or increase the number of lines."
-                        3. A post-processing code already corrected the indentation of each line. Do not do anything about the indentation. Just work like a word correction model. 
-                        4. return nothing but the corrected line of code
-                        
-                        In any case, whatever you return, return it in the below format.
-                        
-                        ```python
-                        particular line
-                        ```
-                        
-                        Make sure you are follow every rule very strictly.
-                        """
+            "content": f"""Fix typos in the following code. do not change anything else.
+            Here is the code{input_text}
+            
+            return your result in the below form
+
+            ```Python
+            result
+            ```
+            
+            """,
         },
     ]
 
@@ -278,7 +267,7 @@ def LM_correction(full_code, line):
     }
 
     payload = {
-        "model": "gpt-4-0613",
+        "model": "gpt-3.5-turbo",
         "messages": messages,
         "max_tokens": 2042,
     }
@@ -290,6 +279,7 @@ def LM_correction(full_code, line):
         if response.status_code == 200:
             print("GPT worked")
             response_json = response.json()
+            # print(response_json)
             result = response_json["choices"][0]["message"]["content"].strip()
             return result
         else:
@@ -299,6 +289,33 @@ def LM_correction(full_code, line):
         print(f"Error: {e}")
         return ""
 
+def mathpix(image_path):
+    with open(image_path, "rb") as img_file:
+        image_data = img_file.read()
+        
+    b64_image = base64.b64encode(image_data).decode("utf-8")
+    
+    headers = {
+        "app_id": MATHPIX_APP_ID,
+        "app_key": MATHPIX_APP_KEY,
+        "Content-type": "application/json",
+    }
+    
+    data = {
+    "src": "data:image/jpeg;base64," + b64_image,
+    "formats": ["text"],
+    "include_line_data": True
+    }
+    
+    response = requests.post("https://api.mathpix.com/v3/text", json=data, headers=headers)
+    
+    if response.status_code == 200:
+        json_response = response.json()
+    else:
+        json_response = None
+        
+    
+    return json_response
 
 def clear_response(txt):
 
