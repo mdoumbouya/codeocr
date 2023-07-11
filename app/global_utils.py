@@ -13,6 +13,9 @@ from dotenv import load_dotenv
 import openai
 import os
 import time
+import pyrebase
+import uuid
+
 
 load_dotenv()
 
@@ -80,11 +83,16 @@ def cluster_indentation(response_data):
 
     labels = mean_shift.labels_
     
-    # print(len(labels))
-    # print(len(data["line_data"]))
+    print(type(labels))
+    print(len(data["line_data"]))
+    
+    print("Mathpix data:")
+    for elem in data:
+        print(elem)
+        print(type(data[elem]))
         
     for i, line in enumerate(data["line_data"]):
-        line["cluster_id"] = labels[i]
+        line["cluster_id"] = int(labels[i])
         
     return min_x, labels, data
 
@@ -267,7 +275,7 @@ def LM_correction(input_text):
     }
 
     payload = {
-        "model": "gpt-3.5-turbo",
+        "model": "gpt-4-0613",
         "messages": messages,
         "max_tokens": 2042,
     }
@@ -281,7 +289,12 @@ def LM_correction(input_text):
             response_json = response.json()
             # print(response_json)
             result = response_json["choices"][0]["message"]["content"].strip()
-            return result
+            
+            print("Gpt data types")
+            for elem in response_json:
+                print(type(response_json[elem]))
+        
+            return result, response_json
         else:
             print("GPT failed")
             return ""
@@ -290,32 +303,32 @@ def LM_correction(input_text):
         return ""
 
 def mathpix(image_path):
-    with open(image_path, "rb") as img_file:
-        image_data = img_file.read()
-        
-    b64_image = base64.b64encode(image_data).decode("utf-8")
-    
-    headers = {
-        "app_id": MATHPIX_APP_ID,
-        "app_key": MATHPIX_APP_KEY,
-        "Content-type": "application/json",
-    }
-    
-    data = {
-    "src": "data:image/jpeg;base64," + b64_image,
-    "formats": ["text"],
-    "include_line_data": True
-    }
-    
-    response = requests.post("https://api.mathpix.com/v3/text", json=data, headers=headers)
-    
-    if response.status_code == 200:
-        json_response = response.json()
-    else:
-        json_response = None
-        
-    
-    return json_response
+    try:
+        with open(image_path, "rb") as img_file:
+            b64_image = base64.b64encode(img_file.read()).decode("utf-8")
+
+        headers = {
+            "app_id": MATHPIX_APP_ID,
+            "app_key": MATHPIX_APP_KEY,
+            "Content-type": "application/json",
+        }
+
+        data = {
+            "src": "data:image/jpeg;base64," + b64_image,
+            "formats": ["text"],
+            "include_line_data": True
+        }
+
+        response = requests.post("https://api.mathpix.com/v3/text", headers=headers, json=data)
+        response.raise_for_status()
+
+        return response.json()
+
+    except requests.exceptions.HTTPError as http_err:
+        print(f'HTTP error occurred: {http_err}')
+    except Exception as err:
+        print(f'Other error occurred: {err}')
+    return None
 
 def clear_response(txt):
 
@@ -329,5 +342,36 @@ def clear_response(txt):
                 return txt[first_tilda + 9:second_tilda]
             else:
                 return txt[first_tilda + 3:second_tilda]
+            
+            
+
+def upload_image(image_path, filename):
+    firebaseConfig = {
+    "apiKey": os.getenv('FIREBASE_API_KEY'),
+    "authDomain": os.getenv('FIREBASE_AUTH_DOMAIN'),
+    "databaseURL": os.getenv('FIREBASE_DATABASE_URL'),
+    "projectId": os.getenv('FIREBASE_PROJECT_ID'),
+    "storageBucket": os.getenv('FIREBASE_STORAGE_BUCKET'),
+    "messagingSenderId": os.getenv('FIREBASE_MESSAGING_SENDER_ID'),
+    "appId": os.getenv('FIREBASE_APP_ID')
+    }
+    firebase = pyrebase.initialize_app(firebaseConfig)
+    storage = firebase.storage()
+
+    cloud_path = "images/" + filename
+
+        # Create a random token
+    # token = str(uuid.uuid4())
+    
+    storage.child(cloud_path).put(image_path)
+
+    # Get the URL of the uploaded image
+    url = storage.child(cloud_path).get_url(None)
+    
+    print("URL: " + url)
+
+    return url
+
+
 
     
