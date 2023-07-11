@@ -13,7 +13,9 @@ $(document).ready(function(){
           data: {source_code: source_code, code_picture: code_picture},
           success: function(response){
               $('#compilation-results').html(response.compilation_results);
+              console.log('success');
               console.log(response.compilation_results);
+              console.log("after the code ran")
           },
           error: function(error){
             console.log('error');
@@ -22,4 +24,3 @@ $(document).ready(function(){
       });
   });
 });
-
