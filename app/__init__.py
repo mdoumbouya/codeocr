@@ -13,6 +13,8 @@ def create_app():
     # Load the default configuration
     app.config.from_pyfile('config.py')
     
+    app.secret_key = 'codeocr'
+    
     # Add the UPLOAD_FOLDER configuration
     
     Path(app.config['UPLOAD_FOLDER']).mkdir(parents=True, exist_ok=True)

@@ -19,14 +19,33 @@ import json
 
 import io
 import contextlib
+import pyrebase
+
+from google.cloud import firestore
+
 from timeit import default_timer as timer
 
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+from flask import session
+
+
 load_dotenv()
+
 
 MATHPIX_APP_ID = os.getenv("MATHPIX_APP_ID")
 MATHPIX_APP_KEY = os.getenv("MATHPIX_APP_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
+
+
+# Use the application default credentials
+cred = credentials.Certificate('firebase_credentials.json')
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
+
 
 @bp.route("/", methods=["GET", "POST"])
 def index():
@@ -41,36 +60,48 @@ def index():
         filename = str(uuid.uuid4()) + secure_filename(file.filename)
         image_path = Path(current_app.config['UPLOAD_FOLDER']) / filename
         file.save(image_path)
-        code_picture = os.path.join("..", "static", "uploaded_images", filename)
+        image_path = str(image_path)
+        
+        code_picture = upload_image(image_path, filename)
+        
+        # code_picture = os.path.join("..", "static", "uploaded_images", filename)
         
         
         
         mathpix__start_time = timer()
-        json_response = mathpix(image_path)
+        json_MPresponse = mathpix(image_path)
         mathpix__end_time = timer()
         
         
-        min_x, labels, data = cluster_indentation(json_response)
+        min_x, labels, data = cluster_indentation(json_MPresponse)
         source_code, data = process_indentation(data)
-        histogram = plot_histogram(min_x)
-        clustering = plot_clustering(min_x, labels)
-        visualized_lines = visualize_lines(data, image_path=str(image_path))
-        mathpix_output = source_code
+        
+        # histogram = plot_histogram(min_x)
+        # clustering = plot_clustering(min_x, labels)
+        # visualized_lines = visualize_lines(data, image_path=str(image_path))
+        # mathpix_output = source_code
         
         
         gpt_start = timer()
-        source_code = LM_correction(source_code)
+        source_code, json_LMresponse  = LM_correction(source_code)
         gpt_end = timer()
         
         
         source_code = clear_response(source_code)
         
         
+        doc_ref = db.collection('codeocr').document() 
+        doc_ref.set({
+            'id': doc_ref.id,        
+            'image_url': code_picture,
+            'mathpix_response': json.dumps(json_MPresponse),
+            'language_model_response': json.dumps(json_LMresponse),
+            'source_code': source_code,
+        })
+        
+        session['doc_id'] = doc_ref.id
         
         
-        print(" ")
-        print("Below is the source to the subject image:")
-        print(code_picture)
         
         
         end_time = timer()
@@ -88,10 +119,6 @@ def index():
             "index.html",
             source_code=source_code,
             code_picture=code_picture,
-            histogram=Markup(histogram),
-            clustering=Markup(clustering),
-            visualized_lines=visualized_lines,
-            mathpix_output=mathpix_output,
         )
 
 
@@ -102,23 +129,28 @@ def run_code():
     source_code = request.form.get('source_code')
     code_picture = request.form.get('code_picture')
 
-    # create a StringIO object to capture stdout
-    stdout = io.StringIO()
+    # Retrieve the document id from the session
+    doc_id = session.get('doc_id')
 
-    try:
-        # Redirect stdout to the StringIO object
-        with contextlib.redirect_stdout(stdout):
-            exec(source_code)
+    if doc_id:
+        doc_ref = db.collection('codeocr').document(doc_id) 
 
-        # Get the stdout value from StringIO object
-        compilation_results = stdout.getvalue()
+        stdout = io.StringIO()
+        try:
+            with contextlib.redirect_stdout(stdout):
+                exec(source_code)
+            compilation_results = stdout.getvalue()
+
+            # Update the document with the executed code
+            doc_ref.update({
+                'executed_source_code': source_code
+            })
+        except Exception as e:
+            compilation_results = str(e)
 
         return jsonify({"compilation_results": compilation_results, 
                         "source_code": source_code, 
                         "code_picture": code_picture})
-
-    except Exception as e:
-        compilation_results = str(e)
-        return jsonify({"compilation_results": compilation_results, 
-                        "source_code": source_code, 
-                        "code_picture": code_picture})
+    else:
+        # Handle the case where 'doc_id' is not set in the session
+        return jsonify({"error": "No document id found in the session."})
