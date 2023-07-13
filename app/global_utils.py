@@ -255,7 +255,7 @@ def LM_correction(input_text):
         },
         {
             "role": "user",
-            "content": f"""Fix typos in the following code. do not change anything else.
+            "content": f"""Only fix typos in the following code. Do not change anything else.
             Here is the code{input_text}
             
             return your result in the below form
