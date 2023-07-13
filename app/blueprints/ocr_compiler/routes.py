@@ -62,7 +62,9 @@ def index():
         file.save(image_path)
         image_path = str(image_path)
         
+        upload_start = timer()
         code_picture = upload_image(image_path, filename)
+        upload_end = timer()
         
         # code_picture = os.path.join("..", "static", "uploaded_images", filename)
         
@@ -89,7 +91,7 @@ def index():
         
         source_code = clear_response(source_code)
         
-        
+        storing_start = timer()
         doc_ref = db.collection('codeocr').document() 
         doc_ref.set({
             'id': doc_ref.id,        
@@ -100,20 +102,22 @@ def index():
         })
         
         session['doc_id'] = doc_ref.id
-        
-        
-        
+        storing_end = timer()
         
         end_time = timer()
         print("|--------------------------------------------------------------------------|")
         print("  Time taken to process the image: " + str(end_time - start_time))
         print("----------------------------------------------------------------------------")
-        print("  Time taken to process the image without any API: " + str((end_time - start_time) - (gpt_end - gpt_start) - (mathpix__end_time - mathpix__start_time)))
+        print("  Time taken to process the image without any API: " + str((end_time - start_time) - (gpt_end - gpt_start) - (mathpix__end_time - mathpix__start_time) - (upload_end - upload_start) - (storing_end - storing_start)))
+        print("----------------------------------------------------------------------------")
+        print("  Time taken to upload the image: " + str(upload_end - upload_start))
         print("----------------------------------------------------------------------------")
         print("  Mathpix process time: " + str(mathpix__end_time - mathpix__start_time))
         print("----------------------------------------------------------------------------")
         print("  LM Process Time: " + str(gpt_end - gpt_start))
-        print("|--------------------------------------------------------------------------|")  
+        print("|--------------------------------------------------------------------------|")
+        print("  Time taken to store the data: " + str(storing_end - storing_start))
+        print("|--------------------------------------------------------------------------|")
         
         return render_template(
             "index.html",
