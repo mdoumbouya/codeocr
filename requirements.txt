@@ -12,10 +12,7 @@ google-cloud-firestore
 google-auth
 json5
 plotly
-io
-contextlib2
 werkzeug
-pathlib
 pybase64
 gunicorn
 google-cloud-vision
