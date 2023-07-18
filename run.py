@@ -9,5 +9,5 @@ app = create_app()
 #     print(rule)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=4444)
+    app.run(debug=True, port=8003)
 
