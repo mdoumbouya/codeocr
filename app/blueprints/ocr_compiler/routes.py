@@ -4,7 +4,6 @@ from flask import render_template, request, current_app
 from werkzeug.utils import secure_filename
 import os
 from pathlib import Path
-from google.cloud import vision
 import uuid
 from flask import jsonify
 from dotenv import load_dotenv
