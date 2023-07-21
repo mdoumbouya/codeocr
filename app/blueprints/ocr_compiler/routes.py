@@ -114,7 +114,7 @@ def index():
         print("  Mathpix process time: " + str(mathpix__end_time - mathpix__start_time))
         print("----------------------------------------------------------------------------")
         print("  LM Process Time: " + str(gpt_end - gpt_start))
-        print("|--------------------------------------------------------------------------|")
+        print("----------------------------------------------------------------------------")
         print("  Time taken to store the data: " + str(storing_end - storing_start))
         print("|--------------------------------------------------------------------------|")
         
