@@ -107,6 +107,7 @@ def index():
             'mathpix_response': json.dumps(json_MPresponse),
             'language_model_response': json.dumps(json_LMresponse),
             'source_code': source_code,
+            'lm_intensity': LM_dropdown,
         })
         
         session['doc_id'] = doc_ref.id
