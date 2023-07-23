@@ -37,3 +37,28 @@ body {
   color: #ccc !important;
 }
 
+/* Dropdown Style */
+#lm-dropdown {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  background-color: #fff;
+  width: 200px;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+#lm-dropdown:focus {
+  outline: none;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+}
+
+#lm-dropdown:hover {
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+}
+
+#lm-dropdown option {
+  padding: 10px 20px;
+}

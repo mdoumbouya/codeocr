@@ -246,7 +246,7 @@ def final_processing(txt):
     
 
 # Will use it when necessary. 
-def LM_correction(input_text):
+def LM_correction_low(input_text):
     print("Into the post process gpt function")
     messages = [
         {
@@ -301,6 +301,120 @@ def LM_correction(input_text):
     except Exception as e:
         print(f"Error: {e}")
         return ""
+
+
+def LM_correction_medium(input_text):
+    print("Into the post process gpt function")
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a helpful assistant who helps translate OCR result of handwritten python code from Mathpix API to Python code.",
+        },
+        {
+            "role": "user",
+            "content": f"""fix typos in the following code. Make very minimum edits. Do not fix any logic.
+            Here is the code{input_text}
+            
+            return your result in the below form
+
+            ```Python
+            result
+            ```
+            
+            """,
+        },
+    ]
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Bearer {OPENAI_API_KEY}",
+    }
+
+    payload = {
+        "model": "gpt-4-0613",
+        "messages": messages,
+        "max_tokens": 2042,
+    }
+
+    try:
+        print("trying GPT")
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(payload))
+
+        if response.status_code == 200:
+            print("GPT worked")
+            response_json = response.json()
+            # print(response_json)
+            result = response_json["choices"][0]["message"]["content"].strip()
+            
+            print("Gpt data types")
+            for elem in response_json:
+                print(type(response_json[elem]))
+        
+            return result, response_json
+        else:
+            print("GPT failed")
+            return ""
+    except Exception as e:
+        print(f"Error: {e}")
+        return ""
+    
+def LM_correction_high(input_text):
+    print("Into the post process gpt function")
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a helpful assistant who helps translate OCR result of handwritten python code from Mathpix API to Python code.",
+        },
+        {
+            "role": "user",
+            "content": f"""Fix every error in the code.
+            Here is the code{input_text}
+            
+            return your result in the below form
+
+            ```Python
+            result
+            ```
+            
+            """,
+        },
+    ]
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Bearer {OPENAI_API_KEY}",
+    }
+
+    payload = {
+        "model": "gpt-4-0613",
+        "messages": messages,
+        "max_tokens": 2042,
+    }
+
+    try:
+        print("trying GPT")
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(payload))
+
+        if response.status_code == 200:
+            print("GPT worked")
+            response_json = response.json()
+            # print(response_json)
+            result = response_json["choices"][0]["message"]["content"].strip()
+            
+            print("Gpt data types")
+            for elem in response_json:
+                print(type(response_json[elem]))
+        
+            return result, response_json
+        else:
+            print("GPT failed")
+            return ""
+    except Exception as e:
+        print(f"Error: {e}")
+        return ""
+
 
 def mathpix(image_path):
     try:
