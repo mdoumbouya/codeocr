@@ -56,6 +56,7 @@ def index():
         print("Inside the function")
         print(os.getenv("OPENAI_KEY"))
         file = request.files["code_picture"]
+        LM_dropdown = request.form.get('lm-dropdown')
         filename = str(uuid.uuid4()) + secure_filename(file.filename)
         image_path = Path(current_app.config['UPLOAD_FOLDER']) / filename
         file.save(image_path)
@@ -84,7 +85,15 @@ def index():
         
         
         gpt_start = timer()
-        source_code, json_LMresponse  = LM_correction(source_code)
+        
+        print("LM_dropdown: ", LM_dropdown)
+        if LM_dropdown == "high":
+            source_code, json_LMresponse  = LM_correction_high(source_code)
+        elif LM_dropdown == "medium":
+            source_code, json_LMresponse  = LM_correction_medium(source_code)
+        else:
+            source_code, json_LMresponse  = LM_correction_low(source_code)
+            
         gpt_end = timer()
         
         
