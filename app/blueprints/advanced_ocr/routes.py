@@ -59,7 +59,7 @@ def advanced():
         
         
         gpt_start = timer()
-        source_code = LM_correction(source_code)
+        source_code, json_LMresponse = LM_correction_low(source_code)
         gpt_end = timer()
         
         
