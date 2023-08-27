@@ -1,0 +1,257 @@
+10,0.2,"list = [6, 14, 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+","list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",null,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",null,"my_list = [6, 11, 5, 8, 9]
+max_val = 0
+for elem in my_list:
+    if elem > max_val:
+        max_val = elem
+print(max_val)
+",null
+11,0.2,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i]:
+            return False
+    return True
+","def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",null,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",null,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",null
+12,0.2,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+","def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",null,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",null,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",null
+13,0.2,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i + 1] + sequence[i + 2])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+","def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",null,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",null,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",null
+14,0.2,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+","def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",null,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",null,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",null
+15,0.2,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+","def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",null,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",null,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",null
+16,0.2,"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list
+","def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",null,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",null,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",null
+17,0.2,"def even_or_odd(number):
+    if number / 2 == 0:
+        return ""Even""
+    if number / 2 != 0:
+        return ""Odd""
+","def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",null,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",null,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",null
+18,0.2,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+","def upper_lower_count(str):
+    Upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            Upper_case += 1
+        else:
+            lower_case += 1
+    return Upper_case, lower_case
+",null,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",null,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",null
+19,0.2,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+","def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",null,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",null,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",null
