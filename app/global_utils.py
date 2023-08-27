@@ -23,6 +23,10 @@ MATHPIX_APP_ID = os.getenv("MATHPIX_APP_ID")
 MATHPIX_APP_KEY = os.getenv("MATHPIX_APP_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
+GPT_MODEL = "gpt-4-0613"
+
+
+
 
 LINE_COLORS =  [
     ((0, 0, 255), 'rgb(255, 0, 0)'),       # red
@@ -275,7 +279,7 @@ def LM_correction_low(input_text):
     }
 
     payload = {
-        "model": "gpt-4-0613",
+        "model": GPT_MODEL,
         "messages": messages,
         "max_tokens": 2042,
     }
@@ -332,7 +336,7 @@ def LM_correction_medium(input_text):
     }
 
     payload = {
-        "model": "gpt-4-0613",
+        "model": GPT_MODEL,
         "messages": messages,
         "max_tokens": 2042,
     }
@@ -368,7 +372,7 @@ def LM_correction_high(input_text):
         },
         {
             "role": "user",
-            "content": f"""Fix every error in the code.
+            "content": f"""Fix every error in the following code.
             Here is the code{input_text}
             
             return your result in the below form
@@ -388,7 +392,7 @@ def LM_correction_high(input_text):
     }
 
     payload = {
-        "model": "gpt-4-0613",
+        "model": GPT_MODEL,
         "messages": messages,
         "max_tokens": 2042,
     }

@@ -1,0 +1,63 @@
+groundtruth
+"list = [6, 14, 5, 8, 9]
+
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+        
+return max"
+"def palindromic(str):
+
+	for i in range(int(len(str)/2)):
+		if str[i] != str[len(str)-i]:
+			return False
+	return True"
+"def factorial(n):
+    result = n * factorial(n - 1)
+    return result"
+"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i+1] + sequence[i+2])
+        i += 1
+    return sequence
+    
+result = fibonacci(5)
+print(result)"
+"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+            freq[item] += 1
+    return freq"
+"def twoSum(nums, target):
+	for i in range(len(nums)):
+		for p in range(i,len(nums)):
+			if(nums[i]+nums[p] == target):
+				return [i,p]"
+"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list"
+"def even_or_odd(number):
+    if number / 2 == 0:
+	    return ""Even""
+    if number / 2 != 0:
+	    return ""Odd"""
+"def upper_lower_count(str):
+	upper_case = 0
+	lower_case = 0
+	for char in str:
+		if char.isupper():
+			upper_case += 1
+		else:
+			lower_case += 1
+	return upper_case, lower_case"
+"def multiply(numbers):  
+    total = 0
+    for x in numbers:
+        total *= x  
+    return total  "
