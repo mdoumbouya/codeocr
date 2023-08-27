@@ -29,7 +29,7 @@ def login():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+                'keys/credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.json', 'w') as token:
@@ -91,7 +91,7 @@ def download_file(real_file_id):
 from pathlib import Path
 if __name__ == '__main__':
     # list_files()
-    file_id = '1BoeaCF2mN_QjXHm4_tEGoWYoAGEpAcc0'
+    file_id = '1mRqgYWlFvIe3ZskcJ_88iO4XLqYmZtzL'
     bio = download_file(real_file_id=file_id)
     Path("drive_downloads").mkdir(exist_ok=True)
     Path(f"drive_downloads/{file_id}.png").write_bytes(bio)

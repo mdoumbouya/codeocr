@@ -1,0 +1,3574 @@
+Ground Truth,Google OCR,ED Google OCR,MP,ED MP,LM Low,ED LM Low,LM Medium,ED LM Medium,LM High,ED LM High
+"num = int(input(""enter a number: ""))
+ans = 1
+while num > 1:
+ans *= num
+num -= 1
+return ans","int (input (""enter a number: "")
+num =
+ans =)
+while num > 1:
+ans * = num
+num - =|
+1
+return ans",20,"num = int (input (""enter a number: "")
+\[
+ext { ans = } 1
+\]
+while num \( >1 \) :
+ans \( *= \) num
+mum - \( =1 \)
+retirn ans",38,"num = int(input(""enter a number: ""))
+ans = 1
+while num > 1:
+ans *= num
+num -= 1
+return ans",0,"num = int(input(""enter a number: ""))
+ans = 1
+while num > 1:
+ans *= num
+num -= 1
+return ans",0,"num = int(input(""enter a number: ""))
+ans = 1
+while num > 1:
+ans *= num
+num -= 1
+return ans",0
+"from karel.stanfordkarel import *
+# this program makes karel pick up a beeper and go back into her house.
+def main():
+# move to the beeper.
+move_beeper()
+# pick the beeper up.
+pick_beeper()
+# return to karel's starting point.
+go_back()
+# this function moves karel to the beeper.
+def move_beeper():
+for i in range(2):
+move()
+turn_right()
+move()
+turn_left()
+move()
+# this function return to karel's starting point.
+def go_back():
+for i in range(2):
+turn_left()
+for i in range(3):
+move()
+turn_right()
+move()
+turn_right()
+def turn_right():
+for i in range(3):
+turn_left
+if __name__ == '__main__':
+main()","from karel. stanfordkarel import *
+#this
+program
+a beeper and
+def main ():
+if
+karel pick
+up
+back into her house,
+#move to the beeper.
+makes
+go
+move beeper ()
+#pick the beeper up.
+beeper ()
+pick
+#return to karel's starting point.
+go-back ()
+#this function moves karel to the beeper.
+def move-beeper ():
+for i in
+(2):
+range
+move()
+turn right()
+move()
+turn left()
+move()
+# this function return to kard's starting
+def go-back();
+for ?. in range
+turn-left()
+for i
+name
+main ()
+move()
+turn_right()
+move (f
+turn-right()
+def turn_right()
+for i in range (3) =
+turn-
+left
+rang
+e (3);
+==
+main____'",158,"from karel.stanfordkarel import * \#this program makes karel pick up a beeper and go back into her house. def main ():
+\#move to the beeper. move_beeper () \# pick the beeper up. pick - beeper () \# return to karel's starting point. go-back ()
+\#this function moves karel to the beeper. def move-beeper ():
+for \( i \) in range (2):
+move ()
+turn right ()
+move ()
+turn leftc)
+movec)
+\# this function refurn to karel's starting poin def go-back () ;
+for i, in range (2):
+for \( i \) in range \( (3) \) :
+move ()
+\[
+ext { move ( } ext { tor }^{2} \mathrm{righ}(\mathrm{c})
+\]
+def turn-right () ?
+for \( i \) in range (3):
+turn-left
+\[
+ext { if } \operatorname{mame}_{\operatorname{man}()}==1 \ldots ext { main } \ldots
+\]
+\( m \operatorname{ain}() \)",234,"from karel.stanfordkarel import *
+# this program makes karel pick up a beeper and go back into her house.
+def main():
+# move to the beeper.
+move_beeper()
+# pick the beeper up.
+pick_beeper()
+# return to karel's starting point.
+go_back()
+# this function moves karel to the beeper.
+def move_beeper():
+for i in range(2):
+move()
+turn_right()
+move()
+turn_left()
+move()
+# this function returns karel to her starting point.
+def go_back():
+for i in range(2):
+for i in range(3):
+move()
+move()
+turn_right()
+# this function makes karel turn right.
+def turn_right():
+for i in range(3):
+turn_left()
+if __name__ == ""__main__"":
+main()",62,"from karel.stanfordkarel import *
+#this program makes karel pick up a beeper and go back into her house.
+def main():
+# move to the beeper.
+move_beeper()
+# pick the beeper up.
+pick_beeper()
+# return to karel's starting point.
+go_back()
+#this function moves karel to the beeper.
+def move_beeper():
+for i in range(2):
+move()
+turn_right()
+move()
+turn_left()
+move()
+# this function returns to karel's starting point
+def go_back():
+for i in range(2):
+for i in range(3):
+move()
+move_to_right()
+def turn_right():
+for i in range(3):
+turn_left()
+if __name__ == ""__main__"":
+main()",39,"from karel.stanfordkarel import *
+# this program makes karel pick up a beeper and go back into her house.
+def main():
+# move to the beeper.
+move_beeper()
+# pick the beeper up.
+pick_beeper()
+# return to karel's starting point.
+go_back()
+# this function moves karel to the beeper.
+def move_beeper():
+for i in range(2):
+move()
+turn_right()
+move()
+turn_left()
+move()
+# this function return to karel's starting point
+def go_back():
+for i in range(2):
+for i in range(3):
+move()
+def move():
+# add your move definition here
+def turn_right():
+for i in range(3):
+turn_left()
+def turn_left():
+# add your turn left definition here
+def pick_beeper():
+# add your pick beeper definition here
+if __name__ == ""__main__"":
+main()",162
+"def main():
+# input
+my_word = input(""enter the original word: "")
+# function calling
+reversed_word = reverse(my_word)
+print('the reversed word is'+' '+ '""'+reversed_word+'""')
+# helper function
+def reverse(word):
+# reversed_word
+new_word = """"
+# char by char
+for char in word:
+new_word = char + new_word
+# return
+return new_word
+if __name__ == '__main__':
+main()","def main ()
+#imput
+my _ word = imput(""entlo- the original wood: 7)
+#function calling
+reversed word = reverse (my-word)
+print ('the
+reversed wood is 1+'
+#helper functtion
+def
+lif
+reverse (woord):
+#reversed -won-d
+mew-won-d=""/
+ster by chan-
+for chan- im word:
+new-woo-d
+return
+return new_wond
+mame
+main()
+a/
++revered_word +
+=char + new-wood",140,"defmaim ():
+\&imput
+\( m y \)-wond = imput (""enten- the onigimal wond: "")
+function calling
+\# helpen-fumction
+\[
+egin{array}{l}
+ext { def nevense (won-d): } \
+ext { * revensed -won-d } \
+ext { mew-won-d = ""1 } \
+ext { x stent by chan- } \
+ext { for chan- im vond: } \
+ext { mew-won-d = chan }+ ext { mew-wond } \
+ext { * } r ext {-etun-m } \
+ext { nietuntm new-won-d } \
+\end{array}
+\]",257,"def main():
+# input
+my_word = input(""enter the original word: "")
+# function calling
+# helper function
+def reverse(word):
+reversed_word = """"
+for char in word:
+reversed_word = char + reversed_word
+return reversed_word
+result = reverse(my_word)
+return result",176,"def main():
+my_word = input(""enter the original word: "")
+# function calling
+# helper function
+def reverse(word):
+reversed_word = """"
+for char in word:
+reversed_word = char + reversed_word
+return reversed_word
+result = main()",171,"def main():
+# input
+my_word = input(""enter the original word: "")
+# function calling
+reverse(my_word)
+# helper function
+def reverse(word):
+# reversing word
+new_word = """"
+for char in word:
+new_word = char + new_word
+return new_word
+# result being returned
+result = main()
+print(result)",143
+"input_number = int(input(""enter number""))
+val = input_number
+result = input_number
+while (val > 1):
+val = val - 1
+result = result * val
+print('factorial for '+str(input_nmb)+ ' is '+str(result))","impur-number =
+int(impur (""enter number'))
+val = inpur-number
+result isput_number
+while (val > 1):
+val - 1
+result val
++
+print ('factorial for 't shy (input-node]
++ srr (result))
+val
+[1
+-result",66,"\( egin{array}{l} ext { inpur-number = } \ ext { inr(inpur('entar number')) } \ ext { val }= ext { impur-number } \ ext { resalt - roppur-number } \ ext { while (val }>1 ext { ): } \ {\left[egin{array}{c} ext { val }= \ ext { result }= ext { result }-1 \ ext { val }\end{array}
+ight.} \ ext { pront ('factobial for' + shr(impat-nob) } \ +\operatorname{srr}( ext { result })) \\end{array} \)",241,"input_number = int(input('enter number'))
+val = input_number
+result = input_number
+while (val > 1):
+val -= 1
+result *= val
+print('factorial for' + str(input_number) + ' is ' + str(result))",28,"input_number = int(input('enter number'))
+val = input_number
+result = input_number
+while (val > 1):
+val = result = result - 1
+print ('factorial for' + str(input_number) + str(result))",27,"input_number = int(input('enter number'))
+val = input_number
+result = input_number
+while(val > 1):
+val = val - 1
+result = result * val
+print('factorial for ' + str(input_number) + ' is ' + str(result))",11
+"def main():
+num = input(""input: "")
+sum = 0
+for n in num:
+sum += int(n)
+print(sum)","def main ():
+num = input (""imput :"")
+sum
+=
+o
+for nin num =
+sum t
+print (sum)
+=
+int (n)",25,"def \( \operatorname{main}(c) \) :
+\[
+egin{array}{l}
+ext { num }= ext { input (""input: "") } \
+ext { sum }=0
+\end{array}
+\]
+for \( n \) in num:
+\[
+\operatorname{sum} t=\operatorname{int}(n)
+\]
+print (sum)",126,"def main(c):
+num = input(""input: "")
+total_sum = 0
+for n in num:
+total_sum += int(n)
+print(total_sum)
+return total_sum",36,"def main(c):
+num = input(""input: "")
+sum = 0
+for n in num:
+sum += int(n)
+print(sum)",1,"def main(c):
+num = input(""input: "")
+sum = 0
+for n in num:
+sum += int(n)
+print(sum)",1
+"def main():
+num = input(""enter the number you want to add"")
+sum = 0
+for i in str(num):
+sum = sum + int(i)
+print(""sum of the value you entered is"", sum)","def main (s.
+()!
+61508x08 09
+0818 tu o sloj toc
+num= impot (""enter the number you want to add)
+poshe
+inpri
+som = 0 101
+zgnivoe nuovesimixam
+=0
+(ad) tizoged to stopilitie nod ovoseido gnieod
+aliotab ort eromeh ab10001 100 ot ti of no blert ezabela - moosoo ucy to noilomitnoo ei tohol zid
+for i in str(num): com
+35100 suzel
+8181882405
+sum=somt int (i)
+edmult inuca
+telti tuossa
+""mis
+print (""sum of the value you entered is, son)
+hilom
+00.000,82
+log
+alpa yliutom
+noitq inomseudaid 12915ml
+asos ss vom
+noitosilofigo inayo?
+lf1",388,"def main () :
+num = imput (""enter the number youcust to add"")
+\[
+ext { sum }=0
+\]
+for i in mtr(num):
+\[
+ext { sum }=\operatorname{sum}+\operatorname{int}(i)
+\]
+print (""sum or the valee yor entered is"", sum)",70,"def main():
+num = input(""enter the number you want to add"")
+sum = 0
+for i in str(num):
+sum = sum + int(i)
+print(""sum of the values you entered is"", sum)",1,"def main():
+num = input(""enter the number you want to add: "")
+sum = 0
+for i in str(num):
+sum = sum + int(i)
+print(""sum of the values you entered is"", sum)
+return sum",14,"def main():
+num = input(""enter the number you want to add: "")
+total_sum = 0
+for i in str(num):
+total_sum = total_sum + int(i)
+print(""sum of the values you entered is: "", total_sum)
+main()",36
+"user_input = input(""write your string here: "")
+upper = user_input.upper()
+print(upper)","input = imput ( ""write your string
+user_ input. upper (1
+user_
+upper = user_ input
+print (upper)
+here: "")",50,"user-input = imput (""write your string here: "") upper \( = \) user input upper ( ) print (upper)",16,"user_input = input(""write your string here: "")
+upper = user_input.upper()
+print (upper)",1,"user_input = input(""write your string here: "")
+upper = user_input.upper()
+print(upper)",0,"user_input = input(""write your string here: "")
+upper = user_input.upper()
+print(upper)",0
+"from karel.stanfordkarel import *
+""""""
+karel should fill the whole world with beepers.
+""""""
+def main():
+# decomposition using a function name for
+# each associated activity
+while left_is_clear():
+fill_one_row()
+return_to_row_start()
+move_up()
+# rewrite code after while loop to overcome
+# fencepost bug
+fill_one_row()","*
+from karel, starfordkarel import
+han
+kanel should fill the world with beepers.
+1100
+def main ():
+#decomposition using a
+function
+#each associated
+while left_ is_clear():
+fill_one_row()
+return_to_row_start()
+activity
+pame
+for
+move_up()
+#rewrite code after white loop to overcome
+# fencepost bug
+one-how ()
+fill_",78,"from karel.stayfordkarel inport
+iiii""
+karel should fill the world with beepers.
+""u u
+\( \operatorname{def} \operatorname{main}() \) :
+\# decomposition using a function rave for \# each associated activity while left-is_clear ():
+fill-ore-row()
+retur _to _ row_start \( ( \) )
+nove_up ()
+\# rewirite code after white loop to overcone \# fencepost bug
+fill_one-row()",84,"from karel.stanfordkarel import *
+""""""
+karel should fill the world with beepers.
+""""""
+def main():
+# decomposition using a function name for
+# each associated activity
+while left_is_clear():
+fill_one_row()
+return_to_row_start()
+move_up()
+# rewrite code after while loop to overcome
+# fencepost bug
+fill_one_row()",6,"from karel.stanfordkarel import *
+""""""
+karel should fill the world with beepers.
+""""""
+def main():
+# decomposition using a function rave for
+# each associated activity
+while left_is_clear():
+fill_one_row()
+return_to_row_start()
+move_up()
+# rewrite code after white loop to overcome
+# fencepost bug
+fill_one_row()",9,"from karel.stanfordkarel import *
+""""""
+karel should fill the world with beepers.
+""""""
+def main():
+# decomposition using a function rule for
+# each associated activity
+while left_is_clear():
+fill_one_row()
+return_to_row_start()
+move_up()
+# rewrite code after while loop to overcome
+# fencepost bug
+fill_one_row()",9
+"from karel.stanfordkarel import *
+def main():
+move()
+move()
+turn_right()
+move()
+turn_left()
+move()
+pick_beeper()
+return_home()
+def return_home():
+turn_around()
+move()
+turn_right()
+move()
+turn_left()
+move()
+move()
+turn_around()
+def turn_right():
+for i in range (3):
+turn_left()
+def turn_around():
+for i in range (2):
+turn_left()
+if __name__ == '__main__':
+main()","if
+from karel.stanfordkarel import*
+def main ()
+move()
+move()
+turn_right()
+move()
+turn_left()
+move()
+-
+pick-beeper()
+return-home()
+def return home()
+turn-around()
+move()
+turn_right()
+move ()
+turn_left()
+movel)
+move()
+turn_around ()
+def turn_right()
+for i in range (3):
+turn-left()
+def turn around ()
+for i in range (2):
+turn_left()
+name.
+main()
+^_main_",42,"from karel. stanfordkarel import *
+def main ()
+move ()
+move()
+turn-right ()
+move ()
+turn-leff()
+move ()
+pick-beeper ()
+return-home()
+def return_home()
+trurn_around()
+move ()
+turn_right()
+move ()
+turn_left ()
+movel)
+move ()
+turn_around ()
+def turn-right ()
+for \( i \) in range (3):
+turn-left ()
+def turn around()
+for \( i \) in range (2):
+turn-left \( ( \) )
+if \( \operatorname{mame}_{-\operatorname{main}()}== \) __main', :",99,"from karel.stanfordkarel import *
+def main():
+move()
+move()
+turn_right()
+move()
+turn_left()
+move()
+pick_beeper()
+return_home()
+def return_home():
+turn_around()
+move()
+turn_right()
+move()
+turn_left()
+move()
+move()
+turn_around()
+def turn_right():
+for i in range(3):
+turn_left()
+def turn_around():
+for i in range(2):
+turn_left()
+if __name__ == '__main__':
+main()",2,"from karel.stanfordkarel import *
+def main():
+move()
+move()
+turn_right()
+move()
+turn_left()
+move()
+pick_beeper()
+return_home()
+def return_home():
+turn_around()
+move()
+turn_right()
+move()
+turn_left()
+move()
+move()
+turn_around()
+def turn_right():
+for i in range(3):
+turn_left()
+def turn_around():
+for i in range(2):
+turn_left()
+if __name__ == '__main__':
+main()",2,"from karel.stanfordkarel import *
+def main():
+move()
+move()
+turn_right()
+move()
+turn_left()
+move()
+pick_beeper()
+return_home()
+def return_home():
+turn_around()
+move()
+turn_right()
+move()
+turn_left()
+move()
+move()
+turn_around()
+def turn_right():
+for i in range(3):
+turn_left()
+def turn_around():
+for i in range(2):
+turn_left()
+if __name__ == '__main__':
+main()",2
+"def main():
+vowel_count = 0
+vowels = ['a', 'e', 'i', 'o', 'u']
+input_string = input(""enter the string: "")
+input_string = input_string.lower()
+for char in input_string:
+for vowel in vowels:
+if char == vowel:
+vowel_count += 1
+print(vowel_count)
+if __name__ == '__main__':
+main()","def main ():
+rauel caunl=0
+vawels = ['a', 'e', 'i', '0', 'u']
+""input-string = ""input (""enter the string:"")
+impret string = ""impret_string= lawer ()
+for chaor in 'imput string:
+for vauvel in vamels:
+if char = = vowel:
+vauvel_cament + = 1
+point (vowel count)
+'__main_
+y__name__ =
+main ()
+inn
+':",72,"de main ():
+vouel caunt \( =0 \)
+input_string = input (""enter the string:"")
+input_string = inpet_string. lawer()
+for choor in input string:
+for vauel 'en vauch:
+if char = = vouel:
+valuel-caunt \( +=1 \)
+print (veuel caunt)
+\[
+egin{array}{l}
+ext { if _-name__ }== ext { '_ main_- } \
+\operatorname{main}() \
+\end{array}
+\]",145,"def main():
+vowel_count = 0
+input_string = input (""enter the string:"")
+input_string = input_string.lower()
+for char in input_string:
+for vowel in ""aeiou"":
+if char == vowel:
+vowel_count += 1
+print (vowel_count )
+if __name__ == '__main__':
+main()",46,"def main():
+vowel_count = 0
+input_string = input(""enter the string:"")
+input_string = input_string.lower()
+for char in input_string:
+for vowel in 'aeiou':
+if char == vowel:
+vowel_count += 1
+print(vowel_count)
+if __name__ == '__main__':
+main()",43,"def main():
+vowel_count = 0
+input_string = input(""enter the string:"")
+input_string = input_string.lower()
+for char in input_string:
+for vowel in 'aeiou':
+if char == vowel:
+vowel_count += 1
+print(vowel_count)
+if __name__ == ""__main__"":
+main()",45
+"def main():
+string = str(input('enter string: '))
+for i in range((len(string)-1),-1,-1):
+print(string[i])","def main ():
+string = str (input ('enter string: '))
+for i in range
+print (string[i])
+((len(string)-1),-1,-1):
+lk
+to
+ays",37,"def \( \operatorname{main}( \) ):
+\[
+ext { string }=\operatorname{str}( ext { input ('enter string: ij) }
+\]
+for \( i \) in range \( (( \) len(string \( )-1),-1,-1) \) : print (string \( [i] \) )",94,"def main():
+string = str(input('enter string: '))
+for i in range(len(string) - 1, -1, -1):
+print(string[i])
+main()",13,"def main():
+string = str(input('enter string: '))
+for i in range (len(string)-1, -1, -1):
+print(string[i])",4,"def main():
+string = str(input('enter string: '))
+for i in range(len(string)-1,-1,-1):
+print(string[i])",2
+"seq = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+seq_even = []
+# it check every element in list(sequence) --
+for i in seq:
+# it decides whether an element from sequence is even ---
+if i % 2 == 0:
+seq_even.append(i) # appends even i in empty list(seq_even)
+print(seq_even)","seq - [1, 2, 3, 4, 5, 6, 7, 8, 9]
+seg - even = []
+#it checks every element in dist (sequence)--
+for i in seq:
+#it decides whether an element from sequence is even ---
+if i % 2 == 0:
+seq-even. append(i) #appends even i in empty list (seq-even)
+print (seq-even)",18,"\[
+egin{array}{l}
+ext { seq }=[1,2,3,4,5,6,7,8,9] \
+ext { seq-even }=[]
+\end{array}
+\]
+\# it checks every element in dist(sequence.).for \( i \) in seq:
+\# it decides whether an clement from sequence is even -.. if \( i \% 2==0 \) :
+seq-even. append ( \( i \) ) \# appends even \( i \) in empty list (seq-even) print (seq-even)",111,"seq = [1,2,3,4,5,6,7,8,9]
+seq_even = []
+for i in seq:
+if i % 2 == 0:
+seq_even.append(i)
+print(seq_even)",153,"seq =[1,2,3,4,5,6,7,8,9]
+seq_even =[]
+for i in seq:
+if i % 2==0:
+seq_even.append(i)
+print(seq_even)",157,"seq = [1,2,3,4,5,6,7,8,9]
+seq_even = []
+# it checks every element in the sequence.
+for i in seq:
+# it decides whether an element from sequence is even.
+if i % 2 == 0:
+seq_even.append(i) # appends even i in empty list seq_even.
+print(seq_even)",24
+"from graphics import canvas
+canvas_width = 300
+canvas_height = 300
+circle_size = 20
+delay = 0.01
+def main:
+canvas = canvas(canvas_width, canvas_height)
+while true
+mouse_x = canvas.get_mouse_x()
+mouse_y = canvas.get_mouse_y()
+if mouse_x >= 0 and mouse_x <= canvas_width and mouse_y >=0 and mouse_y <= canvas_height","from
+from graphics import canvas
+canvas_width = 300
+canvas-height = 300
+circle_size =
+delay = 0,01
+= 20
+def main:
+canvas = canvas ( canvas width, canvas height
+while true
+movse_x = canvas. get_mouse_x()
+mouse-y = canvas. get mouse_y()
+te
+1
+if mouse x >= 0 and mouse x e canvas_width
+and mousely to and mouse_ye canvas. heigh",45,"frim graphics i mport canvas
+\[
+egin{array}{l}
+ext { canvas_width }=300 \
+ext { canvas_hel6ht }=300 \
+ext { circle_size }=20 \
+ext { delay = } 0,01
+\end{array}
+\]
+def main :
+canvas = canvas ( canvar_ wi dfh, canvas hec b ht)
+while true
+\[
+egin{array}{l}
+ext { movse-x = convas. get_mouse_x() } \
+ext { movse-y = canvas. get mouse_y () }
+\end{array}
+\]
+if mouse_x \( x=0 \) and mouse_x \( e \) canuns_wiot4 and nouse_y \( t=0 \) and mouse_ye ch, uss. heig",186,"from graphics import canvas
+canvas_width = 300
+canvas_height = 300
+circle_size = 20
+delay = 0.01
+def main():
+canvas = canvas(canvas_width, canvas_height)
+while true:
+mouse_x = canvas.get_mouse_x()
+mouse_y = canvas.get_mouse_y()
+if mouse_x >= 0 and mouse_x <= canvas_width and mouse_y >= 0 and mouse_y <= canvas_height:",5,"from graphics import canvas
+canvas_width = 300
+canvas_height = 300
+circle_size = 20
+delay = 0.01
+def main():
+canvas = canvas(canvas_width, canvas_height)
+while true:
+mouse_x = canvas.get_mouse_x()
+mouse_y = canvas.get_mouse_y()
+if mouse_x >= 0 and mouse_x <= canvas_width and mouse_y >= 0 and mouse_y <= canvas_height:
+pass",10,"from graphics import canvas
+canvas_width = 300
+canvas_height = 300
+circle_size = 20
+delay = 0.01
+def main():
+canvas = canvas(canvas_width, canvas_height)
+while true:
+mouse_x = canvas.get_mouse_x()
+mouse_y = canvas.get_mouse_y()
+if mouse_x >= 0 and mouse_x <= canvas_width and mouse_y >= 0 and mouse_y <= canvas_height:
+pass",10
+"# 1 karel problem - karel home
+from karel.stanfordkarel import*
+# this program defines a main function which should make karel
+# move to the beeper, pick it up and return home.
+def main():
+get_out()
+pick_food()
+get_back_home()
+# pre : karel facing east, at the corner of starting position
+# post: karel facing east, outside the home, at the position of beeper
+def get_out():
+turn_right()
+move()
+turn_left()
+move()
+move()
+move()
+# post: karel facing west, at the position of beeper
+def pick_food():
+pick_beeper()
+turn_around()
+# post: karel facing east, at the corner of starting position
+def get_back_home():
+move()
+move()
+move()
+turn_right()
+move()
+turn_right()
+def turn_right():
+for i in range(3):
+turn_left()
+def turn_around():
+turn_left()
+turn_left()
+if __name__ == '__main__':
+main()","#1 karel problem - karel home
+from kard stanfordkarel import *
+# this program defines a main function which should make karel
+# move to the beeper, pick it and return home.
+up
+def main ():
+gre_one ()
+pick-food ()
+get back home u
+#pre: karel facing eask, at the corner of starting position.
+# posk: karel facing east, outside the home, at the position of beeper
+def get out ():
+turn_right()
+move (
+turn_left()
+move ()
+move ()
+move()
+# post
+* karel facing west, at
+def pick-food ():
+pick beeper ()
+turn around ()
+#post: karel facing east, at the corner of starting position
+def get back home ():
+move ()
+move ()
+move()
+turn_right()
+move ()
+turn right (1
+def turn right ():
+for i in range (3)
+turn_left()
+def turn around ():
+turn_left()
+zurn_left()
+the position of beeper
+if_name__ == '__main_ ' :
+main ()",107,"\#1 karel problem-karel home from karel. stanfordkarel impork *
+\# this program defines a main function which should make karel \# move to the beeper, pick it up and return home
+def \( \operatorname{main}() \) :
+get_oute \( ( \) )
+pick-food ()
+get_back_home \( u \)
+\# pre: karel facing eask, at the corner of stomeng position
+\# posk: karel facing east, oukside the home, at the position of beeper
+def get_out () :
+turn_right ()
+move?
+turn_left ()
+move ()
+move ()
+move ()
+\# post : karel facing west, at the position of beeper
+def pick-food () :
+pick_beeper ()
+turn_around ()
+\# post: karel fring east, at the corner of stonting position def get_back_home ():
+move ()
+move ()
+move ()
+turn_right ()
+move ()
+turn right ( )
+def turn right () :
+for \( i \) in range (3) :
+turn_left ()
+def turn around ():
+turn_left ()
+turn_kft()
+if _ name_ \( == \) - main - '
+main ()",123,"# karel problem-karel home
+from karel.stanfordkarel import *
+# this program defines a main function which should make karel
+# move to the beeper, pick it up and return home
+def main():
+get_out()
+pick_food()
+get_back_home()
+# pre: karel facing east, at the corner of starting position
+# post: karel facing east, outside the home, at the position of beeper
+def get_out():
+turn_right()
+move()
+turn_left()
+move()
+move()
+move()
+# post : karel facing west, at the position of beeper
+def pick_food():
+pick_beeper()
+turn_around()
+# post: karel facing east, at the corner of starting position
+def get_back_home():
+move()
+move()
+move()
+turn_right()
+move()
+turn_right()
+def turn_right():
+for i in range(3):
+turn_left()
+def turn_around():
+turn_left()
+turn_left()
+if __name__ == '__main__':
+main()",8,"# karel problem-karel home
+from karel.stanfordkarel import *
+# this program defines a main function which should make karel
+# move to the beeper, pick it up and return home
+def main():
+get_out()
+pick_food()
+get_back_home()
+# pre: karel facing east, at the corner of starting position
+# post: karel facing east, outside the home, at the position of beeper
+def get_out():
+turn_right()
+move()
+turn_left()
+move()
+move()
+move()
+# post : karel facing west, at the position of beeper
+def pick_food():
+pick_beeper()
+turn_around()
+# post: karel facing east, at the corner of starting position
+def get_back_home():
+move()
+move()
+move()
+turn_right()
+move()
+turn_right()
+def turn_right():
+for i in range(3):
+turn_left()
+def turn_around():
+turn_left()
+turn_left()
+if __name__ == '__main__':
+main()",8,"# karel problem - karel home
+from karel.stanfordkarel import *
+# this program defines a main function which should make karel
+# move to the beeper, pick it up and return home
+def main():
+get_out()
+pick_food()
+get_back_home()
+# pre: karel facing east, at the corner of starting position
+# post: karel facing east, outside the home, at the position of beeper
+def get_out():
+turn_right()
+move()
+turn_left()
+move()
+move()
+move()
+# post : karel facing west, at the position of beeper
+def pick_food():
+pick_beeper()
+turn_around()
+# post: karel facing east, at the corner of starting position
+def get_back_home():
+move()
+move()
+move()
+turn_right()
+move()
+turn_right()
+def turn_right():
+for i in range(3):
+turn_left()
+def turn_around():
+turn_left()
+turn_left()
+if __name__ == '__main__':
+main()",6
+"def factorial(n):
+if n == 0:
+return 1
+else:
+return n * factorial(n-1)
+print(factorial(5))","def factorial (n):
+if n == 0:
+return 1
+else:
+return n* factorial (n-1)
+print (factorial (5))",5,"def factorial \( (n) \) :
+if \( n==0 \) :
+return 1
+else:
+return \( n \) * factorial \( (n-1) \)
+print (factorial \( (5)) \)",36,"def factorial(n):
+if n == 0:
+return 1
+else:
+return n * factorial(n-1)
+print(factorial(5))",0,"def factorial(n):
+if (n==0):
+return 1
+else:
+return n * factorial(n-1)
+print(factorial(5))",4,"def factorial(n):
+if n == 0:
+return 1
+else:
+return n * factorial(n-1)
+print(factorial(5))",0
+"def main():
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+list=[]
+for elem1 in list1:
+for elem2 in list2:
+if elem1 == elem2:
+elem = elem1
+list.append(elem)
+print(list)","det main 1:
+list 1 2 (1,2,3,4]
+list 2 = (3,4,5,67
+list = []
+for elem 1 in list 1 1
+for elem2 in list 2:
+it olem2 = = elem 2:
+elem = elem 2
+(n46)
+print (list)
+list-append (etem)
+livor",60,"det \( \operatorname{man}(1) \) :
+\[
+egin{array}{l}
+ext { list } 1=[1,2,3,4] \
+ext { list } 2=[3,4,5,6] \
+ext { list }=[7] ext { in list } 11 \
+ext { for elem } 1
+\end{array}
+\]
+for elem2 in list2:
+it \( \operatorname{elem} 2= \) elem2:
+elem = elem 2
+list-append (eum)
+print (ist)",157,"list1 = [1,2,3,4]
+list2 = [3,4,5,6]
+list = [7]
+for elem1 in list1:
+for elem2 in list2:
+if elem1 == elem2:
+list.append(elem1)
+print(list)",35,"def man(num):
+list1=[1,2,3,4]
+list=[7]
+list2=[3,4,5,6]
+for elem1 in list1:
+for elem2 in list2:
+if elem1 == elem2:
+elem = elem2
+list.append(elem)
+print(list)
+man(1)",38,"list1 = [1,2,3,4]
+list2 = [3,4,5,6]
+list3 = [7]
+for elem2 in list2:
+if elem2 in list1:
+elem = elem2
+list3.append(elem)
+print(list3)",49
+"string = input()
+print(string[::-1])","string = input ()
+print (string[::-1])",2,\( egin{array}{l} ext { string }= ext { input } c) \ ext { print }( ext { string }[::-1])\end{array} \),69,"string = input()
+print(string[::-1])",0,"string = input()
+print(string[::-1])",0,"string = input()
+print(string[::-1])",0
+"from karel.stanfordkarel import *
+def main():
+turn_left()
+tower_n()
+tower_s()
+move_4x()
+turn_left()
+tower_n()
+tower_s()
+def tower_s():
+turn_3x()
+tower()
+turn_left()
+def tower_n():
+tower()
+turn_3x()
+move_4x()
+def tower():
+for i in range (5):
+if front_is_clear():
+put_beeper()
+move()
+else:
+put_beeper()
+def turn_3x():
+turn_left()
+turn_left()
+turn_left()
+def move_4x():
+move()
+move()
+move()
+move()
+if __name__ == '__main__':
+main()","from karel. stanford rund emport
+def main ():
+turn-
+laft
+tower_n()
+tower_s()
+move 4x()
+fern-
+-left()
+tower_n()
+-s()
+tower
+del
+de tower -s():
+furn-3x()
+tower ()
+turn_left()
+del tower _n():
+town ()
+turn _ 3x()
+move 4x()
+def tower (13
+for i in
+range
+(5):
+if front_is_clear():
+put-baper (1
+movel)
+else:
+def. jurn - 3x(1:
+turn_left()
+leftis
+turn-
+turn_left()
+()
+pest-beeper ()
+- move_4x();
+move()
+move()
+movell
+move()
+name --
+__main__."":
+main ()
+k",121,"from karel. stanfordkad import *
+def max \( (1): \)
+\[
+egin{array}{l}
+ext { furn - let (1) } \
+ext { fown-n() } \
+ext { tower-s() } \
+ext { move-4x () } \
+ext { furm-lyt ( ) } \
+ext { tower-n( ) } \
+ext { tower-s() } \
+\end{array}
+\]
+def tower-s() :
+\[
+egin{array}{l}
+ext { furn - } 3 imes() \
+ext { tower (1) } \
+ext { turn - laff() }
+\end{array}
+\]
+def tower - n ( ):
+town ()
+\( \operatorname{tin} \) - \( 3 imes() \)
+move_ \( 4 imes() \)
+def tower (1):
+for \( i \) in rang \( (5) \) :
+if front-is-clear () :
+move ()
+else:
+put_buper ()
+def. fum \( -3 imes(1) \) :
+\[
+egin{array}{l}
+ext { turn - blff (1) } \
+ext { turn - bff (1) } \
+ext { turn - beft (1) }
+\end{array}
+\]
+def mere_4r(1):
+morel)
+\[
+egin{array}{c}
+ext { if name - }==^{\prime} ext {. main ... } \
+ext { main () }
+\end{array}
+\]
+main 1)",493,"from karel.stanfordkarel import *
+def max_1():
+turn_left()
+move_n()
+tower_s()
+move_4x()
+turn_right()
+tower_n()
+tower_s()
+def tower_s():
+for _ in range(3):
+tower_1()
+turn_left()
+def tower_n():
+town()
+turn_3_times()
+move_4_times()
+def tower_1():
+for _ in range(5):
+if front_is_clear():
+move()
+else:
+put_beeper()
+def turn_3_times():
+turn_left()
+turn_left()
+turn_left()
+def move_4x():
+move()
+if __name__ == ""__main__"":
+max_1()",89,"from karel.stanfordkarel import *
+def max():
+turn_left()
+move()
+turn_south()
+move_4x()
+turn_left()
+turn_north()
+turn_south()
+def turn_south():
+turn_3_times()
+move_1()
+turn_left()
+def turn_north():
+town()
+turn_3_times()
+move_4_times()
+def move_1():
+for i in range(5):
+if front_is_clear():
+move()
+else:
+put_beeper()
+def turn_left_3_times():
+turn_left()
+turn_left()
+turn_left()
+def move_4_times():
+move()
+if __name__ == ""__main__"":
+main()",123,"from karel.stanfordkarel import *
+def main():
+turn_left()
+move()
+tower_s()
+move_4x()
+turn_left()
+tower_n()
+tower_s()
+def tower_s():
+for _ in range(3):
+tower()
+turn_left()
+def tower_n():
+move()
+turn_3_times()
+move_4x()
+def tower():
+for i in range(5):
+if front_is_clear():
+move()
+else:
+put_beeper()
+def turn_3_times():
+for _ in range(3):
+turn_left()
+def move_4x():
+for _ in range(4):
+move()
+if __name__ == ""__main__"":
+main()",87
+"def main():
+string = str(input('enter string: '))
+for i in range((len(string)-1),-1,-1):
+print(string[i])
+if __name__ == '__main__':
+main()","def main ():
+string = str (input ( 'enter string :'))
+for i in range ((len (string)-1),-1,-1):
+print (string[i])
+if __name__ == '___main__':
+main()",10,"det main ():
+string \( = \) str (input ( enter string: '))
+for \( i \) in range ((len (string) -1\( ),-1,-1) \) : print (string \( [i] \) )
+if name_ \( == \) '_-_main_-1:
+\( \operatorname{main}() \)",69,"def main():
+string = str(input('enter string: '))
+for i in range(len(string) -1, -1, -1):
+print(string[i])
+if __name__ == '__main__':
+main()",5,"def main():
+string = str(input('enter string: '))
+for i in range(len(string)-1, -1, -1):
+print(string[i])
+if __name__ == '__main__':
+main()",4,"def main():
+string = str(input('enter string: '))
+for i in range(len(string) -1, -1, -1):
+print(string[i])
+if __name__ == ""__main__"":
+main()",7
+"def main():
+num = int(input(""enter a number: ""))
+print(f""{num} is {'prime' if is_prime(num) else 'not prime'}"")
+def is_prime(n):
+if n <= 1:
+return false
+elif n <= 3:
+return true
+elif n % 2 == 0 or n % 3 == 0:
+return false
+for i in range(5, int(n ** 0.5) + 1, 6):
+if n % i == 0 or n % (i + 2) == 0:
+return false
+return true
+if __name__ == ""__main__"":
+main()","if
+def main():
+nur - int (input (""enter a umby: ""))
+print (f"" { num } is { ""prime if is_preme (nom)
+else 'not prime' 3"")
+lef is__ pame(n):
+<=
+return false
+elif n <= 3.
+feton true
+elf 0 2 2 = = 6
+02 / 3 = = 0;
+retow false
+for i in, range (5, int(n"" 0.5) +1,6)
+if 1% 1 = = 01 02 0% (i + 2) = = 6:
+retor false
+netum thve
+pale
+main ()
+--
+main",105,"\( \operatorname{deg} \operatorname{main}(): \)
+num =int( (iuput(""entu a nmkn: "")) prutt(f""\{num\} is \{'prime' if is prome(num) else not prime 3 "")
+def is prme \( (n) \) :
+if \( n<=1 \)
+reture alse
+\( \operatorname{elif} \cap<=3 \) :
+seton true
+elf \( n \% 2==arnothing \) or \( \cap \% 3==arnothing \) :
+re tow jalse
+for i in ravge \( \left(5
+ight. \) int \( \left.\left(n^{* *} 0,5
+ight)+1,6
+ight) \) if \( n \% i==arnothing \) or \( n \%(i+2)==arnothing \) : retur false
+nefom thoe",274,"def main():
+num = int(input(""enter a number: ""))
+print(f""{num} is {'prime' if is_prime(num) else 'not prime'}"")
+def is_prime(n):
+if n <= 1:
+return false
+elif n <= 3:
+return true
+elif n % 2 == 0 or n % 3 == 0:
+return false
+for i in range(5, int(n**0.5) + 1, 6):
+if (n % i == 0) or (n % (i + 2) == 0):
+return false
+return true",40,"def main():
+num = int(input(""enter a number: ""))
+print(f""{num} is {'prime' if is_prime(num) else 'not prime'} "")
+def is_prime(n):
+if n <= 1:
+return false
+elif n <= 3:
+return true
+elif (n % 2 == 0) or (n % 3 == 0):
+return false
+for i in range(5, int(n**0.5)+1, 6):
+if (n % i == 0) or (n % (i+2) == 0):
+return false
+return true
+main()",42,"def main():
+num = int(input(""enter a number: ""))
+print(f""{num} is {'prime' if is_prime(num) else 'not prime'}"")
+def is_prime(n):
+if n <= 1:
+return false
+elif n <= 3:
+return true
+elif n % 2 == 0 or n % 3 == 0:
+return false
+i = 5
+while i * i <= n:
+if n % i == 0 or n % (i + 2) == 0:
+return false
+i += 6
+return true
+main()",63
+"from karel.stanfordkarel import *
+def main():
+turn_left()
+while front_is_clear():
+turn_right()
+fill_row()
+return_to_home()
+jump_row()
+turn_right()
+fill_row()
+return_to_home()
+while front_is_clear():
+move()
+def fill_row():
+while front_is_clear():
+put_beeper()
+move()
+put_beeper()","from karel. stamfordkarel import
+def main ():
+turn-left():
+while frent_is_ alpar (fi
+tunn-right()
+fill-row ()
+return _to_home ll
+jump_row()
+turn_right()
+fill-row ()
+vetwook to home ()
+while frent-is. elear();
+meve (s
+sef fill_row();
+while frent_is_ clearl]
+put - beeper ()
+move ()
+put-beeper ()",55,"fremkarel. stamfordkared impert*
+def \( \operatorname{main}() \) :
+turn-left ():
+while frent - is _ clpar ():
+tumn-right 1)
+fill-row()
+retwn-te-home()
+junprow()
+turn - right ()
+fillarow ()
+ve turnkte - home ()
+while front-is. elear ( \( ) \) :
+meve()
+def fill-rew():
+while front - is - clearl)
+put - beeper ()
+move ()
+put-beeper ()",97,"from karel.stanfordkarel import *
+def main():
+turn_left()
+while front_is_clear():
+turn_right()
+fill_row()
+return_to_home()
+jump_row()
+turn_right()
+fill_row()
+return_to_home()
+while front_is_clear():
+move()
+def fill_row():
+while front_is_clear():
+put_beeper()
+move()
+put_beeper()",0,"from karel.stamfordkarel import *
+def main():
+turn_left()
+while front_is_clear():
+turn_right()
+fill_row()
+return_to_home()
+jump_row()
+turn_right()
+fill_a_row()
+return_to_home()
+while front_is_clear():
+move()
+def fill_row():
+while front_is_clear():
+put_beeper()
+move()
+put_beeper()",3,"from karel.stanfordkarel import *
+def main():
+turn_left()
+while front_is_clear():
+turn_right()
+fill_row()
+return_to_home()
+jump_row()
+turn_right()
+fill_row()
+return_to_home()
+while front_is_clear():
+move()
+def fill_row():
+while front_is_clear():
+put_beeper()
+move()
+put_beeper()",0
+"from stanfordkarel import *
+""""""
+karel should fill the whole world with beepers.
+""""""
+def main():
+""""""
+you should write your code to make karel do its task in
+this function. make sure to delete the 'pass' line before
+starting to write your own code. you should also delete this
+comment and replace it with a better, more descriptive one.
+""""""
+while not left_is_blocked():
+put_beeper_line()
+reset_position()
+put_beeper_line()
+def put_beeper_line():
+put_beeper()
+while front_is_clear():
+move()
+put_beeper()","from stanfordkarel import *
+11 11 11
+kard should
+beepers.
+|| || ||
+def
+main ():
+11 [1 (1
+you should write
+karel do its
+comment
+better
+fill
+11 [11
+/
+the whole world with
+make
+viche
+before starting to
+code. you should also
+to
+task in this
+function.
+delete the pass line
+write your
+owen
+delete this
+with
+and replace it
+more descriptive one.
+move ()
+put_ beeper ()
+your
+put_ beeper _line ()
+our code to malce
+while not left_it_ blocked ():
+put - beeper_line()
+resit_ position ()
+dif put_beeper_line():
+put_beeper ()
+front_is_clear
+while
+():",328,"grom stanfordkarel import *
+111111
+karel should fill the whole world with bepers.
+111111
+def \( \operatorname{main}() \) :
+""11 11
+you should write your code to male karel do its task in this function. make sure to delete the 'pass'1 line bfore slarting to rurite your owen code. you should also delete thir comment and replace it with a better, more descriptive one. 111111
+while not left_ir_blockd ():
+put_beper_lin ()
+resit_position ()
+put_buper_line c)
+dy put_buper-line \( ( \) ):
+put_beper ()
+while front_is-clear c):
+move ()
+put_beper ()",91,"from stanfordkarel import *
+def main():
+""""""
+karel will fill the world with beepers.
+you should write your code to make
+karel do its task in this function.
+make sure to delete the 'pass' line
+before starting to write your own
+code. replace this comment with a
+better, more descriptive one.
+""""""
+while not left_is_blocked():
+put_beeper_line()
+reset_position()
+put_beeper_line()
+def put_beeper_line():
+put_beeper()
+while front_is_clear():
+move()
+put_beeper()",85,"from stanfordkarel import *
+'''
+karel should fill the whole world with beepers.
+'''
+def main():
+'''
+you should write your code to make karel do its task in this function.
+make sure to delete the 'pass' line before starting to write your own
+code. you should also delete this comment and replace it with a
+better, more descriptive one.
+'''
+while not left_is_blocked():
+put_beeper_line()
+reset_position()
+put_beeper_line()
+def put_beeper_line():
+put_beeper()
+while front_is_clear():
+move()
+put_beeper()",18,"from stanfordkarel import *
+def main():
+""""""
+the main function in this program is making karel to fill the whole world with beepers.
+karel will place a beeper in each cell until no cells are left to be filled.
+""""""
+while not left_is_blocked():
+put_beeper_line()
+reset_position()
+put_beeper_line()
+def put_beeper_line():
+put_beeper()
+while front_is_clear():
+move()
+put_beeper()",225
+"#karel needs to move to the bottom of the next arch to commence
+#building the next column.
+#precondition: karel is facing east
+#post condition: karel is still facing east at the next column site.
+def move_to_next_arch_bottom():
+if front_is_clear():
+for i in range(4):
+move()""
+def turn_around():
+turn_left()
+turn_left()
+if __name__ == '__main__':
+main()","#karel needs to move to the bottom of the next arch to comm
+#ence building the next column.
+# precondition: karel is facing east
+#post_condition : karel is facing east at the next column site.
+def move_to_ next_arch_botton ():
+if front is clear ():
+for i in range (4):
+move ()
+def turn around () =
+turn_left()
+turn_left (d
+if name
+main ()
+main",45,"hikarel needs to move to the bottom of the next arech to comm. hence building the next column.
+\# precondition: karel is facing east
+\#post-condition: kavel is facing east at the next column site. def move_to_next_arch_botton():
+if frontis-clear () :
+for \( i \) in range (4):
+move ()
+def turnarounl () :",92,"def move_to_next_arch_bottom():
+if front_is_clear():
+for i in range(4):
+move()
+def turnaround():",256,"def move_to_next_arch_bottom():
+if front_is_clear():
+for i in range(4):
+move()
+def turnaround():",256,"# precondition: karel is facing east
+# post-condition: karel is facing east at the next column site.
+def move_to_next_arch_bottom():
+if front_is_clear():
+for i in range(4):
+move()
+def turnaround():
+turn_left()
+turn_left()",134
+"def find_lrgst_smallst(number):
+if not numbers:
+return none
+smallest = largest = number[0]
+for num in numbers:
+if num < smallest:
+smallest = num
+if num > largest:
+largest = num
+return smallest, largest
+# example usage:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+result = find_lrgst_smallst(numbers)
+print(result)","heart
+def- find ligst_smallet (number);
+if not numbers:
+return none
+-smallest= largest = number [0]
+for num in numbers:
+if num < smallest:
+= num
+pit
+smallest
+if nam > largest :
+largest.
+fieturin smallest, largest
+= num
+#example usage:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+tresult
+find_ligst __ smallst (numbens)
+print (result)
+udbhaas-unmess shikssaa pribaar",91,"def find_rigst_smallst (number):
+if not numbers:
+return none
+- smallest = largest = number [0]
+for num in numbers:
+if num < smallest:
+\[
+ext { smallest }= ext { num }
+\]
+if nam > largest:
+\[
+ext { largest }= ext { num }
+\]
+fietutin smallest, largest
+* example usage.
+\[
+egin{array}{l}
+ext { rumbers }=[1,2,3,4,5,6,7,8,9] \
+ext { result }= ext { find_lrgst_smallst (numbers) }
+\end{array}
+\]
+print (result)",123,"def find_largest_smallest(numbers):
+if not numbers:
+return none
+smallest = largest = numbers[0]
+for num in numbers:
+if num < smallest:
+smallest = num
+if num > largest:
+largest = num
+return smallest, largest
+# example usage.
+numbers = [1,2,3,4,5,6,7,8,9]
+result = find_largest_smallest(numbers)
+print(result)",17,"def find_largest_smallest(numbers):
+if not numbers:
+return none
+smallest = largest = numbers[0]
+for num in numbers:
+if num < smallest:
+smallest = num
+if num > largest:
+largest = num
+return smallest, largest
+numbers = [1,2,3,4,5,6,7,8,9]
+result = find_largest_smallest(numbers)
+print(result)",33,"def find_largest_smallest(numbers):
+if not numbers:
+return none
+smallest = largest = numbers[0]
+for num in numbers:
+if num < smallest:
+smallest = num
+if num > largest:
+largest = num
+return smallest, largest
+# example usage.
+numbers =[1,2,3,4,5,6,7,8,9]
+result = find_largest_smallest(numbers)
+print (result)",19
+"def main():
+user_number = input (""enter the number: "")
+result = sum_of_digits(user_number)
+print (""the sum of the digits is: "", result)
+def sum_of_digits(user_number):
+number_str = str(user_number)
+digit_sum = 0
+for digit in number_str:
+digit_sum += int(digit)
+return digit_sum
+if __name__ == ""__main__"":
+main()","def main():
+user number
+input (""enter the number: "")
+result = sum_of_digits (user_number)
+print (""the sum of the digits is"", result)
+def sum_of_digits (user_ number):
+w 18
+number_str = str (user_number)
+digit_sum = 0
+for digit in number str:
+#zero
+return digit sum
+if_name_
+main()
+digit_sum += int(digit)
+_main_"":",73,"def main():
+user_number = input (""enter the number: "")
+result = sum_of digits (user_number)
+print (""the sum of the digits is"", result)
+def sum_of_digits (user_number):
+number_st \( r=\operatorname{str} \) (user_number)
+digit_sum \( =arnothing \quad \# \) zero
+for digit in numberstr:
+\[
+ext { digit_sum } t=\operatorname{int} ext { (digit) }
+\]
+veturn digit_sum
+if name_ \( =="" \) main_ \( "" \) :
+main()",114,"def main():
+user_number = input(""enter the number: "")
+result = sum_of_digits(user_number)
+print(""the sum of the digits is"", result)
+def sum_of_digits(user_number):
+number_str = str(user_number)
+digit_sum = 0
+for digit in number_str:
+digit_sum += int(digit)
+return digit_sum
+if __name__ == ""__main__"":
+main()",4,"def main():
+user_number = input(""enter the number: "")
+result = sum_of_digits(user_number)
+print(""the sum of the digits is"", result)
+def sum_of_digits(user_number):
+number_str = str(user_number)
+digit_sum = 0
+for digit in number_str:
+digit_sum += int(digit)
+return digit_sum
+if __name__ == ""__main__"":
+main()",4,"def main():
+user_number = input(""enter the number: "")
+result = sum_of_digits(user_number)
+print(""the sum of the digits is"", result)
+def sum_of_digits(user_number):
+number_str = str(user_number)
+digit_sum = 0
+for digit in number_str:
+digit_sum += int(digit)
+return digit_sum
+if __name__ == ""__main__"":
+main()",4
+"def is_prime(n):
+""""""
+returns true if n is prime, false otherwise.
+""""""
+if n <= 1:
+return false
+for i in range(2, int(n**0.5) + 1):
+if n % i == 0:
+return false
+return true
+def main():
+""""""
+the main function.
+""""""
+n = int(input(""enter a number: ""))
+if is_prime(n):
+print(n, ""is a prime number."")
+else:
+print(n, ""is not a prime number."")
+if __name__ == ""__main__"":
+main()","def is-prime (n):
+don
+if
+returns true if n is prime, false otherwise.
+|(a ||
+if n <
+n < = 1:
+return false
+for i in range (2, int(n** 0.5) +1);
+if n % i = = 0;
+def main():
+return true
+[((11
+the main function.
+int
+return false
+14
+n = int ( input (""enter a number: "")
+if is-prime (n):
+print (n
+else:
+""is a
+main()
+print (n. ""is not a prime number."")
+name__ ==
+prime number."")
+11
+main.
+--
+})",129,"def is-prime \( (n) \) :
+returns true if \( n \) is prime, false otherwise.
+iiu11
+if \( n<=1 \) :
+return false
+for \( i \) in range \( \left(2, \operatorname{int}\left(n^{* *} 0.5
+ight)+1
+ight) \) :
+if \( n \% i==0 \) :
+retum false
+return true
+def \( \operatorname{main}() \) :
+iiiii
+the main function.
+1....
+\( n=\operatorname{int} \) (input (""enter a number: "")
+if is-prime \( (n) \) :
+print \( (n \), ""is a prime number."")
+else:
+print ( \( n \), ""is not a prime number."")
+if \( \ldots \) name _. \( =="" \) main .. ""
+\( \operatorname{main}() \)",222,"def is_prime(n):
+# returns true if n is prime, false otherwise.
+if n <= 1:
+return false
+for i in range(2, int(n**0.5)+1):
+if n % i == 0:
+return false
+return true
+def main():
+# the main function.
+n = int(input(""enter a number: ""))
+if is_prime(n):
+print(n, ""is a prime number."")
+else:
+print(n, ""is not a prime number."")
+if __name__ == ""__main__"":
+main()",18,"def is_prime(n):
+# returns true if n is prime, false otherwise.
+if n <= 1:
+return false
+for i in range(2, int(n ** 0.5) + 1):
+if n % i == 0:
+return false
+return true
+def main():
+# the main function.
+n = int(input(""enter a number: ""))
+if is_prime(n):
+print(n, ""is a prime number."")
+else:
+print(n, ""is not a prime number."")
+if __name__ == ""__main__"":
+main()",18,"def is_prime(n):
+# returns true if n is prime, false otherwise.
+if n <= 1:
+return false
+for i in range(2, int(n**0.5) + 1):
+if n % i == 0:
+return false
+return true
+def main():
+# the main function.
+n = int(input(""enter a number: ""))
+if is_prime(n):
+print(n, ""is a prime number."")
+else:
+print(n, ""is not a prime number."")
+if __name__ == ""__main__"":
+main()",16
+"# reverse string
+def main():
+str = input(""input a string: "")
+r_str = """"
+for i in str:
+r_str = i + r_str
+print(r_str)
+if __name__ == ""__main__"":
+main()","#reverse string
+def mam ():
+str = input (""input a string: "")
+ro_str=
+for i m str:
+||||
+if_name
+r_str=i+r_stra
+primt (r_stro)
+mam ()
+_maim_"":",55,"\# reverse string
+def \( \operatorname{mam}() \) :
+stro = input (""input a string: "")
+rostro \( ="" 11 \)
+for i instr:
+\[
+r_{-} s t r=i+r_{-} s t r
+\]
+print (r_stro)
+\[
+egin{array}{l}
+ext { if_name- }=="" ext {-main_: } \
+\operatorname{mam} ext { () }
+\end{array}
+\]",140,"# reverse string
+def mam():
+str = input(""input a string: "")
+r_str = """"
+for i in str:
+r_str = i + r_str
+print(r_str)
+if __name__ == ""__main__"":
+mam()",4,"# reverse string
+def mam():
+str = input(""input a string: "")
+r_str = """"
+for i in str:
+r_str = i + r_str
+print(r_str)
+if __name__==""__main__"":
+mam()",6,"# reverse string
+def rev_str():
+stro = input(""input a string: "")
+r_str = """"
+for i in stro:
+r_str = i + r_str
+print(r_str)
+if __name__ == ""__main__"":
+rev_str()",16
+"# write a python program to find the longest word in a given text
+def main():
+sentence = input(""input a sentence: "")
+list = sentence.split()
+l_word = """"
+for word in list:
+if len(word)>len(l_word):
+l_word = word
+print(l_word)
+if __name__ == ""__main__"":
+main()","# write a python program to find the longest word in a given text
+def maint):
+sentence = imput (""input a sentence: "")
+list = sentence.split()
+lword =
+for world im list:
+if len (word) >len (1-word):
+1_ word = word
+primt (1- word)
+if_name_ == ""_mam_"":
+main ()",29,"\# write a python program to find the longest word a \( m \) a given text def main \( ( \) ):
+sentence = imput (""input a sentence: "")
+list = sentence.split ()
+lword = "" ""
+for word im list:
+if len (word) >len (1-word):
+\[
+ext { 1_word }= ext { word }
+\]
+primt (1-word)
+if name_ \( == \) ""-main_"".
+\( \operatorname{main}() \)",89,"# write a python program to find the longest word in a given text
+def main():
+sentence = input(""input a sentence: "")
+list = sentence.split()
+lword = "" ""
+for word in list:
+if len(word) > len(lword):
+lword = word
+print(lword)
+if __name__ == ""__main__"":
+main()",7,"# write a python program to find the longest word in a given text
+def main():
+sentence = input(""input a sentence: "")
+list = sentence.split()
+l_word = """"
+for word in list:
+if len(word) > len(l_word):
+l_word = word
+print(l_word)
+if __name__ == ""__main__"":
+main()",2,"# write a python program to find the longest word in a given text
+def main():
+sentence = input(""input a sentence: "")
+words = sentence.split()
+lword = """"
+for word in words:
+if len(word) > len(lword):
+lword = word
+print(lword)
+if __name__ == ""__main__"":
+main()",16
+"def greatest_common_divisor(a,b):
+smaller_number = a if a < b else b
+common_divisor = []
+for i in range(1, smaller_number + 1):
+if a % i == 0 and b % i == 0:
+common_divisor.append(i)
+return common_divisor[-1]","def greatest common_divisor(a,b):
+smaller_number=a if azb else b
+common_divisor= []
+for i in range (1, smaller_number +1):
+if a %i == 0 and b% i ==0:
+common_divisor.append()
+return common_divisor [-1]",14,"def greatest_common_divisor \( (a, b) \) :
+smaller_number \( =a \) if \( a<b \) else \( b \) common_divisor \( =[] \)
+for \( i \) in range \( (1 \), smaller number +1\( ) \) : if \( a \% i==0 \) and \( b \% i==0 \) : common_divisor. a ppend (i) return common_divisor \( [-1] \)",85,"def greatest_common_divisor(a, b):
+smaller_number = a if a<b else b
+common_divisor = []
+for i in range(1, smaller_number+1):
+if a % i == 0 and b % i == 0:
+common_divisor.append(i)
+return common_divisor[-1]",5,"def greatest_common_divisor(a, b):
+smaller_number = a if a < b else b
+common_divisors = []
+for i in range(1, smaller_number + 1):
+if a % i == 0 and b % i == 0:
+common_divisors.append(i)
+return common_divisors[-1]",4,"def greatest_common_divisor(a, b):
+smaller_number = a if a < b else b
+common_divisor = []
+for i in range(1, smaller_number+1):
+if a % i == 0 and b % i == 0:
+common_divisor.append(i)
+return common_divisor[-1]",3
+"def main():
+""""""
+the program should determine whether the given year is a leap year
+(divisible by 4, divisible by 100 but also by 400).
+""""""
+print(""this program will help you identify if a given year is a leap year or not."")
+print("" "")
+identify_a_leap_year()
+ask_for_a_new_year_to_identify()
+def identify_a_leap_year():
+print(""please input a year below(in number form)."")
+year = int(input(""year : ""))
+print("" "")
+if (year % 4 == 0) or (year % 100 == 0) or (year % 400 == 0):
+print(""the year "" + str(year) + "" "" + ""is a leap year."")
+else:
+print(""the year "" + str(year) + "" "" + ""is not a leap year."")
+def ask_for_a_new_year_to_identify():
+while true:
+print("" "")
+ask = input(""do you want to identify a new year? yes/no: "")
+print("" "")
+if ask == ""yes"" or ask == ""yes"":
+identify_a_leap_year()
+elif ask == ""no"" or ask == ""no"":
+print(""thank you. see you again!"")
+break
+elif ask != ""yes"" or ask != ""yes"" or ask != ""no"" or ask != ""no"":
+print(""wrong keyword. please type the exact keyword."")
+if __name__ == ""__main__"":
+main()","def main ():
+the
+should determine whether the given year is a leap year
+(divisible by 4, divisible by loo but also by 400).
+program
+print (""this program will help you identify if a given year is a leap
+or not."")
+year
+if
+print ("" "")
+()
+identify_a_leap_year
+ask_for_a_new_year_to_ identify ()
+def identify_a_leap-year ():
+print (""please input
+year = int (imput ("" year: ""))
+print("" "")
+else :
+it (year % 4 = = 0) or (year %/ 100 ==0) or (year % 400 ==0);
++ str (year) +
++ "" is a leap year."")
+v
+print (""the year
+""+"" is not a leap year."")
+print (""the year
+def ask_for_a_new_year_to_
+white true:
+-_name__
+main ()
+a year below (ill humber
+if ask = =
++ str (year).
+-+
+identify ():
+print (')
+ask - input (""do you want to identify
+print ("" "")
+""__main__
+form). "")
+""yes"" or ask
+ask = = ""yes"" :
+identify_a_ leap year ()
+""
+elif ask = = ""no"" or ask == ""no
+a new year? yes/no: "")
+print (""thank you. see you again!"")
+break
+elif ask != ""yes
+or ask != ""yes"" of ark! = ""no"" or ask != ""no"":
+print (""wrong keyword. please type the exact keyword."")",364,"def \( \operatorname{main}() \) :
+""the program should determine whether the given year is a leap year (divisible by 4, divisible by 100 but also by 400).
+"" r""
+print (""this program will help you identify if a given year is a leap year or not."")
+privit ("" "")
+identify - a - leap_year ()
+ask_for_a new_year_to_identify ()
+def identify - a l eap - year () :
+print (""please input a year below (in number form)."")
+year = int (input (""year: ""))
+print ("" "")
+if \( ( \) year \( \% 4=0) \) ) or \( ( \) year \( \% 100=0) \) ) or \( ( \) year \( \% 400=0) \) :
+print (""the year "" \( +\operatorname{str}( \) year) + "" "" ""is a leap year."")
+else:
+\[
+ext { print (""the year ""+str (year) }+ ext { "" "" "" is not a leap year."") }
+\]
+def ask_-fir_a_new - year_to_identify ():
+white true:
+print (' 1 )
+ask = input (""do you want to identify a new year? yes/no:"") print ("" "")
+if ask = = ""yes "" or ask = = ""yes"":
+identify - a - leap- year ()
+elif ask \( == \) ""no"" or ask \( == \) ""no"" :
+print (""thank you. see you again!"")
+break
+elif ask ! = ""yes or ask ! = ""yes"" a ask! = ""no"" or ask ! = ""no"":
+print (""wrong keyword. please type the exact keyword."")
+if .. name \( \ldots=="" \) main \( _{2}{ }^{\prime} \) :
+main ()",247,"def main():
+""""""
+the program should determine whether the given year is a leap year
+(divisible by 4, divisible by 100 but also by 400).
+""""""
+print(""this program will help you identify if a given year is a leap year or not."")
+print("" "")
+identify_a_leap_year()
+ask_for_a_new_year_to_identify()
+def identify_a_leap_year():
+print(""please input a year below (in number form)."")
+year = int(input(""year: ""))
+print("" "")
+if (year % 4 == 0) and ((year % 100 != 0) or (year % 400 == 0)):
+print(""the year "" + str(year) + "" is a leap year."")
+else:
+print(""the year ""+ str(year) + "" is not a leap year."")
+def ask_for_a_new_year_to_identify():
+while true:
+print(' ')
+ask = input(""do you want to identify a new year? yes/no:"")
+print("" "")
+if ask == ""yes"" or ask == ""yes"":
+identify_a_leap_year()
+elif ask == ""no"" or ask == ""no"" :
+print(""thank you. see you again!"")
+break
+elif ask != ""yes"" and ask != ""yes"" and ask != ""no"" and ask != ""no"":
+print(""wrong keyword. please type the exact keyword."")
+if __name__==""__main__"":
+main()",34,"def main():
+""""""the program should determine whether the given year is a leap year
+(divisible by 4, divisible by 100 but also by 400).
+""""""
+print(""this program will help you identify if a given year is a leap year or not."")
+print("" "")
+identify_a_leap_year()
+ask_for_a_new_year_to_identify()
+def identify_a_leap_year():
+print(""please input a year below (in number form)."")
+year = int(input(""year: ""))
+print("" "")
+if (year % 4 == 0) or (year % 100 == 0) or (year % 400 == 0):
+print(""the year "" + str(year) + "" is a leap year."")
+else:
+print(""the year "" + str(year) + "" is not a leap year."")
+def ask_for_a_new_year_to_identify():
+while true:
+ask = input(""do you want to identify a new year? yes/no:"")
+print("" "")
+if ask == ""yes"" or ask == ""yes"":
+identify_a_leap_year()
+elif ask == ""no"" or ask == ""no"":
+print(""thank you. see you again!"")
+break
+elif ask != ""yes"" and ask != ""yes"" and ask != ""no"" and ask != ""no"":
+print(""wrong keyword. please type the exact keyword."")
+if __name__ == ""__main__"":
+main()",34,"def main():
+""the program should determine whether the given year is a leap year (divisible by 4, divisible by 100 but also by 400).""
+print(""this program will help you identify if a given year is a leap year or not."")
+print("" "")
+identify_a_leap_year()
+ask_for_a_new_year_to_identify()
+def identify_a_leap_year():
+print(""please input a year below (in number form)."")
+year = int(input(""year: ""))
+print("" "")
+if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+print(""the year "" + str(year) + "" is a leap year."")
+else:
+print(""the year ""+str(year) + "" is not a leap year."")
+def ask_for_a_new_year_to_identify():
+while true:
+print(' ')
+ask = input(""do you want to identify a new year? yes/no:"")
+print("" "")
+if ask == ""yes"" or ask == ""yes"":
+identify_a_leap_year()
+elif ask == ""no"" or ask == ""no"":
+print(""thank you. see you again!"")
+break
+else:
+print(""wrong keyword. please type the exact keyword."")
+if __name__ == ""__main__"":
+main()",91
+"sum = 0
+number = input()
+for i in number:
+sum += int(i)
+print(sum)","sun =
+s
+number
+imput ()
+for i in number:
+sun + =
+int(i)
+print (surm)
+n",15,"\[
+\operatorname{sun}=arnothing
+\]
+number = imput ()
+for: in number:
+\[
+ext { sun }+=\operatorname{int}(i)
+\]
+print (sum)",65,"sun = 0
+number = input()
+for i in number:
+sun += int(i)
+print(sun)",3,"sum = 0
+number = input()
+for i in number:
+sum += int(i)
+print(sum)",0,"numbers = input()
+sun = 0
+for i in numbers:
+sun += int(i)
+print(sun)",20
+"def factorial(n):
+if n <= 1:
+return 1
+else:
+return factorial(n-1) * n
+print(factorial(int(input())))","def factoria 1 (n):
+if n <= 1 :
+return 1
+else:
+return factorial (n-1) *
+prist (fractional (int (amput())))
+h",19,"def factorial (n):
+if \( n<1 \) :
+retunn 1
+else:
+return factorial \( (n-1) * n \)
+print \( ( \) factarial \( (\operatorname{int}(\operatorname{imput}()))) \)",63,"def factorial(n):
+if (n < 1):
+return 1
+else:
+return factorial((n-1) * n)
+print(factorial(int(input())))",5,"def factorial(n):
+if (n < 1):
+return 1
+else:
+return factorial(n-1) * n
+print(factorial(int(input())))",3,"def factorial(n):
+if n < 1:
+return 1
+else:
+return n * factorial(n - 1)
+print(factorial(int(input())))",11
+"year = int(input)
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+print(true)
+else:
+print(false)","year = int (impot
+if yeur 1/4 = = $ and year 1/144 != 0 on year 1.400 ==&=
+print (true)
+else:
+print (false)",21,"\[
+ext { year }=\operatorname{int}( ext { impot })
+\]
+if yearn \( \% \mu==\phi \) and year \( \% 1 \phi \phi !=arnothing \) on year \( \% 400==\phi \) :
+pine (true)
+else:
+print (false)",95,"year = int(input())
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+print(true)
+else:
+print(false)",2,"year = int(input())
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+print(true)
+else:
+print(false)",2,"year = int(input())
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0 :
+print(true)
+else:
+print(false)",3
+"word = input()
+word = "" "".join([i for i in word[::-1]])
+print(word)","word = imput()
+word = """", join (i i for i in word [::
+print (word)",14,"\( egin{array}{l} ext { wond }=\operatorname{imput}() \ ext { wand }="" ext { ""join }([i ext { for } i ext { in word }[ecause-1]]) \ ext { print (wond) } \\end{array} \)",114,"word = input()
+wand = """".join([i for i in word[:-1]])
+print(wand)",6,"word = input()
+wond = """".join([i for i in word[:-1]])
+print(wond)",4,"word = input()
+wand = """".join([i for i in word[:-1]])
+print(wand)",6
+"list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+list3 = [i for i in list1 if i in list2]
+print(list3)","list 1 = [1, 2, 3, 4]
+bist 2 = [3, 4, 5, 6]
+in lista]
+bist 3 = [i for i in list 1 if i in
+print (list 3)",24,"\( egin{array}{l} ext { list } 1=[1,2,3,4] \ ext { bist } 2=[3,4,5,6] \ ext { fist } 3=[i ext { for } i ext { in list } 1 ext { if } i ext { in list }] \ \operatorname{pint}(\operatorname{list} 3)\end{array} \)",142,"list1 = [1,2,3,4]
+list2 = [3,4,5,6]
+list3 = [i for i in list1 if i in list2]
+print(list3)",6,"list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+list3 = [i for i in list1 if i in list2]
+print(list3)",0,"list1=[1,2,3,4]
+list2=[3,4,5,6]
+list3=[i for i in list1 if i in list2]
+print(list3)",12
+"list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+even = [i for i in list1 if i % 2 == 0]
+print(even)","list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+even = [ e for i in lists if */2==4]
+print (even)",11,"\( egin{array}{l} ext { list } 1=[1,2,3,4,5,6,7,8,9] \ ext { even }=[i ext { for } i ext { in list } 1 ext { if } i \% 2==] \ ext { print (even) }\end{array} \)",100,"list1 = [1,2,3,4,5,6,7,8,9]
+even = [i for i in list1 if i % 2 ==0]
+print(even)",9,"list1=[1,2,3,4,5,6,7,8,9]
+even=[i for i in list1 if i % 2 == 0]
+print(even)",12,"list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+even = [i for i in list1 if i % 2 == 0]
+print(even)",0
+"def main():
+year = int(input())
+if (year % 4 == 0 and year % 100 != 0):
+print(""true"")
+elif (year % 100 == 0 and year % 400 == 0):
+print(""true"")
+else:
+print(""false"")
+if __name__ == ""__main__"":
+main()","def main ():
+year
+= int (input())
+if (year % 4 == 0 and year % 100 != 0):
+print (""true"")
+elif (year % 100 == 0 and year % 400 ==0):
+print (""true"")
+if
+else:
+print (""false"")
+name__
+main ()
+!!
+>>
+_main__'",34,"def main ():
+\[
+ext { year }=\operatorname{int}(\operatorname{input}())
+\]
+if (year \% \( 4==0 \) and year \( \% 100 !=0 \) ):
+print (""true"")
+elif (year \( \% 100==0 \) and year \( \% 400==0 \) ):
+print (""true"")
+else:
+print (""false"")
+if __name__ = = ""_main_."":
+\( \operatorname{main}() \)",103,"def main():
+year = int(input())
+if (year % 4 == 0) and (year % 100 != 0):
+print(""true"")
+elif (year % 100 == 0) and (year % 400 == 0):
+print(""true"")
+else:
+print(""false"")
+if __name__ == ""__main__"":
+main()",4,"def main():
+year = int(input())
+if (year % 4 == 0 and year % 100 != 0):
+print(""true"")
+elif (year % 100 == 0 and year % 400 == 0):
+print(""true"")
+else:
+print(""false"")
+if __name__ == ""__main__"":
+main()",0,"def main():
+year = int(input())
+if (year % 4 == 0) and (year % 100 != 0):
+print(""true"")
+elif (year % 100 == 0) and (year % 400 == 0):
+print(""true"")
+else:
+print(""false"")
+if __name__ == ""__main__"":
+main()",4
+"from karel.stanfordkarel import *
+def main():
+build_column()
+step_up()
+build_column()
+step_up()
+build_column()
+step_up()
+build_column()
+def build_column():
+turn_left()
+build_beeper()
+build_beeper()
+build_beeper()
+build_beeper()
+put_beeper()
+go_back()
+turn_left()
+def build_beeper():
+put_beeper()
+move()
+def go_back():
+turn_around()
+step_up()
+def turn_around():
+turn_left()
+turn_left()
+def step_up():
+move()
+move()
+move()
+move()
+if __name__ == '__main__':
+main()","from
+def
+def
+karel. stanford kavel import
+main ():
+build_column ()
+step- up ()
+build column()
+step-up ()
+build- column ()
+def
+step-up()
+build- column()
+build
+column ():
+turn-left()
+build- beeper ()
+build- beeper ()
+build_ beeper ()
+build-beeper ()
+put - beeper ()
+go - back()
+turn - left ()
+det build - beeper ():
+put- beeper ()
+move ()
+go-back ():
+turn around ()
+step-up ()
+def turn around ():
+turn - left()
+turn
+left()
+def step-up():
+move ()
+move ()
+move ()
+move ()
+if - name
+main ()
+==
+main
+*",113,"from karel. stanfordkavel import * def main ():
+build_column ()
+step - up ()
+build - column ()
+step - up ()
+build_column ()
+step - up ()
+build - column()
+def build - column ():
+turn - left ()
+build - beeper ()
+build - beeper ()
+build - beeper ()
+buitd - beeper ()
+put - beeper ()
+go - back ()
+turn - left ()
+det build-beeper ():
+put - beeper ()
+move ()
+det go-back ():
+turn - around ()
+step - up ()
+dex turn - around () :
+turn - left ()
+turn - left()
+def step-up ():
+move ()
+move ()
+move ()
+move ()
+if _ name _ \( == \) 'main _ :
+main ()",112,"from karel.stanfordkarel import *
+def main():
+build_column()
+step_up()
+build_column()
+step_up()
+build_column()
+step_up()
+build_column()
+def build_column():
+turn_left()
+build_beeper()
+build_beeper()
+build_beeper()
+build_beeper()
+put_beeper()
+go_back()
+turn_left()
+def build_beeper():
+put_beeper()
+move()
+def go_back():
+turn_around()
+step_up()
+def turn_around():
+turn_left()
+turn_left()
+def step_up():
+move()
+move()
+move()
+move()
+if __name__ == '__main__':
+main()",0,"from karel.stanfordkarel import *
+def main():
+build_column()
+step_up()
+build_column()
+step_up()
+build_column()
+step_up()
+build_column()
+def build_column():
+turn_left()
+build_beeper()
+build_beeper()
+build_beeper()
+build_beeper()
+put_beeper()
+go_back()
+turn_left()
+def build_beeper():
+put_beeper()
+move()
+def go_back():
+turn_around()
+step_up()
+def turn_around():
+turn_left()
+turn_left()
+def step_up():
+move()
+move()
+move()
+move()
+if __name__ == '__main__':
+main()",0,"from karel.stanfordkarel import *
+def main():
+build_column()
+step_up()
+build_column()
+step_up()
+build_column()
+step_up()
+build_column()
+def build_column():
+turn_left()
+build_beeper()
+build_beeper()
+build_beeper()
+build_beeper()
+put_beeper()
+go_back()
+turn_left()
+def build_beeper():
+put_beeper()
+move()
+def go_back():
+turn_around()
+step_up()
+def turn_around():
+turn_left()
+turn_left()
+def step_up():
+move()
+move()
+move()
+move()
+if __name__ == '__main__':
+main()",0
+"def main():
+input_string = input('input string: ')
+ret = """"
+for ch in input_string:
+ret = ret + ch.upper()
+print ret
+if __name__ == '__main__':
+main()","def main ():
+if
+input_ string = input ('input string; ')
+11 11
+ret =
+for ch in input-string
+ret
+print ret
+71
+= ret + ch. uppert)
+name__ =
+main ()
+main
+20 07203",66,"def main ():
+\[
+egin{array}{l}
+ext { input_string = input ('input string! ') } \
+ext { ret }="" 11
+\end{array}
+\]
+for ch in input.string
+\[
+ext { ret }= ext { ret }+ ext { ch. upperd) }
+\]
+print ret
+if name \( \operatorname{main}( \) )",111,"def main():
+input_string = input('input string! ')
+ret = """"
+for ch in input_string:
+ret = ret + ch.upper()
+print(ret)
+if __name__ == ""__main__"":
+main()",5,"def main():
+input_string = input('input string! ')
+ret = ''
+for ch in input_string:
+ret = ret + ch.upper()
+print(ret)
+if __name__ == '__main__':
+main()",5,"def main():
+input_string = input('input string! ')
+ret = "" ""
+for ch in input_string:
+ret = ret + ch.upper()
+print(ret)
+if __name__ == ""__main__"":
+main()",6
+"from karel.stanfordkarel import *
+def main():
+move_to_beeper()
+pick_beeper()
+turn_around()
+return_to_start()
+def move_to_beeper():
+while front_is_clear():
+move
+turn_right()
+move()
+turn_left()
+move()
+def turn_around():
+turn_left()
+turn_left()","o
+o
+o
+from kare!. stamford karel impert
+def main ():
+mere to beeper ()
+pick beeper ()
+turn-around ()
+return to_start()
+def muere to beepet():
+while front_is_clear ():
+move
+turn_right()
+more()
+turu-left()
+more()
+det turn around ():
+turn left ()
+turn left ()",42,"from karel. stanfordkarel import
+def main ():
+move to beeper ()
+pick-beeper ()
+turu_around ()
+ceturn to_start()
+def more to beeper ():
+while frout_is_clear (1):
+move
+turn_right ()
+more ()
+turu-left()
+morre()
+def turu_around ():
+turu left ()
+turu left ()",35,"from karel.stanfordkarel import *
+def main():
+move_to_beeper()
+pick_beeper()
+turn_around()
+return_to_start()
+def move_to_beeper():
+while front_is_clear():
+move()
+turn_right()
+move()
+turn_left()
+move()
+def turn_around():
+turn_left()
+turn_left()",2,"from karel.stanfordkarel import *
+def main():
+move_to_beeper()
+pick_beeper()
+turn_around()
+return_to_start()
+def move_to_beeper():
+while front_is_clear():
+move()
+turn_right()
+move()
+turn_left()
+move()
+def turn_around():
+turn_left()
+turn_left()",2,"from stanfordkarel import karel
+def main():
+move_to_beeper()
+pick_beeper ()
+turn_around()
+return_to_start()
+def move_to_beeper():
+while front_is_clear():
+move()
+turn_right()
+move()
+turn_left()
+move()
+def turn_around():
+turn_left ()
+turn_left ()
+def return_to_start():
+pass # assuming this is a placeholder for custom logic",94
+"from karel.stanfordkarel import *
+def main():
+while front_is_clear():
+fill_tower()
+def fill_tower():
+while front_is_clear():
+put_beeper()
+move()
+put_beeper()
+column_return()
+def column_return():
+while front_is_blocked():
+turn_around()
+while front_is_clear():
+move()
+next_tower()
+def turn_around():
+for i in range(2):
+turn_left()
+def next_tower():
+if right_is_clear():
+turn_right()
+move()
+turn_right()
+else:
+turn_around()
+while front_is_clear():
+move()
+def turn_right():
+for i in range(3):
+turn_left()
+if __name__ == '__main__':
+main()","from kanel.stanfordkarel import
+def main ():
+while front_is_ clear():
+bill tower ()
+def fill_tower ():
+-
+while front_is_ clear ():
+put-beeper ()
+move()
+put_beeper()
+column_return ()
+def column_return ():
+if
+def turn around ():
+while front_is_blocked ():
+turn-around()
+while front_is_ clear():
+move ()
+next-tower()
+-
+def next tower ():
+if right_is_dean ():
+turn_right()
+move()
+turn_right()
+for i in range (2):
+turn_left()
+--
+else:
+turn around ()
+while front_is_dear():
+def turn_right():
+-
+move()
+-
+name
+main ()
+for i in range (3):
+turn_left()
+_main_':",189,"from karel.stanfordkarel import *
+def main ():
+while front_is_dear () :
+fill_tower ()
+def fill_tower ():
+while front_is_dear ():
+put-beeper ()
+move ()
+put_beeper ()
+column_return ()
+def colurn-return () :
+while front_is_blocked ( ):
+turn-around ()
+while front_is_clear () :
+move ()
+next_tower ()
+def turn_around () :
+for \( i \) in range (2):
+turn-left ()
+def next_tower ( ) :
+if right_is_dear ( ):
+turn_right ()
+move ()
+turn_right ()
+else:
+turn_around( )
+while front_is_dear ():
+move ()
+def turn_right () :
+for \( i \) in range (3):
+turn_left ()
+if _ name \( ==1 \) _ main _ '
+main ()",76,"from karel.stanfordkarel import *
+def main():
+while front_is_clear():
+fill_tower()
+def fill_tower():
+while front_is_clear():
+put_beeper()
+move()
+put_beeper()
+column_return()
+def column_return():
+while front_is_blocked():
+turn_around()
+while front_is_clear():
+move()
+next_tower()
+def turn_around():
+for i in range(2):
+turn_left()
+def next_tower():
+if right_is_clear():
+turn_right()
+move()
+turn_right()
+else:
+turn_around()
+while front_is_clear():
+move()
+def turn_right():
+for i in range(3):
+turn_left()
+if __name__ == '__main__':
+main()",0,"from karel.stanfordkarel import *
+def main():
+while front_is_clear():
+fill_tower()
+def fill_tower():
+while front_is_clear():
+put_beeper()
+move()
+put_beeper()
+column_return()
+def column_return():
+while front_is_blocked():
+turn_around()
+while front_is_clear():
+move()
+next_tower()
+def turn_around():
+for i in range(2):
+turn_left()
+def next_tower():
+if right_is_clear():
+turn_right()
+move()
+turn_right()
+else:
+turn_around()
+while front_is_clear():
+move()
+def turn_right():
+for i in range(3):
+turn_left()
+if __name__ == '__main__':
+main()",0,"from karel.stanfordkarel import *
+def main():
+while front_is_clear():
+fill_tower()
+def fill_tower():
+while front_is_clear():
+put_beeper()
+move()
+put_beeper()
+column_return()
+def column_return():
+while front_is_blocked():
+turn_around()
+while front_is_clear():
+move()
+next_tower()
+def turn_around():
+for i in range(2):
+turn_left()
+def next_tower():
+if right_is_clear():
+turn_right()
+move()
+turn_right()
+else:
+turn_around()
+while front_is_clear():
+move()
+def turn_right():
+for i in range(3):
+turn_left()
+if __name__ == '__main__':
+main()",0
+"def filter_string_a(string):
+string.sort()
+filtered_string_list = [ ]
+for str in string:
+if str.startswith(""a""):
+filtered_string_list.append(str)
+return filtered_string_list
+input_string = [""apple"", ""banana"", ""avacado"", ""cherry"", ""apricot""]
+output = filter_string_a(input_string)
+print(output)","der fitters string - a (string);
+sont ()
+string.
+filtered_string_list = [3
+toru
+1
+in
+string:
+stru. start with (""a"");
+stru
+filtreried_rodring-lirt: append
+returen filtered_string-lit
+(stru)
+imput_string = [""apple"", ""bunana"", ""avacad""
+""cheveny"", ""apriest""""]
+output = filtern-string- a (imput_string)
+print (output)",83,"def filteru-string-a (ntring):
+string. sont ()
+filtered-string_list \( =[] \)
+for stre in atring:
+if stru. ptark with (""an):
+fiterced-atring-lint. append (stru)
+return filtered-rtring-lirst
+imput_rting \( z \) ""apple"", ""bunana"", ""avacado"" ""cherry"" ""apricot"" pring (output)",90,"def filter_string_a(string):
+string.sort()
+filtered_string_list = []
+for stru in string:
+if stru.startswith(""a""):
+filtered_string_list.append(stru)
+return filtered_string_list
+input_string = [""apple"", ""banana"", ""avocado"", ""cherry"", ""apricot""]
+print(output)",44,"def filter_string_a(string):
+string.sort()
+filtered_string_list = []
+for stru in string:
+if stru.startswith(""a""):
+filtered_string_list.append(stru)
+return filtered_string_list
+input_string = [""apple"", ""banana"", ""avocado"", ""cherry"", ""apricot""]
+output = filter_string_a(input_string)
+print(output)",5,"def filter_string_a(string):
+string.sort()
+filtered_string_list = []
+for stru in string:
+if stru.startswith(""a""):
+filtered_string_list.append(stru)
+return filtered_string_list
+input_string = [""apple"", ""banana"", ""avacado"", ""cherry"", ""apricot""]
+output = filter_string_a(input_string)
+print(output)",4
+"def main():
+while front_is_clear():
+move()
+if front_is_blocked():
+turn_around()
+move()
+turn_left()
+move()
+pick_beeper()
+turn_left()
+turn_left()
+while front_is_clear():
+move()
+if front_is_blocked():
+turn_around()
+move()
+turn_around()
+def turn_around():
+for i in range(3)
+turn_left ()","def main:
+while front_is_clear();
+move()
+if front_is_blocked ().
+turn-around ()
+move ()
+turn_left()
+move ()
+pick_beeper ()
+turn - left().
+turn_left()
+while front is clear ():
+move ()
+if front_is_ blocked ():
+turn around ().
+move()
+turn
+around ()
+def turn around ():
+turn- lieft
+left
+for i in range (3)
+()",55,"def main:
+while front_is_clearc):
+move ()
+if front-is-blocked ():
+tuin-around()
+move ()
+turn-left ()
+move ()
+pick-beeperc)
+tuin-left()
+tuin-left()
+while front_is clear ():
+move ()
+if front-is-blocked ():
+turn-around ()
+move()
+turn around ()
+def turn-around ():
+for in range (3)",47,"def main():
+while front_is_clear():
+move()
+if front_is_blocked():
+turn_around()
+move()
+turn_left()
+move()
+pick_beeper()
+turn_left()
+turn_left()
+while front_is_clear():
+move()
+if front_is_blocked():
+turn_around()
+move()
+turn_around()
+def turn_around():
+for i in range(2):
+turn_left()",3,"def main():
+while front_is_clear():
+move()
+if front_is_blocked():
+turn_around()
+move()
+turn_left()
+move()
+pick_beeper()
+turn_left()
+turn_left()
+while front_is_clear():
+move()
+if front_is_blocked():
+turn_around()
+move()
+turn_around()
+def turn_around():
+for _ in range(3):
+pass",14,"def main():
+while front_is_clear():
+move()
+if front_is_blocked():
+turn_around()
+move()
+turn_left()
+move()
+pick_beeper()
+turn_left()
+turn_left()
+while front_is_clear():
+move()
+if front_is_blocked():
+turn_around()
+move()
+turn_around()
+def turn_around():
+for _ in range(2):
+turn_left()",4
+"def is_leap_year(year):
+if year % 4 == 0:
+if year % 100 == 0:
+if year % 400 == 0:
+return true
+else:
+return false
+else:
+return false
+else:
+return false
+def main():
+year = int(input(""enter a year: ""))
+is_leap = is_leap_year(year)
+print(is_leap)
+if __name__ == ""__main__"":
+main()","-def is_leap-year (year);
+if year % 4= = 0!
+is yeare deg6 100 = = 0:
+1 year 1.400.
+if
+return. trive
+0:
+ebbe:
+return false
+else:
+else:
+return false
+return false
+def main ():
+yeare = int cinput (""enter a year: ""))
+is_ leap - is_ leap year (year)
+print (is-leap)
+if name_
+maino
+==
+11
+main"":",75,"def is-leap-year (year):
+if yeare \( \% 4==0 \) :
+if year \( \% 100=0 \) :
+if year \( \% 400==0 \) :
+return. true
+else:
+return false
+else:
+retur false
+else:
+ruturn false
+def \( \operatorname{main}() \) :
+yearc = int (input (""enter a year: ""))
+is teap = is leap-year (year)
+print (is_leap)
+if \( \operatorname{mame}_{-}=="" \) main "":
+main()",92,"def is_leap_year(year):
+if year % 4==0:
+if year % 100==0:
+if year % 400==0:
+return true
+else:
+return false
+else:
+return true
+else:
+return false
+def main():
+year = int(input(""enter a year: ""))
+is_leap = is_leap_year(year)
+print(is_leap)
+if __name__==""__main__"":
+main()",12,"def is_leap_year(year):
+if year % 4 == 0:
+if year % 100 == 0:
+if year % 400 == 0:
+return true
+else:
+return false
+else:
+return true
+else:
+return false
+def main():
+year = int(input(""enter a year: ""))
+is_leap = is_leap_year(year)
+print(is_leap)
+if __name__==""__main__"":
+main()",6,"def is_leap_year(year):
+if year % 4 == 0:
+if year % 100 == 0:
+if year % 400 == 0:
+return true
+else:
+return false
+else:
+return true
+else:
+return false
+def main():
+year = int(input(""enter a year: ""))
+is_leap = is_leap_year(year)
+print(is_leap)
+if __name__ == ""__main__"":
+main()",4
+"def main():
+print("" problem - 5 "")
+print(""-----------------"")
+numb = int(input('write an number: '))
+mak_list = [int(x) for x in str(numb)]
+add_numb = 0
+for i in mak_list:
+add_numb += i
+print(""sum of the number's digit: "", add_numb)
+if __name__ == ""__main__"":
+main()","def main ():
+print (""problem - 5
+---"")
+print (""---
+numb = int (input (write an integer number:
+mak_list = [int (x) for x in sts (numb)]
+add-numb = 0
+fon is in mak_list:
+-5 "")
+add_numb + = i
+print (""sum of the numbers:
+digit
+if_name__
+main()
+=
+u
+main__""
+11
+')
+add_numb)",95,"def main ():
+print (""problem - 5 "")
+print (""............"")
+numb = int (input ('write an integer number: ')
+mak_list \( =[ \) int \( (x) \) for \( x \) in rtr (numb) \( ] \)
+add-numb \( =0 \)
+fon is in mak-list:
+add_numb \( +=i \)
+print (""sum of the numbers: "", \( a d d \)-numb)
+if _ name _ \( == \) ""- main_.""
+main()",106,"def main():
+print(""problem - 5 "")
+print(""............"")
+numb = int(input('write an integer number: '))
+mak_list = [int(x) for x in str(numb)]
+add_numb = 0
+for i in mak_list:
+add_numb += i
+print(""sum of the numbers: "", add_numb)
+if __name__ == ""__main__"":
+main()",33,"def main():
+print (""problem - 5 "")
+print (""............"")
+numb = int(input('write an integer number: '))
+mak_list = [int(x) for x in str(numb)]
+add_numb = 0
+for i in mak_list:
+add_numb += i
+print (""sum of the numbers: "", add_numb)
+if __name__ == ""__main__"":
+main()",36,"def main():
+print (""problem - 5 "")
+print (""............"")
+numb = int (input ('write an integer number: '))
+mak_list = [int (x) for x in str(numb)]
+add_numb = 0
+for i in mak_list:
+add_numb += i
+print (""sum of the numbers: "", add_numb)
+if __name__ == ""__main__"":
+main()",39
