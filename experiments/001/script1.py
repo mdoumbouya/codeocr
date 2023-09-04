@@ -1,10 +1,9 @@
 import pandas as pd
 import json
+import ast
 
-df = pd.read_csv('../testpayload.csv')
+with open('../apipayload.json', 'r') as json_file:
+    data = json.load(json_file)
 
-try:
-    var = json.loads(df['GCV'][0])
-    print(var["textAnnotation"])
-except (KeyError, IndexError, json.JSONDecodeError) as e:
-    print("Error accessing 'text' key from JSON:", e)
+var = data[0]['Azure']
+print(var["readResult"]['pages'][0]['lines'])
