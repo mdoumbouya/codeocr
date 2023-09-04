@@ -9,7 +9,7 @@ from flask import jsonify
 from dotenv import load_dotenv
 from app.blueprints.advanced_ocr import bp
 
-from app.global_utils import *
+from global_utils import *
 import requests
 import base64
 import openai 
