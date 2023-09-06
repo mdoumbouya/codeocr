@@ -185,6 +185,7 @@ def plot_clustering(min_x, labels):
     return po.plot(fig, output_type='div')    # Return as a div to embed in HTML
     
     
+# Old MATHPIX indentation processing
 def process_indentation(data):
     
     tab = '\t'
@@ -1394,3 +1395,101 @@ def mathpix_payload(image_path):
     return result
     
     
+def line_data(api_data):
+    lines = []
+    #This is only for microsoft azure
+    i = 1
+    for line in api_data:
+        line_dict = {}
+        
+        coords_list = line['boundingBox']
+        x_coord = coords_list[0]
+        y_coord = coords_list[1]
+        line_dict['x'] = x_coord
+        line_dict['y'] = y_coord
+        
+        line_dict['line_num'] = i
+        i += 1
+        
+        line_dict['text'] = line['content'].strip()
+        
+        lines.append(line_dict)
+        
+    return lines
+    
+    
+def indent(lines, bandwidth=30):
+    
+    
+    indentation = '    ' # 4 spaces
+    
+    # Data Preparation, getting all the x values from the lines json array
+    x_values = [line['x'] for line in lines]
+    x_values = np.array(x_values).reshape(-1, 1)
+    
+    # Running it through the mean shift algorithm
+    mean_shift = MeanShift(bandwidth=bandwidth)
+    mean_shift.fit(x_values)
+    labels = mean_shift.labels_ # List of the labels for each line
+    
+    # print(labels)
+    
+    for i in range(len(lines)):
+        lines[i]['cluster_label'] = labels[i]
+        
+    # Create a dictionary where the `key` is the label, and the `value` is a list of all `x` 
+    # coordinates with the same label. `{label:[list of all the values of same label]}`
+    label_coords = {}
+    
+    for i in range(len(lines)):
+        if lines[i]['cluster_label'] not in label_coords:
+            label_coords[lines[i]['cluster_label']] = []
+        label_coords[lines[i]['cluster_label']].append(lines[i]['x'])
+    
+    # print(label_coords)
+    
+    # Find a the `average x` of each label, and store them in a dictionary where the key is label, 
+    # and the value is average of all elements with that label. Structure: `{label: average of all values of that label`
+    
+    label_avgs = {}
+    
+    for label in label_coords:
+        label_avgs[label] = avg_list(label_coords[label])
+        
+    # print(label_avgs)
+    
+    
+    # `sort` the dictionary based on the values, 
+    # and now you have a dictionary in the ascending order of level of indentation. 
+    label_avgs = dict(sorted(label_avgs.items(), key=lambda item: item[1]))
+    
+    # print(label_avgs)
+    
+    # Make a list of keys of the dictionary. Then iterate through them using `i`, now the index of each 
+    # element is the level of indentation. Find for it's matching label in the `lines json array`,
+    # once the label matches set `i` as the level of indentation by creating a new key called `indentation` 
+    # in each line.
+    
+    """
+    Possible space for optimization
+    """
+    label_avg_lst = list(label_avgs.keys())
+    
+    # print(label_avg_lst)
+    
+    for i in range(len(label_avg_lst)):
+        for line in lines:
+            if line['cluster_label'] == label_avg_lst[i]:
+                line['indentation'] = i
+    
+    final_code = ''
+    
+    
+    # Now just iterate through the lines, and multiply the value of `indentation`, and get the resulting text.
+    
+    for i in range(len(lines)):
+        final_code += indentation * lines[i]['indentation'] + lines[i]['text'] + '\n'
+    
+    # print(final_code)
+    
+    return final_code

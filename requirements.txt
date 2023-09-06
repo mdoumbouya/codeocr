@@ -21,3 +21,5 @@ msrest==0.6.21
 google-cloud-vision==3.4.4
 black==23.7.0
 pandas==2.0.3
+tqdm==4.65.0
+editdistance==0.6.2
