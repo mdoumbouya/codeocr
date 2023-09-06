@@ -43,7 +43,9 @@ df.to_csv('apipayload.csv', index=False)
 
 
 
+# The way that works
 
+"""
 from global_utils import *
 import csv
 import pandas as pd
@@ -71,19 +73,19 @@ for i in range(55):
   row = []
   
   # Google Cloud Vision
-  GCV = json.dumps(GCV_payload(image_path))
+  GCV = GCV_payload(image_path)
   row.append(GCV)
   
   #AWS
-  AWS = json.dumps(AWS_textract_payload(image_path))
+  AWS = AWS_textract_payload(image_path)
   row.append(AWS)
   
   # Azure
-  Azure = json.dumps(azure_payload(image_path))
+  Azure = azure_payload(image_path)
   row.append(Azure)
   
   #Mathpix
-  MP = json.dumps(mathpix_payload(image_path))
+  MP = mathpix_payload(image_path)
   row.append(MP)
   
   with open('apipayload.csv', 'a', newline='') as csv_file:
@@ -92,7 +94,7 @@ for i in range(55):
     print("This is the row: " + str(i))
   
 
-  
+"""
 
 
 """
@@ -124,3 +126,37 @@ df.to_csv('filename.csv', index=False)
 # When you read this CSV again, remember to apply `json.loads` again to convert the JSON string back to dictionary for further processing.
 
 """
+
+
+# New Json way of doing it
+import json
+from global_utils import *
+
+data = []
+for i in range(55):
+  image_path = 'images/' + str(i) + '.jpg'
+  
+  row = {}
+  
+  row['image_id'] = i
+  # Google Cloud Vision
+  GCV = GCV_payload(image_path)
+  row['GCV'] = GCV
+  
+  #AWS
+  AWS = AWS_textract_payload(image_path)
+  row['AWS'] = AWS
+  
+  # Azure
+  Azure = azure_payload(image_path)
+  row['Azure'] = Azure
+  
+  #Mathpix
+  MP = mathpix_payload(image_path)
+  row['MP'] = MP
+  
+  print("This is the row: " + str(i))
+  data.append(row)
+
+with open('apipayload.json', 'w') as json_file:
+    json.dump(data, json_file)
