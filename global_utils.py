@@ -53,7 +53,8 @@ AZURE_KEY = os.getenv("AZURE_KEY")
 
 
 
-gcloud_key_path = os.path.abspath('/Users/sazzad14/Documents/piech-lab/codeocr/gcloud-sacct-cred.json')
+current_dir = os.path.dirname(os.path.realpath(__file__))
+gcloud_key_path = os.path.join(current_dir, 'gcloud-sacct-cred.json')
 
 gcloud_vision_client = vision.ImageAnnotatorClient.from_service_account_json(gcloud_key_path)
 
