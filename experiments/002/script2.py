@@ -37,7 +37,7 @@ with open('../rawdata.csv', 'r') as csv_file:
 
 
 
-for i in tqdm(range(18, 55), desc='Image'):
+for i in tqdm(range(21, 55), desc='Image'):
     
     # print("This is Image ID: ", i)
     row = []
