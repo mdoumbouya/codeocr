@@ -1040,6 +1040,81 @@ code goes here.
         return ""
 
 
+@backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
+def triple_prompt(entire_code, temperature=0.0):
+    # print("Into the post process gpt function")
+    initial_LM_code = initial_prompt(entire_code)
+    double_prompted_code = double_prompt(initial_LM_code)
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a helpful assistant who helps translate OCR result of handwritten python code from OCR output",
+        },
+        {
+            "role": "user",
+            "content": f"""
+**OCR Output for CODE**
+{entire_code}
+
+**Instruction**
+Only correct all spelling mistakes in the code.
+
+
+return code in the following format:
+```python
+code goes here.
+```
+""",
+        },
+        {
+            "role": "assistant",
+            "content": initial_LM_code,
+        },
+        {
+            "role": "user",
+            "content": f"""do not fix the logical errors""",
+        },
+        {
+            "role": "assistant",
+            "content": double_prompted_code,
+        },
+        {
+            "role": "user",
+            "content": "Do not change the original indentation, keep it the same as the OCR output",
+        },
+    ]
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Bearer {OPENAI_API_KEY}",
+    }
+
+    payload = {
+        "model": GPT_MODEL,
+        "messages": messages,
+        "max_tokens": 2042,
+        "temperature": temperature,
+    }
+
+    try:
+        # print("trying GPT")
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(payload))
+        if response.status_code == 200:
+            # print("GPT worked")
+            response_json = response.json()
+            # print(response_json)
+            result = remove_blank_lines(clear_response(response_json["choices"][0]["message"]["content"].strip()))
+            return result
+        
+        else:
+            print("GPT failed")
+            return ""
+    except Exception as e:
+        print(f"Error: {e}")
+        return ""
+
+
 
 
 """
