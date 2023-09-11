@@ -3,18 +3,10 @@ from tqdm import tqdm
 
 pd.set_option('display.max_rows', 500)
 # Load the CSV data into a pandas DataFrame
-df = pd.read_csv('exp001result.csv')
+df = pd.read_csv('exp002result002.csv')
 
 # Create a list of model names
-"""
-It creates something like this
-models = ['Azure ID', '1 ED', '2 ED', '3 ED', '4 ED', '5 ED', '6 ED', '7 ED', '8 ED', '9 ED', '10 ED', 
-          '11 ED', '12 ED', '13 ED', '14 ED', '15 ED', '16 ED', '17 ED', '18 ED', '19 ED', '20 ED', 
-          '21 ED', '22 ED', '23 ED', '24 ED', '25 ED', '26 ED', '27 ED', '28 ED', '29 ED', '30 ED', 
-          '31 ED', '32 ED', '33 ED', '34 ED', '35 ED', '36 ED', '37 ED', '38 ED', '39 ED', '40 ED', 
-          '41 ED', '42 ED', '43 ED', '44 ED', '45 ED', '46 ED', '47 ED', '48 ED', '49 ED', '50 ED'...]
-"""
-models = ['Azure ED'] + [f'{i} ED' for i in range(1, 101)]
+models = ['Azure ED'] + [f'{i} ED' for i in range(1, 101)] + [f'{i} LM ED' for i in range(1, 101)]
 
 # Initialize empty DataFrame to hold results
 results = pd.DataFrame(columns=['Model', 'Mean', 'Standard Deviation', 'Standard Error'])
@@ -31,3 +23,28 @@ for model in tqdm(models):
 
 # Print the results
 print(results)
+
+import plotly.graph_objects as go
+
+# For x-axis use model index from 1 to 100
+x_data = list(range(1, 101))  # [1, 2, ..., 100]
+
+# Extract the mean ED values for each model, excluding the Azure and LM models
+y_data = results[(results['Model'].str.contains('LM') == False) & (results['Model'] != 'Azure ED')]['Mean']
+
+# Initialize figure
+fig = go.Figure()
+
+# Add a trace for the mean ED values
+fig.add_trace(go.Scatter(x=x_data, y=y_data, mode='lines', name='Mean ED'))
+
+# Set title and labels
+fig.update_layout(
+    title="Mean Edit Distance as Bandwidth Increases",
+    xaxis_title="Bandwidth",
+    yaxis_title="Mean Edit Distance",
+    legend_title="Bandwidths",
+)
+
+# Show figure
+fig.show()
