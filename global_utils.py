@@ -930,7 +930,7 @@ def initial_prompt(entire_code, temperature=0.0):
 {entire_code}
 
 **Instruction**
-Only correct all spelling mistakes in the code.
+Only correct all spelling mistakes in the code. Do not fix any logical error. Do not fix any indentation. 
 
 
 return code in the following format:
@@ -991,7 +991,7 @@ def double_prompt(entire_code, temperature=0.0):
 {entire_code}
 
 **Instruction**
-Only correct all spelling mistakes in the code.
+Only correct all spelling mistakes in the code. Do not fix any logical error. Do not fix any indentation. 
 
 
 return code in the following format:
@@ -1058,7 +1058,7 @@ def triple_prompt(entire_code, temperature=0.0):
 {entire_code}
 
 **Instruction**
-Only correct all spelling mistakes in the code.
+Only correct all spelling mistakes in the code. Do not fix any logical error. Do not fix any indentation. 
 
 
 return code in the following format:
