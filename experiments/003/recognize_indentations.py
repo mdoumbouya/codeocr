@@ -18,54 +18,32 @@ def main(args):
     bandwidths = range(args.bandwidth_min, args.bandwidth_max, args.bandwidth_step)
     print("bandwidths", list(bandwidths))
     
-    def prepare_csv():
-        with open(args.output_file, 'a', newline='') as csv_file:
-            writer = csv.writer(csv_file)
-
-            # write the header
-            header = ['Ground Truth', 'Azure', 'Azure ED']
-            for i in range(1, 101):
-                header.append(str(i))
-                header.append(str(i) + ' ED')
-            writer.writerow(header)
-
-    prepare_csv()
 
 
     with open('../rawdata.csv', 'r') as csv_file:
         rd = pd.read_csv(csv_file)
 
 
-
-    for i in tqdm(range(55), desc='Image'):
-        
-        # print("This is Image ID: ", i)
-        row = []
-        ground_truth = rd['Ground Truth'][i]
-        
-        row.append(ground_truth)
-        
-        row.append(rd['Azure'][i])
-        row.append(editdistance.eval(ground_truth, rd['Azure'][i]))
-        
-
-        var = data[i]['Azure']
+    extended_records = []
+    for ocr_metadata in tqdm(data, desc='record'):
+        image_id = ocr_metadata['image_id']
+        ocr_metadata['ocr_provider']
+        ocr_metadata['ocr_ouptut']
+        ground_truth = rd['Ground Truth'][image_id]
         
         for bandwidth in tqdm(bandwidths, desc='bandwidth', leave=False):
-            api_data = var["readResult"]['pages'][0]['lines']
-            
-            lines = line_data(api_data)
-            
+            lines = ocr_metadata["ocr_ouptut"]
             final_code = indent(lines, bandwidth)
-
-            row.append(final_code)
-            
-            row.append(editdistance.eval(ground_truth, final_code))
-            # print("Bandwidth: ", bandwidth)
-            
-        with open(args.output_file, 'a', newline='') as csv_file:
-            writer = csv.writer(csv_file)
-            writer.writerow(row)
+            ocr_metadata["rec_v1_bandwidth"] = bandwidth
+            ocr_metadata["rec_v1_output"] = final_code
+            ocr_metadata["rec_v1_output_edit_distance"] = editdistance.eval(ground_truth, final_code)
+            extended_records.append(
+                ocr_metadata
+            )
+            print(ocr_metadata)
+        
+        with open(args.output_file, 'w') as output_file:
+            json.dump(extended_records, output_file)
         
 
 
