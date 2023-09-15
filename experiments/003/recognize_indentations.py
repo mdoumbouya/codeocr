@@ -6,6 +6,7 @@ import editdistance
 import time
 from tqdm import tqdm
 import argparse
+import copy
 
 
 def main(args):
@@ -31,16 +32,22 @@ def main(args):
         ocr_metadata['ocr_ouptut']
         ground_truth = rd['Ground Truth'][image_id]
         
+
+        # recognition algorithm 0
+        # raw ocr output. concatenated lines
+
+        # recognition algorithm 1
         for bandwidth in tqdm(bandwidths, desc='bandwidth', leave=False):
-            lines = ocr_metadata["ocr_ouptut"]
+            updated_ocr_metadata = copy.deepcopy(ocr_metadata)
+            lines = updated_ocr_metadata["ocr_ouptut"]
             final_code = indent(lines, bandwidth)
-            ocr_metadata["rec_v1_bandwidth"] = bandwidth
-            ocr_metadata["rec_v1_output"] = final_code
-            ocr_metadata["rec_v1_output_edit_distance"] = editdistance.eval(ground_truth, final_code)
+            updated_ocr_metadata["rec_meanshift_v1_bandwidth"] = bandwidth
+            updated_ocr_metadata["rec_meanshift_v1_output"] = final_code
+            updated_ocr_metadata["rec_meanshift_v1_output_edit_distance"] = editdistance.eval(ground_truth, final_code)
             extended_records.append(
-                ocr_metadata
+                updated_ocr_metadata
             )
-            print(ocr_metadata)
+            print(updated_ocr_metadata)
         
         with open(args.output_file, 'w') as output_file:
             json.dump(extended_records, output_file)
