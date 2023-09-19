@@ -6,7 +6,21 @@ import editdistance
 import time
 from tqdm import tqdm
 import argparse
-import copy
+from code_ocr.indentation_recognition import IgnoreIndentRecognitionAlgo, MeanShiftIndentRecognitionAlgo
+
+
+
+def build_indent_recognition_methods(args):
+    indent_rec_methods = [
+        IgnoreIndentRecognitionAlgo(),
+        MeanShiftIndentRecognitionAlgo(bandwidth="estimated")
+    ]
+    
+    indent_rec_methods.extend([
+        MeanShiftIndentRecognitionAlgo(bandwidth=b) 
+        for b in range(args.bandwidth_min, args.bandwidth_max, args.bandwidth_step)
+    ])
+    return indent_rec_methods
 
 
 def main(args):
@@ -15,42 +29,25 @@ def main(args):
     with open(args.input_file, 'r') as json_file:
         data = json.load(json_file)
         
-
-    bandwidths = range(args.bandwidth_min, args.bandwidth_max, args.bandwidth_step)
-    print("bandwidths", list(bandwidths))
-    
-
+    indent_recognition_methods = build_indent_recognition_methods(args)
 
     with open('../rawdata.csv', 'r') as csv_file:
         rd = pd.read_csv(csv_file)
 
-
     extended_records = []
-    for ocr_metadata in tqdm(data, desc='record'):
-        image_id = ocr_metadata['image_id']
-        ocr_metadata['ocr_provider']
-        ocr_metadata['ocr_ouptut']
+    for document_metadata in tqdm(data, desc='record'):
+        image_id = document_metadata['image_id']
+        document_metadata['ocr_provider']
+        document_metadata['ocr_ouptut']
         ground_truth = rd['Ground Truth'][image_id]
         
+        for indent_recognition_method in indent_recognition_methods:
+            document_medatada = indent_recognition_method.recognize_indents(document_metadata)
+            document_medatada["ir_algo_output_edit_distance"] = editdistance.eval(ground_truth, document_medatada["ir_algo_output_code"]) 
+            extended_records.append(document_medatada)
 
-        # recognition algorithm 0
-        # raw ocr output. concatenated lines
-
-        # recognition algorithm 1
-        for bandwidth in tqdm(bandwidths, desc='bandwidth', leave=False):
-            updated_ocr_metadata = copy.deepcopy(ocr_metadata)
-            lines = updated_ocr_metadata["ocr_ouptut"]
-            final_code = indent(lines, bandwidth)
-            updated_ocr_metadata["rec_meanshift_v1_bandwidth"] = bandwidth
-            updated_ocr_metadata["rec_meanshift_v1_output"] = final_code
-            updated_ocr_metadata["rec_meanshift_v1_output_edit_distance"] = editdistance.eval(ground_truth, final_code)
-            extended_records.append(
-                updated_ocr_metadata
-            )
-            print(updated_ocr_metadata)
-        
-        with open(args.output_file, 'w') as output_file:
-            json.dump(extended_records, output_file)
+    with open(args.output_file, 'w') as output_file:
+        json.dump(extended_records, output_file)
         
 
 
