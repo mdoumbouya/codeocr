@@ -37,8 +37,8 @@ def main(args):
     extended_records = []
     for document_metadata in tqdm(data, desc='record'):
         image_id = document_metadata['image_id']
-        document_metadata['ocr_provider']
-        document_metadata['ocr_ouptut']
+        # document_metadata['ocr_provider']
+        # document_metadata['ocr_ouptut']
         ground_truth = rd['Ground Truth'][image_id]
         
         for indent_recognition_method in indent_recognition_methods:

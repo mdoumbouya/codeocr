@@ -5,18 +5,29 @@
 # step (2)
 
 
-data/postprocessed_ocr_provider_data.json:
-	mkdir -p data
+output/postprocessed_ocr_provider_data.json:
+	mkdir -p output
 	python post_process_ocr_results.py \
 		--input-file ../apipayload.json \
-		--output-file data/postprocessed_ocr_provider_data.json \
+		--output-file output/postprocessed_ocr_provider_data.json \
 		--included-providers Azure
 		# GCV AWS Azure MP
 
-data/recognized_indentations.json:
+output/recognized_indentations.json: output/postprocessed_ocr_provider_data.json
 	python recognize_indentations.py  \
-		--input-file data/postprocessed_ocr_provider_data.json \
-		--output-file data/recognized_indentations.json \
-		--bandwidth-min 10 \
+		--input-file output/postprocessed_ocr_provider_data.json \
+		--output-file output/recognized_indentations.json \
+		--bandwidth-min 5 \
 		--bandwidth-max 200 \
 		--bandwidth-step 5
+
+output/recognition_outputs: output/recognized_indentations.json
+	python dump_recognition_results.py \
+		--input-file output/recognized_indentations.json \
+		--images-dir ../images \
+		--output-dir output/recognition_outputs
+
+output/eval_results.txt: output/recognized_indentations.json
+	python generate_evaluation_results.py \
+		--input-file output/recognized_indentations.json \
+		--output-file output/eval_results.txt

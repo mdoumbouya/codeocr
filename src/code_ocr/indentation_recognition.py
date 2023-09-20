@@ -27,20 +27,37 @@ class MeanShiftIndentRecognitionAlgo(IndentationRecognitionAlgorithm):
         self.bandwidth = bandwidth
 
     def recognize_indents(self, document_metadata):
+        params={
+            "bandwidth": self.bandwidth
+        }
         updated_document_metadata = copy.deepcopy(document_metadata)
         lines = updated_document_metadata["ocr_ouptut"]
 
-        final_code, estimated_or_requested_bandwidth = meanshift_indentation_recognition(lines, self.bandwidth)
-
-        params={"bandwidth": self.bandwidth}
+        estimated_or_requested_bandwidth = self.bandwidth
         if self.bandwidth == "estimated":
-            params["estimated_bandwidth"] = estimated_or_requested_bandwidth
+            params["estimated_bandwidth"] = self.estimate_bandwidth(document_metadata)
+            estimated_or_requested_bandwidth = params["estimated_bandwidth"]
+        
+        lines, final_code = meanshift_indentation_recognition(lines, estimated_or_requested_bandwidth)
+
+        
+        
+        
 
         return self.construct_output(
             document_metadata, 
             params=params,
-            outputs={"code": final_code}
+            outputs={
+                "code": final_code,
+                "indented_lines": lines
+            }
         )
+    
+    def estimate_bandwidth(self, document_metadata):
+        print(document_metadata.keys())
+        box_heights = np.array([box["h"] for box in document_metadata['ocr_ouptut']])
+        return np.mean(box_heights)*1.5
+            
 
 
 class IgnoreIndentRecognitionAlgo(IndentationRecognitionAlgorithm):
@@ -61,20 +78,15 @@ class IgnoreIndentRecognitionAlgo(IndentationRecognitionAlgorithm):
 
 
 def meanshift_indentation_recognition(lines, bandwidth):
+    lines = copy.deepcopy(lines)
     indentation = '    ' # 4 spaces
     
     # Data Preparation, getting all the x values from the lines json array
     x_values = [line['x'] for line in lines]
     x_values = np.array(x_values).reshape(-1, 1)
-
-    # estimate bandwith if requested
-    if bandwidth == "estimated":
-        estimated_or_requested_bandwidth = estimate_bandwidth(x_values, quantile=1) # bandwidth=max distancce between x values
-    else:
-        estimated_or_requested_bandwidth = bandwidth
     
     # Running it through the mean shift algorithm
-    mean_shift = MeanShift(bandwidth=estimated_or_requested_bandwidth)
+    mean_shift = MeanShift(bandwidth=bandwidth)
     mean_shift.fit(x_values)
     labels = mean_shift.labels_ # List of the labels for each line
     
@@ -138,4 +150,4 @@ def meanshift_indentation_recognition(lines, bandwidth):
     
     # print(final_code)
     
-    return final_code, estimated_or_requested_bandwidth
+    return lines, final_code
