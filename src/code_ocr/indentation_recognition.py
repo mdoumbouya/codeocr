@@ -20,7 +20,7 @@ class IndentationRecognitionAlgorithm(object):
 
 
     
-
+# Sazzad Note(SN): Ask Moussa how does this class work. 
 class MeanShiftIndentRecognitionAlgo(IndentationRecognitionAlgorithm):
     def __init__(self, bandwidth):
         super().__init__("meanshift-v1")
@@ -39,10 +39,6 @@ class MeanShiftIndentRecognitionAlgo(IndentationRecognitionAlgorithm):
             estimated_or_requested_bandwidth = params["estimated_bandwidth"]
         
         lines, final_code = meanshift_indentation_recognition(lines, estimated_or_requested_bandwidth)
-
-        
-        
-        
 
         return self.construct_output(
             document_metadata, 

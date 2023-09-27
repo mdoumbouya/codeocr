@@ -24,7 +24,7 @@ def build_indent_recognition_methods(args):
 
 
 def main(args):
-
+    
     start_time = time.time() 
     with open(args.input_file, 'r') as json_file:
         data = json.load(json_file)
