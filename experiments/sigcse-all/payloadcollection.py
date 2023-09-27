@@ -1,6 +1,6 @@
 import pandas as pd
 import csv
-from global_utils import *
+from code_ocr.global_utils import *
 import editdistance
 
 

@@ -1,7 +1,7 @@
 import copy
 from sklearn.cluster import MeanShift, estimate_bandwidth
 import numpy as np
-from global_utils import avg_list
+from code_ocr.global_utils import avg_list
 
 
 class IndentationRecognitionAlgorithm(object):

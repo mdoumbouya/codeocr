@@ -1,7 +1,7 @@
 import pandas as pd
 import csv
 
-from global_utils import *
+from code_ocr.global_utils import *
 
 data = pd.read_csv('errordata/derrorresults.csv')
 
