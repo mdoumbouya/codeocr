@@ -8,7 +8,7 @@ from pydrive.drive import GoogleDrive
 from csv import writer
 from pathlib import Path
 from google.cloud import vision
-from global_utils import *
+from code_ocr.global_utils import *
 import base64
 from cleantext import clean
 import black
