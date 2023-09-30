@@ -31,3 +31,9 @@ output/eval_results.txt: output/recognized_indentations.json
 	python generate_evaluation_results.py \
 		--input-file output/recognized_indentations.json \
 		--output-file output/eval_results.txt
+
+output/lm_post_processed.json: output/recognized_indentations.json
+	python lm_post_correction.py  \
+		--input-file output/recognized_indentations.json \
+		--output-file output/lm_post_processed.json \
+		--prompting-method cot
