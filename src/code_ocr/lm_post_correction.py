@@ -18,17 +18,23 @@ class LMPostCorrectionAlgorithm(object):
     def __init__(self, name):
         self.name = name
         
-    def post_correction(self, indentation_recognition_output):
+    def post_correction(self, document_metadata):
         raise NotImplementedError()
-      
-      
+
+
+
 class COTprompting(LMPostCorrectionAlgorithm):
     def __init__(self):
         super().__init__("cot-v1")
         
-    def post_correction(self, indentation_recognition_output):
-        result = triple_prompt(indentation_recognition_output)
-        return result
+    def post_correction(self, document_metadata):
+        updated_document_metadata = copy.deepcopy(document_metadata)
+        
+        ir_algo_output_code = updated_document_metadata["ir_algo_output_code"]
+        
+        lm_post_processed_code = triple_prompt(ir_algo_output_code)
+            
+        return lm_post_processed_code
         
         
 # Double prompting function
@@ -73,6 +79,9 @@ def clear_response(txt):
                 return txt[first_tilda + 3:second_tilda]
     
     return txt
+
+def backoff_hdlr(details):
+    print("Backing off {wait:0.1f} seconds after {tries} tries calling function {target} with args {args} and kwargs {kwargs}".format(**details))
 
 
 
