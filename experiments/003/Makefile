@@ -37,3 +37,8 @@ output/lm_post_processed.json: output/recognized_indentations.json
 		--input-file output/recognized_indentations.json \
 		--output-file output/lm_post_processed.json \
 		--prompting-method cot
+
+output/final_eval.txt: output/lm_post_processed.json
+	python lm_post_correction_eval.py  \
+		--input-file output/lm_post_processed.json \
+		--output-file output/final_eval.txt

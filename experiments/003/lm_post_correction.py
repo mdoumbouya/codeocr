@@ -23,15 +23,19 @@ def main(args):
     
     for document_metadata in tqdm(data, desc='record'):
         
-        image_id = document_metadata['image_id']
-        ground_truth = rd['Ground Truth'][image_id]
-        
-        if args.prompting_method == "cot":
-          document_metadata["lm_post_processed_code"] = COTprompting.post_correction(document_metadata)
-        else:
-          raise NotImplementedError(f"Prompting method {args.prompting_method} not implemented")
-        
-        document_metadata["lm_post_processed_edit_distance"] = editdistance.eval(document_metadata["lm_post_processed_code"], ground_truth)
+        if "ir_algo_param_bandwidth" in document_metadata:
+            if document_metadata["ir_algo_param_bandwidth"] == "estimated":
+                image_id = document_metadata['image_id']
+                ground_truth = rd['Ground Truth'][image_id]
+                
+                if args.prompting_method == "cot":
+                  document_metadata["lm_post_processed_code"] = COTprompting.post_correction(document_metadata)
+                else:
+                  raise NotImplementedError(f"Prompting method {args.prompting_method} not implemented")
+                
+                document_metadata["lm_post_processed_edit_distance"] = editdistance.eval(document_metadata["lm_post_processed_code"], ground_truth)
+                
+                extended_records.append(document_metadata)
         
         time.sleep(3)
 
