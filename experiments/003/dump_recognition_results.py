@@ -33,8 +33,12 @@ def main(args):
             json.dump(document_metadata, f, indent="4")
         
         # dump output code
-        with open(output_dir / f"{image_id}_output.py", "w") as f:
+        with open(output_dir / f"{image_id}_ir_algo_output.py", "w") as f:
             f.write(document_metadata["ir_algo_output_code"])
+        
+        # Dump lm post processed code
+        with open(output_dir / f"{image_id}_lm_post_processed.py", "w") as f:
+            f.write(document_metadata["lm_post_processed_code"])
         
         # dump ground truth code
         ground_truth = rd['Ground Truth'][image_id]
