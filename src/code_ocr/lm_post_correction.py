@@ -22,7 +22,7 @@ class LMPostCorrectionAlgorithm(object):
         raise NotImplementedError()
 
 
-
+# Chain of thought Class
 class COTprompting(LMPostCorrectionAlgorithm):
     def __init__(self):
         super().__init__("cot-v1")
@@ -40,13 +40,30 @@ class COTprompting(LMPostCorrectionAlgorithm):
         return lm_post_processed_code
         
         
+        
+# Simple Class
+class SIMPLEprompting(LMPostCorrectionAlgorithm):
+    def __init__(self):
+        super().__init__("simple-v1")
+        
+    def post_correction(self, document_metadata):
+        
+        updated_document_metadata = copy.deepcopy(document_metadata)
+        ir_algo_output_code = updated_document_metadata["ir_algo_output_code"]
+        print(ir_algo_output_code)
+        
+        lm_post_processed_code = initial_prompt(ir_algo_output_code)
+            
+        return lm_post_processed_code
+        
+        
+        
+        
+        
+        
+        
+        
 # Double prompting function
-
-
-
-
-
-
 
 def remove_blank_lines(code):
     code = str(code)
@@ -289,3 +306,59 @@ code goes here.
         return ""
 
 
+#This is the simple prompt function
+
+@backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
+def simple_prompt(input_text, temperature=0.0):
+    # print("Into the post process gpt function")
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a helpful assistant who helps correct OCR result of handwritten python code.",
+        },
+        {
+            "role": "user",
+            "content": f"""
+Only fix typos in the following code. Do not change anything else. Here is the code:
+{input_text}
+
+return code in the following format:
+```python
+Code goes here
+```
+""",
+        },
+    ]
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Bearer {OPENAI_API_KEY}",
+    }
+
+    payload = {
+        "model": GPT_MODEL,
+        "messages": messages,
+        "max_tokens": 2042,
+        "temperature": temperature,
+    }
+
+    try:
+        # print("trying GPT")
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(payload))
+
+        if response.status_code == 200:
+            # print("GPT worked")
+            response_json = response.json()
+            # print(response_json)
+            result = response_json["choices"][0]["message"]["content"].strip()
+            
+        
+            # return payload, response_json
+            return result
+        else:
+            print("GPT failed")
+            return ""
+    except Exception as e:
+        print(f"Error: {e}")
+        return ""
