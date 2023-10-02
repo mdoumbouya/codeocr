@@ -1299,8 +1299,8 @@ Code goes here
             result = response_json["choices"][0]["message"]["content"].strip()
             
         
-            # return payload, response_json
-            return result
+            return payload, response_json
+            # return result
         else:
             print("GPT failed")
             return ""
