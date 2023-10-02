@@ -1299,7 +1299,8 @@ Code goes here
             result = response_json["choices"][0]["message"]["content"].strip()
             
         
-            return payload, response_json
+            # return payload, response_json
+            return result
         else:
             print("GPT failed")
             return ""
@@ -1472,26 +1473,33 @@ def mathpix_payload(image_path):
     return result
     
     
-def line_data(api_data):
-    lines = []
-    #This is only for microsoft azure
-    i = 1
-    for line in api_data:
+def line_data(raw_api_datum):
+    extracted_api_data = {
+        "ocr_ouptut": []
+    }
+
+    for i, line in enumerate(raw_api_datum["readResult"]['pages'][0]['lines']):
         line_dict = {}
-        
         coords_list = line['boundingBox']
+        # Quadrangle bounding box of a line or word, depending on the parent object, specified as a list of 8 numbers. The coordinates are specified relative to the top-left of the original image. The eight numbers represent the four points, clockwise from the top-left corner relative to the text orientation. For image, the (x, y) coordinates are measured in pixels. For PDF, the (x, y) coordinates are measured in inches.
+        (
+            tl_x, tl_y,
+            tr_x, tr_y,
+            br_x, br_y,
+            bl_x, bl_y 
+        ) = coords_list
+        
         x_coord = coords_list[0]
         y_coord = coords_list[1]
         line_dict['x'] = x_coord
         line_dict['y'] = y_coord
+        line_dict['w'] = tr_x - tl_x
+        line_dict['h'] = bl_y - tl_y
+        line_dict['line_num'] = i+1
+        line_dict['text'] = line['content'].strip()        
         
-        line_dict['line_num'] = i
-        i += 1
-        
-        line_dict['text'] = line['content'].strip()
-        
-        lines.append(line_dict)
-        
-    return lines
+        extracted_api_data["ocr_ouptut"].append(line_dict)
+
+    return extracted_api_data
     
     
