@@ -32,9 +32,7 @@ class COTprompting(LMPostCorrectionAlgorithm):
         updated_document_metadata = copy.deepcopy(document_metadata)
         
         ir_algo_output_code = updated_document_metadata["ir_algo_output_code"]
-        print("This is from inside the post correction class")
-        print(ir_algo_output_code)
-        
+
         lm_post_processed_code = triple_prompt(ir_algo_output_code)
             
         return lm_post_processed_code
