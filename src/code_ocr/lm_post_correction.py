@@ -28,9 +28,12 @@ class COTprompting(LMPostCorrectionAlgorithm):
         super().__init__("cot-v1")
         
     def post_correction(self, document_metadata):
+        
         updated_document_metadata = copy.deepcopy(document_metadata)
         
         ir_algo_output_code = updated_document_metadata["ir_algo_output_code"]
+        print("This is from inside the post correction class")
+        print(ir_algo_output_code)
         
         lm_post_processed_code = triple_prompt(ir_algo_output_code)
             
@@ -284,4 +287,5 @@ code goes here.
     except Exception as e:
         print(f"Error: {e}")
         return ""
+
 
