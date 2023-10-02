@@ -30,7 +30,7 @@ from firebase_admin import firestore
 from flask import session
 
 from code_ocr.indentation_recognition import MeanShiftIndentRecognitionAlgo
-from code_ocr.lm_post_correction import COTprompting
+from code_ocr.lm_post_correction import COTprompting, SIMPLEprompting
 
 load_dotenv()
 
@@ -110,8 +110,9 @@ def index():
         if LM_dropdown == "COT":
             source_code = COTprompting().post_correction(ir_output)
         elif LM_dropdown == "SIMPLE":
-            source_code = simple_prompt(source_code)
-            
+            source_code = SIMPLEprompting().post_correction(ir_output)
+        else:
+            source_code = SIMPLEprompting().post_correction(ir_output)
         lm_end = timer()
         
         print("source_code: ", source_code)
