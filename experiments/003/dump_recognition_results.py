@@ -79,7 +79,7 @@ def main(args):
         # shutil.copy(Path(args.images_dir) / f"{image_id}.jpg", output_dir)
         # dump metadata json
         with open(output_dir / f"{image_id}.json", "w") as f:
-            json.dump(document_metadata, f, indent="4")
+            json.dump(document_metadata, f)
         
         # dump output code
         with open(output_dir / f"{image_id}_ir_algo_output.py", "w") as f:
