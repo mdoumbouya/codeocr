@@ -38,6 +38,8 @@ output/lm_post_processed.json: output/recognized_indentations.json
 		--output-file output/lm_post_processed.json \
 		--prompting-method cot
 
+
+# This one is just to quickly generate results from the LM json. I will integrate this into the main eval script later.
 output/final_eval.txt: output/lm_post_processed.json
 	python lm_post_correction_eval.py  \
 		--input-file output/lm_post_processed.json \
