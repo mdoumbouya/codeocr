@@ -7,6 +7,7 @@ import time
 from tqdm import tqdm
 import argparse
 import logging
+import numpy as np
 
 logger = logging.getLogger(__name__)
 
@@ -23,6 +24,18 @@ def main(args):
                     extract_provider_metadata(ocr_provider, raw_api_datum)
                 )          
                 post_processed_data.append(post_processed_datum)
+    
+    if args.random_sample_size != -1:
+        rs = np.random.RandomState(seed=args.random_seed)
+        indices = rs.randint(
+            low=0, 
+            high=len(post_processed_data), 
+            size=args.random_sample_size
+        )
+
+        post_processed_data = [
+            post_processed_data[i] for i in indices
+        ]
 
     with open(args.output_file, 'w') as output_file:
         json.dump(post_processed_data, output_file)
@@ -78,6 +91,12 @@ def parse_arguments():
         "--included-providers", required=True, nargs="+", 
         choices=['GCV', 'AWS', 'Azure', 'MP'], 
         help="input file. api dump file"
+    )
+    parser.add_argument(
+        "--random-sample-size", type=int, required=False, default=-1, help="Number of data points to sample. -1 for no sampling"
+    )
+    parser.add_argument(
+        "--random-seed", type=int, required=False, default=42, help="Random seed for sampling"
     )
     parser.add_argument("--input-file", required=True, help="input file. api dump file")
     parser.add_argument("--output-file", required=True, help="file in which to generate code")
