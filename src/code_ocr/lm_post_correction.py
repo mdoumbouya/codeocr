@@ -31,6 +31,7 @@ class COTprompting(LMPostCorrectionAlgorithm):
         
         updated_document_metadata = copy.deepcopy(document_metadata)
         
+        
         ir_algo_output_code = updated_document_metadata["ir_algo_output_code"]
 
         lm_post_processed_code = triple_prompt(ir_algo_output_code)
@@ -48,7 +49,6 @@ class SIMPLEprompting(LMPostCorrectionAlgorithm):
         
         updated_document_metadata = copy.deepcopy(document_metadata)
         ir_algo_output_code = updated_document_metadata["ir_algo_output_code"]
-        print(ir_algo_output_code)
         
         lm_post_processed_code = initial_prompt(ir_algo_output_code)
             
@@ -349,7 +349,7 @@ Code goes here
             # print("GPT worked")
             response_json = response.json()
             # print(response_json)
-            result = response_json["choices"][0]["message"]["content"].strip()
+            result = remove_blank_lines(clear_response(response_json["choices"][0]["message"]["content"].strip()))
             
         
             # return payload, response_json
