@@ -67,40 +67,8 @@ def main(args):
             
             ir_algo_output_edit_distance_percentage.append(ir_algo_percentage)
             lm_post_processed_edit_distance_percentage.append(lm_post_processed_percentage)
-
-        else:
-            image_num = document_metadata['image_id']
-            
-            ground_truth = rd['Ground Truth'][image_num]
-            
-            ground_truth_length = len(ground_truth)
             
             
-            missing_data.append(document_metadata)
-            print(f"Missing lm post processed code for image {image_num} with ir algo {document_metadata['ir_algo_name']} and prompting method {document_metadata['prompting_method']}")
-            if document_metadata['prompting_method'] == 'COT':
-                copied_document_metadata = copy.deepcopy(document_metadata)
-                # print(document_metadata)
-                # print(type(document_metadata))
-                copied_document_metadata['lm_post_processed_code'] = COTprompting.post_correction(copied_document_metadata)
-                copied_document_metadata['lm_post_processed_edit_distance'] = editdistance.eval(copied_document_metadata['lm_post_processed_code'], ground_truth)
-                fixed_data.append(copied_document_metadata)
-            elif document_metadata['prompting_method'] == 'SIMPLE':
-                copied_document_metadata = copy.deepcopy(document_metadata)
-                copied_document_metadata['lm_post_processed_code'] = SIMPLEprompting.post_correction(copied_document_metadata)
-                copied_document_metadata['lm_post_processed_edit_distance'] = editdistance.eval(copied_document_metadata['lm_post_processed_code'], ground_truth)
-                fixed_data.append(copied_document_metadata)
-    
-
-
-
-
-
-# At some point you have to start writing the file in json from fixed data
-
-
-
-
     mean_ir_algo_output_edit_distance_percentage = round(mean(ir_algo_output_edit_distance_percentage), 2)
     mean_lm_post_processed_edit_distance_percentage = round(mean(lm_post_processed_edit_distance_percentage), 2)
     
@@ -123,7 +91,6 @@ def main(args):
     result2tstd = f"tstd edit distance percentage for LM post processed code: {tstd_lm_post_processed_edit_distance_percentage}"
     result2sem = f"sem edit distance percentage for LM post processed code: {sem_lm_post_processed_edit_distance_percentage}"
     
-    # or you can choose missing data, to have a looko at the missing data.
     with open(args.output_file, 'w') as output_file:
         json.dump(fixed_data, output_file)
         
