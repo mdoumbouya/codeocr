@@ -50,7 +50,7 @@ class MeanShiftIndentRecognitionAlgo(IndentationRecognitionAlgorithm):
         )
     
     def estimate_bandwidth(self, document_metadata):
-        print(document_metadata.keys())
+        # print(document_metadata.keys())
         box_heights = np.array([box["h"] for box in document_metadata['ocr_ouptut']])
         return np.mean(box_heights)*1.5
             

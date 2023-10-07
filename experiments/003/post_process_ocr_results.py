@@ -25,6 +25,7 @@ def main(args):
                 )          
                 post_processed_data.append(post_processed_datum)
     
+    # This part to randomly sample the data
     if args.random_sample_size != -1:
         rs = np.random.RandomState(seed=args.random_seed)
         indices = rs.randint(

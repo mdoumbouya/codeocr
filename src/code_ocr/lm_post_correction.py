@@ -11,7 +11,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-logging.basicConfig(filename='lm_class.log', level=logging.INFO,
+logs_dir = "logs"
+if not os.path.exists(logs_dir):
+    os.makedirs(logs_dir)
+
+logging.basicConfig(filename=os.path.join(logs_dir, 'lm_class.log'), 
+                    level=logging.INFO, 
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")

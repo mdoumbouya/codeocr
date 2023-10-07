@@ -37,13 +37,21 @@ DOT_COLORS =  [
 def draw_lines(image_path, data):
     # Load the image
     img = cv2.imread(image_path)
+    img_dimensions = img.shape
+    img_height = img_dimensions[0]
+    img_width = img_dimensions[1]
 
+    #Optimising the line thickness and dot radius based on the image size.
+    min_dimension = min(img_height, img_width)
+    line_thickness = max(min_dimension // 400, 1)
+    dot_radius = line_thickness * 5
+    
     # Draw lines based on OCR output
     for line in data["ocr_ouptut"]:
         x, y, w, h = line["x"], line["y"], line["w"], line["h"]
         top_left = (int(x), int(y))
         bottom_right = (int(x + w), int(y + h))
-        cv2.rectangle(img, top_left, bottom_right, (255, 0, 0), 1)
+        cv2.rectangle(img, top_left, bottom_right, (255, 0, 0), line_thickness)
 
     # Map cluster labels to colors
     color_map = {i: color[0] for i, color in enumerate(DOT_COLORS)}
@@ -53,9 +61,10 @@ def draw_lines(image_path, data):
         for line in data["ir_algo_output_indented_lines"]:
             x, y = line["x"], line["y"]
             cluster_label = line["cluster_label"]
-            cv2.circle(img, (int(x), int(y)), 5, color_map[cluster_label], -1)
+            cv2.circle(img, (int(x), int(y)), dot_radius, color_map[cluster_label], -1)
 
     return img
+
 
 def main(args):
 
@@ -73,7 +82,7 @@ def main(args):
         image_id = document_metadata['image_id']
         param_keys = [k for k in document_metadata.keys() if "param" in k and not "estimated" in k]
         params_str = "__".join([f"{k}_{document_metadata[k]}" for k in param_keys])
-        output_dir = base_output_dir / document_metadata['ocr_provider'] / (document_metadata["ir_algo_name"] + params_str)
+        output_dir = base_output_dir / document_metadata['ocr_provider'] / (document_metadata["ir_algo_name"] + params_str) / document_metadata["prompting_method"]
         output_dir.mkdir(parents=True, exist_ok=True)
         # copy image
         # shutil.copy(Path(args.images_dir) / f"{image_id}.jpg", output_dir)
