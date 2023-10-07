@@ -1,3 +1,4 @@
+import logging
 import copy
 import numpy as np
 from code_ocr.global_utils import avg_list
@@ -9,6 +10,9 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
+logging.basicConfig(filename='lm_class.log', level=logging.INFO,
+                    format='%(asctime)s:%(levelname)s:%(message)s')
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
@@ -30,12 +34,9 @@ class COTprompting(LMPostCorrectionAlgorithm):
     def post_correction(self, document_metadata):
         
         updated_document_metadata = copy.deepcopy(document_metadata)
-        
-        
         ir_algo_output_code = updated_document_metadata["ir_algo_output_code"]
 
         lm_post_processed_code = triple_prompt(ir_algo_output_code)
-            
         return lm_post_processed_code
         
         
@@ -50,18 +51,9 @@ class SIMPLEprompting(LMPostCorrectionAlgorithm):
         updated_document_metadata = copy.deepcopy(document_metadata)
         ir_algo_output_code = updated_document_metadata["ir_algo_output_code"]
         
-        lm_post_processed_code = initial_prompt(ir_algo_output_code)
+        lm_post_processed_code = simple_prompt(ir_algo_output_code)
             
         return lm_post_processed_code
-        
-        
-        
-        
-        
-        
-        
-        
-# Double prompting function
 
 def remove_blank_lines(code):
     code = str(code)
@@ -82,30 +74,31 @@ def remove_blank_lines(code):
             cleaned_code += line + "\n"
     return cleaned_code
 
-# Takes in a string as an input, and outputs the string with the code block removed
-def clear_response(txt):
+def extract_code_from_codeBlock(txt):
+    """
+    Extracts code blocks from a given text string and returns the code as a string.
 
+    Args:
+        txt (str): The text string to extract code blocks from.
+
+    Returns:
+        str: The extracted code block as a string, or the original text if no code block was found.
+    """
     first_tilda = txt.find("```")
-
     if first_tilda != -1:
         second_tilda = txt.find("```", first_tilda + 1)
-
         if second_tilda != -1:
             if txt[first_tilda + 3: first_tilda + 9] == "python" or txt[first_tilda + 3: first_tilda + 9] == "Python":
                 return txt[first_tilda + 9:second_tilda]
             else:
                 return txt[first_tilda + 3:second_tilda]
-    
     return txt
 
 def backoff_hdlr(details):
-    print("Backing off {wait:0.1f} seconds after {tries} tries calling function {target} with args {args} and kwargs {kwargs}".format(**details))
-
-
+    logging.warning("Backing off {wait:0.1f} seconds after {tries} tries calling function {target} with args {args} and kwargs {kwargs}".format(**details))
 
 @backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
 def initial_prompt(entire_code, temperature=0.0):
-    # print("Into the post process gpt function")
     messages = [
         {
             "role": "system",
@@ -128,7 +121,6 @@ code goes here.
 """,
         },
     ]
-
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",
@@ -143,29 +135,29 @@ code goes here.
     }
 
     try:
-        # print("trying GPT")
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(payload))
-
-        if response.status_code == 200:
-            # print("GPT worked")
-            response_json = response.json()
-            # print(response_json)
-            result = response_json["choices"][0]["message"]["content"].strip()
-            
-        
-            return result
-        else:
-            print("GPT failed")
-            return ""
+        response.raise_for_status()  # Raises a HTTPError if the response was an HTTP 4xx or 5xx
+        response_json = response.json()
+        result = extract_code_from_codeBlock(response_json["choices"][0]["message"]["content"].strip())
+        return result
+    except requests.exceptions.HTTPError as errh:
+        logging.error(f"HTTP Error: {errh}")
+        return "failed"
+    except requests.exceptions.ConnectionError as errc:
+        logging.error(f"Error Connecting: {errc}")
+        return "failed"
+    except requests.exceptions.Timeout as errt:
+        logging.error(f"Timeout Error: {errt}")
+        return "failed"
+    except requests.exceptions.RequestException as err:
+        logging.error(f"Something went wrong with the request: {err}")
+        return "failed"
     except Exception as e:
-        print(f"Error: {e}")
-        return ""
-
-
+        logging.error(f"Unknown error: {e}")
+        return "failed"
 
 @backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
 def double_prompt(entire_code, temperature=0.0):
-    # print("Into the post process gpt function")
     initial_LM_code = initial_prompt(entire_code)
     messages = [
         {
@@ -197,7 +189,6 @@ code goes here.
             "content": f"""do not fix the logical errors""",
         }
     ]
-
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",
@@ -212,26 +203,29 @@ code goes here.
     }
 
     try:
-        # print("trying GPT")
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(payload))
-        if response.status_code == 200:
-            # print("GPT worked")
-            response_json = response.json()
-            # print(response_json)
-            result = remove_blank_lines(clear_response(response_json["choices"][0]["message"]["content"].strip()))
-            return result
-        
-        else:
-            print("GPT failed")
-            return ""
+        response.raise_for_status()  # Raises a HTTPError if the response was an HTTP 4xx or 5xx
+        response_json = response.json()
+        result = extract_code_from_codeBlock(response_json["choices"][0]["message"]["content"].strip())
+        return result
+    except requests.exceptions.HTTPError as errh:
+        logging.error(f"HTTP Error: {errh}")
+        return "failed"
+    except requests.exceptions.ConnectionError as errc:
+        logging.error(f"Error Connecting: {errc}")
+        return "failed"
+    except requests.exceptions.Timeout as errt:
+        logging.error(f"Timeout Error: {errt}")
+        return "failed"
+    except requests.exceptions.RequestException as err:
+        logging.error(f"Something went wrong with the request: {err}")
+        return "failed"
     except Exception as e:
-        print(f"Error: {e}")
-        return ""
-
+        logging.error(f"Unknown error: {e}")
+        return "failed"
 
 @backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
 def triple_prompt(entire_code, temperature=0.0):
-    # print("Into the post process gpt function")
     initial_LM_code = initial_prompt(entire_code)
     double_prompted_code = double_prompt(initial_LM_code)
     messages = [
@@ -270,9 +264,8 @@ code goes here.
         {
             "role": "user",
             "content": "Do not change the original indentation, keep it the same as the OCR output",
-        },
+        }
     ]
-
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",
@@ -287,28 +280,29 @@ code goes here.
     }
 
     try:
-        # print("trying GPT")
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(payload))
-        if response.status_code == 200:
-            # print("GPT worked")
-            response_json = response.json()
-            # print(response_json)
-            result = remove_blank_lines(clear_response(response_json["choices"][0]["message"]["content"].strip()))
-            return result
-        
-        else:
-            print("GPT failed")
-            return ""
+        response.raise_for_status()  # Raises a HTTPError if the response was an HTTP 4xx or 5xx
+        response_json = response.json()
+        result = extract_code_from_codeBlock(response_json["choices"][0]["message"]["content"].strip())
+        return result
+    except requests.exceptions.HTTPError as errh:
+        logging.error(f"HTTP Error: {errh}")
+        return "failed"
+    except requests.exceptions.ConnectionError as errc:
+        logging.error(f"Error Connecting: {errc}")
+        return "failed"
+    except requests.exceptions.Timeout as errt:
+        logging.error(f"Timeout Error: {errt}")
+        return "failed"
+    except requests.exceptions.RequestException as err:
+        logging.error(f"Something went wrong with the request: {err}")
+        return "failed"
     except Exception as e:
-        print(f"Error: {e}")
-        return ""
-
-
-#This is the simple prompt function
+        logging.error(f"Unknown error: {e}")
+        return "failed"
 
 @backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
-def simple_prompt(input_text, temperature=0.0):
-    # print("Into the post process gpt function")
+def simple_prompt(entire_code, temperature=0.0):
     messages = [
         {
             "role": "system",
@@ -318,7 +312,7 @@ def simple_prompt(input_text, temperature=0.0):
             "role": "user",
             "content": f"""
 Only fix typos in the following code. Do not change anything else. Here is the code:
-{input_text}
+{entire_code}
 
 return code in the following format:
 ```python
@@ -327,7 +321,6 @@ Code goes here
 """,
         },
     ]
-
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",
@@ -342,21 +335,23 @@ Code goes here
     }
 
     try:
-        # print("trying GPT")
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(payload))
-
-        if response.status_code == 200:
-            # print("GPT worked")
-            response_json = response.json()
-            # print(response_json)
-            result = remove_blank_lines(clear_response(response_json["choices"][0]["message"]["content"].strip()))
-            
-        
-            # return payload, response_json
-            return result
-        else:
-            print("GPT failed")
-            return ""
+        response.raise_for_status()  # Raises a HTTPError if the response was an HTTP 4xx or 5xx
+        response_json = response.json()
+        result = extract_code_from_codeBlock(response_json["choices"][0]["message"]["content"].strip())
+        return result
+    except requests.exceptions.HTTPError as errh:
+        logging.error(f"HTTP Error: {errh}")
+        return "failed"
+    except requests.exceptions.ConnectionError as errc:
+        logging.error(f"Error Connecting: {errc}")
+        return "failed"
+    except requests.exceptions.Timeout as errt:
+        logging.error(f"Timeout Error: {errt}")
+        return "failed"
+    except requests.exceptions.RequestException as err:
+        logging.error(f"Something went wrong with the request: {err}")
+        return "failed"
     except Exception as e:
-        print(f"Error: {e}")
-        return ""
+        logging.error(f"Unknown error: {e}")
+        return "failed"
