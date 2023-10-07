@@ -1,5 +1,12 @@
+# This is the main makefile for the experiments. It will run all the experiments in the correct order.
+
+
+
+# This one runs the experiments on the full dataset.
 # SAMPLES_FLAG=--random-sample-size=-1
-SAMPLES_FLAG=--random-sample-size=2
+
+# Specify the size one in this one to run this over a subset of the data.
+SAMPLES_FLAG=--random-sample-size=15
 
 
 output/postprocessed_ocr_provider_data.json:
@@ -11,6 +18,7 @@ output/postprocessed_ocr_provider_data.json:
 		${SAMPLES_FLAG} \
 		# GCV AWS Azure MP
 
+# You can put bandwidth as -1 to run no custom bandwidth, in that case it will only run [none, estimated]
 output/recognized_indentations.json: output/postprocessed_ocr_provider_data.json
 	python recognize_indentations.py  \
 		--input-file output/postprocessed_ocr_provider_data.json \
@@ -19,6 +27,7 @@ output/recognized_indentations.json: output/postprocessed_ocr_provider_data.json
 		--bandwidth-max -1 \
 		--bandwidth-step 5
 
+# Add the language models you want to use, current option is [cot, simple]
 output/lm_post_processed.json: output/recognized_indentations.json
 	python lm_post_correction.py  \
 		--input-file output/recognized_indentations.json \
@@ -27,21 +36,13 @@ output/lm_post_processed.json: output/recognized_indentations.json
 
 
 output/recognition_outputs: output/lm_post_processed.json
-	python dump_recognition_results.py \
+	python dump_results.py \
 		--input-file output/lm_post_processed.json \
 		--images-dir ../images \
-		--output-dir output/recognition_outputs
+		--output-dir output/dumped_outputs
 
-output/eval_results.txt: output/recognized_indentations.json
+
+output/eval_results.txt: output/lm_post_processed.json
 	python generate_evaluation_results.py \
-		--input-file output/recognized_indentations.json \
-		--output-file output/eval_results.txt
-
-
-
-
-# This one is just to quickly generate results from the LM json. I will integrate this into the main eval script later.
-output/final_eval.txt: output/lm_post_processed.json
-	python lm_post_correction_eval.py  \
 		--input-file output/lm_post_processed.json \
-		--output-file output/final_eval.txt
+		--output-file output/eval_results.txt

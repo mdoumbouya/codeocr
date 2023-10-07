@@ -41,6 +41,12 @@ def main(args):
 
         for prompting_method, post_correction_algo in selected_lm_post_correction_methods:
             lm_post_processed_code = post_correction_algo(document_metadata)
+            
+            # This part is to log where it failed, if it failed.
+            if lm_post_processed_code == 'failed':
+                logger.info(f"Failed to post process image {image_id}-> prompting method {prompting_method} -> ir algo{document_metadata['ir_algo_name']}")
+            
+            # The code would still continue to run, but the lm_post_processed_code would be 'failed'
             lm_post_processed_edit_distance = editdistance.eval(lm_post_processed_code, ground_truth)
             
             extended_record = {
@@ -56,7 +62,8 @@ def main(args):
         
     end_time = time.time()  # save end time
     elapsed_time = end_time - start_time  # calculate elapsed time
-    logger.info(f"The code took {elapsed_time} seconds to run.")
+    
+    logger.info(f"The lm_post_correction.py took {round((elapsed_time / 60), 2)} minutes to run.")
 
 def parse_arguments():
     parser = argparse.ArgumentParser()

@@ -54,7 +54,7 @@ def main(args):
     end_time = time.time()  # save end time
     elapsed_time = end_time - start_time  # calculate elapsed time
 
-    print(f"The code took {elapsed_time} seconds to run.")
+
 
 
 def parse_arguments():
