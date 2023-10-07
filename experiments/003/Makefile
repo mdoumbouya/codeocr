@@ -3,10 +3,10 @@
 
 
 # This one runs the experiments on the full dataset.
-# SAMPLES_FLAG=--random-sample-size=-1
+SAMPLES_FLAG=--random-sample-size=-1
 
 # Specify the size one in this one to run this over a subset of the data.
-SAMPLES_FLAG=--random-sample-size=15
+# SAMPLES_FLAG=--random-sample-size=15
 
 
 output/postprocessed_ocr_provider_data.json:
@@ -24,7 +24,7 @@ output/recognized_indentations.json: output/postprocessed_ocr_provider_data.json
 		--input-file output/postprocessed_ocr_provider_data.json \
 		--output-file output/recognized_indentations.json \
 		--bandwidth-min 0 \
-		--bandwidth-max -1 \
+		--bandwidth-max 200 \
 		--bandwidth-step 5
 
 # Add the language models you want to use, current option is [cot, simple]
