@@ -23,7 +23,7 @@ output/recognized_indentations.json: output/postprocessed_ocr_provider_data.json
 	python recognize_indentations.py  \
 		--input-file output/postprocessed_ocr_provider_data.json \
 		--output-file output/recognized_indentations.json \
-		--bandwidth-min 0 \
+		--bandwidth-min 1 \
 		--bandwidth-max 200 \
 		--bandwidth-step 5
 
