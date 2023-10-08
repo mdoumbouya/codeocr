@@ -6,7 +6,7 @@ import editdistance
 import time
 from tqdm import tqdm
 import argparse
-from code_ocr.lm_post_correction import COTprompting, SIMPLEprompting
+from code_ocr.post_correction import COTprompting, SIMPLEprompting
 import copy
 import logging
 
@@ -56,6 +56,10 @@ def main(args):
                 "lm_post_processed_edit_distance": lm_post_processed_edit_distance
             }
             extended_records.append(extended_record)
+            
+            time.sleep(3) 
+            
+        
 
     with open(args.output_file, 'w') as output_file:
         json.dump(extended_records, output_file)
