@@ -18,6 +18,8 @@ def main(args):
     with open(args.input_file, 'r') as json_file:
         data = json.load(json_file)
     
+    with open('../rawdata.csv', 'r') as csv_file:
+        rd = pd.read_csv(csv_file)
 
 
 
@@ -26,8 +28,8 @@ def main(args):
     # 2. ir algo edit distance should ir_edist, and lm should be lm_edist
     # 3. there would be to edit distance by key, one for lm, one for ir algo
     
-    ir_edit_distances_by_key = {}
-    lm_edit_distances_by_key = {}
+    ir_edit_distances_percentage_by_key = {}
+    lm_edit_distances_percentage_by_key = {}
     image_ids_by_key = {}
     settings_by_key = {}
 
@@ -36,13 +38,16 @@ def main(args):
         params_str = "__".join([f"{k}_{document_metadata[k]}" for k in param_keys])
         setting_key =  document_metadata['ocr_provider'] + document_metadata["ir_algo_name"] + document_metadata["prompting_method"]+ params_str
         
-        if setting_key not in ir_edit_distances_by_key and setting_key not in lm_edit_distances_by_key:
-            ir_edit_distances_by_key[setting_key] = []
-            lm_edit_distances_by_key[setting_key] = []
+        if setting_key not in ir_edit_distances_percentage_by_key and setting_key not in lm_edit_distances_percentage_by_key:
+            ir_edit_distances_percentage_by_key[setting_key] = []
+            lm_edit_distances_percentage_by_key[setting_key] = []
             image_ids_by_key[setting_key] = []
         
-        ir_edit_distances_by_key[setting_key].append(document_metadata['ir_algo_output_edit_distance'])
-        lm_edit_distances_by_key[setting_key].append(document_metadata['lm_post_processed_edit_distance'])
+        ir_edit_distances_percentage = round((document_metadata['ir_algo_output_edit_distance'] / len(rd['Ground Truth'][document_metadata['image_id']])) * 100, 2)
+        lm_edit_distances_percentage = round((document_metadata['lm_post_processed_edit_distance'] / len(rd['Ground Truth'][document_metadata['image_id']])) * 100, 2)
+        
+        ir_edit_distances_percentage_by_key[setting_key].append(ir_edit_distances_percentage)
+        lm_edit_distances_percentage_by_key[setting_key].append(lm_edit_distances_percentage)
         image_ids_by_key[setting_key].append(document_metadata['image_id'])
 
         settings_by_key[setting_key] = {
@@ -78,12 +83,12 @@ def main(args):
         for setting_key, settings in settings_by_key.items():
             
             # Ir stat
-            ir_edit_distances = np.array(ir_edit_distances_by_key[setting_key]).reshape(-1, 1)
+            ir_edit_distances = np.array(ir_edit_distances_percentage_by_key[setting_key]).reshape(-1, 1)
             ir_mean = np.mean(ir_edit_distances)
             ir_stem = float(sem(ir_edit_distances))
             
             # Lm stat
-            lm_edit_distances = np.array(lm_edit_distances_by_key[setting_key]).reshape(-1, 1)
+            lm_edit_distances = np.array(lm_edit_distances_percentage_by_key[setting_key]).reshape(-1, 1)
             lm_mean = np.mean(lm_edit_distances)
             lm_stem = float(sem(lm_edit_distances))
             
@@ -95,9 +100,9 @@ def main(args):
                 if column_name == "n":
                     row.append(n)
                 elif column_name == "ir_edist.":
-                    row.append(f"${ir_mean:.2f} \pm {ir_stem:.2f}$")
+                    row.append(f"${ir_mean:.2f} \pm {ir_stem:.2f}$\%")
                 elif column_name == "lm_edist.":
-                    row.append(f"${lm_mean:.2f} \pm {lm_stem:.2f}$")
+                    row.append(f"${lm_mean:.2f} \pm {lm_stem:.2f}$\%")
                 elif column_name in settings:
                     row.append(settings[column_name])
                 else:
@@ -120,7 +125,7 @@ def main(args):
 
 
         for setting_key, settings in settings_by_key.items():
-            edit_distances = np.array(ir_edit_distances_by_key[setting_key])
+            edit_distances = np.array(ir_edit_distances_percentage_by_key[setting_key])
             image_ids = image_ids_by_key[setting_key]
             
             f.write(f"IMAGES/EDIT DISTANCE: {setting_key}\n")
