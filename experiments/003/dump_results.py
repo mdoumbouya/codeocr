@@ -67,7 +67,7 @@ def draw_lines(image_path, data):
             # Position of the text
             text_position = (int(x - text_offset), int(y))  # or any other position you prefer
             
-            font_scale = max(0.5, min(img_height, img_width) / 500)  # change the divisible to any value that makes the font size look good
+            font_scale = max(0.5, min(img_height, img_width) / 700)  # change the divisible to any value that makes the font size look good
 
             # Other text properties
             font = cv2.FONT_HERSHEY_SIMPLEX  # or any other font
