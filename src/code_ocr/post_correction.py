@@ -8,10 +8,16 @@ import openai
 import backoff
 import os
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
-logging.basicConfig(filename='lm_class.log', level=logging.INFO,
+logs_dir = "logs"
+if not os.path.exists(logs_dir):
+    os.makedirs(logs_dir)
+
+logging.basicConfig(filename=os.path.join(logs_dir, 'lm_class.log'), 
+                    level=logging.INFO, 
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -227,7 +233,10 @@ code goes here.
 @backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
 def triple_prompt(entire_code, temperature=0.0):
     initial_LM_code = initial_prompt(entire_code)
+    time.sleep(3)
     double_prompted_code = double_prompt(initial_LM_code)
+    time.sleep(3)
+    
     messages = [
         {
             "role": "system",

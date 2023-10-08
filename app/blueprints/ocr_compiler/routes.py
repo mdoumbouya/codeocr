@@ -30,7 +30,7 @@ from firebase_admin import firestore
 from flask import session
 
 from code_ocr.indentation_recognition import MeanShiftIndentRecognitionAlgo
-from code_ocr.lm_post_correction import COTprompting, SIMPLEprompting
+from code_ocr.post_correction import COTprompting, SIMPLEprompting
 
 load_dotenv()
 

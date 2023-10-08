@@ -35,13 +35,15 @@ output/lm_post_processed.json: output/recognized_indentations.json
 		--post-correction-methods cot simple
 
 
-output/recognition_outputs: output/lm_post_processed.json
+# Running this one runs the entire pipeline and then dumps the results(No Evaluation)
+output/dumped_outputs: output/lm_post_processed.json
 	python dump_results.py \
 		--input-file output/lm_post_processed.json \
 		--images-dir ../images \
 		--output-dir output/dumped_outputs
 
 
+# Running this one runs the entire pipeline and then Gives the evaluation results(No Dumping results)
 output/eval_results.txt: output/lm_post_processed.json
 	python generate_evaluation_results.py \
 		--input-file output/lm_post_processed.json \

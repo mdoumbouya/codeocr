@@ -44,6 +44,7 @@ def draw_lines(image_path, data):
     #Optimising the line thickness and dot radius based on the image size.
     min_dimension = min(img_height, img_width)
     line_thickness = max(min_dimension // 400, 1)
+    text_offset = (img_width // 200) * 4 # This is the offset of the text from the dot
     dot_radius = line_thickness * 5
     
     # Draw lines based on OCR output
@@ -61,8 +62,19 @@ def draw_lines(image_path, data):
         for line in data["ir_algo_output_indented_lines"]:
             x, y = line["x"], line["y"]
             cluster_label = line["cluster_label"]
-            cv2.circle(img, (int(x), int(y)), dot_radius, color_map[cluster_label], -1)
+            cv2.circle(img, (int(x), int(y)), dot_radius, color_map[cluster_label % len(color_map)], -1) # Now it wraps around
 
+            # Position of the text
+            text_position = (int(x - text_offset), int(y))  # or any other position you prefer
+            
+            font_scale = max(0.5, min(img_height, img_width) / 500)  # change the divisible to any value that makes the font size look good
+
+            # Other text properties
+            font = cv2.FONT_HERSHEY_SIMPLEX  # or any other font
+            font_color = (0, 255, 0)  # or any other color
+            line_type = 2  # thickness of the line 
+            cv2.putText(img, str(cluster_label), text_position, font, font_scale, font_color, line_type)
+            
     return img
 
 
