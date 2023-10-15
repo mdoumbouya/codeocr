@@ -6,7 +6,7 @@
 SAMPLES_FLAG=--random-sample-size=-1
 
 # Specify the size one in this one to run this over a subset of the data.
-# SAMPLES_FLAG=--random-sample-size=15
+# SAMPLES_FLAG=--random-sample-size=1
 
 
 output/postprocessed_ocr_provider_data.json:
@@ -32,7 +32,7 @@ output/lm_post_processed.json: output/recognized_indentations.json
 	python lm_post_correction.py  \
 		--input-file output/recognized_indentations.json \
 		--output-file output/lm_post_processed.json \
-		--post-correction-methods cot simple
+		--post-correction-methods cot cot-test1 cot-test2 cot-test3 cot-test4 cot-test5 simple simple-test1 simple-test2 simple-test3
 
 
 # Running this one runs the entire pipeline and then dumps the results(No Evaluation)
@@ -48,3 +48,5 @@ output/eval_results.txt: output/lm_post_processed.json
 	python generate_evaluation_results.py \
 		--input-file output/lm_post_processed.json \
 		--output-file output/eval_results.txt
+
+

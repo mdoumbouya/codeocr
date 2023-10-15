@@ -53,7 +53,7 @@ def main(args):
         settings_by_key[setting_key] = {
             "ocr_provider": document_metadata['ocr_provider'],
             "ir_algo_name": document_metadata["ir_algo_name"],
-            "lm": document_metadata["prompting_method"],
+            "lmpc": document_metadata["prompting_method"],
         }
         for param_k in param_keys:
             settings_by_key[setting_key][param_k] = document_metadata[param_k]
@@ -67,11 +67,11 @@ def main(args):
     # Changing this temporarily
     
     column_names = sorted(set(column_names))
-    if 'lm' in column_names:
-        column_names.remove('lm')
+    if 'lmpc' in column_names:
+        column_names.remove('lmpc')
     column_names.append('n')
     column_names.append('ir_edist.')
-    column_names.append('lm')
+    column_names.append('lmpc')
     column_names.append('lm_edist.')
     
     
