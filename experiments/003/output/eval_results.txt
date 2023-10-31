@@ -91,6 +91,9 @@
 | v1         |            |           |    | \pm       | test3     | 1.29$\%   |
 |            |            |           |    | 5.02$\%   |           |           |
 +------------+------------+-----------+----+-----------+-----------+-----------+
+| none       |            | none      | 55 | $0.00 \pm | GPT-4b    | $4.41 \pm |
+|            |            |           |    | 0.00$\%   |           | 0.71$\%   |
++------------+------------+-----------+----+-----------+-----------+-----------+
 
 
 \begin{table}
@@ -144,6 +147,8 @@
 			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & simple-test2 & $5.69 \pm 0.89$\% \\
 			\hline
 			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & simple-test3 & $6.19 \pm 1.29$\% \\
+			\hline
+			none &  & none & 55 & $0.00 \pm 0.00$\% & GPT-4b & $4.41 \pm 0.71$\% \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -1381,3 +1386,59 @@ edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
 edist: 89.92	image_id: 15
 edist: 270.45	image_id: 5
+IMAGES/EDIT DISTANCE: nonenoneGPT-4b
+edist: 0.0	image_id: 0
+edist: 0.0	image_id: 29
+edist: 0.0	image_id: 30
+edist: 0.0	image_id: 31
+edist: 0.0	image_id: 32
+edist: 0.0	image_id: 33
+edist: 0.0	image_id: 34
+edist: 0.0	image_id: 35
+edist: 0.0	image_id: 36
+edist: 0.0	image_id: 37
+edist: 0.0	image_id: 38
+edist: 0.0	image_id: 39
+edist: 0.0	image_id: 28
+edist: 0.0	image_id: 40
+edist: 0.0	image_id: 42
+edist: 0.0	image_id: 43
+edist: 0.0	image_id: 44
+edist: 0.0	image_id: 45
+edist: 0.0	image_id: 46
+edist: 0.0	image_id: 47
+edist: 0.0	image_id: 48
+edist: 0.0	image_id: 49
+edist: 0.0	image_id: 50
+edist: 0.0	image_id: 51
+edist: 0.0	image_id: 52
+edist: 0.0	image_id: 41
+edist: 0.0	image_id: 53
+edist: 0.0	image_id: 27
+edist: 0.0	image_id: 25
+edist: 0.0	image_id: 1
+edist: 0.0	image_id: 2
+edist: 0.0	image_id: 3
+edist: 0.0	image_id: 4
+edist: 0.0	image_id: 5
+edist: 0.0	image_id: 6
+edist: 0.0	image_id: 7
+edist: 0.0	image_id: 8
+edist: 0.0	image_id: 9
+edist: 0.0	image_id: 10
+edist: 0.0	image_id: 11
+edist: 0.0	image_id: 26
+edist: 0.0	image_id: 12
+edist: 0.0	image_id: 14
+edist: 0.0	image_id: 15
+edist: 0.0	image_id: 16
+edist: 0.0	image_id: 17
+edist: 0.0	image_id: 18
+edist: 0.0	image_id: 19
+edist: 0.0	image_id: 20
+edist: 0.0	image_id: 21
+edist: 0.0	image_id: 22
+edist: 0.0	image_id: 23
+edist: 0.0	image_id: 24
+edist: 0.0	image_id: 13
+edist: 0.0	image_id: 54
