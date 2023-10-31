@@ -10,6 +10,9 @@ from code_ocr.post_correction import *
 import copy
 import logging
 
+
+# If I ever come back to this, one potential place of development is implement gpt4b more coherently with the codebase. 
+
 logger = logging.getLogger(__name__)
 
 no_lmpc = no_lmpc()
@@ -23,6 +26,7 @@ SIMPLEprompting = SIMPLEprompting()
 SIMPLEprompting_test1 = SIMPLEprompting_test1()
 SIMPLEprompting_test2 = SIMPLEprompting_test2()
 SIMPLEprompting_test3 = SIMPLEprompting_test3()
+#GPT$B is not added as a method here as I recieve it from a different dataset.
 
 # A list of tuples, each tuple contains the prompting method and the post correction method
 lm_post_correction_methods = [
@@ -76,7 +80,12 @@ def main(args):
                 extended_records.append(extended_record)
 
             
-        
+    if 'gpt4b' in args.post_correction_methods:
+        with open('output/gpt4b_multimodal_manual.json') as f:
+            gpt4b_data = json.load(f)
+            
+        for datum in gpt4b_data:
+            extended_records.append(datum)
 
     with open(args.output_file, 'w') as output_file:
         json.dump(extended_records, output_file)
@@ -90,7 +99,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input-file", required=True, help="input file recognized indentation file")
     parser.add_argument("--output-file", required=True, help="file in which to put the new lm code")
-    parser.add_argument("--post-correction-methods", required=True, nargs='+', help="Specify the methods of prompting, or choose all", choices=["none", "cot", "cot-test1", "cot-test2", "cot-test3", "cot-test4", "cot-test5", "simple", "simple-test1", "simple-test2", "simple-test3"])
+    parser.add_argument("--post-correction-methods", required=True, nargs='+', help="Specify the methods of prompting, or choose all", choices=["none", "cot", "cot-test1", "cot-test2", "cot-test3", "cot-test4", "cot-test5", "simple", "simple-test1", "simple-test2", "simple-test3", "gpt4b"])
     return parser.parse_args()
 
 if __name__ == '__main__':
