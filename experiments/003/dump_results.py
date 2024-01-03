@@ -114,7 +114,7 @@ def main(args):
         with open(output_dir / f"{image_id}_ground_truth.py", "w") as f:
             f.write(ground_truth)
         
-        if document_metadata['prompting_method'] != "GPT-4b": # Because this version do not have any intermediate results.
+        if document_metadata['prompting_method'] != "gpt4-vision": # Because this version do not have any intermediate results.
             # dump output code
             with open(output_dir / f"{image_id}_ir_algo_output.py", "w") as f:
                 f.write(document_metadata["ir_algo_output_code"])
@@ -124,8 +124,8 @@ def main(args):
             img = draw_lines(str(image_path), document_metadata)
             cv2.imwrite(str(output_dir / f"{image_id}_visualized.jpg"), img)
         
-        else: # However we will still dump the raw photos in GPT4b directory for the convenience of comparison.
-            # Skipping ir, as there is none of gpt4b
+        else: # However we will still dump the raw photos in gpt4-vision directory for the convenience of comparison.
+            # Skipping ir, as there is none of gpt4-vision
             # returning the image without any lines
             image_path = str(Path(args.images_dir) / f"{image_id}.jpg")
             img = cv2.imread(image_path)
