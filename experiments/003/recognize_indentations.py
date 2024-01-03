@@ -5,15 +5,19 @@ from code_ocr.global_utils import *
 import editdistance
 import time
 from tqdm import tqdm
+import cv2
+
 import argparse
-from code_ocr.indentation_recognition import IgnoreIndentRecognitionAlgo, MeanShiftIndentRecognitionAlgo
+from code_ocr.indentation_recognition import IgnoreIndentRecognitionAlgo, MeanShiftIndentRecognitionAlgo, GaussianIndentationRecognitionAlgo
 
 
 
 def build_indent_recognition_methods(args):
     indent_rec_methods = [
         IgnoreIndentRecognitionAlgo(),
-        MeanShiftIndentRecognitionAlgo(bandwidth="estimated")
+        MeanShiftIndentRecognitionAlgo(bandwidth="estimated"),
+        GaussianIndentationRecognitionAlgo(negative_delta_cluster_method="mean"),
+        GaussianIndentationRecognitionAlgo(negative_delta_cluster_method="nearest_neighbour"),
     ]
     
     indent_rec_methods.extend([
@@ -35,12 +39,13 @@ def main(args):
         rd = pd.read_csv(csv_file)
 
     extended_records = []
-    for document_metadata in tqdm(data, desc='record'):
+    for document_metadata in tqdm(data, desc='Progress'):
         image_id = document_metadata['image_id']
         # document_metadata['ocr_provider']
         # document_metadata['ocr_ouptut']
         ground_truth = rd['Ground Truth'][image_id]
         
+        # We have to pass in the image width alongside the document metadata for the gaussian method, so in this case we have to load the image
         for indent_recognition_method in indent_recognition_methods:
             document_medatada = indent_recognition_method.recognize_indents(document_metadata)
             document_medatada["ir_algo_output_edit_distance"] = editdistance.eval(ground_truth, document_medatada["ir_algo_output_code"]) 

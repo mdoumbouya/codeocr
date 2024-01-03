@@ -4,7 +4,7 @@ import pandas as pd
 import editdistance
 from tqdm import tqdm
 
-# This file is used to process manually collected gpt4b data.
+# This file is used to process manually collected gpt4-vision data.
 
 
 
@@ -29,7 +29,7 @@ if num > 0:
 '''
 
 
-gpt4b_outputs = {
+gpt4-vision_outputs = {
     0 : image_id0_variant1,
     1 : '''from karel.stanfordkarel import *
 
@@ -877,14 +877,14 @@ for datum in tqdm(data, desc='Iteration'):
     copied_datum['ir_algo_output_code'] = 'none'
     copied_datum['ir_algo_output_edit_distance'] = 0
     copied_datum['prompting_method'] = 'GPT-4b'
-    # copied_datum['lm_post_processed_code'] = str(gpt4b_outputs[datum['image_id']])
-    copied_datum['lm_post_processed_code'] = remove_blank_lines(str(gpt4b_outputs[datum['image_id']]))
+    # copied_datum['lm_post_processed_code'] = str(gpt4-vision_outputs[datum['image_id']])
+    copied_datum['lm_post_processed_code'] = remove_blank_lines(str(gpt4-vision_outputs[datum['image_id']]))
     copied_datum['lm_post_processed_edit_distance'] = editdistance.eval(copied_datum['lm_post_processed_code'], rd['Ground Truth'][datum['image_id']])
     
     output.append(copied_datum)
     
     
-with open('output/gpt4b_multimodal_manual.json', 'w') as f:
+with open('output/gpt4-vision_multimodal_manual.json', 'w') as f:
     json.dump(output, f)
     
     

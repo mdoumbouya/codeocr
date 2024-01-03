@@ -11,7 +11,7 @@ import copy
 import logging
 
 
-# If I ever come back to this, one potential place of development is implement gpt4b more coherently with the codebase. 
+# If I ever come back to this, one potential place of development is implement gpt4-vision more coherently with the codebase. 
 
 logger = logging.getLogger(__name__)
 
@@ -26,11 +26,11 @@ SIMPLEprompting = SIMPLEprompting()
 SIMPLEprompting_test1 = SIMPLEprompting_test1()
 SIMPLEprompting_test2 = SIMPLEprompting_test2()
 SIMPLEprompting_test3 = SIMPLEprompting_test3()
-#GPT$B is not added as a method here as I recieve it from a different dataset.
+GPT4_Vision = GPT4_Vision()
 
 # A list of tuples, each tuple contains the prompting method and the post correction method
 lm_post_correction_methods = [
-    ("none", no_lmpc),
+    ("none", no_lmpc.post_correction),
     ("cot", COTprompting.post_correction),
     ("cot-test1", COTprompting_test1.post_correction),
     ("cot-test2", COTprompting_test2.post_correction),
@@ -56,8 +56,10 @@ def main(args):
     ]
 
     extended_records = []
-    for document_metadata in tqdm(data, desc='Iteration'):
-        if document_metadata['ir_algo_name'] == 'none' or (document_metadata['ir_algo_name'] == 'meanshift-v1' and document_metadata['ir_algo_param_bandwidth'] == 'estimated'):
+    for document_metadata in tqdm(data, desc='Iteration through Indentation Recognition Algorithms'):
+        if (document_metadata['ir_algo_name'] == 'none'
+        or (document_metadata['ir_algo_name'] == 'meanshift-v1' and document_metadata['ir_algo_param_bandwidth'] == 'estimated')
+        or (document_metadata['ir_algo_name'] == 'gaussian-v1')):
             image_id = document_metadata['image_id']
             ground_truth = rd.loc[image_id, 'Ground Truth']
 
@@ -79,14 +81,42 @@ def main(args):
                 }
                 extended_records.append(extended_record)
 
-            
-    if 'gpt4b' in args.post_correction_methods:
-        with open('output/gpt4b_multimodal_manual.json') as f:
-            gpt4b_data = json.load(f)
-            
-        for datum in gpt4b_data:
-            extended_records.append(datum)
-
+    # This part works with GPT4 vision
+    i = 0
+    if 'gpt4-vision' in args.post_correction_methods:
+        image_dir = '../images/'
+        for image_file in tqdm(os.listdir(image_dir), desc='Iteration through GPT4 Vision'):
+            image_id = int(image_file.split('.')[0])
+            if image_id not in rd.index:
+                continue
+            ground_truth = rd.loc[image_id, 'Ground Truth']
+            image_path = image_dir + image_file
+            image = cv2.imread(image_path)
+            image_height, image_width, _ = image.shape
+            document_metadata = {
+                "image_id": image_id,
+                "image_height": image_height,
+                "image_width": image_width,
+                "ocr_provider": "GPT4-vision",
+                "ocr_ouptut": "none",
+                "ir_algo_name": "none",
+                "ir_algo_output_code": "none",
+                "ir_algo_output_edit_distance": 0,
+            }
+            lm_post_processed_code = GPT4_Vision.post_correction(image_path)
+            lm_post_processed_edit_distance = editdistance.eval(lm_post_processed_code, ground_truth)
+            extended_record = {
+                **document_metadata, 
+                "prompting_method": "GPT4-vision",
+                "lm_post_processed_code": lm_post_processed_code,
+                "lm_post_processed_edit_distance": lm_post_processed_edit_distance
+            }
+            extended_records.append(extended_record)
+            i += 1
+            if i == 2:
+                break
+        
+        
     with open(args.output_file, 'w') as output_file:
         json.dump(extended_records, output_file)
         
@@ -96,10 +126,11 @@ def main(args):
     logger.info(f"The lm_post_correction.py took {round((elapsed_time / 60), 2)} minutes to run.")
 
 def parse_arguments():
+    
     parser = argparse.ArgumentParser()
     parser.add_argument("--input-file", required=True, help="input file recognized indentation file")
     parser.add_argument("--output-file", required=True, help="file in which to put the new lm code")
-    parser.add_argument("--post-correction-methods", required=True, nargs='+', help="Specify the methods of prompting, or choose all", choices=["none", "cot", "cot-test1", "cot-test2", "cot-test3", "cot-test4", "cot-test5", "simple", "simple-test1", "simple-test2", "simple-test3", "gpt4b"])
+    parser.add_argument("--post-correction-methods", required=True, nargs='+', help="Specify the methods of prompting, or choose all", choices=["none", "cot", "cot-test1", "cot-test2", "cot-test3", "cot-test4", "cot-test5", "simple", "simple-test1", "simple-test2", "simple-test3", "gpt4-vision"])
     return parser.parse_args()
 
 if __name__ == '__main__':

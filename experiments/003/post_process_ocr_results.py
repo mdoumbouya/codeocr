@@ -8,6 +8,7 @@ from tqdm import tqdm
 import argparse
 import logging
 import numpy as np
+import cv2
 
 logger = logging.getLogger(__name__)
 
@@ -16,8 +17,14 @@ def main(args):
     with open(args.input_file, 'r') as input_file:
         for raw_api_datum in json.load(input_file):
             for ocr_provider in args.included_providers:
+                # Find the height and width of the image
+                image_id = raw_api_datum["image_id"]
+                image = cv2.imread('../images/' + f"{image_id}.jpg")
+                image_height, image_width, _ = image.shape
                 post_processed_datum = {
-                    "image_id": raw_api_datum["image_id"],
+                    "image_id": image_id,
+                    "image_height": image_height,
+                    "image_width": image_width,
                     "ocr_provider": ocr_provider
                 }
                 post_processed_datum.update(

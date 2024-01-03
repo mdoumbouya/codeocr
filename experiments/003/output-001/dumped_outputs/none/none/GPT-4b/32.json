@@ -1,0 +1,1 @@
+{"image_id": 32, "ocr_provider": "none", "ocr_ouptut": "none", "ir_algo_name": "none", "ir_algo_output_code": "none", "ir_algo_output_edit_distance": 0, "prompting_method": "GPT-4b", "lm_post_processed_code": "year = int(input())\nif year % 4 == 0 and year % 100 != 0 or year % 400 == 0:\n    print(True)\nelse:\n    print(False)\n", "lm_post_processed_edit_distance": 2}
