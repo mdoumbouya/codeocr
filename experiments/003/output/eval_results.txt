@@ -1,1444 +1,391 @@
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| ir_algo_na | ir_algo_pa | ocr_provi | n  | ir_edist. | lmpc      | lm_edist. |
-| me         | ram_bandwi | der       |    |           |           |           |
-|            | dth        |           |    |           |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | none      | $30.23    |
-|            |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 1.83$\%   |           | 1.83$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | cot       | $21.36    |
-|            |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 1.83$\%   |           | 1.19$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | cot-test1 | $19.60    |
-|            |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 1.83$\%   |           | 1.10$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | cot-test2 | $19.98    |
-|            |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 1.83$\%   |           | 1.09$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | cot-test3 | $20.15    |
-|            |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 1.83$\%   |           | 1.04$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | cot-test4 | $19.12    |
-|            |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 1.83$\%   |           | 1.06$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | cot-test5 | $18.07    |
-|            |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 1.83$\%   |           | 1.04$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | simple    | $6.36 \pm |
-|            |            |           |    | \pm       |           | 1.13$\%   |
-|            |            |           |    | 1.83$\%   |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | simple-   | $9.28 \pm |
-|            |            |           |    | \pm       | test1     | 1.29$\%   |
-|            |            |           |    | 1.83$\%   |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | simple-   | $8.26 \pm |
-|            |            |           |    | \pm       | test2     | 1.15$\%   |
-|            |            |           |    | 1.83$\%   |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | Azure     | 55 | $30.23    | simple-   | $6.47 \pm |
-|            |            |           |    | \pm       | test3     | 0.95$\%   |
-|            |            |           |    | 1.83$\%   |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | none      | $28.27    |
-| v1         |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 5.02$\%   |           | 5.02$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | cot       | $15.20    |
-| v1         |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 5.02$\%   |           | 1.72$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | cot-test1 | $13.98    |
-| v1         |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 5.02$\%   |           | 1.31$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | cot-test2 | $15.36    |
-| v1         |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 5.02$\%   |           | 1.64$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | cot-test3 | $14.46    |
-| v1         |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 5.02$\%   |           | 1.30$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | cot-test4 | $13.68    |
-| v1         |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 5.02$\%   |           | 1.44$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | cot-test5 | $10.72    |
-| v1         |            |           |    | \pm       |           | \pm       |
-|            |            |           |    | 5.02$\%   |           | 1.06$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | simple    | $6.25 \pm |
-| v1         |            |           |    | \pm       |           | 1.39$\%   |
-|            |            |           |    | 5.02$\%   |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | simple-   | $6.64 \pm |
-| v1         |            |           |    | \pm       | test1     | 1.25$\%   |
-|            |            |           |    | 5.02$\%   |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | simple-   | $5.69 \pm |
-| v1         |            |           |    | \pm       | test2     | 0.89$\%   |
-|            |            |           |    | 5.02$\%   |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| meanshift- | estimated  | Azure     | 55 | $28.27    | simple-   | $6.19 \pm |
-| v1         |            |           |    | \pm       | test3     | 1.29$\%   |
-|            |            |           |    | 5.02$\%   |           |           |
-+------------+------------+-----------+----+-----------+-----------+-----------+
-| none       |            | none      | 55 | $0.00 \pm | GPT-4b    | $4.41 \pm |
-|            |            |           |    | 0.00$\%   |           | 0.71$\%   |
-+------------+------------+-----------+----+-----------+-----------+-----------+
++----------+----------+----------+----------+---+----------+---------+---------+
+| ir_algo_ | ir_algo_ | ir_algo_ | ocr_prov | n | ir_edist | lmpc    | lm_edis |
+| name     | param_ba | param_ne | ider     |   | .        |         | t.      |
+|          | ndwidth  | gative_d |          |   |          |         |         |
+|          |          | elta_clu |          |   |          |         |         |
+|          |          | ster_met |          |   |          |         |         |
+|          |          | hod      |          |   |          |         |         |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | cot     | $13.50  |
+|          |          |          |          |   | \pm      |         | \pm     |
+|          |          |          |          |   | 6.59$\%  |         | 8.28$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | cot-    | $12.38  |
+|          |          |          |          |   | \pm      | test1   | \pm     |
+|          |          |          |          |   | 6.59$\%  |         | 7.16$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | cot-    | $11.83  |
+|          |          |          |          |   | \pm      | test2   | \pm     |
+|          |          |          |          |   | 6.59$\%  |         | 6.61$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | cot-    | $12.38  |
+|          |          |          |          |   | \pm      | test3   | \pm     |
+|          |          |          |          |   | 6.59$\%  |         | 7.16$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | cot-    | $11.83  |
+|          |          |          |          |   | \pm      | test4   | \pm     |
+|          |          |          |          |   | 6.59$\%  |         | 6.61$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | cot-    | $12.38  |
+|          |          |          |          |   | \pm      | test5   | \pm     |
+|          |          |          |          |   | 6.59$\%  |         | 7.16$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | simple  | $22.85  |
+|          |          |          |          |   | \pm      |         | \pm 18. |
+|          |          |          |          |   | 6.59$\%  |         | 94$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | simple- | $4.56   |
+|          |          |          |          |   | \pm      | test1   | \pm     |
+|          |          |          |          |   | 6.59$\%  |         | 0.65$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | simple- | $4.56   |
+|          |          |          |          |   | \pm      | test2   | \pm     |
+|          |          |          |          |   | 6.59$\%  |         | 0.65$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | Azure    | 2 | $23.02   | simple- | $15.76  |
+|          |          |          |          |   | \pm      | test3   | \pm 11. |
+|          |          |          |          |   | 6.59$\%  |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | cot     | $14.08  |
+| t-v1     | d        |          |          |   | \pm      |         | \pm     |
+|          |          |          |          |   | 22.32$\% |         | 4.58$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | cot-    | $6.99   |
+| t-v1     | d        |          |          |   | \pm      | test1   | \pm     |
+|          |          |          |          |   | 22.32$\% |         | 0.27$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | cot-    | $7.36   |
+| t-v1     | d        |          |          |   | \pm      | test2   | \pm     |
+|          |          |          |          |   | 22.32$\% |         | 2.14$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | cot-    | $5.40   |
+| t-v1     | d        |          |          |   | \pm      | test3   | \pm     |
+|          |          |          |          |   | 22.32$\% |         | 0.19$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | cot-    | $11.29  |
+| t-v1     | d        |          |          |   | \pm      | test4   | \pm     |
+|          |          |          |          |   | 22.32$\% |         | 7.38$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | cot-    | $10.72  |
+| t-v1     | d        |          |          |   | \pm      | test5   | \pm     |
+|          |          |          |          |   | 22.32$\% |         | 7.93$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | simple  | $22.85  |
+| t-v1     | d        |          |          |   | \pm      |         | \pm 18. |
+|          |          |          |          |   | 22.32$\% |         | 94$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | simple- | $15.76  |
+| t-v1     | d        |          |          |   | \pm      | test1   | \pm 11. |
+|          |          |          |          |   | 22.32$\% |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | simple- | $15.76  |
+| t-v1     | d        |          |          |   | \pm      | test2   | \pm 11. |
+|          |          |          |          |   | 22.32$\% |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| meanshif | estimate |          | Azure    | 2 | $51.42   | simple- | $15.76  |
+| t-v1     | d        |          |          |   | \pm      | test3   | \pm 11. |
+|          |          |          |          |   | 22.32$\% |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | cot     | $17.43  |
+| -v1      |          |          |          |   | \pm      |         | \pm     |
+|          |          |          |          |   | 3.32$\%  |         | 1.23$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | cot-    | $4.75   |
+| -v1      |          |          |          |   | \pm      | test1   | \pm     |
+|          |          |          |          |   | 3.32$\%  |         | 1.96$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | cot-    | $11.27  |
+| -v1      |          |          |          |   | \pm      | test2   | \pm     |
+|          |          |          |          |   | 3.32$\%  |         | 6.05$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | cot-    | $10.71  |
+| -v1      |          |          |          |   | \pm      | test3   | \pm     |
+|          |          |          |          |   | 3.32$\%  |         | 5.49$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | cot-    | $17.43  |
+| -v1      |          |          |          |   | \pm      | test4   | \pm     |
+|          |          |          |          |   | 3.32$\%  |         | 1.23$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | cot-    | $10.72  |
+| -v1      |          |          |          |   | \pm      | test5   | \pm     |
+|          |          |          |          |   | 3.32$\%  |         | 7.93$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | simple  | $22.48  |
+| -v1      |          |          |          |   | \pm      |         | \pm 18. |
+|          |          |          |          |   | 3.32$\%  |         | 56$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | simple- | $15.76  |
+| -v1      |          |          |          |   | \pm      | test1   | \pm 11. |
+|          |          |          |          |   | 3.32$\%  |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | simple- | $15.76  |
+| -v1      |          |          |          |   | \pm      | test2   | \pm 11. |
+|          |          |          |          |   | 3.32$\%  |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | mean     | Azure    | 2 | $32.42   | simple- | $15.76  |
+| -v1      |          |          |          |   | \pm      | test3   | \pm 11. |
+|          |          |          |          |   | 3.32$\%  |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | cot     | $5.88   |
+| -v1      |          | neighbou |          |   | \pm      |         | \pm     |
+|          |          | r        |          |   | 3.32$\%  |         | 0.84$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | cot-    | $12.68  |
+| -v1      |          | neighbou |          |   | \pm      | test1   | \pm     |
+|          |          | r        |          |   | 3.32$\%  |         | 5.98$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | cot-    | $12.02  |
+| -v1      |          | neighbou |          |   | \pm      | test2   | \pm     |
+|          |          | r        |          |   | 3.32$\%  |         | 5.30$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | cot-    | $10.71  |
+| -v1      |          | neighbou |          |   | \pm      | test3   | \pm     |
+|          |          | r        |          |   | 3.32$\%  |         | 5.49$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | cot-    | $17.43  |
+| -v1      |          | neighbou |          |   | \pm      | test4   | \pm     |
+|          |          | r        |          |   | 3.32$\%  |         | 1.23$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | cot-    | $10.72  |
+| -v1      |          | neighbou |          |   | \pm      | test5   | \pm     |
+|          |          | r        |          |   | 3.32$\%  |         | 7.93$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | simple  | $22.48  |
+| -v1      |          | neighbou |          |   | \pm      |         | \pm 18. |
+|          |          | r        |          |   | 3.32$\%  |         | 56$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | simple- | $15.76  |
+| -v1      |          | neighbou |          |   | \pm      | test1   | \pm 11. |
+|          |          | r        |          |   | 3.32$\%  |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | simple- | $15.76  |
+| -v1      |          | neighbou |          |   | \pm      | test2   | \pm 11. |
+|          |          | r        |          |   | 3.32$\%  |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| gaussian |          | nearest_ | Azure    | 2 | $32.42   | simple- | $15.76  |
+| -v1      |          | neighbou |          |   | \pm      | test3   | \pm 11. |
+|          |          | r        |          |   | 3.32$\%  |         | 85$\%   |
++----------+----------+----------+----------+---+----------+---------+---------+
+| none     |          |          | GPT4-vis | 2 | $0.00    | GPT4-vi | $2.83   |
+|          |          |          | ion      |   | \pm      | sion    | \pm     |
+|          |          |          |          |   | 0.00$\%  |         | 0.98$\% |
++----------+----------+----------+----------+---+----------+---------+---------+
 
 
 \begin{table}
 	\begin{center}
-		\begin{tabular}{|l|l|l|l|l|l|l|}
+		\begin{tabular}{|l|l|l|l|l|l|l|l|}
 			\hline
 			 \\
 			\hline
-			ir_algo_name & ir_algo_param_bandwidth & ocr_provider & n & ir_edist. & lmpc & lm_edist. \\
+			ir_algo_name & ir_algo_param_bandwidth & ir_algo_param_negative_delta_cluster_method & ocr_provider & n & ir_edist. & lmpc & lm_edist. \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & none & $30.23 \pm 1.83$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & cot & $13.50 \pm 8.28$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & cot & $21.36 \pm 1.19$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & cot-test1 & $12.38 \pm 7.16$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & cot-test1 & $19.60 \pm 1.10$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & cot-test2 & $11.83 \pm 6.61$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & cot-test2 & $19.98 \pm 1.09$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & cot-test3 & $12.38 \pm 7.16$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & cot-test3 & $20.15 \pm 1.04$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & cot-test4 & $11.83 \pm 6.61$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & cot-test4 & $19.12 \pm 1.06$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & cot-test5 & $12.38 \pm 7.16$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & cot-test5 & $18.07 \pm 1.04$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & simple & $22.85 \pm 18.94$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & simple & $6.36 \pm 1.13$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & simple-test1 & $4.56 \pm 0.65$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & simple-test1 & $9.28 \pm 1.29$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & simple-test2 & $4.56 \pm 0.65$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & simple-test2 & $8.26 \pm 1.15$\% \\
+			none &  &  & Azure & 2 & $23.02 \pm 6.59$\% & simple-test3 & $15.76 \pm 11.85$\% \\
 			\hline
-			none &  & Azure & 55 & $30.23 \pm 1.83$\% & simple-test3 & $6.47 \pm 0.95$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & cot & $14.08 \pm 4.58$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & none & $28.27 \pm 5.02$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & cot-test1 & $6.99 \pm 0.27$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & cot & $15.20 \pm 1.72$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & cot-test2 & $7.36 \pm 2.14$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & cot-test1 & $13.98 \pm 1.31$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & cot-test3 & $5.40 \pm 0.19$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & cot-test2 & $15.36 \pm 1.64$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & cot-test4 & $11.29 \pm 7.38$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & cot-test3 & $14.46 \pm 1.30$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & cot-test5 & $10.72 \pm 7.93$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & cot-test4 & $13.68 \pm 1.44$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & simple & $22.85 \pm 18.94$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & cot-test5 & $10.72 \pm 1.06$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & simple-test1 & $15.76 \pm 11.85$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & simple & $6.25 \pm 1.39$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & simple-test2 & $15.76 \pm 11.85$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & simple-test1 & $6.64 \pm 1.25$\% \\
+			meanshift-v1 & estimated &  & Azure & 2 & $51.42 \pm 22.32$\% & simple-test3 & $15.76 \pm 11.85$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & simple-test2 & $5.69 \pm 0.89$\% \\
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & cot & $17.43 \pm 1.23$\% \\
 			\hline
-			meanshift-v1 & estimated & Azure & 55 & $28.27 \pm 5.02$\% & simple-test3 & $6.19 \pm 1.29$\% \\
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & cot-test1 & $4.75 \pm 1.96$\% \\
 			\hline
-			none &  & none & 55 & $0.00 \pm 0.00$\% & GPT-4b & $4.41 \pm 0.71$\% \\
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & cot-test2 & $11.27 \pm 6.05$\% \\
+			\hline
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & cot-test3 & $10.71 \pm 5.49$\% \\
+			\hline
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & cot-test4 & $17.43 \pm 1.23$\% \\
+			\hline
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & cot-test5 & $10.72 \pm 7.93$\% \\
+			\hline
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & simple & $22.48 \pm 18.56$\% \\
+			\hline
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & simple-test1 & $15.76 \pm 11.85$\% \\
+			\hline
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & simple-test2 & $15.76 \pm 11.85$\% \\
+			\hline
+			gaussian-v1 &  & mean & Azure & 2 & $32.42 \pm 3.32$\% & simple-test3 & $15.76 \pm 11.85$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & cot & $5.88 \pm 0.84$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & cot-test1 & $12.68 \pm 5.98$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & cot-test2 & $12.02 \pm 5.30$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & cot-test3 & $10.71 \pm 5.49$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & cot-test4 & $17.43 \pm 1.23$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & cot-test5 & $10.72 \pm 7.93$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & simple & $22.48 \pm 18.56$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & simple-test1 & $15.76 \pm 11.85$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & simple-test2 & $15.76 \pm 11.85$\% \\
+			\hline
+			gaussian-v1 &  & nearest_neighbour & Azure & 2 & $32.42 \pm 3.32$\% & simple-test3 & $15.76 \pm 11.85$\% \\
+			\hline
+			none &  &  & GPT4-vision & 2 & $0.00 \pm 0.00$\% & GPT4-vision & $2.83 \pm 0.98$\% \\
 			\hline
 		\end{tabular}
 	\end{center}
 	\caption{Indentation Recognition Results}
 	\label{table:indentation_recognition_results}
-\end{table}IMAGES/EDIT DISTANCE: Azurenonenone
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
+\end{table}IMAGES/EDIT DISTANCE: Azurenonecot
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
-IMAGES/EDIT DISTANCE: Azurenonecot
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
-edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
-edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonecot-test1
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonecot-test2
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonecot-test3
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonecot-test4
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonecot-test5
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonesimple
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonesimple-test1
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonesimple-test2
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
 IMAGES/EDIT DISTANCE: Azurenonesimple-test3
-edist: 9.2	image_id: 6
-edist: 14.58	image_id: 34
-edist: 14.77	image_id: 35
-edist: 15.15	image_id: 0
-edist: 16.06	image_id: 11
 edist: 16.42	image_id: 51
-edist: 17.65	image_id: 33
-edist: 18.57	image_id: 47
-edist: 19.12	image_id: 13
-edist: 20.45	image_id: 24
-edist: 20.82	image_id: 7
-edist: 21.62	image_id: 16
-edist: 21.95	image_id: 28
-edist: 22.54	image_id: 30
-edist: 22.81	image_id: 32
-edist: 23.21	image_id: 22
-edist: 23.48	image_id: 21
-edist: 23.78	image_id: 27
-edist: 23.87	image_id: 1
-edist: 25.0	image_id: 49
-edist: 25.24	image_id: 45
-edist: 25.44	image_id: 29
-edist: 25.71	image_id: 48
-edist: 27.18	image_id: 3
-edist: 28.33	image_id: 36
-edist: 29.37	image_id: 10
-edist: 29.55	image_id: 41
 edist: 29.61	image_id: 38
-edist: 29.98	image_id: 8
-edist: 30.28	image_id: 46
-edist: 30.39	image_id: 26
-edist: 30.64	image_id: 39
-edist: 30.91	image_id: 18
-edist: 31.06	image_id: 2
-edist: 31.5	image_id: 31
-edist: 31.9	image_id: 14
-edist: 32.11	image_id: 25
-edist: 32.53	image_id: 23
-edist: 32.56	image_id: 42
-edist: 33.24	image_id: 40
-edist: 33.62	image_id: 52
-edist: 34.5	image_id: 9
-edist: 34.95	image_id: 44
-edist: 36.79	image_id: 4
-edist: 37.16	image_id: 53
-edist: 37.72	image_id: 43
-edist: 38.34	image_id: 19
-edist: 39.3	image_id: 20
-edist: 40.76	image_id: 15
-edist: 42.01	image_id: 50
-edist: 42.93	image_id: 37
-edist: 45.57	image_id: 17
-edist: 52.63	image_id: 54
-edist: 56.2	image_id: 12
-edist: 101.7	image_id: 5
-IMAGES/EDIT DISTANCE: Azuremeanshift-v1noneir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
-edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
-edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1cotir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1cot-test1ir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1cot-test2ir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1cot-test3ir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1cot-test4ir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1cot-test5ir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1simpleir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1simple-test1ir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1simple-test2ir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
 IMAGES/EDIT DISTANCE: Azuremeanshift-v1simple-test3ir_algo_param_bandwidth_estimated
-edist: 5.56	image_id: 49
-edist: 5.71	image_id: 47
-edist: 6.91	image_id: 28
-edist: 8.74	image_id: 45
-edist: 10.0	image_id: 36
-edist: 10.01	image_id: 13
-edist: 10.51	image_id: 24
-edist: 11.49	image_id: 6
-edist: 11.81	image_id: 31
-edist: 11.86	image_id: 1
-edist: 12.07	image_id: 52
-edist: 12.25	image_id: 8
-edist: 13.54	image_id: 34
-edist: 13.64	image_id: 35
-edist: 13.73	image_id: 29
-edist: 14.08	image_id: 46
-edist: 14.33	image_id: 40
-edist: 14.36	image_id: 26
-edist: 14.48	image_id: 39
-edist: 15.49	image_id: 30
-edist: 15.69	image_id: 11
-edist: 15.79	image_id: 32
-edist: 15.82	image_id: 22
-edist: 15.87	image_id: 10
-edist: 16.18	image_id: 33
-edist: 17.26	image_id: 7
-edist: 18.92	image_id: 16
-edist: 20.04	image_id: 25
-edist: 20.85	image_id: 27
-edist: 21.43	image_id: 48
-edist: 22.31	image_id: 23
-edist: 22.49	image_id: 50
-edist: 23.29	image_id: 2
-edist: 23.3	image_id: 21
-edist: 24.14	image_id: 14
-edist: 24.42	image_id: 42
-edist: 25.74	image_id: 17
-edist: 26.14	image_id: 41
-edist: 27.4	image_id: 37
-edist: 27.88	image_id: 18
 edist: 29.1	image_id: 51
-edist: 29.36	image_id: 53
-edist: 30.1	image_id: 3
-edist: 30.42	image_id: 44
-edist: 30.7	image_id: 9
-edist: 31.39	image_id: 43
-edist: 31.71	image_id: 20
-edist: 35.85	image_id: 4
-edist: 38.8	image_id: 19
-edist: 55.91	image_id: 12
-edist: 58.59	image_id: 0
-edist: 63.16	image_id: 54
 edist: 73.74	image_id: 38
-edist: 89.92	image_id: 15
-edist: 270.45	image_id: 5
-IMAGES/EDIT DISTANCE: nonenoneGPT-4b
-edist: 0.0	image_id: 0
-edist: 0.0	image_id: 29
-edist: 0.0	image_id: 30
-edist: 0.0	image_id: 31
-edist: 0.0	image_id: 32
-edist: 0.0	image_id: 33
-edist: 0.0	image_id: 34
-edist: 0.0	image_id: 35
-edist: 0.0	image_id: 36
-edist: 0.0	image_id: 37
-edist: 0.0	image_id: 38
-edist: 0.0	image_id: 39
-edist: 0.0	image_id: 28
-edist: 0.0	image_id: 40
-edist: 0.0	image_id: 42
-edist: 0.0	image_id: 43
-edist: 0.0	image_id: 44
-edist: 0.0	image_id: 45
-edist: 0.0	image_id: 46
-edist: 0.0	image_id: 47
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cotir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test1ir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test2ir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test3ir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test4ir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test5ir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1simpleir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1simple-test1ir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1simple-test2ir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1simple-test3ir_algo_param_negative_delta_cluster_method_mean
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cotir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test1ir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test2ir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test3ir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test4ir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1cot-test5ir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1simpleir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1simple-test1ir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1simple-test2ir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: Azuregaussian-v1simple-test3ir_algo_param_negative_delta_cluster_method_nearest_neighbour
+edist: 29.1	image_id: 51
+edist: 35.75	image_id: 38
+IMAGES/EDIT DISTANCE: GPT4-visionnoneGPT4-vision
 edist: 0.0	image_id: 48
 edist: 0.0	image_id: 49
-edist: 0.0	image_id: 50
-edist: 0.0	image_id: 51
-edist: 0.0	image_id: 52
-edist: 0.0	image_id: 41
-edist: 0.0	image_id: 53
-edist: 0.0	image_id: 27
-edist: 0.0	image_id: 25
-edist: 0.0	image_id: 1
-edist: 0.0	image_id: 2
-edist: 0.0	image_id: 3
-edist: 0.0	image_id: 4
-edist: 0.0	image_id: 5
-edist: 0.0	image_id: 6
-edist: 0.0	image_id: 7
-edist: 0.0	image_id: 8
-edist: 0.0	image_id: 9
-edist: 0.0	image_id: 10
-edist: 0.0	image_id: 11
-edist: 0.0	image_id: 26
-edist: 0.0	image_id: 12
-edist: 0.0	image_id: 14
-edist: 0.0	image_id: 15
-edist: 0.0	image_id: 16
-edist: 0.0	image_id: 17
-edist: 0.0	image_id: 18
-edist: 0.0	image_id: 19
-edist: 0.0	image_id: 20
-edist: 0.0	image_id: 21
-edist: 0.0	image_id: 22
-edist: 0.0	image_id: 23
-edist: 0.0	image_id: 24
-edist: 0.0	image_id: 13
-edist: 0.0	image_id: 54
