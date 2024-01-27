@@ -3,10 +3,10 @@
 
 
 # This one runs the experiments on the full dataset.
-# SAMPLES_FLAG=--random-sample-size=-1
+SAMPLES_FLAG=--random-sample-size=-1
 
 # Specify the size one in this one to run this over a subset of the data.
-SAMPLES_FLAG=--random-sample-size=2
+# SAMPLES_FLAG=--random-sample-size=2
 
 
 output/postprocessed_ocr_provider_data.json:
@@ -25,15 +25,17 @@ output/recognized_indentations.json: output/postprocessed_ocr_provider_data.json
 		--output-file output/recognized_indentations.json \
 		--bandwidth-min 1 \
 		--bandwidth-max 200 \
-		--bandwidth-step 50
+		--bandwidth-step 5
 # Bandwidth step should be 5, I am setting it up to 50 for speedup
 
 # Add the language models you want to use, current option is [cot, simple]
+# All the possible methods are cot cot-test1 cot-test2 cot-test3 cot-test4 cot-test5 simple simple-test1 simple-test2 simple-test3 gpt4-vision
+# However we are only using the ones that has showed promising results.
 output/lm_post_processed.json: output/recognized_indentations.json
 	python lm_post_correction.py  \
 		--input-file output/recognized_indentations.json \
 		--output-file output/lm_post_processed.json \
-		--post-correction-methods cot cot-test1 cot-test2 cot-test3 cot-test4 cot-test5 simple simple-test1 simple-test2 simple-test3 gpt4-vision
+		--post-correction-methods none cot-test1 cot-test5 simple-test2 simple-test3 gpt4-vision
 
 
 # Running this one runs the entire pipeline and then dumps the results(No Evaluation)

@@ -11,6 +11,8 @@ from dotenv import load_dotenv
 import time
 
 from ratelimit import limits, sleep_and_retry
+import base64
+
 
 load_dotenv()
 
@@ -25,6 +27,8 @@ logging.basicConfig(filename=os.path.join(logs_dir, 'lm_class.log'),
 def backoff_hdlr(details):
     logging.warning("Backing off {wait:0.1f} seconds after {tries} tries calling function {target} with args {args} and kwargs {kwargs}".format(**details))
 
+
+logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
@@ -419,6 +423,32 @@ Code goes here
             return "failed"
 
 
+# Gpt 4 vision
+
+class GPT4_Vision(LMPostCorrectionAlgorithm):
+    def __init__(self):
+        super().__init__("gpt4-vision")
+        
+    @sleep_and_retry
+    @limits(calls=40, period=ONE_MINUTE)
+    @backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
+    def post_correction(self, image_path):
+        try:
+            encoded_image = encode_image(image_path)
+            response_json = call_gpt4v_api(encoded_image)
+            result = remove_blank_lines(extract_code_from_codeBlock(response_json["choices"][0]["message"]["content"].strip()))
+            return result
+
+
+        except Exception as e:
+            print(f"Unexpected error in get_gpt4v_extraction: {e}")
+            logger.error(f"Unexpected error in get_gpt4v_extraction: {e}")
+
+
+
+
+
+
 def remove_blank_lines(code):
     code = str(code)
     lines = code.split("\n")
@@ -448,15 +478,18 @@ def extract_code_from_codeBlock(txt):
     Returns:
         str: The extracted code block as a string, or the original text if no code block was found.
     """
-    first_tilda = txt.find("```")
-    if first_tilda != -1:
+    try:
+        first_tilda = txt.find("```")
         second_tilda = txt.find("```", first_tilda + 1)
-        if second_tilda != -1:
-            if txt[first_tilda + 3: first_tilda + 9] == "python" or txt[first_tilda + 3: first_tilda + 9] == "Python":
-                return txt[first_tilda + 9:second_tilda]
-            else:
-                return txt[first_tilda + 3:second_tilda]
-    return txt
+        if first_tilda != -1 and second_tilda != -1:
+            code_lang = txt[first_tilda + 3: first_tilda + 9]
+            if code_lang in ["python", "Python"]:
+                return txt[first_tilda + 9:second_tilda].strip()
+            return txt[first_tilda + 3:second_tilda].strip()
+        return txt
+    except Exception as e:
+        logger.error(f"Error in clear_response: {e}")
+        return txt  # return original text in case of error
 
 
 
@@ -1101,3 +1134,71 @@ code goes here.
     except Exception as e:
         logging.error(f"Unknown error: {e}")
         return "failed"
+
+
+
+# GPT4 Vision Setup
+def encode_image(image_path):
+    """
+    Encode a local image file to base64.
+    """
+    try:
+        with open(image_path, "rb") as image_file:
+            return base64.b64encode(image_file.read()).decode('utf-8')
+    except Exception as e:
+        logger.error(f"Error in encode_image: {e}")
+
+
+@sleep_and_retry
+@limits(calls=40, period=ONE_MINUTE)
+@backoff.on_exception(backoff.expo, (requests.exceptions.RequestException, Exception), max_tries=10, on_backoff=backoff_hdlr)
+def call_gpt4v_api(encoded_image):
+        api_key = OPENAI_API_KEY
+        if not api_key:
+            logger.error("OPENAI_API_KEY not set in environment variables")
+
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}"
+        }
+
+        payload = {
+            "model": "gpt-4-vision-preview",
+            "messages":[
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", 
+                    "text": """The image contains handwritten python code.  
+return the code in the image in this below codeblock format:
+
+```python
+code
+```
+
+Only fix typos in the code.
+*VERY STRICT RULE*
+- Do not fix any logical, or numerical error of the original code. KEEP THE LOGIC EXACTLY AS IT IS, even if it is wrong. 
+- Do not change any indentation from the original image. KEEP THE INDENTATION EXACTLY AS IT IS, even if it is wrong.
+re
+
+"""},
+                {
+                    "type": "image_url",
+                    "image_url": {
+                    "url":f"data:image/jpeg;base64,{encoded_image}",
+                },
+                },
+            ],
+            }
+        ],
+            "max_tokens": 500
+        }
+
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload, timeout=15)
+
+        if response.status_code == 200:
+            json_response = response.json()
+            return json_response
+        else:
+            logger.error(f"Error from GPT-4 API: {response.text}")
