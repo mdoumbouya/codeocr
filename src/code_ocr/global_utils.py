@@ -1472,7 +1472,8 @@ def mathpix_payload(image_path):
         
     return result
     
-    
+
+# Only works for microsoft azure as of now. 
 def line_data(raw_api_datum):
     extracted_api_data = {
         "ocr_ouptut": []

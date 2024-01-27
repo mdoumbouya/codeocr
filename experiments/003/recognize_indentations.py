@@ -11,13 +11,14 @@ import argparse
 from code_ocr.indentation_recognition import IgnoreIndentRecognitionAlgo, MeanShiftIndentRecognitionAlgo, GaussianIndentationRecognitionAlgo
 
 
+# Leaving Mean clustering method out from GauissianIndentationRecognitionAlgo for now, because it returns the same results as nearest ancestor, and nearst ancestor is a little more robust in my hypoteshis.
 
 def build_indent_recognition_methods(args):
     indent_rec_methods = [
         IgnoreIndentRecognitionAlgo(),
         MeanShiftIndentRecognitionAlgo(bandwidth="estimated"),
-        GaussianIndentationRecognitionAlgo(negative_delta_cluster_method="mean"),
-        GaussianIndentationRecognitionAlgo(negative_delta_cluster_method="nearest_neighbour"),
+        # GaussianIndentationRecognitionAlgo(negative_delta_cluster_method="mean"),
+        GaussianIndentationRecognitionAlgo(negative_delta_cluster_method="nearest_ancestor"),
     ]
     
     indent_rec_methods.extend([

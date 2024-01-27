@@ -56,7 +56,7 @@ def main(args):
     ]
 
     extended_records = []
-    for document_metadata in tqdm(data, desc='Iteration through Indentation Recognition Algorithms'):
+    for document_metadata in tqdm(data, desc='Iteration through Indentation Recognition Algorithms for Post Correction'):
         if (document_metadata['ir_algo_name'] == 'none'
         or (document_metadata['ir_algo_name'] == 'meanshift-v1' and document_metadata['ir_algo_param_bandwidth'] == 'estimated')
         or (document_metadata['ir_algo_name'] == 'gaussian-v1')):
@@ -82,7 +82,6 @@ def main(args):
                 extended_records.append(extended_record)
 
     # This part works with GPT4 vision
-    i = 0
     if 'gpt4-vision' in args.post_correction_methods:
         image_dir = '../images/'
         for image_file in tqdm(os.listdir(image_dir), desc='Iteration through GPT4 Vision'):
@@ -93,28 +92,25 @@ def main(args):
             image_path = image_dir + image_file
             image = cv2.imread(image_path)
             image_height, image_width, _ = image.shape
+            gpt4v_output = GPT4_Vision.post_correction(image_path)
+            gpt4v_output_edit_distance = editdistance.eval(gpt4v_output, ground_truth)
+            
             document_metadata = {
                 "image_id": image_id,
                 "image_height": image_height,
                 "image_width": image_width,
                 "ocr_provider": "GPT4-vision",
-                "ocr_ouptut": "none",
+                "ocr_ouptut": gpt4v_output,
                 "ir_algo_name": "none",
-                "ir_algo_output_code": "none",
-                "ir_algo_output_edit_distance": 0,
+                "ir_algo_output_code": gpt4v_output,
+                "ir_algo_output_edit_distance": gpt4v_output_edit_distance,
+                "prompting_method": "none",
+                "lm_post_processed_code": gpt4v_output,
+                "lm_post_processed_edit_distance": gpt4v_output_edit_distance,
             }
-            lm_post_processed_code = GPT4_Vision.post_correction(image_path)
-            lm_post_processed_edit_distance = editdistance.eval(lm_post_processed_code, ground_truth)
-            extended_record = {
-                **document_metadata, 
-                "prompting_method": "GPT4-vision",
-                "lm_post_processed_code": lm_post_processed_code,
-                "lm_post_processed_edit_distance": lm_post_processed_edit_distance
-            }
-            extended_records.append(extended_record)
-            i += 1
-            if i == 2:
-                break
+            
+            extended_records.append(document_metadata)
+            
         
         
     with open(args.output_file, 'w') as output_file:
