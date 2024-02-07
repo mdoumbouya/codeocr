@@ -68,6 +68,8 @@ def index():
         code_picture = upload_image(image_path, filename)
         upload_end = timer()
         
+        
+        
         # code_picture = os.path.join("..", "static", "uploaded_images", filename)
         
         
@@ -148,6 +150,12 @@ def index():
         # print("  Time taken to store the data: " + str(storing_end - storing_start))
         # print("|--------------------------------------------------------------------------|")
         
+        
+        # Removing the image from the local machine, so that it doesn't take up space, the images are stored in the firebase
+        if os.path.exists(image_path):
+            # Delete the file
+            os.remove(image_path)
+            
         return render_template(
             "index.html",
             source_code=source_code,
