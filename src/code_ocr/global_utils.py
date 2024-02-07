@@ -1469,7 +1469,7 @@ def mathpix_payload(image_path):
         print(f'File {image_path} not found.')
     except Exception as err:
         print(f'An unexpected error occurred: {err}')
-        
+    
     return result
     
 
