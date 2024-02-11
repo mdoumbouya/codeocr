@@ -130,7 +130,7 @@ df.to_csv('filename.csv', index=False)
 
 # New Json way of doing it
 import json
-from global_utils import *
+from code_ocr.global_utils import *
 
 data = []
 for i in range(55):

@@ -1,63 +1,66 @@
 import pandas as pd
 import json
 import csv
-from global_utils import *
+from code_ocr.global_utils import *
 import editdistance
 import time
 from tqdm import tqdm
+import cv2
+
 import argparse
-import copy
+from code_ocr.indentation_recognition import IgnoreIndentRecognitionAlgo, MeanShiftIndentRecognitionAlgo, GaussianIndentationRecognitionAlgo
+
+
+# Leaving Mean clustering method out from GauissianIndentationRecognitionAlgo for now, because it returns the same results as nearest ancestor, and nearst ancestor is a little more robust in my hypoteshis.
+
+def build_indent_recognition_methods(args):
+    indent_rec_methods = [
+        IgnoreIndentRecognitionAlgo(),
+        MeanShiftIndentRecognitionAlgo(bandwidth="estimated"),
+        # GaussianIndentationRecognitionAlgo(negative_delta_cluster_method="mean"),
+        GaussianIndentationRecognitionAlgo(negative_delta_cluster_method="nearest_ancestor"),
+    ]
+    
+    indent_rec_methods.extend([
+        MeanShiftIndentRecognitionAlgo(bandwidth=b) 
+        for b in range(args.bandwidth_min, args.bandwidth_max, args.bandwidth_step)
+    ])
+    return indent_rec_methods
 
 
 def main(args):
-
+    
     start_time = time.time() 
     with open(args.input_file, 'r') as json_file:
         data = json.load(json_file)
         
-
-    bandwidths = range(args.bandwidth_min, args.bandwidth_max, args.bandwidth_step)
-    print("bandwidths", list(bandwidths))
-    
-
+    indent_recognition_methods = build_indent_recognition_methods(args)
 
     with open('../rawdata.csv', 'r') as csv_file:
         rd = pd.read_csv(csv_file)
 
-
     extended_records = []
-    for ocr_metadata in tqdm(data, desc='record'):
-        image_id = ocr_metadata['image_id']
-        ocr_metadata['ocr_provider']
-        ocr_metadata['ocr_ouptut']
+    for document_metadata in tqdm(data, desc='Progress'):
+        image_id = document_metadata['image_id']
+        # document_metadata['ocr_provider']
+        # document_metadata['ocr_ouptut']
         ground_truth = rd['Ground Truth'][image_id]
         
+        # We have to pass in the image width alongside the document metadata for the gaussian method, so in this case we have to load the image
+        for indent_recognition_method in indent_recognition_methods:
+            document_medatada = indent_recognition_method.recognize_indents(document_metadata)
+            document_medatada["ir_algo_output_edit_distance"] = editdistance.eval(ground_truth, document_medatada["ir_algo_output_code"]) 
+            extended_records.append(document_medatada)
 
-        # recognition algorithm 0
-        # raw ocr output. concatenated lines
-
-        # recognition algorithm 1
-        for bandwidth in tqdm(bandwidths, desc='bandwidth', leave=False):
-            updated_ocr_metadata = copy.deepcopy(ocr_metadata)
-            lines = updated_ocr_metadata["ocr_ouptut"]
-            final_code = indent(lines, bandwidth)
-            updated_ocr_metadata["rec_meanshift_v1_bandwidth"] = bandwidth
-            updated_ocr_metadata["rec_meanshift_v1_output"] = final_code
-            updated_ocr_metadata["rec_meanshift_v1_output_edit_distance"] = editdistance.eval(ground_truth, final_code)
-            extended_records.append(
-                updated_ocr_metadata
-            )
-            print(updated_ocr_metadata)
-        
-        with open(args.output_file, 'w') as output_file:
-            json.dump(extended_records, output_file)
+    with open(args.output_file, 'w') as output_file:
+        json.dump(extended_records, output_file)
         
 
 
     end_time = time.time()  # save end time
     elapsed_time = end_time - start_time  # calculate elapsed time
 
-    print(f"The code took {elapsed_time} seconds to run.")
+
 
 
 def parse_arguments():
