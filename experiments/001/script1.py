@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 import csv
-from global_utils import *
+from code_ocr.global_utils import *
 import editdistance
 import time
 from tqdm import tqdm

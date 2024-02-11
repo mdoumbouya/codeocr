@@ -133,3 +133,8 @@ dmypy.json
 # Stopping the upload of the uploaded_image folder
 uploaded_image/
 app/static/uploaded_images/
+
+# Stopping the upload of experiment output
+experiments/003/output
+.venv310
+experiments/003/output/postprocessed_ocr_provider_data.json
