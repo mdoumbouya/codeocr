@@ -121,7 +121,7 @@ def main(args):
                 
             # Dumping visualized images.
             image_path = Path(args.images_dir) / f"{image_id}.jpg"
-            img = draw_lines(str(image_path), document_metadata)
+            img = cv2.imread(str(image_path)) # Not drawing any lines as there is no visual task
             cv2.imwrite(str(output_dir / f"{image_id}_visualized.jpg"), img)
         
         else: # However we will still dump the raw photos in gpt4-vision directory for the convenience of comparison.
