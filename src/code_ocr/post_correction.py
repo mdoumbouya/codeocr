@@ -305,7 +305,7 @@ class SIMPLEprompting_test2(LMPostCorrectionAlgorithm):
             {
                 "role": "user",
                 "content": f"""
-Only fix typos in the following code, and errors, and garbage text that may come from a Optical Charracter Recongnition system. Do not change anything else about the code. Here is the code:
+Only fix typos in the following code, and errors, and garbage text that may come from a Optical Character Recongnition system. Do not change anything else about the code. Here is the code:
 {ir_algo_output_code}
 
 return code in the following format:
