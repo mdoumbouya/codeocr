@@ -58,7 +58,7 @@ class MeanShiftIndentRecognitionAlgo(IndentationRecognitionAlgorithm):
 
 
 class GaussianIndentationRecognitionAlgo(IndentationRecognitionAlgorithm):
-    def __init__(self, negative_delta_cluster_method):
+    def __init__(self, negative_delta_cluster_method="nearest_ancestor"):
         super().__init__("gaussian-v1")
         self.negative_delta_cluster_method = negative_delta_cluster_method # Possible values: "mean", "nearest_ancestor"
 
