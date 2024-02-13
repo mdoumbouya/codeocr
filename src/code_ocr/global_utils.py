@@ -537,7 +537,7 @@ def upload_image(image_path, filename):
     # Get the URL of the uploaded image
     url = storage.child(cloud_path).get_url(None)
     
-    print("URL: " + url)
+    # print("URL: " + url)
 
     return url
 

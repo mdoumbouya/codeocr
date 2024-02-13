@@ -29,7 +29,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 from flask import session
 
-from code_ocr.indentation_recognition import MeanShiftIndentRecognitionAlgo
+from code_ocr.indentation_recognition import MeanShiftIndentRecognitionAlgo, GaussianIndentationRecognitionAlgo
 from code_ocr.post_correction import COTprompting, SIMPLEprompting
 
 load_dotenv()
@@ -83,12 +83,21 @@ def index():
         print("----------------------------------------------")
         ocr_end_time = timer()
         
+        
+        
         # Getting the gneralized form of line data using the new method
         document_metadata = line_data(json_OCRresponse)
+        
+        image = cv2.imread(image_path)
+        image_height, image_width, _ = image.shape
+        
+        document_metadata["image_height"] = image_height
+        document_metadata["image_width"] = image_width
+        
         print("lines_data: \n", document_metadata)
         print("----------------------------------------------")
         
-        ir_output = MeanShiftIndentRecognitionAlgo(bandwidth='estimated').recognize_indents(document_metadata)
+        ir_output = GaussianIndentationRecognitionAlgo().recognize_indents(document_metadata)
         
         print("ir_output: \n", ir_output)
         print("----------------------------------------------")
@@ -99,7 +108,7 @@ def index():
         # histogram = plot_histogram(min_x)
         # clustering = plot_clustering(min_x, labels)
         # visualized_lines = visualize_lines(data, image_path=str(image_path))
-        # mathpix_output = source_code
+        # ocr_output = source_code
         
         """
         Chnage how gpt is done here
