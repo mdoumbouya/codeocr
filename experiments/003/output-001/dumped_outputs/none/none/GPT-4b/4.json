@@ -1,0 +1,1 @@
+{"image_id": 4, "ocr_provider": "none", "ocr_ouptut": "none", "ir_algo_name": "none", "ir_algo_output_code": "none", "ir_algo_output_edit_distance": 0, "prompting_method": "GPT-4b", "lm_post_processed_code": "def main():\n    num = input('input :')\n    sum = 0\n    for h in num:\n        sum += int(h)\n    print(sum)\n", "lm_post_processed_edit_distance": 6}

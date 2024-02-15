@@ -1,0 +1,1 @@
+{"image_id": 0, "ocr_provider": "none", "ocr_ouptut": "none", "ir_algo_name": "none", "ir_algo_output_code": "none", "ir_algo_output_edit_distance": 0, "prompting_method": "GPT-4b", "lm_post_processed_code": "num = int(input(\"Enter a number: \"))\nAns = 1\nwhile num > 1:\n    Ans *= num\n    num -= 1\nreturn Ans\n", "lm_post_processed_edit_distance": 0}
