@@ -58,18 +58,18 @@ output/eval_results.txt: output/lm_post_processed.json
 
 
 
-.PHONY: clean-results
-clean-results:
+.PHONY: remove-results
+remove-results:
 	rm -f output/eval_results.txt
 	rm -rf output/dumped_outputs
 
-.PHONY: clean-output
-clean-output:
+.PHONY: remove-output
+remove-output:
 	rm -rf output/*
 
 
-.PHONY: clean-all-data
-clean-all:
+.PHONY: remove-all-data
+remove-all:
 	rm -rf output/*
 	rm -f ../apipayload.json
 
