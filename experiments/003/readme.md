@@ -82,7 +82,7 @@ make output/eval_results.txt
 
 Generate annotated images and post-corrected code:
 ```bash
-make output/dump_results.py
+make output/dumped_outputs
 ```
 
 Remove generated results:
