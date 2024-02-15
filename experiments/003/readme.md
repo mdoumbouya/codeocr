@@ -26,9 +26,7 @@ Welcome to our results reproduction guide. This document aims to facilitate a sm
 
 ## Quick Start
 
-Ensure you have the necessary dependencies installed on your system to run the commands provided in this guide. If not, install them using the following commands from the **root directory**  of the repository:
-
-We recomend starting by creating a virtual environment and installing the dependencies. Here are the steps to do so: 
+Ensure you have the necessary dependencies installed on your system to run the commands provided in this guide. If not, install them using the following commands from the **root directory**  of the repository. We recomend starting by creating a virtual environment and installing the dependencies. Here are the steps to do so: 
 
 
 1. **Navigate to the Project's Root Directory:**
