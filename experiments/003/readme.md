@@ -9,11 +9,11 @@ Welcome to our results reproduction guide. This document aims to facilitate a sm
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Generating Results](#generating-results)
-    - [Cleaning Up](#cleaning-up)
+    - [removeing Up](#removeing-up)
 - [Reproducing From Scratch](#reproducing-from-scratch)
     - [Environment Variables](#environment-variables)
     - [API Keys Collection](#api-keys-collection)
-    - [Initial Clean-Up Commands](#initial-clean-up-commands)
+    - [Initial remove-Up Commands](#initial-remove-up-commands)
     - [Complete Reproduction](#complete-reproduction)
 - [Warnings and Notes](#warnings-and-notes)
 - [Guide to Collecting API Keys for Services](#guide-to-collecting-api-keys-for-services)
@@ -39,9 +39,9 @@ Generate annotated images and post-corrected code:
 make output/dump_results.py
 ```
 
-Clean generated results:
+Remove generated results:
 ```bash
-make clean-results
+make remove-results
 ```
 
 Recreate all results:
@@ -66,11 +66,11 @@ Our repository includes all collected data in the `../apipayload.json` and `/out
 
 To generate the result table and dump results, use the commands provided in the [Quick Start](#quick-start) section. These commands will save the results in the output directory.
 
-### Cleaning Up
+### removeing Up
 
 To remove generated files (`output/eval_results.txt` and `output/dump_results.py`), run:
 ```bash
-make clean-results
+make remove-results
 ```
 
 ## Reproducing From Scratch
@@ -110,23 +110,23 @@ aws configure
 
 Scroll down to the bottom of the page for instructions on collecting API keys for the services used in the experiments.
 
-### Initial Clean-Up Commands
+### Initial remove-Up Commands
 
-To clean up existing output data, run:
+To remove up existing output data, run:
 
 ```bash
-make clean-output
+make remove-output
 ```
 
 For a complete reset, including OCR data, use:
 
 ```bash
-make clean-all-data
+make remove-all-data
 ```
 
 ### Complete Reproduction
 
-With the environment set up and initial data cleaned, you can now reproduce the experiment results by running:
+With the environment set up and initial data removeed, you can now reproduce the experiment results by running:
 
 ```bash
 make all-results
