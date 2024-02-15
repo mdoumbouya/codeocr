@@ -58,21 +58,51 @@ output/eval_results.txt: output/lm_post_processed.json
 
 
 
-.PHONY: remove-results
-remove-results:
+.PHONY: force-remove-results
+force-remove-results:
 	rm -f output/eval_results.txt
 	rm -rf output/dumped_outputs
 
-.PHONY: remove-output
-remove-output:
+.PHONY: force-remove-output
+force-remove-output:
 	rm -rf output/*
 
 
-.PHONY: remove-all-data
-remove-all:
+.PHONY: force-remove-all-data
+force-remove-all:
 	rm -rf output/*
 	rm -f ../apipayload.json
 
 
 .PHONY: all-results
 all-results: output/eval_results.txt output/dumped_outputs
+
+
+# Safeguards
+.PHONY: remove-results
+remove-results:
+	@read -p "Are you sure you want to delete evaluation results and dumped outputs? [y/N] " confirm; \
+	if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
+		make force-remove-results; \
+	else \
+		echo "Deletion of results cancelled."; \
+	fi
+
+
+.PHONY: remove-output
+remove-output:
+	@read -p "Are you sure you want to delete all contents in the output directory? This action is irreversible. [y/N] " confirm; \
+	if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
+		make force-remove-output; \
+	else \
+		echo "Deletion of output contents cancelled."; \
+	fi
+
+.PHONY: remove-all-data
+remove-all-data:
+	@read -p "WARNING: You are about to delete ALL data including output contents and the API payload. Are you absolutely sure? [y/N] " confirm; \
+	if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
+		make force-remove-all; \
+	else \
+		echo "Deletion of all data cancelled."; \
+	fi
