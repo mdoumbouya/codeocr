@@ -6,7 +6,6 @@ Welcome to our results reproduction guide. This document aims to facilitate a sm
 
 - [Quick Start](#quick-start)
 - [Detailed Reproduction Steps](#detailed-reproduction-steps)
-    - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Generating Results](#generating-results)
     - [removeing Up](#removeing-up)
@@ -27,7 +26,54 @@ Welcome to our results reproduction guide. This document aims to facilitate a sm
 
 ## Quick Start
 
+Ensure you have the necessary dependencies installed on your system to run the commands provided in this guide. If not, install them using the following commands from the **root directory**  of the repository:
+
+We recomend starting by creating a virtual environment and installing the dependencies. Here are the steps to do so: 
+
+
+1. **Navigate to the Project's Root Directory:**
+   Open a terminal (macOS/Linux) or a command prompt (Windows) and navigate to the root directory of the repository where you want to set up the virtual environment.
+
+2. **Create the Virtual Environment:**
+   Run the following command to create a virtual environment named `env` within the project directory:
+   
+   - **macOS/Linux:**
+     ```sh
+     python3 -m venv env
+     ```
+   - **Windows:**
+     ```cmd
+     python -m venv env
+     ```
+
+3. **Activate the Virtual Environment:**
+   Before you can start installing or using packages in your virtual environment, you need to activate it.
+    
+   - **macOS/Linux:**
+     ```sh
+     source env/bin/activate
+     ```
+   - **Windows:**
+     ```cmd
+     .\env\Scripts\activate
+     ```
+
+   You'll know that the virtual environment is activated because the command prompt will now show the name of the virtual environment (in this case, `env`).
+
+Now from the root directory of the repository, you can install the dependencies by running the following commands:
+```bash
+pip install -e .
+pip install -r requirements.txt
+```
+
+or simply run the following command in **root directory** of the repository:
+
+```bash
+make install
+```
+
 For those looking to quickly generate the results used in our paper, execute the following commands from the `experiments/003` directory:
+
 
 Generate the result table:
 ```bash
@@ -50,13 +96,6 @@ make all-results
 ```
 
 ## Detailed Reproduction Steps
-
-### Prerequisites
-
-Ensure you have the necessary dependencies installed on your system to run the commands provided in this guide.
-```bash
-pip install -r requirements.txt
-```
 
 ### Setup
 

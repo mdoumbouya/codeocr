@@ -9,3 +9,11 @@ start-dev-server:
 	flask --app main run
 
 TODO:
+
+
+
+# installing dependencies
+.PHONY: install
+install:
+	pip install -r requirements.txt
+	pip install -e .
