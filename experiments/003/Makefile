@@ -57,7 +57,6 @@ output/eval_results.txt: output/lm_post_processed.json
 		--output-file output/eval_results.txt
 
 
-
 .PHONY: force-remove-results
 force-remove-results:
 	rm -f output/eval_results.txt
