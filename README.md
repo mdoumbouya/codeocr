@@ -58,9 +58,7 @@ codeocr/
 │   ├── __pycache__
 │   ├── blueprints
 │   │   ├── advanced_ocr
-│   │   │   └── __pycache__
 │   │   └── ocr_compiler
-│   │       └── __pycache__
 │   ├── static
 │   │   ├── css
 │   │   ├── js
@@ -87,7 +85,6 @@ codeocr/
 ├── logs
 ├── src
 │   ├── code_ocr
-│   │   └── __pycache__
 │   └── codeocr.egg-info
 └── uploaded_images
 
