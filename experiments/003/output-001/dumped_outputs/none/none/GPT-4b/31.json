@@ -1,1 +1,0 @@
-{"image_id": 31, "ocr_provider": "none", "ocr_ouptut": "none", "ir_algo_name": "none", "ir_algo_output_code": "none", "ir_algo_output_edit_distance": 0, "prompting_method": "GPT-4b", "lm_post_processed_code": "def factorial(n):\n    if n <= 1:\n        return 1\n    else:\n        return factorial(n-1) * n\nprint(factorial(int(input())))\n", "lm_post_processed_edit_distance": 2}
