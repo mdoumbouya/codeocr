@@ -8,8 +8,12 @@ SAMPLES_FLAG=--random-sample-size=-1
 # Specify the size one in this one to run this over a subset of the data.
 # SAMPLES_FLAG=--random-sample-size=2
 
+# Collect Api Payload
+../apipayload.json:
+	python ../collect_api_payload.py
 
-output/postprocessed_ocr_provider_data.json:
+
+output/postprocessed_ocr_provider_data.json: ../apipayload.json
 	mkdir -p output
 	python post_process_ocr_results.py \
 		--input-file ../apipayload.json \
@@ -52,3 +56,23 @@ output/eval_results.txt: output/lm_post_processed.json
 		--input-file output/lm_post_processed.json \
 		--output-file output/eval_results.txt
 
+
+
+.PHONY: clean-results
+clean-results:
+	rm -f output/eval_results.txt
+	rm -rf output/dumped_outputs
+
+.PHONY: clean-output
+clean-output:
+	rm -rf output/*
+
+
+.PHONY: clean-all-data
+clean-all:
+	rm -rf output/*
+	rm -f ../apipayload.json
+
+
+.PHONY: all-results
+all-results: output/eval_results.txt output/dumped_outputs
