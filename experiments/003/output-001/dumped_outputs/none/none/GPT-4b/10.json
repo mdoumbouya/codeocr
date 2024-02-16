@@ -1,1 +1,0 @@
-{"image_id": 10, "ocr_provider": "none", "ocr_ouptut": "none", "ir_algo_name": "none", "ir_algo_output_code": "none", "ir_algo_output_edit_distance": 0, "prompting_method": "GPT-4b", "lm_post_processed_code": "def main():\n    string = str(input('Enter a string:'))\n    for i in range(len(string)-1, -1, -1):\n        print(string[i])\n", "lm_post_processed_edit_distance": 9}
