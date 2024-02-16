@@ -1,0 +1,188 @@
+Data Id,Model Temperature,Ground Truth,Azure,Line by Line LM,Change Category Low
+0,0.2,"list = [6, 14, 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+","list = [6, 11,5,8,9]
+for elem in list:
+max=0
+if elem> max :
+max = elem
+return max","list = [6, 11, 5, 8, 9]
+for elem in list:
+max = 0
+if elem > max:
+max = elem
+return max
+",null
+1,0.2,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i]:
+            return False
+    return True
+","def palindromic (stro):
+for i in range (int (len(str)/2)):
+if stro [i] ! = str [len(stn) -i] :
+return False
+return True","
+def palindromic(stro):
+for i in range(int(len(stro)/2)):
+if stro[i] != stro[len(stro) - i - 1]:
+return False
+return True
+",null
+2,0.2,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+","def factorial (n):
+result = n * factorial (n-1)
+return result","
+def factorial(n):
+result = n * factorial(n-1)
+return result
+",null
+3,0.2,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i + 1] + sequence[i + 2])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+","def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence> <= n:
+sequence. append (sequence [+]+ sequence [i+2]
+it = 1
+return sequence
+result = fibonacci (5)
+print (result)","
+def fibonacci(n):
+sequence = [0,1]
+i = 0
+while len(sequence) <= n:
+sequence.append(sequence[i]+sequence[i+2])
+i = 1
+return sequence
+result = fibonacci(5)
+print(result)
+",null
+4,0.2,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+","def CountFrequency (my-list):
+freq = { }
+for item in my-list:
+freq [item]+=1
+return freq","
+def CountFrequency(my_list):
+freq = {}
+for item in my_list:
+freq[item] += 1
+return freq
+",null
+5,0.2,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+","def two Sam (nams, target):
+for i in range (len (nams) :
+for p in range (i) Lan (namp):
+if (names [i] + numa[P] == fanget):
+Detunn [i, P]","
+def two_sum(nums, target):
+for i in range(len(nams)):
+for p in range(i, len(names)):
+if (names[i] + names[p] == target):
+return [i, p]
+",null
+6,0.2,"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list
+","des Remove (duplicate):
+for wam in duplicate:
+Sinal-Lint = []
+if num not in final-list :
+final-lint. append(num)
+return final-lint","
+def Remove(duplicate):
+for num in duplicate:
+final_list = []
+if num not in final_list:
+final_list.append(num)
+return final_list
+",null
+7,0.2,"def even_or_odd(number):
+    if number / 2 == 0:
+        return ""Even""
+    if number / 2 != 0:
+        return ""Odd""
+","det even-or-odd (number):
+if number /2=0:
+Detann ""Even""
+if number 12 != 0:
+retain ""Odd""","
+def even_or_odd(number):
+if number % 2 == 0:
+return ""Even""
+if number % 2 != 0:
+return ""Odd""
+",null
+8,0.2,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+","daf
+upper-lower-count (sto):
+Upper-case = 0
+lower-case = 0
+for char in str.
+if chan, inupper():
+upper-case +=1
+elpe:
+lower-case += 1
+return upper-care, lowercase","def
+
+def upper_lower_count(str):
+upper_case = 0
+lower_case = 0
+for char in sto:
+if char.isupper():
+upper_case += 1
+else:
+lower_case += 1
+return upper-case, lower-case
+",null
+9,0.2,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+","det multiply (numbers);
+total= 0
+for se in numbers:
+total * = Je
+return total
+Tony Upper case. la","
+def multiply(numbers):
+total = 0
+for se in numbers:
+total *= se
+return total
+Tony.upper_case.la
+",null

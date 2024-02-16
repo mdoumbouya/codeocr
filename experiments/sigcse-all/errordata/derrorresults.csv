@@ -1,0 +1,6353 @@
+Ground Truth,Model Temperature,GCV,ED GCV,GCV LM Low,ED GCV LM Low,GCV LM Medium,ED GCV LM Medium,GCV LM High,ED GCV LM High,AWS,ED AWS,AWS LM Low,ED AWS LM Low,AWS LM Medium,ED AWS LM Medium,AWS LM High,ED AWS LM High,Azure,ED Azure,Azure LM Low,ED Azure LM Low,Azure LM Medium,ED Azure LM Medium,Azure LM High,ED Azure LM High,MP,ED MP,MP LM Low,ED MP LM Low,MP LM Medium,ED MP LM Medium,MP LM High,ED MP LM High
+"list = [6, 14, 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",0.0,"list = [6, 14, 5, 8, 9]
+for elem in list :
+max = 0.
+if elem > max :
+De
+max = elem
+return max",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"my_list = [6, 14, 5, 8, 9]
+max_value = 0
+for elem in my_list:
+    if elem > max_value:
+        max_value = elem
+print(max_value)
+",56,"list = [6, H, 5,8, 9]
+for elem in list :
+max =0
+if elem > max Der
+:
+max = elem
+return max",23,"list = [6, ""H"", 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",3,"list = [6, ""H"", 5, 8, 9]
+max_val = 0
+for elem in list:
+    if isinstance(elem, int) and elem > max_val:
+        max_val = elem
+print(max_val)
+",59,"list = [6, ""H"", 5, 8, 9]
+max_val = 0
+for elem in list:
+    if isinstance(elem, int) and elem > max_val:
+        max_val = elem
+print(max_val)
+",59,"list = [6, 11,5,8,9]
+for elem in list:
+max=0
+if elem> max :
+max = elem
+return max",25,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",21,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",29,"list = [6, 11, 5, 8, 9]
+max_val = 0
+for elem in list:
+    if elem > max_val:
+        max_val = elem
+print(max_val)
+",44,"\[
+\text { list }=[6,14,5,8,9]
+\]
+for elem in list:
+\[
+\max =0
+\]
+\[
+\begin{array}{l} 
+\text { if elem }>\max : \\
+\max =\text { elem }
+\end{array}
+\]
+return max",89,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28
+"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i]:
+            return False
+    return True
+",0.0,"def palindromic (sta):
+for i in range (int (len (str)/2)):
+if str[i] != str [len (str)-i]:.
+return False
+return True",41,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14,"def palindromic (str)):
+for i in range (int (len (str) 12)):
+if str [i] ! = str [len (str)-i]:- -
+return False
+return True",42,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14,"def palindromic (stro):
+for i in range (int (len(str)/2)):
+if stro [i] ! = str [len(stn) -i] :
+return False
+return True",42,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str):
+for \( i \) in range \( ( \) int \( (\operatorname{len}( \) stro \( ) / 2)) \) :
+if \( s+r[i] !=\operatorname{str}[\operatorname{len}(s \operatorname{st})-i]: \)
+return False
+return True",117,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - 1 - i]:
+            return False
+    return True
+",13
+"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0.0,"def factorial (n):
+result = n* factorial (n-1)
+return sesut result",20,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+",61,"def factorial (h):
+result = n
+factorial (n-1) -
+return result result",23,"def factorial(n):
+    result = n
+    factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    result = n
+    factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    if n == 1:
+        return n
+    else:
+        return n * factorial(n - 1)
+",52,"def factorial (n):
+result = n * factorial (n-1)
+return result",13,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",60,"def factorial \( (n) \) :
+\[
+\text { result }=n * \text { factorial }(n-1)
+\]
+return result",36,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50
+"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i + 1] + sequence[i + 2])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+",0.0,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+i+=1
+return sequence
+result = fibonacci (5)
+print (result)",50,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1=0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+it=1
+return sequence
+result = fibonacci (5)
+print (result)",53,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence> <= n:
+sequence. append (sequence [+]+ sequence [i+2]
+it = 1
+return sequence
+result = fibonacci (5)
+print (result)",54,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibmacci \( (n) \) :
+sequence \( =[0,1] \)
+\[
+i=0
+\]
+while len (sequence) \( <=n \) :
+sequence. append (sequence \( [i+1]+ \) sequence \( [i+2]) \) \( i+=1 \)
+return sequence
+result = fibonaeci (5)
+print (result)",73,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7
+"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0.0,"def Count Frequency (my-list):
+freq = { } !!
+for item in my-list:
+freq [item] + = 1
+return freq",28,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def Count Frequency (my-list):
+freq = { }
+for item in my-list :
+freq [item] += 1
+return freq",28,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",24,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def CountFrequency (my-list):
+freq = { }
+for item in my-list:
+freq [item]+=1
+return freq",28,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",21,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",70,"def Count Frequency (my-list):
+\[
+\text { freq }=\{\}
+\]
+for item in my-list:
+\[
+\text { freg [item] }+=1
+\]
+return freq",38,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73
+"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0.0,"def two Sam (nams, tanget):
+Son i
+for
+in pange (len (nama)) :
+Pin
+Pange (i, Lon(namp))!
+if (nams [i] + nump [P] == tanget)!
+petanu [1, p]",84,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam(nams, tanget):
+for i in range(dev (nams)) :
+for P in range(i) (an(nams)):
+if(names [i] -namp[p] == tanget):
+retann [i, p]",67,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+",1,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",13,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",13,"def two Sam (nams, target):
+for i in range (len (nams) :
+for p in range (i) Lan (namp):
+if (names [i] + numa[P] == fanget):
+Detunn [i, P]",69,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam (nams, tanget): for: in pange (len (nams)):
+for \( p \) in pange \( (i) \operatorname{len}( \) nams \( )) \) :
+\[
+\text { if (naws }[i]+\operatorname{nams}[p]==\text { tanget }) \text { ! }
+\]
+\( \operatorname{retanx}[i, P] \)",139,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",3,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",5,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2
+"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list
+",0.0,"des Remove (duplicate):
+Son nam in duplicate:
+Simal - Lint = []
+if
+not in final-lint:
+Sinal - lint- append (num)
+pefunn final-lint
+Mum",41,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Removeldaplicate):
+for nam in daplicats:
+Sival-Lint = []
+if nvm not in final-lint:
+Sinal_lint.append (num)
+return final-lint",25,"def RemoveDuplicate():
+    for num in duplicates:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",40,"def RemoveDuplicate(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",67,"def remove_duplicates(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",70,"des Remove (duplicate):
+for wam in duplicate:
+Sinal-Lint = []
+if num not in final-list :
+final-lint. append(num)
+return final-lint",22,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(daplicate):
+for nam in daplicate:
+final-Lint \( =[] \)
+if num not in final-lint:
+final_lint append (num)
+refunu final-lint",29,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",58
+"def even_or_odd(number):
+    if number / 2 == 0:
+        return ""Even""
+    if number / 2 != 0:
+        return ""Odd""
+",0.0,"def even on-odd (number):
+if numben / 2 == 0:
+petann ""Even""
+if numbers 12 !=0%
+return ""Old""",39,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even on-odd(number):
+if number 12==0:
+retann ""Even""
+if number 12 !=0:
+return ""odd""",38,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"det even-or-odd (number):
+if number /2=0:
+Detann ""Even""
+if number 12 != 0:
+retain ""Odd""",40,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"Lef even-or-odd(namber):
+if numben \( / 2==0 \) :
+retann ""Even""
+if number \( 12 !=0 \) : retarn ""Odd"".",41,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2
+"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0.0,"def
+uppen - lower_count (nto):
+Upper- cape =
+= 0
+lower - Cape = 0
+for chap in ptp:
+is chan, inupper():
+upper-cane + = 1
+elpe:
+lower-case + =
+= 1
+peturn upper-care, lower cape",94,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"daf -
+Upper- case = 0
+lower - case = 0
+for char in str:
+if char, inupperu: /
+upper-cane += 1
+else:
+lower-case. += 1
+return upper - cape, lowercape",102,"str = ""...""
+upper_case = 0
+lower_case = 0
+for char in str:
+    if char.isupper():
+        upper_case += 1
+    else:
+        lower_case += 1
+return upper_case, lower_case
+",58,"def count_case(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",14,"def count_case(s):
+    upper_case = 0
+    lower_case = 0
+    for char in s:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",18,"daf
+upper-lower-count (sto):
+Upper-case = 0
+lower-case = 0
+for char in str.
+if chan, inupper():
+upper-case +=1
+elpe:
+lower-case += 1
+return upper-care, lowercase",78,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(str):
+    Upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            Upper_case += 1
+        else:
+            lower_case += 1
+    return Upper_case, lower_case
+",3,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper-lower-count(ntr):
+\[
+\begin{array}{l}
+\text { Upper-case }=0 \\
+\text { lower-case }=0
+\end{array}
+\]
+for char in str:
+if char. isupper:
+\[
+\text { upper-case }+=1
+\]
+elre:
+\[
+\text { lower-case }+=1
+\]
+return upper-care, lowercase",113,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2
+"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0.0,"def multiply (numboon);
+total = 0
+for je in numberni
+total ** = se
+peturn total
+moppen:
+Mape
+lowen cone",55,"def multiply(number):
+    total = 0
+    for se in number:
+        total *= se
+    return total
+",6,"def multiply(number):
+    total = 0
+    for se in number:
+        total *= se
+    return total
+
+
+try:
+    pass
+except:
+    pass
+",39,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply (numbers):
+total = 0
+for xc in numbern:
+total *= re
+return total
+mopper",31,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"det multiply (numbers);
+total= 0
+for se in numbers:
+total * = Je
+return total
+Tony Upper case. la",47,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def maltiply (numbons):
+total \( =0 \)
+for \( x \) in nambern!
+total \( *=x \)
+return total",41,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total
+",1,"def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total
+",1
+"list = [6, 14, 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",0.2,"list = [6, 14, 5, 8, 9]
+for elem in list :
+max = 0.
+if elem > max :
+De
+max = elem
+return max",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list_ = [6, 14, 5, 8, 9]
+max_ = 0
+for elem in list_:
+    if elem > max_:
+        max_ = elem
+print(max_)
+",34,"list = [6, H, 5,8, 9]
+for elem in list :
+max =0
+if elem > max Der
+:
+max = elem
+return max",23,"list = [6, ""H"", 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",3,"list = [6, ""H"", 5, 8, 9]
+max = 0
+for elem in list:
+    if isinstance(elem, int) and elem > max:
+        max = elem
+print(max)
+",44,"my_list = [6, ""H"", 5, 8, 9]
+max_value = 0
+for elem in my_list:
+    if isinstance(elem, int) and elem > max_value:
+        max_value = elem
+print(max_value)
+",73,"list = [6, 11,5,8,9]
+for elem in list:
+max=0
+if elem> max :
+max = elem
+return max",25,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",21,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",29,"my_list = [6, 11, 5, 8, 9]
+max_val = 0
+for elem in my_list:
+    if elem > max_val:
+        max_val = elem
+print(max_val)
+",50,"\[
+\text { list }=[6,14,5,8,9]
+\]
+for elem in list:
+\[
+\max =0
+\]
+\[
+\begin{array}{l} 
+\text { if elem }>\max : \\
+\max =\text { elem }
+\end{array}
+\]
+return max",89,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28
+"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i]:
+            return False
+    return True
+",0.2,"def palindromic (sta):
+for i in range (int (len (str)/2)):
+if str[i] != str [len (str)-i]:.
+return False
+return True",41,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14,"def palindromic (str)):
+for i in range (int (len (str) 12)):
+if str [i] ! = str [len (str)-i]:- -
+return False
+return True",42,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14,"def palindromic (stro):
+for i in range (int (len(str)/2)):
+if stro [i] ! = str [len(stn) -i] :
+return False
+return True",42,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str):
+for \( i \) in range \( ( \) int \( (\operatorname{len}( \) stro \( ) / 2)) \) :
+if \( s+r[i] !=\operatorname{str}[\operatorname{len}(s \operatorname{st})-i]: \)
+return False
+return True",117,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14
+"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0.2,"def factorial (n):
+result = n* factorial (n-1)
+return sesut result",20,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+",61,"def factorial (h):
+result = n
+factorial (n-1) -
+return result result",23,"def factorial(n):
+    result = n
+    factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    result = n
+    factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    if n == 1:
+        return n
+    else:
+        return n * factorial(n - 1)
+",52,"def factorial (n):
+result = n * factorial (n-1)
+return result",13,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",60,"def factorial \( (n) \) :
+\[
+\text { result }=n * \text { factorial }(n-1)
+\]
+return result",36,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50
+"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i + 1] + sequence[i + 2])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+",0.2,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+i+=1
+return sequence
+result = fibonacci (5)
+print (result)",50,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1=0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+it=1
+return sequence
+result = fibonacci (5)
+print (result)",53,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence> <= n:
+sequence. append (sequence [+]+ sequence [i+2]
+it = 1
+return sequence
+result = fibonacci (5)
+print (result)",54,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibmacci \( (n) \) :
+sequence \( =[0,1] \)
+\[
+i=0
+\]
+while len (sequence) \( <=n \) :
+sequence. append (sequence \( [i+1]+ \) sequence \( [i+2]) \) \( i+=1 \)
+return sequence
+result = fibonaeci (5)
+print (result)",73,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7
+"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0.2,"def Count Frequency (my-list):
+freq = { } !!
+for item in my-list:
+freq [item] + = 1
+return freq",28,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def Count Frequency (my-list):
+freq = { }
+for item in my-list :
+freq [item] += 1
+return freq",28,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = my_list.count(item)
+    return freq
+",23,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def CountFrequency (my-list):
+freq = { }
+for item in my-list:
+freq [item]+=1
+return freq",28,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",21,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",70,"def Count Frequency (my-list):
+\[
+\text { freq }=\{\}
+\]
+for item in my-list:
+\[
+\text { freg [item] }+=1
+\]
+return freq",38,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73
+"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0.2,"def two Sam (nams, tanget):
+Son i
+for
+in pange (len (nama)) :
+Pin
+Pange (i, Lon(namp))!
+if (nams [i] + nump [P] == tanget)!
+petanu [1, p]",84,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam(nams, tanget):
+for i in range(dev (nams)) :
+for P in range(i) (an(nams)):
+if(names [i] -namp[p] == tanget):
+retann [i, p]",67,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+",1,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",13,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",16,"def two Sam (nams, target):
+for i in range (len (nams) :
+for p in range (i) Lan (namp):
+if (names [i] + numa[P] == fanget):
+Detunn [i, P]",69,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam (nams, tanget): for: in pange (len (nams)):
+for \( p \) in pange \( (i) \operatorname{len}( \) nams \( )) \) :
+\[
+\text { if (naws }[i]+\operatorname{nams}[p]==\text { tanget }) \text { ! }
+\]
+\( \operatorname{retanx}[i, P] \)",139,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",5,"def two_sum(nams, target):
+    for i in range(len(nams)):
+        for p in range(len(nams)):
+            if nams[i] + nams[p] == target:
+                return [i, p]
+",10,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2
+"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list
+",0.2,"des Remove (duplicate):
+Son nam in duplicate:
+Simal - Lint = []
+if
+not in final-lint:
+Sinal - lint- append (num)
+pefunn final-lint
+Mum",41,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Removeldaplicate):
+for nam in daplicats:
+Sival-Lint = []
+if nvm not in final-lint:
+Sinal_lint.append (num)
+return final-lint",25,"def RemoveDuplicate():
+    for num in duplicates:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",40,"def RemoveDuplicate(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",67,"def remove_duplicates(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",70,"des Remove (duplicate):
+for wam in duplicate:
+Sinal-Lint = []
+if num not in final-list :
+final-lint. append(num)
+return final-lint",22,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(daplicate):
+for nam in daplicate:
+final-Lint \( =[] \)
+if num not in final-lint:
+final_lint append (num)
+refunu final-lint",29,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",58
+"def even_or_odd(number):
+    if number / 2 == 0:
+        return ""Even""
+    if number / 2 != 0:
+        return ""Odd""
+",0.2,"def even on-odd (number):
+if numben / 2 == 0:
+petann ""Even""
+if numbers 12 !=0%
+return ""Old""",39,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even on-odd(number):
+if number 12==0:
+retann ""Even""
+if number 12 !=0:
+return ""odd""",38,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"det even-or-odd (number):
+if number /2=0:
+Detann ""Even""
+if number 12 != 0:
+retain ""Odd""",40,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"Lef even-or-odd(namber):
+if numben \( / 2==0 \) :
+retann ""Even""
+if number \( 12 !=0 \) : retarn ""Odd"".",41,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2
+"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0.2,"def
+uppen - lower_count (nto):
+Upper- cape =
+= 0
+lower - Cape = 0
+for chap in ptp:
+is chan, inupper():
+upper-cane + = 1
+elpe:
+lower-case + =
+= 1
+peturn upper-care, lower cape",94,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"daf -
+Upper- case = 0
+lower - case = 0
+for char in str:
+if char, inupperu: /
+upper-cane += 1
+else:
+lower-case. += 1
+return upper - cape, lowercape",102,"def count_case(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",14,"def count_case(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",14,"def count_case(s):
+    upper_case = 0
+    lower_case = 0
+    for char in s:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",18,"daf
+upper-lower-count (sto):
+Upper-case = 0
+lower-case = 0
+for char in str.
+if chan, inupper():
+upper-case +=1
+elpe:
+lower-case += 1
+return upper-care, lowercase",78,"def upper_lower_count(str):
+    Upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            Upper_case += 1
+        else:
+            lower_case += 1
+    return Upper_case, lower_case
+",3,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper-lower-count(ntr):
+\[
+\begin{array}{l}
+\text { Upper-case }=0 \\
+\text { lower-case }=0
+\end{array}
+\]
+for char in str:
+if char. isupper:
+\[
+\text { upper-case }+=1
+\]
+elre:
+\[
+\text { lower-case }+=1
+\]
+return upper-care, lowercase",113,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2
+"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0.2,"def multiply (numboon);
+total = 0
+for je in numberni
+total ** = se
+peturn total
+moppen:
+Mape
+lowen cone",55,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(number):
+    total = 0
+    for se in number:
+        total *= se
+    return total
+
+
+try:
+    pass
+except:
+    pass
+",39,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply (numbers):
+total = 0
+for xc in numbern:
+total *= re
+return total
+mopper",31,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"det multiply (numbers);
+total= 0
+for se in numbers:
+total * = Je
+return total
+Tony Upper case. la",47,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def maltiply (numbons):
+total \( =0 \)
+for \( x \) in nambern!
+total \( *=x \)
+return total",41,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total
+",1
+"list = [6, 14, 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",0.4,"list = [6, 14, 5, 8, 9]
+for elem in list :
+max = 0.
+if elem > max :
+De
+max = elem
+return max",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"lst = [6, 14, 5, 8, 9]
+max_val = 0
+for elem in lst:
+    if elem > max_val:
+        max_val = elem
+print(max_val)
+",45,"list = [6, H, 5,8, 9]
+for elem in list :
+max =0
+if elem > max Der
+:
+max = elem
+return max",23,"list = [6, ""H"", 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",3,"list = [6, ""H"", 5, 8, 9]
+max_val = 0
+for elem in list:
+    if isinstance(elem, int) and elem > max_val:
+        max_val = elem
+return max_val
+",52,"my_list = [6, ""H"", 5, 8, 9]
+max_val = 0
+for elem in my_list:
+    if isinstance(elem, int) and elem > max_val:
+        max_val = elem
+print(max_val)
+",65,"list = [6, 11,5,8,9]
+for elem in list:
+max=0
+if elem> max :
+max = elem
+return max",25,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",21,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",29,"my_list = [6, 11, 5, 8, 9]
+max_value = 0
+for elem in my_list:
+    if elem > max_value:
+        max_value = elem
+print(max_value)
+",57,"\[
+\text { list }=[6,14,5,8,9]
+\]
+for elem in list:
+\[
+\max =0
+\]
+\[
+\begin{array}{l} 
+\text { if elem }>\max : \\
+\max =\text { elem }
+\end{array}
+\]
+return max",89,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28
+"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i]:
+            return False
+    return True
+",0.4,"def palindromic (sta):
+for i in range (int (len (str)/2)):
+if str[i] != str [len (str)-i]:.
+return False
+return True",41,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str)):
+for i in range (int (len (str) 12)):
+if str [i] ! = str [len (str)-i]:- -
+return False
+return True",42,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14,"def palindromic (stro):
+for i in range (int (len(str)/2)):
+if stro [i] ! = str [len(stn) -i] :
+return False
+return True",42,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str):
+for \( i \) in range \( ( \) int \( (\operatorname{len}( \) stro \( ) / 2)) \) :
+if \( s+r[i] !=\operatorname{str}[\operatorname{len}(s \operatorname{st})-i]: \)
+return False
+return True",117,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14
+"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0.4,"def factorial (n):
+result = n* factorial (n-1)
+return sesut result",20,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",60,"def factorial (h):
+result = n
+factorial (n-1) -
+return result result",23,"def factorial(n):
+    result = n
+    factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    result = n
+    result *= factorial(n - 1)
+    return result
+",12,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+",52,"def factorial (n):
+result = n * factorial (n-1)
+return result",13,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",60,"def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",60,"def factorial \( (n) \) :
+\[
+\text { result }=n * \text { factorial }(n-1)
+\]
+return result",36,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50
+"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i + 1] + sequence[i + 2])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+",0.4,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+i+=1
+return sequence
+result = fibonacci (5)
+print (result)",50,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1=0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+it=1
+return sequence
+result = fibonacci (5)
+print (result)",53,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence> <= n:
+sequence. append (sequence [+]+ sequence [i+2]
+it = 1
+return sequence
+result = fibonacci (5)
+print (result)",54,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibmacci \( (n) \) :
+sequence \( =[0,1] \)
+\[
+i=0
+\]
+while len (sequence) \( <=n \) :
+sequence. append (sequence \( [i+1]+ \) sequence \( [i+2]) \) \( i+=1 \)
+return sequence
+result = fibonaeci (5)
+print (result)",73,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7
+"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0.4,"def Count Frequency (my-list):
+freq = { } !!
+for item in my-list:
+freq [item] + = 1
+return freq",28,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",71,"def Count Frequency (my-list):
+freq = { }
+for item in my-list :
+freq [item] += 1
+return freq",28,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",24,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",24,"def CountFrequency (my-list):
+freq = { }
+for item in my-list:
+freq [item]+=1
+return freq",28,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",21,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",70,"def Count Frequency (my-list):
+\[
+\text { freq }=\{\}
+\]
+for item in my-list:
+\[
+\text { freg [item] }+=1
+\]
+return freq",38,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73
+"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0.4,"def two Sam (nams, tanget):
+Son i
+for
+in pange (len (nama)) :
+Pin
+Pange (i, Lon(namp))!
+if (nams [i] + nump [P] == tanget)!
+petanu [1, p]",84,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam(nams, tanget):
+for i in range(dev (nams)) :
+for P in range(i) (an(nams)):
+if(names [i] -namp[p] == tanget):
+retann [i, p]",67,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+",1,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",13,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",13,"def two Sam (nams, target):
+for i in range (len (nams) :
+for p in range (i) Lan (namp):
+if (names [i] + numa[P] == fanget):
+Detunn [i, P]",69,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] + names[p] == target:
+                return [i, p]
+",12,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam (nams, tanget): for: in pange (len (nams)):
+for \( p \) in pange \( (i) \operatorname{len}( \) nams \( )) \) :
+\[
+\text { if (naws }[i]+\operatorname{nams}[p]==\text { tanget }) \text { ! }
+\]
+\( \operatorname{retanx}[i, P] \)",139,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",3,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",5,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2
+"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list
+",0.4,"des Remove (duplicate):
+Son nam in duplicate:
+Simal - Lint = []
+if
+not in final-lint:
+Sinal - lint- append (num)
+pefunn final-lint
+Mum",41,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Removeldaplicate):
+for nam in daplicats:
+Sival-Lint = []
+if nvm not in final-lint:
+Sinal_lint.append (num)
+return final-lint",25,"def RemoveDuplicate():
+    for num in duplicates:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",40,"def RemoveDuplicate(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",67,"def remove_duplicates(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",70,"des Remove (duplicate):
+for wam in duplicate:
+Sinal-Lint = []
+if num not in final-list :
+final-lint. append(num)
+return final-lint",22,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(daplicate):
+for nam in daplicate:
+final-Lint \( =[] \)
+if num not in final-lint:
+final_lint append (num)
+refunu final-lint",29,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56
+"def even_or_odd(number):
+    if number / 2 == 0:
+        return ""Even""
+    if number / 2 != 0:
+        return ""Odd""
+",0.4,"def even on-odd (number):
+if numben / 2 == 0:
+petann ""Even""
+if numbers 12 !=0%
+return ""Old""",39,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even on-odd(number):
+if number 12==0:
+retann ""Even""
+if number 12 !=0:
+return ""odd""",38,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"det even-or-odd (number):
+if number /2=0:
+Detann ""Even""
+if number 12 != 0:
+retain ""Odd""",40,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"Lef even-or-odd(namber):
+if numben \( / 2==0 \) :
+retann ""Even""
+if number \( 12 !=0 \) : retarn ""Odd"".",41,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2
+"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0.4,"def
+uppen - lower_count (nto):
+Upper- cape =
+= 0
+lower - Cape = 0
+for chap in ptp:
+is chan, inupper():
+upper-cane + = 1
+elpe:
+lower-case + =
+= 1
+peturn upper-care, lower cape",94,"def upper_lower_count(nto):
+    upper_case = 0
+    lower_case = 0
+    for char in nto:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(nto):
+    upper_case = 0
+    lower_case = 0
+    for char in nto:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"daf -
+Upper- case = 0
+lower - case = 0
+for char in str:
+if char, inupperu: /
+upper-cane += 1
+else:
+lower-case. += 1
+return upper - cape, lowercape",102,"def count_case(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",14,"def count_cases(s):
+    upper_case = 0
+    lower_case = 0
+    for char in s:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",18,"def count_case(s):
+    upper_case = 0
+    lower_case = 0
+    for char in s:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",18,"daf
+upper-lower-count (sto):
+Upper-case = 0
+lower-case = 0
+for char in str.
+if chan, inupper():
+upper-case +=1
+elpe:
+lower-case += 1
+return upper-care, lowercase",78,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(string):
+    upper_case = 0
+    lower_case = 0
+    for char in string:
+        if char.isupper():
+            upper_case += 1
+        elif char.islower():
+            lower_case += 1
+    return upper_case, lower_case
+",21,"def upper-lower-count(ntr):
+\[
+\begin{array}{l}
+\text { Upper-case }=0 \\
+\text { lower-case }=0
+\end{array}
+\]
+for char in str:
+if char. isupper:
+\[
+\text { upper-case }+=1
+\]
+elre:
+\[
+\text { lower-case }+=1
+\]
+return upper-care, lowercase",113,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2
+"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0.4,"def multiply (numboon);
+total = 0
+for je in numberni
+total ** = se
+peturn total
+moppen:
+Mape
+lowen cone",55,"
+def multiply (number):
+    total = 0
+    for se in number:
+        total *= se
+    return total
+open:
+    Map
+lower code
+",33,"def multiply(number):
+    total = 1
+    for num in number:
+        total *= num
+    return total
+
+
+try:
+    pass
+except:
+    pass
+",42,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+
+
+try:
+    multiply([2, 3, 4])
+except:
+    print(""An error occurred"")
+",77,"def multiply (numbers):
+total = 0
+for xc in numbern:
+total *= re
+return total
+mopper",31,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"det multiply (numbers);
+total= 0
+for se in numbers:
+total * = Je
+return total
+Tony Upper case. la",47,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def maltiply (numbons):
+total \( =0 \)
+for \( x \) in nambern!
+total \( *=x \)
+return total",41,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total
+",1,"def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total
+",1
+"list = [6, 14, 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",0.6,"list = [6, 14, 5, 8, 9]
+for elem in list :
+max = 0.
+if elem > max :
+De
+max = elem
+return max",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list_numbers = [6, 14, 5, 8, 9]
+max_value = 0
+for elem in list_numbers:
+    if elem > max_value:
+        max_value = elem
+print(max_value)
+",59,"list = [6, H, 5,8, 9]
+for elem in list :
+max =0
+if elem > max Der
+:
+max = elem
+return max",23,"list = [6, ""H"", 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",3,"list = [6, ""H"", 5, 8, 9]
+max = 0
+for elem in list:
+    if isinstance(elem, int) and elem > max:
+        max = elem
+print(max)
+",44,"my_list = [6, ""H"", 5, 8, 9]
+max_val = 0
+for elem in my_list:
+    if isinstance(elem, int) and elem > max_val:
+        max_val = elem
+print(max_val)
+",65,"list = [6, 11,5,8,9]
+for elem in list:
+max=0
+if elem> max :
+max = elem
+return max",25,"list = [6, 11, 5, 8, 9]
+max_num = 0
+for elem in list:
+    if elem > max_num:
+        max_num = elem
+print(max_num)
+",44,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",29,"my_list = [6, 11, 5, 8, 9]
+max_value = 0
+for elem in my_list:
+    if elem > max_value:
+        max_value = elem
+print(max_value)
+",57,"\[
+\text { list }=[6,14,5,8,9]
+\]
+for elem in list:
+\[
+\max =0
+\]
+\[
+\begin{array}{l} 
+\text { if elem }>\max : \\
+\max =\text { elem }
+\end{array}
+\]
+return max",89,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28
+"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i]:
+            return False
+    return True
+",0.6,"def palindromic (sta):
+for i in range (int (len (str)/2)):
+if str[i] != str [len (str)-i]:.
+return False
+return True",41,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str)):
+for i in range (int (len (str) 12)):
+if str [i] ! = str [len (str)-i]:- -
+return False
+return True",42,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14,"def palindromic (stro):
+for i in range (int (len(str)/2)):
+if stro [i] ! = str [len(stn) -i] :
+return False
+return True",42,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str):
+for \( i \) in range \( ( \) int \( (\operatorname{len}( \) stro \( ) / 2)) \) :
+if \( s+r[i] !=\operatorname{str}[\operatorname{len}(s \operatorname{st})-i]: \)
+return False
+return True",117,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - 1 - i]:
+            return False
+    return True
+",13,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14
+"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0.6,"def factorial (n):
+result = n* factorial (n-1)
+return sesut result",20,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+",52,"def factorial (h):
+result = n
+factorial (n-1) -
+return result result",23,"def factorial(n):
+    result = n
+    result *= factorial(n - 1)
+    return result
+",12,"def factorial(n):
+    result = n
+    factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+",61,"def factorial (n):
+result = n * factorial (n-1)
+return result",13,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",60,"def factorial \( (n) \) :
+\[
+\text { result }=n * \text { factorial }(n-1)
+\]
+return result",36,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return n
+    else:
+        return n * factorial(n - 1)
+",52,"def factorial(n):
+    if n == 1:
+        return n
+    else:
+        return n * factorial(n - 1)
+",52
+"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i + 1] + sequence[i + 2])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+",0.6,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+i+=1
+return sequence
+result = fibonacci (5)
+print (result)",50,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1=0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+it=1
+return sequence
+result = fibonacci (5)
+print (result)",53,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,":
+
+def fibonacci(n):
+    sequence = [0,1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i+1])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+",11,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence> <= n:
+sequence. append (sequence [+]+ sequence [i+2]
+it = 1
+return sequence
+result = fibonacci (5)
+print (result)",54,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibmacci \( (n) \) :
+sequence \( =[0,1] \)
+\[
+i=0
+\]
+while len (sequence) \( <=n \) :
+sequence. append (sequence \( [i+1]+ \) sequence \( [i+2]) \) \( i+=1 \)
+return sequence
+result = fibonaeci (5)
+print (result)",73,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7
+"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0.6,"def Count Frequency (my-list):
+freq = { } !!
+for item in my-list:
+freq [item] + = 1
+return freq",28,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def Count Frequency (my-list):
+freq = { }
+for item in my-list :
+freq [item] += 1
+return freq",28,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",22,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def CountFrequency (my-list):
+freq = { }
+for item in my-list:
+freq [item]+=1
+return freq",28,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",21,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",21,"def Count Frequency (my-list):
+\[
+\text { freq }=\{\}
+\]
+for item in my-list:
+\[
+\text { freg [item] }+=1
+\]
+return freq",38,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73
+"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0.6,"def two Sam (nams, tanget):
+Son i
+for
+in pange (len (nama)) :
+Pin
+Pange (i, Lon(namp))!
+if (nams [i] + nump [P] == tanget)!
+petanu [1, p]",84,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0,"def two_sum(nams, target):
+    for i in range(len(nams)):
+        for p in range(i, len(nams)):
+            if nams[i] + nams[p] == target:
+                return [i, p]
+",7,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam(nams, tanget):
+for i in range(dev (nams)) :
+for P in range(i) (an(nams)):
+if(names [i] -namp[p] == tanget):
+retann [i, p]",67,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+",4,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+",1,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",16,"def two Sam (nams, target):
+for i in range (len (nams) :
+for p in range (i) Lan (namp):
+if (names [i] + numa[P] == fanget):
+Detunn [i, P]",69,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] + names[p] == target:
+                return [i, p]
+",12,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] + names[p] == target:
+                return [i, p]
+",12,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0,"def two Sam (nams, tanget): for: in pange (len (nams)):
+for \( p \) in pange \( (i) \operatorname{len}( \) nams \( )) \) :
+\[
+\text { if (naws }[i]+\operatorname{nams}[p]==\text { tanget }) \text { ! }
+\]
+\( \operatorname{retanx}[i, P] \)",139,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",3,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",5,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2
+"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list
+",0.6,"des Remove (duplicate):
+Son nam in duplicate:
+Simal - Lint = []
+if
+not in final-lint:
+Sinal - lint- append (num)
+pefunn final-lint
+Mum",41,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Removeldaplicate):
+for nam in daplicats:
+Sival-Lint = []
+if nvm not in final-lint:
+Sinal_lint.append (num)
+return final-lint",25,"def RemoveDuplicate():
+    for num in duplicates:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",40,"def RemoveDuplicate():
+    for num in duplicates:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",40,"def RemoveDuplicate(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",67,"des Remove (duplicate):
+for wam in duplicate:
+Sinal-Lint = []
+if num not in final-list :
+final-lint. append(num)
+return final-lint",22,"def Remove(duplicate):
+    for num in duplicate:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",36,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(daplicate):
+for nam in daplicate:
+final-Lint \( =[] \)
+if num not in final-lint:
+final_lint append (num)
+refunu final-lint",29,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",58
+"def even_or_odd(number):
+    if number / 2 == 0:
+        return ""Even""
+    if number / 2 != 0:
+        return ""Odd""
+",0.6,"def even on-odd (number):
+if numben / 2 == 0:
+petann ""Even""
+if numbers 12 !=0%
+return ""Old""",39,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even on-odd(number):
+if number 12==0:
+retann ""Even""
+if number 12 !=0:
+return ""odd""",38,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"det even-or-odd (number):
+if number /2=0:
+Detann ""Even""
+if number 12 != 0:
+retain ""Odd""",40,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"Lef even-or-odd(namber):
+if numben \( / 2==0 \) :
+retann ""Even""
+if number \( 12 !=0 \) : retarn ""Odd"".",41,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2
+"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0.6,"def
+uppen - lower_count (nto):
+Upper- cape =
+= 0
+lower - Cape = 0
+for chap in ptp:
+is chan, inupper():
+upper-cane + = 1
+elpe:
+lower-case + =
+= 1
+peturn upper-care, lower cape",94,"def upper_lower_count(nto):
+    upper_case = 0
+    lower_case = 0
+    for char in nto:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(nto):
+    upper_case = 0
+    lower_case = 0
+    for char in nto:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"daf -
+Upper- case = 0
+lower - case = 0
+for char in str:
+if char, inupperu: /
+upper-cane += 1
+else:
+lower-case. += 1
+return upper - cape, lowercape",102,"def count_case(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",14,"def count_case(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",14,"def count_case(s):
+    upper_case = 0
+    lower_case = 0
+    for char in s:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",18,"daf
+upper-lower-count (sto):
+Upper-case = 0
+lower-case = 0
+for char in str.
+if chan, inupper():
+upper-case +=1
+elpe:
+lower-case += 1
+return upper-care, lowercase",78,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper-lower-count(ntr):
+\[
+\begin{array}{l}
+\text { Upper-case }=0 \\
+\text { lower-case }=0
+\end{array}
+\]
+for char in str:
+if char. isupper:
+\[
+\text { upper-case }+=1
+\]
+elre:
+\[
+\text { lower-case }+=1
+\]
+return upper-care, lowercase",113,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2
+"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0.6,"def multiply (numboon);
+total = 0
+for je in numberni
+total ** = se
+peturn total
+moppen:
+Mape
+lowen cone",55,"def multiply(number):
+    total = 1
+    for num in number:
+        total *= num
+    return total
+",9,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+
+
+try:
+    multiply([2, 3, 4])
+except:
+    pass
+",55,"def multiply (numbers):
+total = 0
+for xc in numbern:
+total *= re
+return total
+mopper",31,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"det multiply (numbers);
+total= 0
+for se in numbers:
+total * = Je
+return total
+Tony Upper case. la",47,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def maltiply (numbons):
+total \( =0 \)
+for \( x \) in nambern!
+total \( *=x \)
+return total",41,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total
+",1
+"list = [6, 14, 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",0.8,"list = [6, 14, 5, 8, 9]
+for elem in list :
+max = 0.
+if elem > max :
+De
+max = elem
+return max",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"my_list = [6, 14, 5, 8, 9]
+max_val = 0
+for elem in my_list:
+    if elem > max_val:
+        max_val = elem
+print(max_val)
+",49,"list = [6, H, 5,8, 9]
+for elem in list :
+max =0
+if elem > max Der
+:
+max = elem
+return max",23,"list = [6, ""H"", 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",3,"list = [6, ""H"", 5, 8, 9]
+max_val = 0
+for elem in list:
+    if isinstance(elem, int) and elem > max_val:
+        max_val = elem
+return max_val
+",52,"lst = [6, ""H"", 5, 8, 9]
+max_value = 0
+for elem in lst:
+    if isinstance(elem, int) and elem > max_value:
+        max_value = elem
+print(max_value)
+",69,"list = [6, 11,5,8,9]
+for elem in list:
+max=0
+if elem> max :
+max = elem
+return max",25,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",21,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",29,"my_list = [6, 11, 5, 8, 9]
+max_num = 0
+for elem in my_list:
+    if elem > max_num:
+        max_num = elem
+print(max_num)
+",50,"\[
+\text { list }=[6,14,5,8,9]
+\]
+for elem in list:
+\[
+\max =0
+\]
+\[
+\begin{array}{l} 
+\text { if elem }>\max : \\
+\max =\text { elem }
+\end{array}
+\]
+return max",89,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"lst = [6, 14, 5, 8, 9]
+max_val = 0
+for elem in lst:
+    if elem > max_val:
+        max_val = elem
+return max_val
+",38,"list = [6, 14, 5, 8, 9]
+max_val = 0
+for elem in list:
+    if elem > max_val:
+        max_val = elem
+return max_val
+",36
+"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i]:
+            return False
+    return True
+",0.8,"def palindromic (sta):
+for i in range (int (len (str)/2)):
+if str[i] != str [len (str)-i]:.
+return False
+return True",41,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str)):
+for i in range (int (len (str) 12)):
+if str [i] ! = str [len (str)-i]:- -
+return False
+return True",42,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14,"def palindromic (stro):
+for i in range (int (len(str)/2)):
+if stro [i] ! = str [len(stn) -i] :
+return False
+return True",42,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str):
+for \( i \) in range \( ( \) int \( (\operatorname{len}( \) stro \( ) / 2)) \) :
+if \( s+r[i] !=\operatorname{str}[\operatorname{len}(s \operatorname{st})-i]: \)
+return False
+return True",117,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14
+"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0.8,"def factorial (n):
+result = n* factorial (n-1)
+return sesut result",20,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,":
+
+def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50,"def factorial (h):
+result = n
+factorial (n-1) -
+return result result",23,"def factorial(n):
+    result = n
+    factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    result = n
+    result = result * factorial(n - 1)
+    return result
+",20,"def factorial(n):
+    if n == 1:
+        return n
+    else:
+        return n * factorial(n - 1)
+",52,"def factorial (n):
+result = n * factorial (n-1)
+return result",13,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50,"def factorial \( (n) \) :
+\[
+\text { result }=n * \text { factorial }(n-1)
+\]
+return result",36,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",50
+"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i + 1] + sequence[i + 2])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+",0.8,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+i+=1
+return sequence
+result = fibonacci (5)
+print (result)",50,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1=0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+it=1
+return sequence
+result = fibonacci (5)
+print (result)",53,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence> <= n:
+sequence. append (sequence [+]+ sequence [i+2]
+it = 1
+return sequence
+result = fibonacci (5)
+print (result)",54,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 1
+    while len(sequence) <= n:
+        sequence.append(sequence[i - 1] + sequence[i])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",8,"def fibmacci \( (n) \) :
+sequence \( =[0,1] \)
+\[
+i=0
+\]
+while len (sequence) \( <=n \) :
+sequence. append (sequence \( [i+1]+ \) sequence \( [i+2]) \) \( i+=1 \)
+return sequence
+result = fibonaeci (5)
+print (result)",73,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7
+"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0.8,"def Count Frequency (my-list):
+freq = { } !!
+for item in my-list:
+freq [item] + = 1
+return freq",28,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,":
+
+def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",4,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def Count Frequency (my-list):
+freq = { }
+for item in my-list :
+freq [item] += 1
+return freq",28,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,":
+
+def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = my_list.count(item)
+    return freq
+",26,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def CountFrequency (my-list):
+freq = { }
+for item in my-list:
+freq [item]+=1
+return freq",28,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",21,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",70,"def Count Frequency (my-list):
+\[
+\text { freq }=\{\}
+\]
+for item in my-list:
+\[
+\text { freg [item] }+=1
+\]
+return freq",38,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,"
+def Count_Frequency(my_list):
+    freq = {}
+   	for item in my_list:
+   		freq[item] += 1
+	return freq
+",12,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73
+"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0.8,"def two Sam (nams, tanget):
+Son i
+for
+in pange (len (nama)) :
+Pin
+Pange (i, Lon(namp))!
+if (nams [i] + nump [P] == tanget)!
+petanu [1, p]",84,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+",3,"def two Sam(nams, tanget):
+for i in range(dev (nams)) :
+for P in range(i) (an(nams)):
+if(names [i] -namp[p] == tanget):
+retann [i, p]",67,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+",3,"def two_sam(names, target):
+    for i in range(len(names)):
+        for p in range(i, len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",14,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+",6,"def two Sam (nams, target):
+for i in range (len (nams) :
+for p in range (i) Lan (namp):
+if (names [i] + numa[P] == fanget):
+Detunn [i, P]",69,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam (nams, tanget): for: in pange (len (nams)):
+for \( p \) in pange \( (i) \operatorname{len}( \) nams \( )) \) :
+\[
+\text { if (naws }[i]+\operatorname{nams}[p]==\text { tanget }) \text { ! }
+\]
+\( \operatorname{retanx}[i, P] \)",139,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",3,"def two_sum(nams, target):
+    for i in range(len(nams)):
+        for p in range(len(nams)):
+            if nams[i] + nams[p] == target:
+                return [i, p]
+",10,"def two_sum(nams, target):
+    for i in range(len(nams)):
+        for p in range(i, len(nams)):
+            if nams[i] + nams[p] == target:
+                return [i, p]
+",7
+"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list
+",0.8,"des Remove (duplicate):
+Son nam in duplicate:
+Simal - Lint = []
+if
+not in final-lint:
+Sinal - lint- append (num)
+pefunn final-lint
+Mum",41,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Removeldaplicate):
+for nam in daplicats:
+Sival-Lint = []
+if nvm not in final-lint:
+Sinal_lint.append (num)
+return final-lint",25,"def RemoveDuplicate():
+    for num in duplicates:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",40,"def RemoveDuplicate():
+    for nam in duplicates:
+        final_list = []
+        if nam not in final_list:
+            final_list.append(nam)
+    return final_list
+",43,"def RemoveDuplicate(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",67,"des Remove (duplicate):
+for wam in duplicate:
+Sinal-Lint = []
+if num not in final-list :
+final-lint. append(num)
+return final-lint",22,"def Remove(duplicate):
+    for num in duplicate:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",36,"def Remove(duplicate):
+    for num in duplicate:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",36,"def Remove(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",58,"def Remove(daplicate):
+for nam in daplicate:
+final-Lint \( =[] \)
+if num not in final-lint:
+final_lint append (num)
+refunu final-lint",29,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",58
+"def even_or_odd(number):
+    if number / 2 == 0:
+        return ""Even""
+    if number / 2 != 0:
+        return ""Odd""
+",0.8,"def even on-odd (number):
+if numben / 2 == 0:
+petann ""Even""
+if numbers 12 !=0%
+return ""Old""",39,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    else:
+        return ""Odd""
+",18,"def even on-odd(number):
+if number 12==0:
+retann ""Even""
+if number 12 !=0:
+return ""odd""",38,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"det even-or-odd (number):
+if number /2=0:
+Detann ""Even""
+if number 12 != 0:
+retain ""Odd""",40,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"Lef even-or-odd(namber):
+if numben \( / 2==0 \) :
+retann ""Even""
+if number \( 12 !=0 \) : retarn ""Odd"".",41,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2
+"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0.8,"def
+uppen - lower_count (nto):
+Upper- cape =
+= 0
+lower - Cape = 0
+for chap in ptp:
+is chan, inupper():
+upper-cane + = 1
+elpe:
+lower-case + =
+= 1
+peturn upper-care, lower cape",94,"def upper_lower_count(nto):
+    upper_case = 0
+    lower_case = 0
+    for char in nto:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"daf -
+Upper- case = 0
+lower - case = 0
+for char in str:
+if char, inupperu: /
+upper-cane += 1
+else:
+lower-case. += 1
+return upper - cape, lowercape",102,"daf =
+Upper_case = 0
+lower_case = 0
+for char in str:
+if char.isupper():
+upper_case += 1
+else:
+lower_case += 1
+return upper_case, lower_case
+",81,"def count_case(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",14,"def count_cases(s):
+    upper_case = 0
+    lower_case = 0
+    for char in s:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",18,"daf
+upper-lower-count (sto):
+Upper-case = 0
+lower-case = 0
+for char in str.
+if chan, inupper():
+upper-case +=1
+elpe:
+lower-case += 1
+return upper-care, lowercase",78,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(str):
+    Upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            Upper_case += 1
+        else:
+            lower_case += 1
+    return Upper_case, lower_case
+",3,"def upper_lower_count(sto):
+    upper_case = 0
+    lower_case = 0
+    for char in sto:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2,"def upper-lower-count(ntr):
+\[
+\begin{array}{l}
+\text { Upper-case }=0 \\
+\text { lower-case }=0
+\end{array}
+\]
+for char in str:
+if char. isupper:
+\[
+\text { upper-case }+=1
+\]
+elre:
+\[
+\text { lower-case }+=1
+\]
+return upper-care, lowercase",113,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(input_str):
+    upper_case = 0
+    lower_case = 0
+    for char in input_str:
+        if char.isupper():
+            upper_case += 1
+        elif char.islower():
+            lower_case += 1
+    return upper_case, lower_case
+",27
+"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0.8,"def multiply (numboon);
+total = 0
+for je in numberni
+total ** = se
+peturn total
+moppen:
+Mape
+lowen cone",55,"def multiply(number):
+    total = 0
+    for n in number:
+        total *= n
+    return total
+",4,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+
+
+try:
+    multiply([2, 3, 4])
+except:
+    pass
+",55,"def multiply (numbers):
+total = 0
+for xc in numbern:
+total *= re
+return total
+mopper",31,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"det multiply (numbers);
+total= 0
+for se in numbers:
+total * = Je
+return total
+Tony Upper case. la",47,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def maltiply (numbons):
+total \( =0 \)
+for \( x \) in nambern!
+total \( *=x \)
+return total",41,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total
+",1
+"list = [6, 14, 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",1.0,"list = [6, 14, 5, 8, 9]
+for elem in list :
+max = 0.
+if elem > max :
+De
+max = elem
+return max",20,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28,"list_nums = [6, 14, 5, 8, 9]
+max_num = 0
+for elem in list_nums:
+    if elem > max_num:
+        max_num = elem
+print(max_num)
+",48,"list = [6, H, 5,8, 9]
+for elem in list :
+max =0
+if elem > max Der
+:
+max = elem
+return max",23,"list = [6, ""H"", 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+return max
+",3,"list = [6, ""H"", 5, 8, 9]
+for elem in list:
+    max = 0
+    if elem > max:
+        max = elem
+print(max)
+",11,"my_list = [6, ""H"", 5, 8, 9]
+_max = 0
+for elem in my_list:
+    if isinstance(elem, int):
+        if elem > _max:
+            _max = elem
+print(_max)
+",59,"list = [6, 11,5,8,9]
+for elem in list:
+max=0
+if elem> max :
+max = elem
+return max",25,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",21,"list = [6, 11, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",29,"my_list = [6, 11, 5, 8, 9]
+
+
+def find_max(my_list):
+    maximum = 0
+    for elem in my_list:
+        if elem > maximum:
+            maximum = elem
+    return maximum
+
+
+print(find_max(my_list))
+",101,"\[
+\text { list }=[6,14,5,8,9]
+\]
+for elem in list:
+\[
+\max =0
+\]
+\[
+\begin{array}{l} 
+\text { if elem }>\max : \\
+\max =\text { elem }
+\end{array}
+\]
+return max",89,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+return max
+",20,"my_list = [6, 14, 5, 8, 9]
+max = 0
+for elem in my_list:
+    if elem > max:
+        max = elem
+return max
+",26,"list = [6, 14, 5, 8, 9]
+max = 0
+for elem in list:
+    if elem > max:
+        max = elem
+print(max)
+",28
+"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i]:
+            return False
+    return True
+",1.0,"def palindromic (sta):
+for i in range (int (len (str)/2)):
+if str[i] != str [len (str)-i]:.
+return False
+return True",41,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(sta):
+    for i in range(int(len(sta) / 2)):
+        if sta[i] != sta[len(sta) - 1 - i]:
+            return False
+    return True
+",9,"def palindromic(sta):
+    str_sta = str(sta)
+    for i in range(int(len(str_sta) / 2)):
+        if str_sta[i] != str_sta[len(str_sta) - 1 - i]:
+            return False
+    return True
+",44,"def palindromic (str)):
+for i in range (int (len (str) 12)):
+if str [i] ! = str [len (str)-i]:- -
+return False
+return True",42,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14,"def palindromic (stro):
+for i in range (int (len(str)/2)):
+if stro [i] ! = str [len(stn) -i] :
+return False
+return True",42,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic(stro):
+    for i in range(int(len(stro) / 2)):
+        if stro[i] != stro[len(stro) - i - 1]:
+            return False
+    return True
+",9,"def palindromic (str):
+for \( i \) in range \( ( \) int \( (\operatorname{len}( \) stro \( ) / 2)) \) :
+if \( s+r[i] !=\operatorname{str}[\operatorname{len}(s \operatorname{st})-i]: \)
+return False
+return True",117,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(str):
+    for i in range(int(len(str) / 2)):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
+",4,"def palindromic(s):
+    for i in range(int(len(s) / 2)):
+        if s[i] != s[len(s) - i - 1]:
+            return False
+    return True
+",14
+"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",1.0,"def factorial (n):
+result = n* factorial (n-1)
+return sesut result",20,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+",52,"def factorial (h):
+result = n
+factorial (n-1) -
+return result result",23,"def factorial(n):
+    result = n
+    factorial(n - 1)
+    return result
+",3,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1:
+        return n
+    else:
+        return n * factorial(n - 1)
+",52,"def factorial (n):
+result = n * factorial (n-1)
+return result",13,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",60,"def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+    return result
+",56,"def factorial \( (n) \) :
+\[
+\text { result }=n * \text { factorial }(n-1)
+\]
+return result",36,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    result = n * factorial(n - 1)
+    return result
+",0,"def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
+",60
+"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i + 1] + sequence[i + 2])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+",1.0,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+i+=1
+return sequence
+result = fibonacci (5)
+print (result)",50,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1=0
+while len (sequence) <=n:
+sequence. append (sequence [i+1] + sequence [i+2])
+it=1
+return sequence
+result = fibonacci (5)
+print (result)",53,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci (n):
+sequence = [0,1]
+1 = 0
+while len (sequence> <= n:
+sequence. append (sequence [+]+ sequence [i+2]
+it = 1
+return sequence
+result = fibonacci (5)
+print (result)",54,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,"def fibmacci \( (n) \) :
+sequence \( =[0,1] \)
+\[
+i=0
+\]
+while len (sequence) \( <=n \) :
+sequence. append (sequence \( [i+1]+ \) sequence \( [i+2]) \) \( i+=1 \)
+return sequence
+result = fibonaeci (5)
+print (result)",73,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7,":
+
+def fibonacci(n):
+    sequence = [0,1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i+1])
+        i += 1
+    return sequence
+result = fibonacci(5)
+print(result)
+",11,"def fibonacci(n):
+    sequence = [0, 1]
+    i = 0
+    while len(sequence) <= n:
+        sequence.append(sequence[i] + sequence[i + 1])
+        i += 1
+    return sequence
+
+
+result = fibonacci(5)
+print(result)
+",7
+"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1.0,"def Count Frequency (my-list):
+freq = { } !!
+for item in my-list:
+freq [item] + = 1
+return freq",28,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",3,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",24,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",24,"def Count Frequency (my-list):
+freq = { }
+for item in my-list :
+freq [item] += 1
+return freq",28,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = my_list.count(item)
+    return freq
+",23,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",22,"def CountFrequency (my-list):
+freq = { }
+for item in my-list:
+freq [item]+=1
+return freq",28,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",0,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+",21,"def CountFrequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",70,"def Count Frequency (my-list):
+\[
+\text { freq }=\{\}
+\]
+for item in my-list:
+\[
+\text { freg [item] }+=1
+\]
+return freq",38,"def Count_Frequency(my_list):
+    freq = {}
+    for item in my_list:
+        freq[item] += 1
+    return freq
+",1,"
+def Count_Frequency(my_list):
+    freq = {}
+   	for item in my_list:
+   		freq[item] += 1
+    return freq
+",8,"def count_frequency(my_list):
+    freq = {}
+    for item in my_list:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
+",73
+"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",1.0,"def two Sam (nams, tanget):
+Son i
+for
+in pange (len (nama)) :
+Pin
+Pange (i, Lon(namp))!
+if (nams [i] + nump [P] == tanget)!
+petanu [1, p]",84,"def two_sum(nams, target):
+    for i in range(len(nams)):
+        for p in range(i, len(nams)):
+            if nams[i] + nams[p] == target:
+                return [i, p]
+
+
+return None
+",21,"def two_sum(nams, target):
+    for i in range(len(nams)):
+        for p in range(i, len(nams)):
+            if nams[i] + nams[p] == target:
+                return [i, p]
+",7,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam(nams, tanget):
+for i in range(dev (nams)) :
+for P in range(i) (an(nams)):
+if(names [i] -namp[p] == tanget):
+retann [i, p]",67,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+    return
+",12,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] - nums[p] == target:
+                return [i, p]
+",4,"def two_sum(names, target):
+    for i in range(len(names)):
+        for p in range(len(names)):
+            if names[i] - names[p] == target:
+                return [i, p]
+",16,"def two Sam (nams, target):
+for i in range (len (nams) :
+for p in range (i) Lan (namp):
+if (names [i] + numa[P] == fanget):
+Detunn [i, P]",69,"def twoSum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",0,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",2,"def two Sam (nams, tanget): for: in pange (len (nams)):
+for \( p \) in pange \( (i) \operatorname{len}( \) nams \( )) \) :
+\[
+\text { if (naws }[i]+\operatorname{nams}[p]==\text { tanget }) \text { ! }
+\]
+\( \operatorname{retanx}[i, P] \)",139,":
+
+def two_sum(nums, target): 
+    for i in range(len(nums)):
+        for p in range(i, len(nums)):
+            if nums[i]+nums[p] == target: 
+                return [i, p]
+",9,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",5,"def two_sum(nums, target):
+    for i in range(len(nums)):
+        for p in range(len(nums)):
+            if nums[i] + nums[p] == target:
+                return [i, p]
+",5
+"def Remove(duplicate):
+	for num in duplicate:
+	final_list = []
+	if num not in final_list:
+		final_list.append(num)
+	return final_list
+",1.0,"des Remove (duplicate):
+Son nam in duplicate:
+Simal - Lint = []
+if
+not in final-lint:
+Sinal - lint- append (num)
+pefunn final-lint
+Mum",41,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Removeldaplicate):
+for nam in daplicats:
+Sival-Lint = []
+if nvm not in final-lint:
+Sinal_lint.append (num)
+return final-lint",25,"
+def RemoveDuplicate():
+for num in duplicates:
+final_list = []
+if num not in final_list:
+final_list.append(num)
+return final_list
+",11,"def RemoveDuplicate():
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",60,"def remove_duplicate(duplicates):
+    final_list = []
+    for num in duplicates:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",69,"des Remove (duplicate):
+for wam in duplicate:
+Sinal-Lint = []
+if num not in final-list :
+final-lint. append(num)
+return final-lint",22,"def Remove(duplicate):
+    for num in duplicate:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",36,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(daplicate):
+for nam in daplicate:
+final-Lint \( =[] \)
+if num not in final-lint:
+final_lint append (num)
+refunu final-lint",29,"def Remove(duplicate):
+    for num in duplicate:
+        final_list = []
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",36,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56,"def Remove(duplicate):
+    final_list = []
+    for num in duplicate:
+        if num not in final_list:
+            final_list.append(num)
+    return final_list
+",56
+"def even_or_odd(number):
+    if number / 2 == 0:
+        return ""Even""
+    if number / 2 != 0:
+        return ""Odd""
+",1.0,"def even on-odd (number):
+if numben / 2 == 0:
+petann ""Even""
+if numbers 12 !=0%
+return ""Old""",39,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    else:
+        return ""Odd""
+",18,"def even on-odd(number):
+if number 12==0:
+retann ""Even""
+if number 12 !=0:
+return ""odd""",38,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"det even-or-odd (number):
+if number /2=0:
+Detann ""Even""
+if number 12 != 0:
+retain ""Odd""",40,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,"Lef even-or-odd(namber):
+if numben \( / 2==0 \) :
+retann ""Even""
+if number \( 12 !=0 \) : retarn ""Odd"".",41,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2,":
+
+def even_or_odd(number):
+	if number % 2 == 0:
+		return ""Even""
+	if number % 2 != 0:
+		return ""Odd""
+",29,"def even_or_odd(number):
+    if number % 2 == 0:
+        return ""Even""
+    if number % 2 != 0:
+        return ""Odd""
+",2
+"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",1.0,"def
+uppen - lower_count (nto):
+Upper- cape =
+= 0
+lower - Cape = 0
+for chap in ptp:
+is chan, inupper():
+upper-cane + = 1
+elpe:
+lower-case + =
+= 1
+peturn upper-care, lower cape",94,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"def upper_lower_count(ptp):
+    upper_case = 0
+    lower_case = 0
+    for char in ptp:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",4,"daf -
+Upper- case = 0
+lower - case = 0
+for char in str:
+if char, inupperu: /
+upper-cane += 1
+else:
+lower-case. += 1
+return upper - cape, lowercape",102,"str_ = ""Some text here""
+upper_case = 0
+lower_case = 0
+for char in str_:
+    if char.isupper():
+        upper_case += 1
+    else:
+        lower_case += 1
+return upper_case, lower_case
+",56,"def count_cases(s):
+    upper_case = 0
+    lower_case = 0
+    for char in s:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",18,"def count_cases(s):
+    upper_case = 0
+    lower_case = 0
+    for char in s:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",18,"daf
+upper-lower-count (sto):
+Upper-case = 0
+lower-case = 0
+for char in str.
+if chan, inupper():
+upper-case +=1
+elpe:
+lower-case += 1
+return upper-care, lowercase",78,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(sto):
+    Upper_case = 0
+    lower_case = 0
+    for char in sto:
+        if char.isupper():
+            Upper_case += 1
+        else:
+            lower_case += 1
+    return Upper_case, lower_case
+",5,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper-lower-count(ntr):
+\[
+\begin{array}{l}
+\text { Upper-case }=0 \\
+\text { lower-case }=0
+\end{array}
+\]
+for char in str:
+if char. isupper:
+\[
+\text { upper-case }+=1
+\]
+elre:
+\[
+\text { lower-case }+=1
+\]
+return upper-care, lowercase",113,"def upper_lower_count(str):
+    upper_case = 0
+    lower_case = 0
+    for char in str:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",0,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2,"def upper_lower_count(ntr):
+    upper_case = 0
+    lower_case = 0
+    for char in ntr:
+        if char.isupper():
+            upper_case += 1
+        else:
+            lower_case += 1
+    return upper_case, lower_case
+",2
+"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",1.0,"def multiply (numboon);
+total = 0
+for je in numberni
+total ** = se
+peturn total
+moppen:
+Mape
+lowen cone",55,"def multiply(numbers):
+    total = 0
+    for num in numbers:
+        total *= num
+    return total
+
+
+try:
+    main()
+except:
+    print(""Lower down"")
+",56,"def multiply(numboon):
+    total = 0
+    for se in numboon:
+        total *= se
+    return total
+
+
+try:
+    pass
+except:
+    pass
+",43,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply (numbers):
+total = 0
+for xc in numbern:
+total *= re
+return total
+mopper",31,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def multiply(numbers):
+    total = 1
+    for n in numbers:
+        total *= n
+    return total
+",3,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"det multiply (numbers);
+total= 0
+for se in numbers:
+total * = Je
+return total
+Tony Upper case. la",47,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for se in numbers:
+        total *= se
+    return total
+",5,"def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total *= num
+    return total
+",7,"def maltiply (numbons):
+total \( =0 \)
+for \( x \) in nambern!
+total \( *=x \)
+return total",41,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 0
+    for x in numbers:
+        total *= x
+    return total
+",0,"def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total
+",1
