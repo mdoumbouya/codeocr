@@ -1,0 +1,1 @@
+{"image_id": 35, "ocr_provider": "none", "ocr_ouptut": "none", "ir_algo_name": "none", "ir_algo_output_code": "none", "ir_algo_output_edit_distance": 0, "prompting_method": "GPT-4b", "lm_post_processed_code": "list1 = [1,2,3,4,5,6,7,8,9]\neven = [i for i in list1 if i%2==0]\nprint(even)\n", "lm_post_processed_edit_distance": 12}
