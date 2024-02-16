@@ -1,0 +1,734 @@
+Timestamp,Email Address,imagelink,groundtruth,Score,(1) Problem #
+6/12/2023 13:39:26,zahranaqvi2006@gmail.com,"https://drive.google.com/open?id=1mRqgYWlFvIe3ZskcJ_88iO4XLqYmZtzL, https://drive.google.com/open?id=1lJNadL-wiUXz8_o5Gxwhtl-hhfiEob3g, https://drive.google.com/open?id=18zedMhQEgk3KWG0go9ZKBrmGNI7SU0Hj","num = int(input(""Enter a number: ""))
+Ans = 1
+while num > 1:
+	Ans *= num 
+	num -=1
+return Ans",,6
+6/12/2023 14:25:52,yanez.ramos.mg@gmail.com,"https://drive.google.com/open?id=1QKh2yJj9npZivX3t3bPPKtKIrwGD81t3, https://drive.google.com/open?id=1ozCmWGnXh4Mp1F79yLaeq7V3QFMrb_0i, https://drive.google.com/open?id=1QDP4C0wCb61pqwC3NYwZqFlInl1_3GAT, https://drive.google.com/open?id=1h_R5GAsfHx19d6Pbd6yV5K-o6dtoIEaB, https://drive.google.com/open?id=1xTqYBTMmFbsF6gpLKIdw-F0yAw_kQ-yM","from karel.stanfordkarel import *
+
+#This prgram makes Karel pick up a beeper and go back into her house.
+def main():
+    #Move to the beeper.
+    move_beeper()
+    #Pick the beeper up. 
+    pick_beeper()
+    #Return to Karel's starting point.
+    go_back()
+
+#This function moves Karel to the beeper.
+def move_beeper():
+    for i in range (2):
+        move()
+    turn_right()
+    move()
+    turn_left()
+    move()
+
+#This function return to Karel's starting point.   
+def go_back():
+    for i in range (2):
+        turn_left()
+    for i in range (3):
+        move()
+    turn_right()
+    move()
+    turn_right()
+
+def turn_right():
+    for i in range (3):
+        turn_left()
+
+if __name__ == '__main__':
+    main()",,1
+6/12/2023 16:02:12,juanmontreuil71@gmail.com,"https://drive.google.com/open?id=1xYBOCfaVpDyI8TkTH8AXh_758EEQNXB5, https://drive.google.com/open?id=1NitXVZoUxL1eGhzXDnCXWi6QM7Fg5Lrz, https://drive.google.com/open?id=1mHi3bcDZSTSh-LonnE0hciZWPlYAhLn2","def main():
+    #input
+    my_word = input(""Enter the original word: "")
+
+    #function calling
+    reversed_word = reverse(my_word)
+    print('The reversed word is'+' '+ '""'+reversed_word+'""')
+
+#Helper function
+def reverse(word):
+    #reversed_word
+    new_word = """"
+    #char by char
+    for char in word:
+        new_word = char + new_word
+    #return
+    return new_word
+
+
+if __name__ == '__main__':
+    main()",,8
+6/12/2023 16:21:12,kkesari@gmail.com,https://drive.google.com/open?id=14sO8HMcVUnQ6zr5IpC9Sj_aCKciElZc9,"input_number=int(input(""Enter a number to calculate factorial: ""))
+val=input_number
+result=input_number
+while (val > 1):
+    val=val - 1
+    result=result * val
+print('factorial for '+str(input_number)+ ' is '+str(result))",,
+6/12/2023 19:40:44,lanlanjay@gmail.com,"https://drive.google.com/open?id=1SVj4_wCvShrS-QFb0lR3cdYmEGngq97z, https://drive.google.com/open?id=1FDCRtGr83llw3-XIunyFHEumoZa0xnKL, https://drive.google.com/open?id=1A5uVg1X--Z920XCitZNnIjULZgOAGqgp, https://drive.google.com/open?id=1ZUJJiGpyRmzeMtUMt_c3vjOpwonTOrEw","def main():
+  num = input(""input: "")
+  sum = 0
+  for n in num:
+    sum+=int(n)
+  print(sum)",,5
+6/12/2023 19:45:45,ashok.tumati@gmail.com,https://drive.google.com/open?id=1QjpQo8j7L5b0raBiMNAc4GsY7b1l5QzF,"def main():
+    num=input(""enter the number you want to add"")
+    sum=0
+    for i in str(num):
+        sum=sum+int(i)
+    print(""sum of the value you entered is"",sum)",,
+6/12/2023 19:54:07,rakibnkhadija@gmail.com,"https://drive.google.com/open?id=1hGCpiHtmae43Kdj5ofcjE5KvXpyeWZo4, https://drive.google.com/open?id=1AqtSCrUspf5pywQdnBlDCtThzQ6v9y8b","user_input = input(""Write your String here: "")
+upper = user_input.upper()
+print(upper)",,22
+6/12/2023 22:52:25,mvaranasi1102@gmail.com,"https://drive.google.com/open?id=1Se58EeVK9OB8qbeKfYe_HP08rDp26bkM, https://drive.google.com/open?id=1diMmCm8QJDbTrijMmPLa8EB9mLVJBa4P, https://drive.google.com/open?id=1TRGKsv0pDHDFi2Yz6zcnTmIN_YGFRS9w","from karel.stanfordkarel import *
+""""""
+Karel should fill the whole world with beepers.
+""""""
+def main():
+    #decomposition using a function name for
+    #each associated activity
+    while left_is_clear():
+        fill_one_row()
+        return_to_row_start()
+        move_up()
+    #rewrite code after while loop to overcome
+    #fencepost bug
+    fill_one_row()",,3
+6/12/2023 23:39:18,humayratisha07@gmail.com,https://drive.google.com/open?id=1XaiCUpQ6lTYtYaYqPX5YPKAFMZXBpzRS,"from karel.stanfordkarel import *
+
+def main():
+    move()
+    move()
+    turn_right()
+    move()
+    turn_left()
+    move()
+    pick_beeper()
+    return_home()
+def return_home():
+    turn_around()
+    move()
+    turn_right()
+    move()
+    turn_left()
+    move()
+    move()
+    turn_around()
+def turn_right():
+    for i in range (3):
+        turn_left()
+def turn_around():
+    for i in range (2):
+        turn_left()
+
+if __name__ == '__main__':
+    main()",,1
+6/13/2023 2:18:17,irum779@gmail.com,"https://drive.google.com/open?id=1Qd9PHgzvGBjHLkeNMNeY33yngkxlyFXd, https://drive.google.com/open?id=1WEkHQA_DHLYuXzt-XVyZ-9qBX-4Pmj6Z, https://drive.google.com/open?id=1JD-K5647NozzWJnwqK-5vBaI3c_DF8gZ, https://drive.google.com/open?id=1dVA5Tm1ncvkjB2QXn7vJGahQzRau6S-l","def main():
+    vowel_count = 0
+    vowels = ['a', 'e', 'i', 'o', 'u']
+
+    input_string = input(""Enter the string: "")
+    input_string = input_string.lower()
+
+    for char in input_string:
+        for vowel in vowels:
+            if char == vowel:
+                vowel_count += 1
+
+    print(vowel_count)
+
+
+if __name__ == '__main__':
+    main()",,14
+6/13/2023 3:23:14,mamunmintu333@gmail.com,"https://drive.google.com/open?id=1HkMpK-AlDehG2O9OTnql7zLthnXjF877, https://drive.google.com/open?id=1XXbvBFvSYrGANb2f_bWyPO8t-YczJMUI","def main():
+    string = str(input('Enter string: '))
+    for i in range((len(string)-1),-1,-1):
+        print(string[i])",,8
+6/13/2023 3:33:40,rehanadatiya786@gmail.com,"https://drive.google.com/open?id=1v2Gn3nn7W5k5-LDpsmfeIPzUxxx-cFLH, https://drive.google.com/open?id=1yrgeN2aN7-81BczxeOSalt6UlmtBposF","seq = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+seq_even = []
+
+
+# It check every element in list(sequence) --
+for i in seq:
+    # It decides whether an element from sequence is even ---
+    if i % 2 == 0:
+       seq_even.append(i) #appends even i in empty list(seq_even)
+
+print(seq_even)",,10
+6/13/2023 4:52:17,marques.jose@gmail.com,"https://drive.google.com/open?id=1IMmunutLONOP4NogqE5iWdnwRGiDLS04, https://drive.google.com/open?id=1oAYFR7VOYeMXNmNVG2BA3AoxnwxIlmGn, https://drive.google.com/open?id=1w3XUE6J7rMNiqbv0yQkTv2fHFN9NZsQd, https://drive.google.com/open?id=1rtvav3TbFyO7fakmSbEeQvuV4PV0E_Ww","from graphics import Canvas
+
+CANVAS_WIDTH = 300
+CANVAS_HEIGHT = 300
+CIRCLE_SIZE = 20
+DELAY = 0.01
+
+def main:
+    canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
+    
+
+    while TRUE
+
+        mouse_x = canvas.get_mouse_x()
+        mouse_y = canvas.get_mouse_y()
+        
+        if mouse_x >= 0 and mouse_x <= CANVAS_WIDTH and mouse_y >=0 and mouse_y <= CANVAS_HEIGHT",,
+6/13/2023 5:20:07,rvshiyamala@gmail.com,"https://drive.google.com/open?id=1TG4azes2D4WRFcX88-GiGdrQ1yo20NI2, https://drive.google.com/open?id=1xZVu6fZ95vhYzN2S-HChr1sUR1k59aaz","from karel.stanfordkarel import*
+
+# This program defines a main function which should make Karel
+# move to the beeper, pick it up and return home.
+def main():   
+       get_out()
+       pick_food()
+       get_back_home()
+    
+# pre : karel facing east, at the corner of starting position
+# post: karel facing east, outside the home, at the position of beeper
+def get_out():
+       turn_right()
+       move()
+       turn_left()
+       move()
+       move()
+       move()
+    
+# post: karel facing west, at the position of beeper 
+def pick_food():
+       pick_beeper()
+       turn_around()
+    
+# post: karel facing east, at the corner of starting position
+def get_back_home():
+       move()
+       move()
+       move()
+       turn_right()
+       move()
+       turn_right()
+
+def turn_right():
+    for i in range(3):
+        turn_left()
+
+def turn_around():
+       turn_left()
+       turn_left()
+
+if __name__ == '__main__':
+    main()",,1
+6/13/2023 5:22:46,turunc_eren@yahoo.com,https://drive.google.com/open?id=1Dyd6A2O_9sGJPNfxzREj00wF57j7xNn0,"def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(5))",,6
+6/13/2023 7:52:19,jannatuladnineshita@gmail.com,https://drive.google.com/open?id=1gJEM48G_Dk--_AorABVtKHJ5FhISBvZq,"def main():
+    list1 = [1, 2, 3, 4]
+    list2 = [3, 4, 5, 6]
+    list=[]
+    
+    for elem1 in list1:
+        for elem2 in list2:
+            if elem1==elem2:
+                elem=elem1
+                list.append(elem)
+    print(list)",,9
+6/13/2023 8:12:28,srisatyasatti@gmail.com,https://drive.google.com/open?id=10lsbnXNtvnJVYMohqXYe_PdL3jM16U9f,"String = input()
+print(String[::-1])",,8
+6/13/2023 9:22:24,nathaly.fairlie@gmail.com,https://drive.google.com/open?id=1gQ1OqZmoYuGqBn-C94-7Qeom1pa7aqdo,"from karel.stanfordkarel import *
+
+def main():
+    turn_left()
+    tower_N()
+    tower_S()
+    move_4x()
+    turn_left()
+    tower_N()
+    tower_S()
+    
+def tower_S():
+    turn_3x()
+    tower()
+    turn_left()
+        
+def tower_N():
+    tower()
+    turn_3x()
+    move_4x()
+        
+   
+def tower():
+    for i in range (5):
+        if front_is_clear():
+            put_beeper()
+            move()
+        else:
+            put_beeper()
+            
+
+def turn_3x():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+
+def move_4x():
+    move()
+    move()
+    move()
+    move()
+
+if __name__ == '__main__':
+    main()",,2
+6/13/2023 10:02:08,mamunmintu333@gmail.com,"https://drive.google.com/open?id=11vxMZzvjVn-RmXn25PHyBHkWtR8HwIiP, https://drive.google.com/open?id=1RTNcdGU4Wh9fnbhCa6o7jFKPlVRPckNa","def main():
+    string = str(input('Enter string: '))
+    for i in range((len(string)-1),-1,-1):
+        print(string[i])
+
+if __name__ == '__main__':
+    main()",,8
+6/13/2023 10:42:08,rdmontgomery2@gmail.com,https://drive.google.com/open?id=14F2jMuqLWYLXgpxzRNZv0LeoucSZxBEt,"def main():
+
+    num = int(input(""Enter a number: ""))        
+    print(f""{num} is {'prime' if is_prime(num) else 'not prime'}"")
+
+def is_prime(n):
+        if n <= 1:
+            return False
+        elif n <= 3:
+            return True
+        elif n % 2 == 0 or n % 3 == 0:
+            return False
+        for i in range(5, int(n ** 0.5) + 1, 6):
+            if n % i == 0 or n % (i + 2) == 0:
+                return False
+        return True
+    
+
+if __name__ == ""__main__"":
+    main()",,13
+6/13/2023 14:41:45,benouis.ilham@univ-bechar.dz,"https://drive.google.com/open?id=1Xxe10DrlZvqkXjF9JeOFQOdCGPQ4mM3w, https://drive.google.com/open?id=1AGg7izaHNlfR8Qvqwowavaee1MpaX7ou","from karel.stanfordkarel import *
+def main():  
+    turn_left()
+    while front_is_clear():
+        turn_right()
+        fill_row()
+        return_to_home()
+        jump_row()
+    turn_right()
+    fill_row()
+    return_to_home()
+    while front_is_clear():
+        move()
+def fill_row():
+    while front_is_clear():
+        put_beeper()
+        move()
+    put_beeper()
+def jump_row():
+    turn_left()
+    move()
+def turn_right():
+    for i in range(3):
+        turn_left()
+def return_to_home():
+    turn_around()
+    while front_is_clear():
+        move()
+    turn_around()
+def turn_around():
+    for i in range(2):
+        turn_left()
+   
+if __name__ == '__main__':
+    main()",,3
+6/13/2023 23:53:47,vcs200831@gmail.com,"https://drive.google.com/open?id=1LdueWoocGhXi-_R8tJhQzOzI0ncKDfoS, https://drive.google.com/open?id=1tQJzBmMS00ogINzLR2b3u1d78jfDLWaA, https://drive.google.com/open?id=1i-V2_pCypUC3vKg6SO6mL9Zhmg5jR2ZU, https://drive.google.com/open?id=1ndWoEpgzF3XPmR9gttlLH2DBTNIif7_A","from stanfordkarel import *
+""""""
+Karel should fill the whole world with beepers.
+""""""
+def main():
+    """"""
+    You should write your code to make Karel do its task in
+    this function. Make sure to delete the 'pass' line before
+    starting to write your own code. You should also delete this
+    comment and replace it with a better, more descriptive one.
+    """"""
+    while not left_is_blocked():
+        put_beeper_Line()
+        reset_Position()
+    put_beeper_Line()
+
+
+def put_beeper_Line():
+    put_beeper()
+    while front_is_clear():
+        move()
+        put_beeper()",,3
+6/14/2023 4:00:07,tinaxxris@gmail.com,"https://drive.google.com/open?id=1C2iQmFoopJg7mDig-mWLdjfPAivq1xLw, https://drive.google.com/open?id=19OTvv9tIxD1RsIhrdPoxEHXHXJwkIjHj","#karel needs to move to the bottom of the next arch to commence 
+#building the next column.
+#precondition: karel is facing east
+#post condition: karel is still facing east at the next column site.
+        
+def move_to_next_arch_bottom():
+    if front_is_clear():
+        for i in range(4):
+            move()
+    
+                
+def turn_around():
+    turn_left()
+    turn_left()
+        
+
+if __name__ == '__main__':
+    main()",,2
+6/14/2023 22:41:59,istiakahmedem@gmail.com,https://drive.google.com/open?id=1vr3mEZBaNgPMBrFMQ21yKk5sJNrvTgqh,"def find_lrgst_smallst(number):
+    if not numbers:
+        return none
+    smallest = largest = number[0]
+    for num in numbers:
+        if num < smallest:
+            smallest = num
+        if num > largest:
+            largest = num
+    return smallest, largest
+    
+# Example Usage:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+result = find_lrgst_smallst(numbers)
+print(result)",,16
+6/15/2023 9:43:56,ramdulam@gmail.com,https://drive.google.com/open?id=1m1U2xKt8_p-99NvwL3tYHMD3LiwCSifn,"def main():
+    user_number = input (""Enter the number: "")
+    result = sum_of_digits(user_number)
+    print (""The Sum of the Digits is: "", result)
+
+def sum_of_digits(user_number):
+    number_str = str(user_number)
+    digit_sum = 0
+    
+    for digit in number_str:
+        digit_sum += int(digit)
+    return digit_sum
+
+if __name__ == ""__main__"":
+    main()",,5
+6/15/2023 10:16:57,xuying850765216@gmail.com,https://drive.google.com/open?id=1qythaRO-qqVJLcC28ONLuNRxLdgxsDsE,"def is_prime(n):
+  """"""
+  Returns True if n is prime, False otherwise.
+  """"""
+  if n <= 1:
+    return False
+  for i in range(2, int(n**0.5) + 1):
+    if n % i == 0:
+      return False
+  return True
+
+def main():
+  """"""
+  The main function.
+  """"""
+  n = int(input(""Enter a number: ""))
+  if is_prime(n):
+    print(n, ""is a prime number."")
+  else:
+    print(n, ""is not a prime number."")
+
+if __name__ == ""__main__"":
+  main()",,13
+6/15/2023 22:07:18,mariem2542018@gmail.com,https://drive.google.com/open?id=104z15zxRw_IQ1-hqaQQbamXumTUBHQXW,"#Reverse String
+def main():
+    str = input(""Input a string: "")
+    r_str=""""
+    for i in str:
+        r_str=i+r_str
+    print(r_str)
+        
+
+if __name__ == ""__main__"":
+    main()",,8
+6/15/2023 22:55:24,mariem2542018@gmail.com,https://drive.google.com/open?id=1vCmok4cMLKuGGbs4gm7RIdXUQO_tcPG-,"#Write a Python program to find the longest word in a given text
+def main():
+    sentence=input(""Input a sentence: "")
+    list=sentence.split()
+    l_word=""""
+    for word in list:
+    
+        if len(word)>len(l_word):
+            l_word= word
+    print(l_word)
+    
+        
+if __name__ == ""__main__"":
+    main()",,24
+6/16/2023 17:40:16,yazminvillegas128@gmail.com,"https://drive.google.com/open?id=1x6gEHPCe0P48Dftf_PfrnCtJHjJ1B9VD, https://drive.google.com/open?id=10iTk-WHX-sp37PTEraF4Lqo5m06ufAtV, https://drive.google.com/open?id=1is20dHqQKDFOgfY2dSmW1cutzzR3IQcE, https://drive.google.com/open?id=1V4tNv65kgite7N5FsJ6QPvMU8AIyFPqs","def greatest_common_divisor(a,b):
+    smaller_number = a if a < b else b
+    common_divisor = []
+    for i in range(1, smaller_number + 1):
+        if a%i == 0 and b%i == 0:
+            common_divisor.append(i)
+    return common_divisor[-1]",,23
+6/17/2023 3:31:01,christian.villafuerte14official@gmail.com,https://drive.google.com/open?id=1zhEl_o4F-6BJhNxYOEAdSLpRNDz4dclX,"def main():
+    """"""
+    The program should determine whether the given year is a leap year
+    (divisible by 4, divisible by 100 but also by 400).
+    """"""
+
+    print(""This program will help you identify if a given year is a leap year or not."")
+    print("" "")
+    identify_a_leap_year()
+    ask_for_a_new_year_to_identify()
+
+def identify_a_leap_year():
+    print(""Please input a year below(in number form)."")
+    Year = int(input(""Year : ""))
+    print("" "")
+
+    if (Year % 4 == 0) or (Year % 100 == 0) or (Year % 400 == 0):
+        print(""The Year "" + str(Year) + "" "" + ""is a leap year."")
+    else:
+        print(""The Year "" + str(Year) + "" "" + ""is not a leap year."")
+
+def ask_for_a_new_year_to_identify():
+    while True:
+        print("" "")
+        ask = input(""Do you want to identify a new year? Yes/No: "")
+        print("" "")
+    
+        if ask == ""Yes"" or ask == ""yes"":
+            identify_a_leap_year()
+        
+        elif ask == ""No"" or ask == ""no"":
+            print(""Thank you. See you again!"")
+            break
+        
+        elif ask != ""Yes"" or ask != ""yes"" or ask != ""No"" or ask != ""no"":
+            print(""Wrong keyword. Please type the exact keyword."")
+
+if __name__ == ""__main__"":
+    main()",,7
+6/17/2023 10:49:53,frankbexxx@gmail.com,https://drive.google.com/open?id=1kXNms5TJW0hxPPg7Hj0bEWFGdRkswuse,"sum = 0
+number = input()
+for i in number:
+    sum += int(i)
+print(sum)",,5
+6/17/2023 10:51:42,frankbexxx@gmail.com,https://drive.google.com/open?id=1ZCuR9Xhg9cO4lwu87n-O1R1V3BZm2A0n,"def factorial(n):
+    if n <= 1:
+        return 1
+    else:
+        return factorial(n-1) * n
+    
+
+print(factorial(int(input())))",,6
+6/17/2023 11:13:34,frankbexxx@gmail.com,https://drive.google.com/open?id=1XqGm93FQY6h1GtQTr1Ln_WnTufrayp8F,"year = int(input())
+
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+    print(True)
+else:
+    print(False)",,7
+6/17/2023 11:14:14,frankbexxx@gmail.com,https://drive.google.com/open?id=1Jv1g5iSl4MwGwM_wRv_J6Qwq8qeiJJUR,"word = input()
+
+word = """".join([i for i in word[::-1]])
+
+print(word)",,8
+6/17/2023 11:14:46,frankbexxx@gmail.com,https://drive.google.com/open?id=1JO1UiflYpLaQVgGiSCBgjsNdZ6MGebM3,"list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+
+list3 = [i for i in list1 if i in list2]
+
+print(list3)",,
+6/17/2023 11:15:17,frankbexxx@gmail.com,https://drive.google.com/open?id=1u8IoO3y8lUzrXMJxpezPU9_KFXCwMmtw,"list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+even = [i for i in list1 if i % 2 == 0]
+
+print(even)",,10
+6/17/2023 12:36:57,dipitasinha@gmail.com,"https://drive.google.com/open?id=17tjXllj4nEqo1z8NnlNyKghYdG8tBRnI, https://drive.google.com/open?id=1psIrRjUtH3xopdjxdmekGKHndy-PzHBg, https://drive.google.com/open?id=1JEFn6pU1n1WYQBQP4Dkzwj1qLe3Sn3z6","def main():
+    year = int(input())
+    if (year % 4 == 0 and year % 100 != 0):
+        print(""True"")
+    elif (year % 100 == 0 and year % 400 == 0):
+        print(""True"")
+    else:
+        print(""False"")
+if __name__ == ""__main__"":
+    main()",,7
+6/17/2023 23:14:52,khanhlinh1511@gmail.com,"https://drive.google.com/open?id=16aj0izqAsUdeyVk_sf_TDgyCBZWQlSl9, https://drive.google.com/open?id=19tmMgQwYv5sIkNQhGfsB1llCN0arqs-7, https://drive.google.com/open?id=1aV4ogrXF_yD0SBXuEovseHDVvMZQA3t7, https://drive.google.com/open?id=1WI16UhAeaAjq6_xcEC3zajXOI1ip3Cu5, https://drive.google.com/open?id=1xbNI3cx2y3jwyvhbu5s_XNiMpT3S57-W","from karel.stanfordkarel import *
+
+
+def main():
+    build_column()
+    step_up()
+    build_column()
+    step_up()
+    build_column()
+    step_up()
+    build_column()
+
+
+def build_column():
+    turn_left()
+    build_beeper()
+    build_beeper()
+    build_beeper()
+    build_beeper()
+    put_beeper()
+    go_back()
+    turn_left()
+    
+def build_beeper():
+    put_beeper()
+    move()
+
+def go_back():
+    turn_around()
+    step_up()
+    
+def turn_around():
+    turn_left()
+    turn_left()
+    
+def step_up():
+    move()
+    move()
+    move()
+    move()
+
+if __name__ == '__main__':
+    main()",,2
+6/18/2023 22:58:31,hayoung.lee@gmail.com,https://drive.google.com/open?id=1XL8xRgR5mcSpcpfitBbJnJKSjmMD8-Wn,"def main():
+    input_string = input('Input string: ')
+    ret = """"
+    for ch in input_string:
+        ret = ret + ch.upper()
+    print(ret)
+
+if __name__ == '__main__':
+    main()",,22
+6/19/2023 7:15:52,elena.gylling@gmail.com,"https://drive.google.com/open?id=1X3ex-vzrvPDazDzvx1kIvpYvkDXdUI90, https://drive.google.com/open?id=1puQannZTjw-HgzHj7JhRkxyZuUaWB8RD","from karel.stanfordkarel import *
+
+def main():
+    move_to_beeper()
+    pick_beeper()
+    turn_around()
+    return_to_start()
+  
+def move_to_beeper():
+    while front_is_clear():
+        move()
+    turn_right()
+    move()
+    turn_left()
+    move()
+    
+def turn_around():
+    turn_left()
+    turn_left()",,
+6/19/2023 14:09:13,tashfin.1610@gmail.com,https://drive.google.com/open?id=12ajIUe1koZZk21FIhN2EbkxAjch5ZoMi,"from karel.stanfordkarel import *
+
+def main():
+    while front_is_clear():
+        fill_tower()
+    
+
+def fill_tower():
+    while front_is_clear():
+        put_beeper()
+        move()
+    put_beeper()
+    column_return()
+    
+def column_return():
+    while front_is_blocked():
+        turn_around()
+    while front_is_clear():
+        move()
+    next_tower()    
+    
+    
+def turn_around():
+    for i in range(2):
+        turn_left()
+    
+def next_tower():
+    if right_is_clear():
+        turn_right()
+        move()
+        turn_right()
+    else:
+        turn_around()
+        while front_is_clear():
+            move()
+            
+def turn_right():
+    for i in range(3):
+        turn_left()
+        
+        
+if __name__ == '__main__':
+    main()",,3
+6/20/2023 9:23:44,ilmasalsabil1006@gmail.com,"https://drive.google.com/open?id=12B5JKe4p0WC-W3uC1j4KU8Tow_xiTyL3, https://drive.google.com/open?id=12fXEaiLxAajqPtu_eKBdwZtm1zo7cxR2, https://drive.google.com/open?id=1hTgS9nP9JaenbRdSPOvZ6ruOkDOqQzP1, https://drive.google.com/open?id=14G-TIb4G3xldKem2kMgNIGwEgO8CamL4, https://drive.google.com/open?id=1TsvThlma6yf1C0BrFZ74QEITg9qFU9TB","def filter_string_a(string):
+      string.sort()
+      filtered_string_list = [ ]
+      for str in string:
+             if str.startswith(""a""):
+                    filtered_string_list.append(str)
+       return filtered_string_list
+input_string = [""apple"", ""banana"", ""avacado"", ""cherry"", ""apricot""]
+output = filter_string_a(input_string)
+print(output)",,19
+6/21/2023 11:55:02,maria.ginsbourg@gmail.com,https://drive.google.com/open?id=1vWQ0VTXcyKaROXFvkJw7TooMzLQ5FUjO,"def main():
+  while front_is_clear():
+      move()
+  if front_is_blocked():
+      turn_around()
+  move()
+  turn_left()
+  move()
+  pick_beeper()
+  turn_left()
+  turn_left()
+  while front_is_clear():
+      move()
+  if front_is_blocked():
+      turn_around()
+  move()
+  turn_around()
+
+    
+def turn_around():
+    for i in range(3):
+        turn_left ()",,1
+6/30/2023 2:39:21,raisaramin.n@gmail.com,https://drive.google.com/open?id=1n__kqhxPMRD3SoEzapSkMTjM8OOwqNig,"def is_leap_year(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+
+def main():
+    year = int(input(""Enter a year: ""))
+    is_leap = is_leap_year(year)
+    print(is_leap)
+
+if __name__ == ""__main__"":
+    main()",,7
+6/30/2023 23:33:41,ashrafarzu7@gmail.com,https://drive.google.com/open?id=1JJidC3SiGFoCH6r67520-KEK00P0ToKS,"def main():
+    print("" Problem - 5"")
+    print(""-----------------"")
+    numb = int(input('write an  number: '))
+    mak_list = [int(x) for x in str(numb)]
+    
+    add_numb = 0
+    for i in mak_list:
+        add_numb += i
+    print(""Sum of the number's digit: "",add_numb)
+
+if __name__ == ""__main__"":
+    main()",,

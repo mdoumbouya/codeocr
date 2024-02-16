@@ -1,0 +1,6218 @@
+[
+  {
+    "image_id": 0,
+    "image_height": 4032,
+    "image_width": 2268,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 1672.0,
+        "y": 609.0,
+        "w": -4.0,
+        "h": 0.0,
+        "line_num": 1,
+        "text": "num = int (input (\"Enter a number: \")"
+      },
+      {
+        "x": 1527.0,
+        "y": 675.0,
+        "w": 11.0,
+        "h": 2.0,
+        "line_num": 2,
+        "text": "Ans =1"
+      },
+      {
+        "x": 1390.0,
+        "y": 620.0,
+        "w": 2.0,
+        "h": 0.0,
+        "line_num": 3,
+        "text": "while num > 1 :"
+      },
+      {
+        "x": 1241.0,
+        "y": 778.0,
+        "w": -9.0,
+        "h": 0.0,
+        "line_num": 4,
+        "text": "Ans * = num"
+      },
+      {
+        "x": 1065.0,
+        "y": 797.0,
+        "w": 23.0,
+        "h": 0.0,
+        "line_num": 5,
+        "text": "num -= 1"
+      },
+      {
+        "x": 948.0,
+        "y": 604.0,
+        "w": 9.0,
+        "h": 0.0,
+        "line_num": 6,
+        "text": "return Ans"
+      }
+    ]
+  },
+  {
+    "image_id": 1,
+    "image_height": 1600,
+    "image_width": 1033,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 96.0,
+        "y": 71.0,
+        "w": 689.0,
+        "h": 37.0,
+        "line_num": 1,
+        "text": "from Karel. stanfordkarel import *"
+      },
+      {
+        "x": 90.0,
+        "y": 137.0,
+        "w": 720.0,
+        "h": 35.0,
+        "line_num": 2,
+        "text": "# This program makes Karel pick up"
+      },
+      {
+        "x": 138.0,
+        "y": 174.0,
+        "w": 721.0,
+        "h": 31.0,
+        "line_num": 3,
+        "text": "a beeper and go back into her house."
+      },
+      {
+        "x": 97.0,
+        "y": 219.0,
+        "w": 275.0,
+        "h": 37.0,
+        "line_num": 4,
+        "text": "def main ():"
+      },
+      {
+        "x": 179.0,
+        "y": 255.0,
+        "w": 442.0,
+        "h": 36.0,
+        "line_num": 5,
+        "text": "# Move to the beeper."
+      },
+      {
+        "x": 192.0,
+        "y": 301.0,
+        "w": 289.0,
+        "h": 31.0,
+        "line_num": 6,
+        "text": "move_ beeper ()"
+      },
+      {
+        "x": 178.0,
+        "y": 341.0,
+        "w": 446.0,
+        "h": 36.0,
+        "line_num": 7,
+        "text": "# Pick the beeper up."
+      },
+      {
+        "x": 187.0,
+        "y": 390.0,
+        "w": 312.0,
+        "h": 40.0,
+        "line_num": 8,
+        "text": "pick-beeper ()"
+      },
+      {
+        "x": 176.0,
+        "y": 439.0,
+        "w": 743.0,
+        "h": 45.0,
+        "line_num": 9,
+        "text": "# Return to Karel's starting point."
+      },
+      {
+        "x": 190.0,
+        "y": 491.0,
+        "w": 242.0,
+        "h": 38.0,
+        "line_num": 10,
+        "text": "go- back ()"
+      },
+      {
+        "x": 85.0,
+        "y": 595.0,
+        "w": 878.0,
+        "h": 36.0,
+        "line_num": 11,
+        "text": "# This function moves Karel to the beeper."
+      },
+      {
+        "x": 85.0,
+        "y": 640.0,
+        "w": 420.0,
+        "h": 38.0,
+        "line_num": 12,
+        "text": "def move_beeper ():"
+      },
+      {
+        "x": 180.0,
+        "y": 682.0,
+        "w": 376.0,
+        "h": 48.0,
+        "line_num": 13,
+        "text": "for i in range (2):"
+      },
+      {
+        "x": 269.0,
+        "y": 734.0,
+        "w": 163.0,
+        "h": 34.0,
+        "line_num": 14,
+        "text": "move ( )"
+      },
+      {
+        "x": 188.0,
+        "y": 773.0,
+        "w": 285.0,
+        "h": 37.0,
+        "line_num": 15,
+        "text": "turn right ()"
+      },
+      {
+        "x": 196.0,
+        "y": 825.0,
+        "w": 156.0,
+        "h": 32.0,
+        "line_num": 16,
+        "text": "move ()"
+      },
+      {
+        "x": 202.0,
+        "y": 860.0,
+        "w": 239.0,
+        "h": 39.0,
+        "line_num": 17,
+        "text": "turn left ()"
+      },
+      {
+        "x": 209.0,
+        "y": 907.0,
+        "w": 141.0,
+        "h": 33.0,
+        "line_num": 18,
+        "text": "move()"
+      },
+      {
+        "x": 83.0,
+        "y": 967.0,
+        "w": 946.0,
+        "h": 51.0,
+        "line_num": 19,
+        "text": "# this function return to Karel's starting poin"
+      },
+      {
+        "x": 87.0,
+        "y": 1037.0,
+        "w": 343.0,
+        "h": 39.0,
+        "line_num": 20,
+        "text": "def 90-back () ;"
+      },
+      {
+        "x": 168.0,
+        "y": 1074.0,
+        "w": 416.0,
+        "h": 37.0,
+        "line_num": 21,
+        "text": "for i in range (2):"
+      },
+      {
+        "x": 246.0,
+        "y": 1110.0,
+        "w": 283.0,
+        "h": 38.0,
+        "line_num": 22,
+        "text": "turn-left ()"
+      },
+      {
+        "x": 175.0,
+        "y": 1153.0,
+        "w": 419.0,
+        "h": 44.0,
+        "line_num": 23,
+        "text": "for i in range (3)."
+      },
+      {
+        "x": 259.0,
+        "y": 1204.0,
+        "w": 177.0,
+        "h": 34.0,
+        "line_num": 24,
+        "text": "move()"
+      },
+      {
+        "x": 186.0,
+        "y": 1238.0,
+        "w": 267.0,
+        "h": 40.0,
+        "line_num": 25,
+        "text": "turn_right ()"
+      },
+      {
+        "x": 193.0,
+        "y": 1281.0,
+        "w": 177.0,
+        "h": 42.0,
+        "line_num": 26,
+        "text": "move ()"
+      },
+      {
+        "x": 186.0,
+        "y": 1317.0,
+        "w": 287.0,
+        "h": 48.0,
+        "line_num": 27,
+        "text": "turn - right ( )"
+      },
+      {
+        "x": 80.0,
+        "y": 1364.0,
+        "w": 386.0,
+        "h": 52.0,
+        "line_num": 28,
+        "text": "def turn-right ( )?"
+      },
+      {
+        "x": 165.0,
+        "y": 1410.0,
+        "w": 453.0,
+        "h": 45.0,
+        "line_num": 29,
+        "text": "for i in range (3):"
+      },
+      {
+        "x": 226.0,
+        "y": 1457.0,
+        "w": 287.0,
+        "h": 37.0,
+        "line_num": 30,
+        "text": "turn-left"
+      },
+      {
+        "x": 38.0,
+        "y": 1497.0,
+        "w": 690.0,
+        "h": 47.0,
+        "line_num": 31,
+        "text": "if -- name= = ' __ main __"
+      },
+      {
+        "x": 155.0,
+        "y": 1534.0,
+        "w": 201.0,
+        "h": 42.0,
+        "line_num": 32,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 2,
+    "image_height": 1098,
+    "image_width": 1280,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 155.0,
+        "y": 118.0,
+        "w": 301.0,
+        "h": 30.0,
+        "line_num": 1,
+        "text": "def main ( ) :"
+      },
+      {
+        "x": 227.0,
+        "y": 157.0,
+        "w": 128.0,
+        "h": 32.0,
+        "line_num": 2,
+        "text": "Himput"
+      },
+      {
+        "x": 233.0,
+        "y": 199.0,
+        "w": 836.0,
+        "h": 35.0,
+        "line_num": 3,
+        "text": "my_ word = input( Enter The original word: 7"
+      },
+      {
+        "x": 218.0,
+        "y": 267.0,
+        "w": 291.0,
+        "h": 36.0,
+        "line_num": 4,
+        "text": "#Function calling"
+      },
+      {
+        "x": 244.0,
+        "y": 318.0,
+        "w": 710.0,
+        "h": 31.0,
+        "line_num": 5,
+        "text": "reversed- word = reverse (my-word )"
+      },
+      {
+        "x": 243.0,
+        "y": 354.0,
+        "w": 974.0,
+        "h": 35.0,
+        "line_num": 6,
+        "text": "Print ( The reversed word is (+) \" +\"\"+reversed-wordt\""
+      },
+      {
+        "x": 135.0,
+        "y": 424.0,
+        "w": 293.0,
+        "h": 35.0,
+        "line_num": 7,
+        "text": "# Helpen- Function"
+      },
+      {
+        "x": 155.0,
+        "y": 468.0,
+        "w": 393.0,
+        "h": 33.0,
+        "line_num": 8,
+        "text": "def severse (word) :"
+      },
+      {
+        "x": 269.0,
+        "y": 507.0,
+        "w": 281.0,
+        "h": 34.0,
+        "line_num": 9,
+        "text": "# reversed-word"
+      },
+      {
+        "x": 296.0,
+        "y": 552.0,
+        "w": 282.0,
+        "h": 28.0,
+        "line_num": 10,
+        "text": "mew-word = \"\""
+      },
+      {
+        "x": 262.0,
+        "y": 584.0,
+        "w": 258.0,
+        "h": 33.0,
+        "line_num": 11,
+        "text": "A chent by chan-"
+      },
+      {
+        "x": 298.0,
+        "y": 626.0,
+        "w": 368.0,
+        "h": 31.0,
+        "line_num": 12,
+        "text": "For- chan- in word :"
+      },
+      {
+        "x": 375.0,
+        "y": 666.0,
+        "w": 562.0,
+        "h": 31.0,
+        "line_num": 13,
+        "text": "new-word = Char + new-word"
+      },
+      {
+        "x": 297.0,
+        "y": 702.0,
+        "w": 154.0,
+        "h": 28.0,
+        "line_num": 14,
+        "text": "# return"
+      },
+      {
+        "x": 302.0,
+        "y": 742.0,
+        "w": 322.0,
+        "h": 30.0,
+        "line_num": 15,
+        "text": "return new-word"
+      },
+      {
+        "x": 163.0,
+        "y": 857.0,
+        "w": 40.0,
+        "h": 30.0,
+        "line_num": 16,
+        "text": "if"
+      },
+      {
+        "x": 249.0,
+        "y": 862.0,
+        "w": 174.0,
+        "h": 34.0,
+        "line_num": 17,
+        "text": "name_"
+      },
+      {
+        "x": 426.0,
+        "y": 864.0,
+        "w": 78.0,
+        "h": 25.0,
+        "line_num": 18,
+        "text": "=="
+      },
+      {
+        "x": 502.0,
+        "y": 854.0,
+        "w": 233.0,
+        "h": 39.0,
+        "line_num": 19,
+        "text": "main1 :"
+      },
+      {
+        "x": 253.0,
+        "y": 903.0,
+        "w": 156.0,
+        "h": 25.0,
+        "line_num": 20,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 3,
+    "image_height": 465,
+    "image_width": 595,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 52.0,
+        "y": 13.0,
+        "w": 262.0,
+        "h": 38.0,
+        "line_num": 1,
+        "text": "inpur-number ="
+      },
+      {
+        "x": 159.0,
+        "y": 53.0,
+        "w": 393.0,
+        "h": 42.0,
+        "line_num": 2,
+        "text": "int(impur (Enter number)"
+      },
+      {
+        "x": 80.0,
+        "y": 108.0,
+        "w": 368.0,
+        "h": 41.0,
+        "line_num": 3,
+        "text": "Val = inpur-number"
+      },
+      {
+        "x": 44.0,
+        "y": 162.0,
+        "w": 394.0,
+        "h": 36.0,
+        "line_num": 4,
+        "text": "result = input-number"
+      },
+      {
+        "x": 68.0,
+        "y": 208.0,
+        "w": 299.0,
+        "h": 38.0,
+        "line_num": 5,
+        "text": "While (val>1):"
+      },
+      {
+        "x": 156.0,
+        "y": 259.0,
+        "w": 89.0,
+        "h": 34.0,
+        "line_num": 6,
+        "text": "val ="
+      },
+      {
+        "x": 316.0,
+        "y": 244.0,
+        "w": 164.0,
+        "h": 48.0,
+        "line_num": 7,
+        "text": "Val -1"
+      },
+      {
+        "x": 118.0,
+        "y": 308.0,
+        "w": 15.0,
+        "h": 25.0,
+        "line_num": 8,
+        "text": "L"
+      },
+      {
+        "x": 136.0,
+        "y": 309.0,
+        "w": 373.0,
+        "h": 37.0,
+        "line_num": 9,
+        "text": "Result = result & val"
+      },
+      {
+        "x": 55.0,
+        "y": 365.0,
+        "w": 520.0,
+        "h": 40.0,
+        "line_num": 10,
+        "text": "print ('factorial f& +shr(input-nale]"
+      },
+      {
+        "x": 240.0,
+        "y": 410.0,
+        "w": 265.0,
+        "h": 45.0,
+        "line_num": 11,
+        "text": "+ spr (result))"
+      }
+    ]
+  },
+  {
+    "image_id": 4,
+    "image_height": 957,
+    "image_width": 1280,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 133.0,
+        "y": 47.0,
+        "w": 437.0,
+        "h": 98.0,
+        "line_num": 1,
+        "text": "def main () :"
+      },
+      {
+        "x": 251.0,
+        "y": 187.0,
+        "w": 722.0,
+        "h": 96.0,
+        "line_num": 2,
+        "text": "num = input (\" Input : \" )"
+      },
+      {
+        "x": 275.0,
+        "y": 319.0,
+        "w": 275.0,
+        "h": 72.0,
+        "line_num": 3,
+        "text": "sum = 0"
+      },
+      {
+        "x": 280.0,
+        "y": 439.0,
+        "w": 554.0,
+        "h": 100.0,
+        "line_num": 4,
+        "text": "for h in num :"
+      },
+      {
+        "x": 412.0,
+        "y": 586.0,
+        "w": 492.0,
+        "h": 73.0,
+        "line_num": 5,
+        "text": "sum + = int (n)"
+      },
+      {
+        "x": 287.0,
+        "y": 750.0,
+        "w": 298.0,
+        "h": 89.0,
+        "line_num": 6,
+        "text": "print ( sum )"
+      }
+    ]
+  },
+  {
+    "image_id": 5,
+    "image_height": 1169,
+    "image_width": 2599,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 60.0,
+        "y": 49.0,
+        "w": 637.0,
+        "h": 88.0,
+        "line_num": 1,
+        "text": "def main ( ) ."
+      },
+      {
+        "x": 2070.0,
+        "y": 34.0,
+        "w": 365.0,
+        "h": 48.0,
+        "line_num": 2,
+        "text": "81108 x68.09"
+      },
+      {
+        "x": 2473.0,
+        "y": 191.0,
+        "w": 9.0,
+        "h": 4.0,
+        "line_num": 3,
+        "text": "-"
+      },
+      {
+        "x": 316.0,
+        "y": 209.0,
+        "w": 2218.0,
+        "h": 123.0,
+        "line_num": 4,
+        "text": "num = input (\"enter the number you want to add )"
+      },
+      {
+        "x": 298.0,
+        "y": 357.0,
+        "w": 1913.0,
+        "h": 94.0,
+        "line_num": 5,
+        "text": "Som=0"
+      },
+      {
+        "x": 23.0,
+        "y": 412.0,
+        "w": 178.0,
+        "h": 37.0,
+        "line_num": 6,
+        "text": "apnivoa"
+      },
+      {
+        "x": 12.0,
+        "y": 464.0,
+        "w": 738.0,
+        "h": 42.0,
+        "line_num": 7,
+        "text": "talioteb adt ero preHab10591 100Y"
+      },
+      {
+        "x": 771.0,
+        "y": 471.0,
+        "w": 485.0,
+        "h": 45.0,
+        "line_num": 8,
+        "text": "rot ti of no blerl sabelq"
+      },
+      {
+        "x": 315.0,
+        "y": 506.0,
+        "w": 857.0,
+        "h": 102.0,
+        "line_num": 9,
+        "text": "for \u00e8 in str (num):"
+      },
+      {
+        "x": 1963.0,
+        "y": 593.0,
+        "w": 239.0,
+        "h": 42.0,
+        "line_num": 10,
+        "text": "tatoO auze"
+      },
+      {
+        "x": 1827.0,
+        "y": 645.0,
+        "w": 402.0,
+        "h": 47.0,
+        "line_num": 11,
+        "text": "hedmull inuopDA"
+      },
+      {
+        "x": 646.0,
+        "y": 685.0,
+        "w": 832.0,
+        "h": 92.0,
+        "line_num": 12,
+        "text": "Sum = Sum+ int (i)"
+      },
+      {
+        "x": 1922.0,
+        "y": 705.0,
+        "w": 316.0,
+        "h": 47.0,
+        "line_num": 13,
+        "text": "eltil tnuossA"
+      },
+      {
+        "x": 307.0,
+        "y": 825.0,
+        "w": 2136.0,
+        "h": 108.0,
+        "line_num": 14,
+        "text": "Print (\"sum of the value you entered in, som)"
+      },
+      {
+        "x": 1131.0,
+        "y": 816.0,
+        "w": 257.0,
+        "h": 50.0,
+        "line_num": 15,
+        "text": "00.000,83"
+      },
+      {
+        "x": 1305.0,
+        "y": 990.0,
+        "w": 89.0,
+        "h": 54.0,
+        "line_num": 16,
+        "text": "BM"
+      },
+      {
+        "x": 867.0,
+        "y": 1057.0,
+        "w": 100.0,
+        "h": 39.0,
+        "line_num": 17,
+        "text": "nioit"
+      },
+      {
+        "x": 1555.0,
+        "y": 1055.0,
+        "w": 704.0,
+        "h": 54.0,
+        "line_num": 18,
+        "text": "hoitqO Inemoandaid 12516Mil"
+      }
+    ]
+  },
+  {
+    "image_id": 6,
+    "image_height": 928,
+    "image_width": 3201,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 58.0,
+        "y": 48.0,
+        "w": 2854.0,
+        "h": 166.0,
+        "line_num": 1,
+        "text": "user-input = input(\"write your string here:"
+      },
+      {
+        "x": 3011.0,
+        "y": 33.0,
+        "w": 114.0,
+        "h": 184.0,
+        "line_num": 2,
+        "text": "\")"
+      },
+      {
+        "x": 95.0,
+        "y": 342.0,
+        "w": 1859.0,
+        "h": 148.0,
+        "line_num": 3,
+        "text": "Upper = user input. upper()"
+      },
+      {
+        "x": 78.0,
+        "y": 499.0,
+        "w": 835.0,
+        "h": 185.0,
+        "line_num": 4,
+        "text": "print (upper)"
+      }
+    ]
+  },
+  {
+    "image_id": 7,
+    "image_height": 599,
+    "image_width": 726,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 15.0,
+        "y": 18.0,
+        "w": 501.0,
+        "h": 41.0,
+        "line_num": 1,
+        "text": "from karel. stanfordkarel import *"
+      },
+      {
+        "x": 14.0,
+        "y": 117.0,
+        "w": 636.0,
+        "h": 40.0,
+        "line_num": 2,
+        "text": "Karel should fill the world with beepers."
+      },
+      {
+        "x": 8.0,
+        "y": 157.0,
+        "w": 44.0,
+        "h": 18.0,
+        "line_num": 3,
+        "text": "1100"
+      },
+      {
+        "x": 4.0,
+        "y": 197.0,
+        "w": 175.0,
+        "h": 34.0,
+        "line_num": 4,
+        "text": "def main () :"
+      },
+      {
+        "x": 55.0,
+        "y": 236.0,
+        "w": 609.0,
+        "h": 35.0,
+        "line_num": 5,
+        "text": "# decomposition using a function name for"
+      },
+      {
+        "x": 51.0,
+        "y": 276.0,
+        "w": 390.0,
+        "h": 33.0,
+        "line_num": 6,
+        "text": "# each associated activity"
+      },
+      {
+        "x": 52.0,
+        "y": 308.0,
+        "w": 375.0,
+        "h": 32.0,
+        "line_num": 7,
+        "text": "while left-is-clear ():"
+      },
+      {
+        "x": 113.0,
+        "y": 346.0,
+        "w": 238.0,
+        "h": 35.0,
+        "line_num": 8,
+        "text": "fill_one-row()"
+      },
+      {
+        "x": 105.0,
+        "y": 384.0,
+        "w": 365.0,
+        "h": 34.0,
+        "line_num": 9,
+        "text": "return_to_row-start ()"
+      },
+      {
+        "x": 103.0,
+        "y": 428.0,
+        "w": 151.0,
+        "h": 28.0,
+        "line_num": 10,
+        "text": "Nove-up()"
+      },
+      {
+        "x": 45.0,
+        "y": 468.0,
+        "w": 664.0,
+        "h": 38.0,
+        "line_num": 11,
+        "text": "# rewrite code after while loop to overcome"
+      },
+      {
+        "x": 45.0,
+        "y": 512.0,
+        "w": 230.0,
+        "h": 32.0,
+        "line_num": 12,
+        "text": "# fencepost bug"
+      },
+      {
+        "x": 47.0,
+        "y": 553.0,
+        "w": 248.0,
+        "h": 35.0,
+        "line_num": 13,
+        "text": "fill-one-row()"
+      }
+    ]
+  },
+  {
+    "image_id": 8,
+    "image_height": 1600,
+    "image_width": 1200,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 95.0,
+        "y": 64.0,
+        "w": 675.0,
+        "h": 50.0,
+        "line_num": 1,
+        "text": "from karel. stanfordkarel import*"
+      },
+      {
+        "x": 105.0,
+        "y": 168.0,
+        "w": 253.0,
+        "h": 47.0,
+        "line_num": 2,
+        "text": "def main ()"
+      },
+      {
+        "x": 191.0,
+        "y": 235.0,
+        "w": 152.0,
+        "h": 38.0,
+        "line_num": 3,
+        "text": "move()"
+      },
+      {
+        "x": 198.0,
+        "y": 283.0,
+        "w": 150.0,
+        "h": 38.0,
+        "line_num": 4,
+        "text": "move()"
+      },
+      {
+        "x": 197.0,
+        "y": 330.0,
+        "w": 280.0,
+        "h": 45.0,
+        "line_num": 5,
+        "text": "turn-right ()"
+      },
+      {
+        "x": 204.0,
+        "y": 388.0,
+        "w": 161.0,
+        "h": 40.0,
+        "line_num": 6,
+        "text": "move()"
+      },
+      {
+        "x": 205.0,
+        "y": 432.0,
+        "w": 259.0,
+        "h": 46.0,
+        "line_num": 7,
+        "text": "turn-left()"
+      },
+      {
+        "x": 216.0,
+        "y": 498.0,
+        "w": 149.0,
+        "h": 36.0,
+        "line_num": 8,
+        "text": "move()"
+      },
+      {
+        "x": 217.0,
+        "y": 543.0,
+        "w": 285.0,
+        "h": 43.0,
+        "line_num": 9,
+        "text": "pick-beeper()"
+      },
+      {
+        "x": 225.0,
+        "y": 597.0,
+        "w": 320.0,
+        "h": 40.0,
+        "line_num": 10,
+        "text": "return-home()"
+      },
+      {
+        "x": 112.0,
+        "y": 666.0,
+        "w": 414.0,
+        "h": 47.0,
+        "line_num": 11,
+        "text": "def return_home()"
+      },
+      {
+        "x": 198.0,
+        "y": 726.0,
+        "w": 312.0,
+        "h": 44.0,
+        "line_num": 12,
+        "text": "turn-around()"
+      },
+      {
+        "x": 204.0,
+        "y": 787.0,
+        "w": 149.0,
+        "h": 39.0,
+        "line_num": 13,
+        "text": "move()"
+      },
+      {
+        "x": 212.0,
+        "y": 831.0,
+        "w": 246.0,
+        "h": 47.0,
+        "line_num": 14,
+        "text": "turn-right()"
+      },
+      {
+        "x": 215.0,
+        "y": 892.0,
+        "w": 155.0,
+        "h": 38.0,
+        "line_num": 15,
+        "text": "move ()"
+      },
+      {
+        "x": 220.0,
+        "y": 938.0,
+        "w": 248.0,
+        "h": 44.0,
+        "line_num": 16,
+        "text": "turn-left ()"
+      },
+      {
+        "x": 222.0,
+        "y": 1001.0,
+        "w": 138.0,
+        "h": 37.0,
+        "line_num": 17,
+        "text": "move()"
+      },
+      {
+        "x": 224.0,
+        "y": 1038.0,
+        "w": 152.0,
+        "h": 40.0,
+        "line_num": 18,
+        "text": "move()"
+      },
+      {
+        "x": 223.0,
+        "y": 1083.0,
+        "w": 311.0,
+        "h": 46.0,
+        "line_num": 19,
+        "text": "turn-around ()"
+      },
+      {
+        "x": 108.0,
+        "y": 1159.0,
+        "w": 401.0,
+        "h": 50.0,
+        "line_num": 20,
+        "text": "det turn-right()"
+      },
+      {
+        "x": 217.0,
+        "y": 1219.0,
+        "w": 389.0,
+        "h": 44.0,
+        "line_num": 21,
+        "text": "for i in range (3):"
+      },
+      {
+        "x": 274.0,
+        "y": 1274.0,
+        "w": 245.0,
+        "h": 45.0,
+        "line_num": 22,
+        "text": "turn-left ()"
+      },
+      {
+        "x": 120.0,
+        "y": 1335.0,
+        "w": 429.0,
+        "h": 46.0,
+        "line_num": 23,
+        "text": "def turn- around()"
+      },
+      {
+        "x": 215.0,
+        "y": 1393.0,
+        "w": 371.0,
+        "h": 41.0,
+        "line_num": 24,
+        "text": "for i in range (2):"
+      },
+      {
+        "x": 263.0,
+        "y": 1437.0,
+        "w": 251.0,
+        "h": 39.0,
+        "line_num": 25,
+        "text": "turn-left ()"
+      },
+      {
+        "x": 51.0,
+        "y": 1485.0,
+        "w": 36.0,
+        "h": 51.0,
+        "line_num": 26,
+        "text": "if"
+      },
+      {
+        "x": 132.0,
+        "y": 1508.0,
+        "w": 537.0,
+        "h": 36.0,
+        "line_num": 27,
+        "text": "name == '_main' ':"
+      },
+      {
+        "x": 121.0,
+        "y": 1545.0,
+        "w": 161.0,
+        "h": 38.0,
+        "line_num": 28,
+        "text": "main()"
+      }
+    ]
+  },
+  {
+    "image_id": 9,
+    "image_height": 4032,
+    "image_width": 3024,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 433.0,
+        "y": 250.0,
+        "w": 465.0,
+        "h": 97.0,
+        "line_num": 1,
+        "text": "de main ():"
+      },
+      {
+        "x": 524.0,
+        "y": 424.0,
+        "w": 622.0,
+        "h": 82.0,
+        "line_num": 2,
+        "text": "vowel-count=0"
+      },
+      {
+        "x": 559.0,
+        "y": 568.0,
+        "w": 1278.0,
+        "h": 132.0,
+        "line_num": 3,
+        "text": "vowels=['\u00e0' ,'e' ,' i','o', 'u']"
+      },
+      {
+        "x": 586.0,
+        "y": 857.0,
+        "w": 1587.0,
+        "h": 107.0,
+        "line_num": 4,
+        "text": "input-string = input (\"Enter the string:\")"
+      },
+      {
+        "x": 629.0,
+        "y": 1044.0,
+        "w": 1389.0,
+        "h": 118.0,
+        "line_num": 5,
+        "text": "input string = input_string . lower ()"
+      },
+      {
+        "x": 676.0,
+        "y": 1326.0,
+        "w": 926.0,
+        "h": 105.0,
+        "line_num": 6,
+        "text": "for char in input string:"
+      },
+      {
+        "x": 774.0,
+        "y": 1492.0,
+        "w": 880.0,
+        "h": 106.0,
+        "line_num": 7,
+        "text": "for vowel in vowels :"
+      },
+      {
+        "x": 946.0,
+        "y": 1660.0,
+        "w": 754.0,
+        "h": 122.0,
+        "line_num": 8,
+        "text": "if char == vowel:"
+      },
+      {
+        "x": 1114.0,
+        "y": 1854.0,
+        "w": 658.0,
+        "h": 93.0,
+        "line_num": 9,
+        "text": "vowel-count+=1"
+      },
+      {
+        "x": 719.0,
+        "y": 2046.0,
+        "w": 793.0,
+        "h": 101.0,
+        "line_num": 10,
+        "text": "point (nouvel_count)"
+      },
+      {
+        "x": 545.0,
+        "y": 2251.0,
+        "w": 1097.0,
+        "h": 108.0,
+        "line_num": 11,
+        "text": "y_name _== '_main __ :"
+      },
+      {
+        "x": 680.0,
+        "y": 2427.0,
+        "w": 281.0,
+        "h": 92.0,
+        "line_num": 12,
+        "text": "main ( )"
+      }
+    ]
+  },
+  {
+    "image_id": 10,
+    "image_height": 1246,
+    "image_width": 3355,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 63.0,
+        "y": 54.0,
+        "w": 913.0,
+        "h": 132.0,
+        "line_num": 1,
+        "text": "det main ():"
+      },
+      {
+        "x": 393.0,
+        "y": 285.0,
+        "w": 2705.0,
+        "h": 161.0,
+        "line_num": 2,
+        "text": "String = str (input ('Enter string: '))"
+      },
+      {
+        "x": 367.0,
+        "y": 471.0,
+        "w": 2886.0,
+        "h": 196.0,
+        "line_num": 3,
+        "text": "for i in range ((len (string)-1) ,- 1 ,- 1):"
+      },
+      {
+        "x": 649.0,
+        "y": 726.0,
+        "w": 1296.0,
+        "h": 158.0,
+        "line_num": 4,
+        "text": "print (string [1])"
+      }
+    ]
+  },
+  {
+    "image_id": 11,
+    "image_height": 1194,
+    "image_width": 2210,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 214.0,
+        "y": 57.0,
+        "w": 1038.0,
+        "h": 82.0,
+        "line_num": 1,
+        "text": "seq = [ 1, 2, 3, 4, 5, 6, 7, 8,9 ]"
+      },
+      {
+        "x": 207.0,
+        "y": 236.0,
+        "w": 423.0,
+        "h": 78.0,
+        "line_num": 2,
+        "text": "Seq-even=[]"
+      },
+      {
+        "x": 200.0,
+        "y": 411.0,
+        "w": 1457.0,
+        "h": 80.0,
+        "line_num": 3,
+        "text": "# It checks every element in list (sequence) -"
+      },
+      {
+        "x": 208.0,
+        "y": 502.0,
+        "w": 424.0,
+        "h": 73.0,
+        "line_num": 4,
+        "text": "for i in seg:"
+      },
+      {
+        "x": 325.0,
+        "y": 670.0,
+        "w": 1835.0,
+        "h": 79.0,
+        "line_num": 5,
+        "text": "#it decides whether an element from sequence is even -.."
+      },
+      {
+        "x": 329.0,
+        "y": 763.0,
+        "w": 506.0,
+        "h": 73.0,
+        "line_num": 6,
+        "text": "if i % 2 == 0 ;"
+      },
+      {
+        "x": 423.0,
+        "y": 851.0,
+        "w": 1745.0,
+        "h": 80.0,
+        "line_num": 7,
+        "text": "seg-even. append (i) # appends even ; in empty list (seq-even)"
+      },
+      {
+        "x": 234.0,
+        "y": 1033.0,
+        "w": 482.0,
+        "h": 79.0,
+        "line_num": 8,
+        "text": "print (seg-even)"
+      }
+    ]
+  },
+  {
+    "image_id": 12,
+    "image_height": 4032,
+    "image_width": 3024,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 190.0,
+        "y": 132.0,
+        "w": 2008.0,
+        "h": 145.0,
+        "line_num": 1,
+        "text": "FROM GRAPHIES IMPORT CANVAS"
+      },
+      {
+        "x": 147.0,
+        "y": 387.0,
+        "w": 1259.0,
+        "h": 120.0,
+        "line_num": 2,
+        "text": "CANVAS WIDTH = 300"
+      },
+      {
+        "x": 120.0,
+        "y": 558.0,
+        "w": 1364.0,
+        "h": 113.0,
+        "line_num": 3,
+        "text": "CANVAS_HEIGHT = 300"
+      },
+      {
+        "x": 118.0,
+        "y": 732.0,
+        "w": 1208.0,
+        "h": 119.0,
+        "line_num": 4,
+        "text": "CIRCLE_SIZE = 20"
+      },
+      {
+        "x": 134.0,
+        "y": 954.0,
+        "w": 800.0,
+        "h": 124.0,
+        "line_num": 5,
+        "text": "DELAY = 0, 01"
+      },
+      {
+        "x": 117.0,
+        "y": 1275.0,
+        "w": 719.0,
+        "h": 112.0,
+        "line_num": 6,
+        "text": "DEF MAIN :"
+      },
+      {
+        "x": 217.0,
+        "y": 1463.0,
+        "w": 2752.0,
+        "h": 130.0,
+        "line_num": 7,
+        "text": "CANVAS = CANVAS ( CANVAS_ WIDTH, CANVAS HEL GH8)"
+      },
+      {
+        "x": 215.0,
+        "y": 1737.0,
+        "w": 761.0,
+        "h": 117.0,
+        "line_num": 8,
+        "text": "WHILE TRUE"
+      },
+      {
+        "x": 302.0,
+        "y": 1915.0,
+        "w": 2345.0,
+        "h": 169.0,
+        "line_num": 9,
+        "text": "MOUSE-X = CANVAS . GET_MOUSE _ X ()"
+      },
+      {
+        "x": 251.0,
+        "y": 2083.0,
+        "w": 2348.0,
+        "h": 180.0,
+        "line_num": 10,
+        "text": "MOUSE- Y = CANVAS . GET MOUSE_ Y ( )"
+      },
+      {
+        "x": 258.0,
+        "y": 2438.0,
+        "w": 2735.0,
+        "h": 167.0,
+        "line_num": 11,
+        "text": "IF MOUSE XT=U AND MOUSE X E CANVAS_WIDTH"
+      },
+      {
+        "x": 230.0,
+        "y": 2656.0,
+        "w": 2783.0,
+        "h": 158.0,
+        "line_num": 12,
+        "text": "AND MOUSELY SE O AND MOUSE-YE CANVAS HEIGH"
+      }
+    ]
+  },
+  {
+    "image_id": 13,
+    "image_height": 1600,
+    "image_width": 1200,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 41.0,
+        "y": 21.0,
+        "w": 420.0,
+        "h": 33.0,
+        "line_num": 1,
+        "text": "# 1 karel Problem - Karel home"
+      },
+      {
+        "x": 69.0,
+        "y": 78.0,
+        "w": 453.0,
+        "h": 31.0,
+        "line_num": 2,
+        "text": "from Karel. Stanfordkarel import *"
+      },
+      {
+        "x": 68.0,
+        "y": 135.0,
+        "w": 937.0,
+        "h": 38.0,
+        "line_num": 3,
+        "text": "# This program defines a main function which should make karel"
+      },
+      {
+        "x": 66.0,
+        "y": 170.0,
+        "w": 719.0,
+        "h": 28.0,
+        "line_num": 4,
+        "text": "# move to the beeper, pick it up and return home"
+      },
+      {
+        "x": 75.0,
+        "y": 219.0,
+        "w": 192.0,
+        "h": 28.0,
+        "line_num": 5,
+        "text": "def main () :"
+      },
+      {
+        "x": 136.0,
+        "y": 255.0,
+        "w": 128.0,
+        "h": 24.0,
+        "line_num": 6,
+        "text": "get_Out ()"
+      },
+      {
+        "x": 140.0,
+        "y": 285.0,
+        "w": 140.0,
+        "h": 25.0,
+        "line_num": 7,
+        "text": "pick_food ()"
+      },
+      {
+        "x": 140.0,
+        "y": 314.0,
+        "w": 229.0,
+        "h": 28.0,
+        "line_num": 8,
+        "text": "get back_ home ()"
+      },
+      {
+        "x": 67.0,
+        "y": 374.0,
+        "w": 835.0,
+        "h": 32.0,
+        "line_num": 9,
+        "text": "# pre : Karel facing east, at the corner of starting position"
+      },
+      {
+        "x": 66.0,
+        "y": 404.0,
+        "w": 943.0,
+        "h": 30.0,
+        "line_num": 10,
+        "text": "# post: karel facing east, outside the home, at the position of beeper"
+      },
+      {
+        "x": 67.0,
+        "y": 444.0,
+        "w": 229.0,
+        "h": 32.0,
+        "line_num": 11,
+        "text": "def get_out () :"
+      },
+      {
+        "x": 144.0,
+        "y": 484.0,
+        "w": 158.0,
+        "h": 26.0,
+        "line_num": 12,
+        "text": "turn_right ( )"
+      },
+      {
+        "x": 149.0,
+        "y": 518.0,
+        "w": 92.0,
+        "h": 22.0,
+        "line_num": 13,
+        "text": "move ()"
+      },
+      {
+        "x": 152.0,
+        "y": 543.0,
+        "w": 158.0,
+        "h": 25.0,
+        "line_num": 14,
+        "text": "turn_left ()"
+      },
+      {
+        "x": 153.0,
+        "y": 577.0,
+        "w": 93.0,
+        "h": 22.0,
+        "line_num": 15,
+        "text": "move ()"
+      },
+      {
+        "x": 155.0,
+        "y": 605.0,
+        "w": 98.0,
+        "h": 21.0,
+        "line_num": 16,
+        "text": "move ()"
+      },
+      {
+        "x": 155.0,
+        "y": 632.0,
+        "w": 102.0,
+        "h": 23.0,
+        "line_num": 17,
+        "text": "move ()"
+      },
+      {
+        "x": 63.0,
+        "y": 690.0,
+        "w": 755.0,
+        "h": 31.0,
+        "line_num": 18,
+        "text": "# post: Karel facing west, at the position of beeper"
+      },
+      {
+        "x": 65.0,
+        "y": 730.0,
+        "w": 244.0,
+        "h": 31.0,
+        "line_num": 19,
+        "text": "def pick-food ():"
+      },
+      {
+        "x": 129.0,
+        "y": 770.0,
+        "w": 184.0,
+        "h": 28.0,
+        "line_num": 20,
+        "text": "pick_beeper ()"
+      },
+      {
+        "x": 132.0,
+        "y": 805.0,
+        "w": 189.0,
+        "h": 24.0,
+        "line_num": 21,
+        "text": "turn- around ()"
+      },
+      {
+        "x": 56.0,
+        "y": 862.0,
+        "w": 880.0,
+        "h": 32.0,
+        "line_num": 22,
+        "text": "# post: Karel facing east, at the corner of starting position"
+      },
+      {
+        "x": 63.0,
+        "y": 906.0,
+        "w": 323.0,
+        "h": 33.0,
+        "line_num": 23,
+        "text": "def get_ back_home () :"
+      },
+      {
+        "x": 138.0,
+        "y": 951.0,
+        "w": 98.0,
+        "h": 22.0,
+        "line_num": 24,
+        "text": "move ()"
+      },
+      {
+        "x": 137.0,
+        "y": 992.0,
+        "w": 106.0,
+        "h": 22.0,
+        "line_num": 25,
+        "text": "Move ()"
+      },
+      {
+        "x": 136.0,
+        "y": 1028.0,
+        "w": 101.0,
+        "h": 23.0,
+        "line_num": 26,
+        "text": "move ()"
+      },
+      {
+        "x": 137.0,
+        "y": 1057.0,
+        "w": 187.0,
+        "h": 26.0,
+        "line_num": 27,
+        "text": "turn right ()"
+      },
+      {
+        "x": 136.0,
+        "y": 1097.0,
+        "w": 107.0,
+        "h": 24.0,
+        "line_num": 28,
+        "text": "move ()"
+      },
+      {
+        "x": 141.0,
+        "y": 1127.0,
+        "w": 185.0,
+        "h": 23.0,
+        "line_num": 29,
+        "text": "turn right ()"
+      },
+      {
+        "x": 42.0,
+        "y": 1174.0,
+        "w": 295.0,
+        "h": 33.0,
+        "line_num": 30,
+        "text": "def turn right () ;"
+      },
+      {
+        "x": 116.0,
+        "y": 1212.0,
+        "w": 271.0,
+        "h": 31.0,
+        "line_num": 31,
+        "text": "for i in range (3) :"
+      },
+      {
+        "x": 173.0,
+        "y": 1246.0,
+        "w": 161.0,
+        "h": 26.0,
+        "line_num": 32,
+        "text": "turn-left ()"
+      },
+      {
+        "x": 48.0,
+        "y": 1313.0,
+        "w": 61.0,
+        "h": 28.0,
+        "line_num": 33,
+        "text": "def"
+      },
+      {
+        "x": 116.0,
+        "y": 1311.0,
+        "w": 250.0,
+        "h": 27.0,
+        "line_num": 34,
+        "text": "turn-around () :"
+      },
+      {
+        "x": 124.0,
+        "y": 1348.0,
+        "w": 170.0,
+        "h": 27.0,
+        "line_num": 35,
+        "text": "turn_left ()"
+      },
+      {
+        "x": 130.0,
+        "y": 1389.0,
+        "w": 164.0,
+        "h": 29.0,
+        "line_num": 36,
+        "text": "turn_kft ()"
+      },
+      {
+        "x": 52.0,
+        "y": 1458.0,
+        "w": 406.0,
+        "h": 39.0,
+        "line_num": 37,
+        "text": "if_ name_ == '-main -:"
+      },
+      {
+        "x": 99.0,
+        "y": 1493.0,
+        "w": 121.0,
+        "h": 30.0,
+        "line_num": 38,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 14,
+    "image_height": 1676,
+    "image_width": 2917,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 233.0,
+        "y": 101.0,
+        "w": 1461.0,
+        "h": 205.0,
+        "line_num": 1,
+        "text": "def factorial (n):"
+      },
+      {
+        "x": 459.0,
+        "y": 355.0,
+        "w": 678.0,
+        "h": 160.0,
+        "line_num": 2,
+        "text": "if n= = 0 :"
+      },
+      {
+        "x": 725.0,
+        "y": 591.0,
+        "w": 681.0,
+        "h": 136.0,
+        "line_num": 3,
+        "text": "return 1"
+      },
+      {
+        "x": 451.0,
+        "y": 815.0,
+        "w": 453.0,
+        "h": 151.0,
+        "line_num": 4,
+        "text": "else :"
+      },
+      {
+        "x": 720.0,
+        "y": 997.0,
+        "w": 2048.0,
+        "h": 170.0,
+        "line_num": 5,
+        "text": "return 1 * factorial (n-1)"
+      },
+      {
+        "x": 297.0,
+        "y": 1247.0,
+        "w": 1486.0,
+        "h": 201.0,
+        "line_num": 6,
+        "text": "print (factorial (5)"
+      }
+    ]
+  },
+  {
+    "image_id": 15,
+    "image_height": 1565,
+    "image_width": 1186,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 1151.0,
+        "y": 37.0,
+        "w": 22.0,
+        "h": 0.0,
+        "line_num": 1,
+        "text": "det main () :"
+      },
+      {
+        "x": 1043.0,
+        "y": 271.0,
+        "w": 65.0,
+        "h": 1.0,
+        "line_num": 2,
+        "text": "list 1 = [1, 2,3,4]"
+      },
+      {
+        "x": 921.0,
+        "y": 281.0,
+        "w": 23.0,
+        "h": 2.0,
+        "line_num": 3,
+        "text": "list 2 ="
+      },
+      {
+        "x": 965.0,
+        "y": 589.0,
+        "w": 29.0,
+        "h": 6.0,
+        "line_num": 4,
+        "text": "(3,4,5,6)"
+      },
+      {
+        "x": 854.0,
+        "y": 276.0,
+        "w": 19.0,
+        "h": 1.0,
+        "line_num": 5,
+        "text": "List = []"
+      },
+      {
+        "x": 782.0,
+        "y": 277.0,
+        "w": 68.0,
+        "h": 5.0,
+        "line_num": 6,
+        "text": "for elem1 in list 1?"
+      },
+      {
+        "x": 678.0,
+        "y": 434.0,
+        "w": 69.0,
+        "h": 7.0,
+        "line_num": 7,
+        "text": "for eleme in list2:"
+      },
+      {
+        "x": 583.0,
+        "y": 640.0,
+        "w": 76.0,
+        "h": 3.0,
+        "line_num": 8,
+        "text": "it elem1 = = elem2:"
+      },
+      {
+        "x": 499.0,
+        "y": 871.0,
+        "w": 51.0,
+        "h": 2.0,
+        "line_num": 9,
+        "text": "elem = elema"
+      },
+      {
+        "x": 381.0,
+        "y": 871.0,
+        "w": 74.0,
+        "h": 7.0,
+        "line_num": 10,
+        "text": "list. append (elem)"
+      },
+      {
+        "x": 206.0,
+        "y": 347.0,
+        "w": 59.0,
+        "h": 8.0,
+        "line_num": 11,
+        "text": "print (ist)"
+      }
+    ]
+  },
+  {
+    "image_id": 16,
+    "image_height": 581,
+    "image_width": 1475,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 218.0,
+        "y": 154.0,
+        "w": 903.0,
+        "h": 112.0,
+        "line_num": 1,
+        "text": "String = input c)"
+      },
+      {
+        "x": 257.0,
+        "y": 308.0,
+        "w": 1133.0,
+        "h": 130.0,
+        "line_num": 2,
+        "text": "Print (String [ ::- 1])"
+      }
+    ]
+  },
+  {
+    "image_id": 17,
+    "image_height": 1440,
+    "image_width": 989,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 114.0,
+        "y": 51.0,
+        "w": 464.0,
+        "h": 35.0,
+        "line_num": 1,
+        "text": "from Karel. Stanford Kad import *"
+      },
+      {
+        "x": 54.0,
+        "y": 140.0,
+        "w": 144.0,
+        "h": 32.0,
+        "line_num": 2,
+        "text": "del main ():"
+      },
+      {
+        "x": 121.0,
+        "y": 181.0,
+        "w": 150.0,
+        "h": 27.0,
+        "line_num": 3,
+        "text": "turn- left 1)"
+      },
+      {
+        "x": 115.0,
+        "y": 216.0,
+        "w": 127.0,
+        "h": 27.0,
+        "line_num": 4,
+        "text": "tower_N()"
+      },
+      {
+        "x": 116.0,
+        "y": 251.0,
+        "w": 121.0,
+        "h": 27.0,
+        "line_num": 5,
+        "text": "tower-SC)"
+      },
+      {
+        "x": 112.0,
+        "y": 287.0,
+        "w": 138.0,
+        "h": 24.0,
+        "line_num": 6,
+        "text": "move-4x ( )"
+      },
+      {
+        "x": 109.0,
+        "y": 317.0,
+        "w": 135.0,
+        "h": 28.0,
+        "line_num": 7,
+        "text": "turn-left ( )"
+      },
+      {
+        "x": 110.0,
+        "y": 361.0,
+        "w": 125.0,
+        "h": 27.0,
+        "line_num": 8,
+        "text": "tower _ N()"
+      },
+      {
+        "x": 105.0,
+        "y": 397.0,
+        "w": 132.0,
+        "h": 27.0,
+        "line_num": 9,
+        "text": "tower -SC )"
+      },
+      {
+        "x": 33.0,
+        "y": 470.0,
+        "w": 224.0,
+        "h": 44.0,
+        "line_num": 10,
+        "text": "de tower - SC):"
+      },
+      {
+        "x": 81.0,
+        "y": 518.0,
+        "w": 166.0,
+        "h": 31.0,
+        "line_num": 11,
+        "text": "turn - 3x()"
+      },
+      {
+        "x": 75.0,
+        "y": 557.0,
+        "w": 116.0,
+        "h": 30.0,
+        "line_num": 12,
+        "text": "Tower ()"
+      },
+      {
+        "x": 88.0,
+        "y": 596.0,
+        "w": 136.0,
+        "h": 31.0,
+        "line_num": 13,
+        "text": "Turn- left ( )"
+      },
+      {
+        "x": 29.0,
+        "y": 653.0,
+        "w": 201.0,
+        "h": 30.0,
+        "line_num": 14,
+        "text": "del tower- NC)."
+      },
+      {
+        "x": 85.0,
+        "y": 695.0,
+        "w": 96.0,
+        "h": 29.0,
+        "line_num": 15,
+        "text": "Tower ()"
+      },
+      {
+        "x": 84.0,
+        "y": 733.0,
+        "w": 131.0,
+        "h": 28.0,
+        "line_num": 16,
+        "text": "turn- 3x()"
+      },
+      {
+        "x": 84.0,
+        "y": 769.0,
+        "w": 133.0,
+        "h": 26.0,
+        "line_num": 17,
+        "text": "move- 4x ()"
+      },
+      {
+        "x": 32.0,
+        "y": 834.0,
+        "w": 157.0,
+        "h": 31.0,
+        "line_num": 18,
+        "text": "del tower ():"
+      },
+      {
+        "x": 99.0,
+        "y": 867.0,
+        "w": 246.0,
+        "h": 31.0,
+        "line_num": 19,
+        "text": "for i in range (5) :"
+      },
+      {
+        "x": 141.0,
+        "y": 903.0,
+        "w": 254.0,
+        "h": 34.0,
+        "line_num": 20,
+        "text": "il front-is- clear ( ) :"
+      },
+      {
+        "x": 185.0,
+        "y": 932.0,
+        "w": 179.0,
+        "h": 27.0,
+        "line_num": 21,
+        "text": "Put-boper ()"
+      },
+      {
+        "x": 204.0,
+        "y": 965.0,
+        "w": 92.0,
+        "h": 25.0,
+        "line_num": 22,
+        "text": "move ()"
+      },
+      {
+        "x": 145.0,
+        "y": 1009.0,
+        "w": 53.0,
+        "h": 24.0,
+        "line_num": 23,
+        "text": "else:"
+      },
+      {
+        "x": 190.0,
+        "y": 1032.0,
+        "w": 126.0,
+        "h": 28.0,
+        "line_num": 24,
+        "text": "put- beeper ()"
+      },
+      {
+        "x": 45.0,
+        "y": 1088.0,
+        "w": 185.0,
+        "h": 27.0,
+        "line_num": 25,
+        "text": "def. turn- 3x (1."
+      },
+      {
+        "x": 112.0,
+        "y": 1118.0,
+        "w": 123.0,
+        "h": 25.0,
+        "line_num": 26,
+        "text": "Turn_left ()"
+      },
+      {
+        "x": 106.0,
+        "y": 1151.0,
+        "w": 125.0,
+        "h": 24.0,
+        "line_num": 27,
+        "text": "turn - left ()"
+      },
+      {
+        "x": 108.0,
+        "y": 1185.0,
+        "w": 122.0,
+        "h": 27.0,
+        "line_num": 28,
+        "text": "burn- left ()"
+      },
+      {
+        "x": 34.0,
+        "y": 1231.0,
+        "w": 164.0,
+        "h": 30.0,
+        "line_num": 29,
+        "text": "def . meve_4x11;"
+      },
+      {
+        "x": 102.0,
+        "y": 1260.0,
+        "w": 57.0,
+        "h": 18.0,
+        "line_num": 30,
+        "text": "move 11"
+      },
+      {
+        "x": 103.0,
+        "y": 1287.0,
+        "w": 57.0,
+        "h": 16.0,
+        "line_num": 31,
+        "text": "move ()"
+      },
+      {
+        "x": 101.0,
+        "y": 1309.0,
+        "w": 63.0,
+        "h": 17.0,
+        "line_num": 32,
+        "text": "morell"
+      },
+      {
+        "x": 103.0,
+        "y": 1333.0,
+        "w": 66.0,
+        "h": 18.0,
+        "line_num": 33,
+        "text": "move ()"
+      },
+      {
+        "x": 19.0,
+        "y": 1372.0,
+        "w": 313.0,
+        "h": 31.0,
+        "line_num": 34,
+        "text": "if -- name __ == ' -- main __ :"
+      },
+      {
+        "x": 118.0,
+        "y": 1396.0,
+        "w": 91.0,
+        "h": 22.0,
+        "line_num": 35,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 18,
+    "image_height": 2057,
+    "image_width": 4134,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 229.0,
+        "y": 120.0,
+        "w": 933.0,
+        "h": 142.0,
+        "line_num": 1,
+        "text": "det main ( ):"
+      },
+      {
+        "x": 540.0,
+        "y": 290.0,
+        "w": 2614.0,
+        "h": 166.0,
+        "line_num": 2,
+        "text": "String = str (input (\"Enter string: ')"
+      },
+      {
+        "x": 529.0,
+        "y": 474.0,
+        "w": 2975.0,
+        "h": 218.0,
+        "line_num": 3,
+        "text": "for i in range ((len(string)-1) ,- 1 ,- 1):"
+      },
+      {
+        "x": 825.0,
+        "y": 718.0,
+        "w": 1124.0,
+        "h": 180.0,
+        "line_num": 4,
+        "text": "print (string [1])"
+      },
+      {
+        "x": 208.0,
+        "y": 1014.0,
+        "w": 1766.0,
+        "h": 183.0,
+        "line_num": 5,
+        "text": "if __ name _== '-main-':"
+      },
+      {
+        "x": 335.0,
+        "y": 1246.0,
+        "w": 482.0,
+        "h": 145.0,
+        "line_num": 6,
+        "text": "main()"
+      }
+    ]
+  },
+  {
+    "image_id": 19,
+    "image_height": 2048,
+    "image_width": 1536,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 298.0,
+        "y": 194.0,
+        "w": 303.0,
+        "h": 72.0,
+        "line_num": 1,
+        "text": "def main ():"
+      },
+      {
+        "x": 303.0,
+        "y": 274.0,
+        "w": 773.0,
+        "h": 74.0,
+        "line_num": 2,
+        "text": "num = int (input (\" Enter a Nmbu :"
+      },
+      {
+        "x": 300.0,
+        "y": 336.0,
+        "w": 1105.0,
+        "h": 61.0,
+        "line_num": 3,
+        "text": "print (f\"Enums is &'prime if is_ prime (nom)"
+      },
+      {
+        "x": 812.0,
+        "y": 396.0,
+        "w": 476.0,
+        "h": 60.0,
+        "line_num": 4,
+        "text": "else not prim\u00e9 3\")"
+      },
+      {
+        "x": 256.0,
+        "y": 469.0,
+        "w": 533.0,
+        "h": 78.0,
+        "line_num": 5,
+        "text": "def is- prone (1) :"
+      },
+      {
+        "x": 379.0,
+        "y": 542.0,
+        "w": 390.0,
+        "h": 68.0,
+        "line_num": 6,
+        "text": "if n <= 12"
+      },
+      {
+        "x": 470.0,
+        "y": 610.0,
+        "w": 435.0,
+        "h": 66.0,
+        "line_num": 7,
+        "text": "return false"
+      },
+      {
+        "x": 384.0,
+        "y": 702.0,
+        "w": 480.0,
+        "h": 82.0,
+        "line_num": 8,
+        "text": "elif > <= 3:"
+      },
+      {
+        "x": 441.0,
+        "y": 789.0,
+        "w": 462.0,
+        "h": 80.0,
+        "line_num": 9,
+        "text": "return True"
+      },
+      {
+        "x": 362.0,
+        "y": 889.0,
+        "w": 1019.0,
+        "h": 102.0,
+        "line_num": 10,
+        "text": "elf n/ 2 == x OR 1% 3= 6 ;"
+      },
+      {
+        "x": 463.0,
+        "y": 995.0,
+        "w": 518.0,
+        "h": 76.0,
+        "line_num": 11,
+        "text": "return False"
+      },
+      {
+        "x": 324.0,
+        "y": 1127.0,
+        "w": 1200.0,
+        "h": 95.0,
+        "line_num": 12,
+        "text": "for i in Range (5, int (n+\"0.5) + 1,6"
+      },
+      {
+        "x": 404.0,
+        "y": 1221.0,
+        "w": 1082.0,
+        "h": 82.0,
+        "line_num": 13,
+        "text": "if 1% i =x or 1%(i+2) =6:"
+      },
+      {
+        "x": 537.0,
+        "y": 1306.0,
+        "w": 485.0,
+        "h": 75.0,
+        "line_num": 14,
+        "text": "return False"
+      },
+      {
+        "x": 368.0,
+        "y": 1386.0,
+        "w": 550.0,
+        "h": 79.0,
+        "line_num": 15,
+        "text": "return True"
+      },
+      {
+        "x": 280.0,
+        "y": 1512.0,
+        "w": 234.0,
+        "h": 141.0,
+        "line_num": 16,
+        "text": "- nor"
+      },
+      {
+        "x": 810.0,
+        "y": 1547.0,
+        "w": 457.0,
+        "h": 95.0,
+        "line_num": 17,
+        "text": "= - - main"
+      },
+      {
+        "x": 349.0,
+        "y": 1662.0,
+        "w": 394.0,
+        "h": 103.0,
+        "line_num": 18,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 20,
+    "image_height": 2287,
+    "image_width": 1620,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 75.0,
+        "y": 69.0,
+        "w": 1425.0,
+        "h": 81.0,
+        "line_num": 1,
+        "text": "from karel . stamfordkarel import *"
+      },
+      {
+        "x": 66.0,
+        "y": 189.0,
+        "w": 424.0,
+        "h": 83.0,
+        "line_num": 2,
+        "text": "def mais ():"
+      },
+      {
+        "x": 169.0,
+        "y": 313.0,
+        "w": 449.0,
+        "h": 79.0,
+        "line_num": 3,
+        "text": "turn-left ():"
+      },
+      {
+        "x": 168.0,
+        "y": 432.0,
+        "w": 981.0,
+        "h": 79.0,
+        "line_num": 4,
+        "text": "while frent_ is_ alpar () ;"
+      },
+      {
+        "x": 381.0,
+        "y": 544.0,
+        "w": 445.0,
+        "h": 73.0,
+        "line_num": 5,
+        "text": "turn-right ()"
+      },
+      {
+        "x": 404.0,
+        "y": 656.0,
+        "w": 348.0,
+        "h": 85.0,
+        "line_num": 6,
+        "text": "fill-row( )"
+      },
+      {
+        "x": 400.0,
+        "y": 781.0,
+        "w": 634.0,
+        "h": 71.0,
+        "line_num": 7,
+        "text": "return _to_ home()"
+      },
+      {
+        "x": 405.0,
+        "y": 904.0,
+        "w": 364.0,
+        "h": 71.0,
+        "line_num": 8,
+        "text": "Jumprow ()"
+      },
+      {
+        "x": 169.0,
+        "y": 1027.0,
+        "w": 471.0,
+        "h": 69.0,
+        "line_num": 9,
+        "text": "turn-right ()"
+      },
+      {
+        "x": 175.0,
+        "y": 1147.0,
+        "w": 362.0,
+        "h": 84.0,
+        "line_num": 10,
+        "text": "fill-row ()"
+      },
+      {
+        "x": 172.0,
+        "y": 1252.0,
+        "w": 712.0,
+        "h": 72.0,
+        "line_num": 11,
+        "text": "returnkte - home ()"
+      },
+      {
+        "x": 180.0,
+        "y": 1366.0,
+        "w": 880.0,
+        "h": 85.0,
+        "line_num": 12,
+        "text": "while front- is- Elcar ()"
+      },
+      {
+        "x": 423.0,
+        "y": 1493.0,
+        "w": 234.0,
+        "h": 62.0,
+        "line_num": 13,
+        "text": "meve()"
+      },
+      {
+        "x": 109.0,
+        "y": 1605.0,
+        "w": 584.0,
+        "h": 90.0,
+        "line_num": 14,
+        "text": "def fill-row() ;"
+      },
+      {
+        "x": 167.0,
+        "y": 1725.0,
+        "w": 894.0,
+        "h": 85.0,
+        "line_num": 15,
+        "text": "while front- is clear()"
+      },
+      {
+        "x": 352.0,
+        "y": 1847.0,
+        "w": 525.0,
+        "h": 81.0,
+        "line_num": 16,
+        "text": "put - beeper()"
+      },
+      {
+        "x": 366.0,
+        "y": 1975.0,
+        "w": 269.0,
+        "h": 62.0,
+        "line_num": 17,
+        "text": "move ()"
+      },
+      {
+        "x": 164.0,
+        "y": 2093.0,
+        "w": 451.0,
+        "h": 84.0,
+        "line_num": 18,
+        "text": "put-beeper ()"
+      }
+    ]
+  },
+  {
+    "image_id": 21,
+    "image_height": 3703,
+    "image_width": 2761,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 281.0,
+        "y": 22.0,
+        "w": 1729.0,
+        "h": 105.0,
+        "line_num": 1,
+        "text": "from stanfordkarel import *"
+      },
+      {
+        "x": 267.0,
+        "y": 354.0,
+        "w": 2206.0,
+        "h": 100.0,
+        "line_num": 2,
+        "text": "Kard should fill the whole world with"
+      },
+      {
+        "x": 263.0,
+        "y": 483.0,
+        "w": 429.0,
+        "h": 88.0,
+        "line_num": 3,
+        "text": "keepers."
+      },
+      {
+        "x": 292.0,
+        "y": 662.0,
+        "w": 1.0,
+        "h": 3.0,
+        "line_num": 4,
+        "text": "-"
+      },
+      {
+        "x": 223.0,
+        "y": 842.0,
+        "w": 719.0,
+        "h": 100.0,
+        "line_num": 5,
+        "text": "daf main () :"
+      },
+      {
+        "x": 507.0,
+        "y": 963.0,
+        "w": 309.0,
+        "h": 58.0,
+        "line_num": 6,
+        "text": "11 11 11"
+      },
+      {
+        "x": 481.0,
+        "y": 1101.0,
+        "w": 2206.0,
+        "h": 84.0,
+        "line_num": 7,
+        "text": "You should write your code to males"
+      },
+      {
+        "x": 479.0,
+        "y": 1212.0,
+        "w": 2223.0,
+        "h": 116.0,
+        "line_num": 8,
+        "text": "kard do its task in this function"
+      },
+      {
+        "x": 443.0,
+        "y": 1373.0,
+        "w": 2211.0,
+        "h": 98.0,
+        "line_num": 9,
+        "text": "Make sure to delete the 'pass' line"
+      },
+      {
+        "x": 415.0,
+        "y": 1514.0,
+        "w": 2242.0,
+        "h": 103.0,
+        "line_num": 10,
+        "text": "before starting to write your own"
+      },
+      {
+        "x": 396.0,
+        "y": 1673.0,
+        "w": 1976.0,
+        "h": 79.0,
+        "line_num": 11,
+        "text": "code. You should also delete this"
+      },
+      {
+        "x": 418.0,
+        "y": 1798.0,
+        "w": 2225.0,
+        "h": 64.0,
+        "line_num": 12,
+        "text": "comment and replace it with a"
+      },
+      {
+        "x": 400.0,
+        "y": 1917.0,
+        "w": 1842.0,
+        "h": 83.0,
+        "line_num": 13,
+        "text": "better more descriptive one."
+      },
+      {
+        "x": 431.0,
+        "y": 2071.0,
+        "w": 330.0,
+        "h": 62.0,
+        "line_num": 14,
+        "text": "11 11 11"
+      },
+      {
+        "x": 431.0,
+        "y": 2214.0,
+        "w": 1739.0,
+        "h": 97.0,
+        "line_num": 15,
+        "text": "While not left-is - blocked ():"
+      },
+      {
+        "x": 681.0,
+        "y": 2344.0,
+        "w": 942.0,
+        "h": 120.0,
+        "line_num": 16,
+        "text": "put - beeper -Line( )"
+      },
+      {
+        "x": 665.0,
+        "y": 2485.0,
+        "w": 846.0,
+        "h": 92.0,
+        "line_num": 17,
+        "text": "reset_Position ()"
+      },
+      {
+        "x": 395.0,
+        "y": 2637.0,
+        "w": 1005.0,
+        "h": 99.0,
+        "line_num": 18,
+        "text": "put-beeper _line ()"
+      },
+      {
+        "x": 179.0,
+        "y": 2974.0,
+        "w": 1177.0,
+        "h": 151.0,
+        "line_num": 19,
+        "text": "de put_beeper-Line ():"
+      },
+      {
+        "x": 374.0,
+        "y": 3113.0,
+        "w": 630.0,
+        "h": 96.0,
+        "line_num": 20,
+        "text": "put -beeper ()"
+      },
+      {
+        "x": 378.0,
+        "y": 3266.0,
+        "w": 1234.0,
+        "h": 89.0,
+        "line_num": 21,
+        "text": "while front-is- clear ():"
+      },
+      {
+        "x": 609.0,
+        "y": 3414.0,
+        "w": 411.0,
+        "h": 73.0,
+        "line_num": 22,
+        "text": "move ()"
+      },
+      {
+        "x": 603.0,
+        "y": 3529.0,
+        "w": 618.0,
+        "h": 90.0,
+        "line_num": 23,
+        "text": "put -beeper ()"
+      }
+    ]
+  },
+  {
+    "image_id": 22,
+    "image_height": 2165,
+    "image_width": 2795,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 34.0,
+        "y": 130.0,
+        "w": 2681.0,
+        "h": 102.0,
+        "line_num": 1,
+        "text": "#karel needs to move to the bottom of the next noch to como"
+      },
+      {
+        "x": 52.0,
+        "y": 248.0,
+        "w": 1434.0,
+        "h": 73.0,
+        "line_num": 2,
+        "text": "Hence building the next column."
+      },
+      {
+        "x": 46.0,
+        "y": 348.0,
+        "w": 1439.0,
+        "h": 88.0,
+        "line_num": 3,
+        "text": "# Precondition: Karel is facing east"
+      },
+      {
+        "x": 26.0,
+        "y": 450.0,
+        "w": 2522.0,
+        "h": 101.0,
+        "line_num": 4,
+        "text": "# post-condition: Karel is facing east at the next column site."
+      },
+      {
+        "x": 58.0,
+        "y": 682.0,
+        "w": 1436.0,
+        "h": 105.0,
+        "line_num": 5,
+        "text": "def move_to_next_arch botton () ;"
+      },
+      {
+        "x": 271.0,
+        "y": 802.0,
+        "w": 855.0,
+        "h": 104.0,
+        "line_num": 6,
+        "text": "if front is clear ():"
+      },
+      {
+        "x": 417.0,
+        "y": 925.0,
+        "w": 831.0,
+        "h": 86.0,
+        "line_num": 7,
+        "text": "for i in range (4) :"
+      },
+      {
+        "x": 573.0,
+        "y": 1042.0,
+        "w": 341.0,
+        "h": 76.0,
+        "line_num": 8,
+        "text": "move ( )"
+      },
+      {
+        "x": 52.0,
+        "y": 1251.0,
+        "w": 850.0,
+        "h": 87.0,
+        "line_num": 9,
+        "text": "def turn around ():"
+      },
+      {
+        "x": 250.0,
+        "y": 1370.0,
+        "w": 504.0,
+        "h": 84.0,
+        "line_num": 10,
+        "text": "turn left ( )"
+      },
+      {
+        "x": 267.0,
+        "y": 1474.0,
+        "w": 532.0,
+        "h": 99.0,
+        "line_num": 11,
+        "text": "turn_left ()"
+      },
+      {
+        "x": 32.0,
+        "y": 1719.0,
+        "w": 453.0,
+        "h": 102.0,
+        "line_num": 12,
+        "text": "if __ name."
+      },
+      {
+        "x": 1025.0,
+        "y": 1762.0,
+        "w": 205.0,
+        "h": 52.0,
+        "line_num": 13,
+        "text": "main"
+      },
+      {
+        "x": 186.0,
+        "y": 1843.0,
+        "w": 342.0,
+        "h": 71.0,
+        "line_num": 14,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 23,
+    "image_height": 4160,
+    "image_width": 3120,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 497.0,
+        "y": 307.0,
+        "w": 1733.0,
+        "h": 140.0,
+        "line_num": 1,
+        "text": "def find_Ligst_smallst (number):"
+      },
+      {
+        "x": 782.0,
+        "y": 529.0,
+        "w": 888.0,
+        "h": 111.0,
+        "line_num": 2,
+        "text": "if not numbers:"
+      },
+      {
+        "x": 1091.0,
+        "y": 682.0,
+        "w": 795.0,
+        "h": 102.0,
+        "line_num": 3,
+        "text": "Return none"
+      },
+      {
+        "x": 827.0,
+        "y": 902.0,
+        "w": 1653.0,
+        "h": 124.0,
+        "line_num": 4,
+        "text": "Smallest= largest = number [0]"
+      },
+      {
+        "x": 762.0,
+        "y": 1234.0,
+        "w": 618.0,
+        "h": 105.0,
+        "line_num": 5,
+        "text": "for num in"
+      },
+      {
+        "x": 1258.0,
+        "y": 1181.0,
+        "w": 805.0,
+        "h": 123.0,
+        "line_num": 6,
+        "text": "in numbers :"
+      },
+      {
+        "x": 1110.0,
+        "y": 1378.0,
+        "w": 1095.0,
+        "h": 149.0,
+        "line_num": 7,
+        "text": "if num < smallest:"
+      },
+      {
+        "x": 1486.0,
+        "y": 1561.0,
+        "w": 947.0,
+        "h": 114.0,
+        "line_num": 8,
+        "text": "smallest = num"
+      },
+      {
+        "x": 1155.0,
+        "y": 1697.0,
+        "w": 1023.0,
+        "h": 163.0,
+        "line_num": 9,
+        "text": "if num > Largest :"
+      },
+      {
+        "x": 1599.0,
+        "y": 1911.0,
+        "w": 907.0,
+        "h": 114.0,
+        "line_num": 10,
+        "text": "Largest = num"
+      },
+      {
+        "x": 788.0,
+        "y": 2143.0,
+        "w": 1690.0,
+        "h": 139.0,
+        "line_num": 11,
+        "text": "tieturin smallest, Largest"
+      },
+      {
+        "x": 420.0,
+        "y": 2489.0,
+        "w": 1104.0,
+        "h": 146.0,
+        "line_num": 12,
+        "text": "# Example usage."
+      },
+      {
+        "x": 553.0,
+        "y": 2699.0,
+        "w": 2028.0,
+        "h": 139.0,
+        "line_num": 13,
+        "text": "numbers = [1,2,3, 4,5,6,7,8,9]"
+      },
+      {
+        "x": 522.0,
+        "y": 2933.0,
+        "w": 2258.0,
+        "h": 160.0,
+        "line_num": 14,
+        "text": "result = find_Ligst_smallst (numberis)"
+      },
+      {
+        "x": 555.0,
+        "y": 3217.0,
+        "w": 859.0,
+        "h": 171.0,
+        "line_num": 15,
+        "text": "print (result)"
+      },
+      {
+        "x": 2100.0,
+        "y": 3896.0,
+        "w": 727.0,
+        "h": 99.0,
+        "line_num": 16,
+        "text": "\u0907\u092e\u093e\u092e-\u091c\u0924\u094d\u0930\u093e\u0938 \u092e\u093f\u0915\u094d\u0915\u093e \u0936\u0928\u093f\u0935\u093e\u091c\u093c"
+      }
+    ]
+  },
+  {
+    "image_id": 24,
+    "image_height": 953,
+    "image_width": 1118,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 30.0,
+        "y": 35.0,
+        "w": 246.0,
+        "h": 41.0,
+        "line_num": 1,
+        "text": "def main():"
+      },
+      {
+        "x": 140.0,
+        "y": 102.0,
+        "w": 832.0,
+        "h": 45.0,
+        "line_num": 2,
+        "text": "user-number = input (\"Enter the number: \")"
+      },
+      {
+        "x": 146.0,
+        "y": 164.0,
+        "w": 710.0,
+        "h": 42.0,
+        "line_num": 3,
+        "text": "result = sum_of_digits (user_number)"
+      },
+      {
+        "x": 150.0,
+        "y": 213.0,
+        "w": 773.0,
+        "h": 60.0,
+        "line_num": 4,
+        "text": "print (\"The sum of the digits is \", result)"
+      },
+      {
+        "x": 21.0,
+        "y": 345.0,
+        "w": 629.0,
+        "h": 41.0,
+        "line_num": 5,
+        "text": "def Sum_of_digits (user_ number):"
+      },
+      {
+        "x": 132.0,
+        "y": 448.0,
+        "w": 554.0,
+        "h": 37.0,
+        "line_num": 6,
+        "text": "number_str = Str (user_number)"
+      },
+      {
+        "x": 137.0,
+        "y": 496.0,
+        "w": 438.0,
+        "h": 47.0,
+        "line_num": 7,
+        "text": "digit-sum=0 # zero"
+      },
+      {
+        "x": 151.0,
+        "y": 591.0,
+        "w": 454.0,
+        "h": 38.0,
+        "line_num": 8,
+        "text": "for digit in number- str:"
+      },
+      {
+        "x": 245.0,
+        "y": 655.0,
+        "w": 413.0,
+        "h": 38.0,
+        "line_num": 9,
+        "text": "digit_sum + = int (digit)"
+      },
+      {
+        "x": 158.0,
+        "y": 725.0,
+        "w": 279.0,
+        "h": 36.0,
+        "line_num": 10,
+        "text": "return digit sum"
+      },
+      {
+        "x": 29.0,
+        "y": 837.0,
+        "w": 492.0,
+        "h": 45.0,
+        "line_num": 11,
+        "text": "if _name_ = \"_main_\":"
+      },
+      {
+        "x": 90.0,
+        "y": 883.0,
+        "w": 103.0,
+        "h": 28.0,
+        "line_num": 12,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 25,
+    "image_height": 3393,
+    "image_width": 2984,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 263.0,
+        "y": 39.0,
+        "w": 597.0,
+        "h": 83.0,
+        "line_num": 1,
+        "text": "def is-prime (n):"
+      },
+      {
+        "x": 423.0,
+        "y": 168.0,
+        "w": 91.0,
+        "h": 41.0,
+        "line_num": 2,
+        "text": "1104"
+      },
+      {
+        "x": 434.0,
+        "y": 240.0,
+        "w": 1471.0,
+        "h": 96.0,
+        "line_num": 3,
+        "text": "Returns True if n is prime, False otherwise"
+      },
+      {
+        "x": 435.0,
+        "y": 395.0,
+        "w": 79.0,
+        "h": 41.0,
+        "line_num": 4,
+        "text": "11011"
+      },
+      {
+        "x": 426.0,
+        "y": 487.0,
+        "w": 397.0,
+        "h": 81.0,
+        "line_num": 5,
+        "text": "if n < = 1 :"
+      },
+      {
+        "x": 606.0,
+        "y": 627.0,
+        "w": 461.0,
+        "h": 72.0,
+        "line_num": 6,
+        "text": "return False"
+      },
+      {
+        "x": 420.0,
+        "y": 752.0,
+        "w": 1117.0,
+        "h": 86.0,
+        "line_num": 7,
+        "text": "for i in range (2, int(n* 0.5) +1):"
+      },
+      {
+        "x": 552.0,
+        "y": 903.0,
+        "w": 571.0,
+        "h": 86.0,
+        "line_num": 8,
+        "text": "if n % i == 0."
+      },
+      {
+        "x": 725.0,
+        "y": 1068.0,
+        "w": 429.0,
+        "h": 71.0,
+        "line_num": 9,
+        "text": "return False"
+      },
+      {
+        "x": 427.0,
+        "y": 1166.0,
+        "w": 499.0,
+        "h": 127.0,
+        "line_num": 10,
+        "text": "return True"
+      },
+      {
+        "x": 281.0,
+        "y": 1481.0,
+        "w": 437.0,
+        "h": 80.0,
+        "line_num": 11,
+        "text": "def main () :"
+      },
+      {
+        "x": 491.0,
+        "y": 1609.0,
+        "w": 85.0,
+        "h": 44.0,
+        "line_num": 12,
+        "text": "11 /11"
+      },
+      {
+        "x": 457.0,
+        "y": 1694.0,
+        "w": 621.0,
+        "h": 134.0,
+        "line_num": 13,
+        "text": "The main function ."
+      },
+      {
+        "x": 477.0,
+        "y": 1846.0,
+        "w": 118.0,
+        "h": 39.0,
+        "line_num": 14,
+        "text": "/11.11"
+      },
+      {
+        "x": 474.0,
+        "y": 1934.0,
+        "w": 1157.0,
+        "h": 82.0,
+        "line_num": 15,
+        "text": "n = int ( input (\"Enter a number: \")"
+      },
+      {
+        "x": 470.0,
+        "y": 2057.0,
+        "w": 511.0,
+        "h": 88.0,
+        "line_num": 16,
+        "text": "if is-prime (n):"
+      },
+      {
+        "x": 589.0,
+        "y": 2186.0,
+        "w": 1057.0,
+        "h": 92.0,
+        "line_num": 17,
+        "text": "print (n, \" is a prime number. \")"
+      },
+      {
+        "x": 451.0,
+        "y": 2349.0,
+        "w": 178.0,
+        "h": 72.0,
+        "line_num": 18,
+        "text": "else :"
+      },
+      {
+        "x": 587.0,
+        "y": 2471.0,
+        "w": 1181.0,
+        "h": 84.0,
+        "line_num": 19,
+        "text": "print( n, \" is not a prime number. \")"
+      },
+      {
+        "x": 333.0,
+        "y": 2650.0,
+        "w": 87.0,
+        "h": 85.0,
+        "line_num": 20,
+        "text": "if"
+      },
+      {
+        "x": 462.0,
+        "y": 2678.0,
+        "w": 642.0,
+        "h": 80.0,
+        "line_num": 21,
+        "text": "-- name __ == \""
+      },
+      {
+        "x": 974.0,
+        "y": 2706.0,
+        "w": 503.0,
+        "h": 84.0,
+        "line_num": 22,
+        "text": "- - main __ :"
+      },
+      {
+        "x": 474.0,
+        "y": 2838.0,
+        "w": 210.0,
+        "h": 75.0,
+        "line_num": 23,
+        "text": "main ( )"
+      }
+    ]
+  },
+  {
+    "image_id": 26,
+    "image_height": 1804,
+    "image_width": 1712,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 50.0,
+        "y": 24.0,
+        "w": 778.0,
+        "h": 85.0,
+        "line_num": 1,
+        "text": "# Reverse String"
+      },
+      {
+        "x": 79.0,
+        "y": 183.0,
+        "w": 549.0,
+        "h": 91.0,
+        "line_num": 2,
+        "text": "def main ():"
+      },
+      {
+        "x": 259.0,
+        "y": 342.0,
+        "w": 1375.0,
+        "h": 113.0,
+        "line_num": 3,
+        "text": "str = input (\"Input a string: \")"
+      },
+      {
+        "x": 252.0,
+        "y": 528.0,
+        "w": 400.0,
+        "h": 76.0,
+        "line_num": 4,
+        "text": "ro-str= \""
+      },
+      {
+        "x": 235.0,
+        "y": 685.0,
+        "w": 577.0,
+        "h": 85.0,
+        "line_num": 5,
+        "text": "for i'm str:"
+      },
+      {
+        "x": 451.0,
+        "y": 862.0,
+        "w": 598.0,
+        "h": 77.0,
+        "line_num": 6,
+        "text": "r_ str = 1+ r_ str"
+      },
+      {
+        "x": 218.0,
+        "y": 1015.0,
+        "w": 577.0,
+        "h": 84.0,
+        "line_num": 7,
+        "text": "print (rostro)"
+      },
+      {
+        "x": 69.0,
+        "y": 1191.0,
+        "w": 999.0,
+        "h": 90.0,
+        "line_num": 8,
+        "text": "if_name _= \"_main_\":"
+      },
+      {
+        "x": 229.0,
+        "y": 1344.0,
+        "w": 301.0,
+        "h": 72.0,
+        "line_num": 9,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 27,
+    "image_height": 885,
+    "image_width": 1600,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 54.0,
+        "y": 56.0,
+        "w": 1531.0,
+        "h": 57.0,
+        "line_num": 1,
+        "text": "# Write a Python program to find the longest word in a given text"
+      },
+      {
+        "x": 45.0,
+        "y": 132.0,
+        "w": 303.0,
+        "h": 55.0,
+        "line_num": 2,
+        "text": "def main ():"
+      },
+      {
+        "x": 142.0,
+        "y": 184.0,
+        "w": 913.0,
+        "h": 60.0,
+        "line_num": 3,
+        "text": "sentence = input (\"Input a sentence: \")"
+      },
+      {
+        "x": 143.0,
+        "y": 260.0,
+        "w": 535.0,
+        "h": 53.0,
+        "line_num": 4,
+        "text": "list = sentence . split ( )"
+      },
+      {
+        "x": 147.0,
+        "y": 356.0,
+        "w": 272.0,
+        "h": 56.0,
+        "line_num": 5,
+        "text": "Lword = \" \""
+      },
+      {
+        "x": 137.0,
+        "y": 452.0,
+        "w": 447.0,
+        "h": 54.0,
+        "line_num": 6,
+        "text": "for word in List:"
+      },
+      {
+        "x": 240.0,
+        "y": 515.0,
+        "w": 706.0,
+        "h": 57.0,
+        "line_num": 7,
+        "text": "if len (word) > len (1-word):"
+      },
+      {
+        "x": 339.0,
+        "y": 598.0,
+        "w": 362.0,
+        "h": 54.0,
+        "line_num": 8,
+        "text": "1- word = word"
+      },
+      {
+        "x": 136.0,
+        "y": 680.0,
+        "w": 374.0,
+        "h": 60.0,
+        "line_num": 9,
+        "text": "print (1-word)"
+      },
+      {
+        "x": 82.0,
+        "y": 743.0,
+        "w": 582.0,
+        "h": 54.0,
+        "line_num": 10,
+        "text": "if _name=\"_main_\":"
+      },
+      {
+        "x": 162.0,
+        "y": 802.0,
+        "w": 170.0,
+        "h": 43.0,
+        "line_num": 11,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 28,
+    "image_height": 4000,
+    "image_width": 3000,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 92.0,
+        "y": 383.0,
+        "w": 2414.0,
+        "h": 152.0,
+        "line_num": 1,
+        "text": "det greatest_common_divisor(a,b) :"
+      },
+      {
+        "x": 399.0,
+        "y": 633.0,
+        "w": 2289.0,
+        "h": 120.0,
+        "line_num": 2,
+        "text": "smaller_ number = a if a <b else lo"
+      },
+      {
+        "x": 403.0,
+        "y": 775.0,
+        "w": 1398.0,
+        "h": 106.0,
+        "line_num": 3,
+        "text": "common_divisor= []"
+      },
+      {
+        "x": 418.0,
+        "y": 917.0,
+        "w": 2505.0,
+        "h": 114.0,
+        "line_num": 4,
+        "text": "for i in range (1, smaller_number +1):"
+      },
+      {
+        "x": 631.0,
+        "y": 1057.0,
+        "w": 1865.0,
+        "h": 113.0,
+        "line_num": 5,
+        "text": "if 9% i == 0 and 6% i == 0:"
+      },
+      {
+        "x": 811.0,
+        "y": 1221.0,
+        "w": 1864.0,
+        "h": 109.0,
+        "line_num": 6,
+        "text": "common_divisor. append (i)"
+      },
+      {
+        "x": 397.0,
+        "y": 1324.0,
+        "w": 1849.0,
+        "h": 105.0,
+        "line_num": 7,
+        "text": "return common_divisor [-1]"
+      }
+    ]
+  },
+  {
+    "image_id": 29,
+    "image_height": 2980,
+    "image_width": 2016,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 155.0,
+        "y": 131.0,
+        "w": 360.0,
+        "h": 91.0,
+        "line_num": 1,
+        "text": "def main ( ) :"
+      },
+      {
+        "x": 339.0,
+        "y": 270.0,
+        "w": 1567.0,
+        "h": 65.0,
+        "line_num": 2,
+        "text": "The program should determine whether the given year is a leap year"
+      },
+      {
+        "x": 340.0,
+        "y": 326.0,
+        "w": 1136.0,
+        "h": 69.0,
+        "line_num": 3,
+        "text": "( divisible by 4, divisible by 100 but also by 400)."
+      },
+      {
+        "x": 335.0,
+        "y": 471.0,
+        "w": 1555.0,
+        "h": 70.0,
+        "line_num": 4,
+        "text": "print ( \" This program will help you identify if a given year is a leap"
+      },
+      {
+        "x": 546.0,
+        "y": 542.0,
+        "w": 357.0,
+        "h": 60.0,
+        "line_num": 5,
+        "text": "year or not . \")"
+      },
+      {
+        "x": 335.0,
+        "y": 622.0,
+        "w": 215.0,
+        "h": 85.0,
+        "line_num": 6,
+        "text": "print ( \""
+      },
+      {
+        "x": 338.0,
+        "y": 704.0,
+        "w": 484.0,
+        "h": 68.0,
+        "line_num": 7,
+        "text": "identify_a_ leap year ()"
+      },
+      {
+        "x": 343.0,
+        "y": 780.0,
+        "w": 689.0,
+        "h": 65.0,
+        "line_num": 8,
+        "text": "ask _ for _ a _ new _year _ to _identify ( )"
+      },
+      {
+        "x": 161.0,
+        "y": 897.0,
+        "w": 624.0,
+        "h": 73.0,
+        "line_num": 9,
+        "text": "def identify_ a_ leap-year () :"
+      },
+      {
+        "x": 349.0,
+        "y": 983.0,
+        "w": 1121.0,
+        "h": 74.0,
+        "line_num": 10,
+        "text": "print (\"Please input a year below ( in number form). \")"
+      },
+      {
+        "x": 346.0,
+        "y": 1054.0,
+        "w": 587.0,
+        "h": 63.0,
+        "line_num": 11,
+        "text": "Year = int (input (\"Year:"
+      },
+      {
+        "x": 353.0,
+        "y": 1121.0,
+        "w": 272.0,
+        "h": 63.0,
+        "line_num": 12,
+        "text": "print (\" \")"
+      },
+      {
+        "x": 345.0,
+        "y": 1204.0,
+        "w": 1448.0,
+        "h": 75.0,
+        "line_num": 13,
+        "text": "if (Year % 4 == 0) or (Year % 100 == 0) or (year % 400 == 0) ;"
+      },
+      {
+        "x": 516.0,
+        "y": 1283.0,
+        "w": 1322.0,
+        "h": 85.0,
+        "line_num": 14,
+        "text": "print (\"The Year\" + str (Year) + \" \"+ \" is a leap year. \")"
+      },
+      {
+        "x": 340.0,
+        "y": 1405.0,
+        "w": 105.0,
+        "h": 56.0,
+        "line_num": 15,
+        "text": "else :"
+      },
+      {
+        "x": 518.0,
+        "y": 1450.0,
+        "w": 1399.0,
+        "h": 92.0,
+        "line_num": 16,
+        "text": "print ( \" the Year \" + str ( Year ) + \" \" + \" is not a leap year . \" )"
+      },
+      {
+        "x": 154.0,
+        "y": 1595.0,
+        "w": 918.0,
+        "h": 73.0,
+        "line_num": 17,
+        "text": "def ask-for-a-new year_ to _ identify ( ) :"
+      },
+      {
+        "x": 336.0,
+        "y": 1709.0,
+        "w": 263.0,
+        "h": 56.0,
+        "line_num": 18,
+        "text": "while True :"
+      },
+      {
+        "x": 506.0,
+        "y": 1782.0,
+        "w": 244.0,
+        "h": 67.0,
+        "line_num": 19,
+        "text": "print (\" \")"
+      },
+      {
+        "x": 511.0,
+        "y": 1847.0,
+        "w": 1390.0,
+        "h": 78.0,
+        "line_num": 20,
+        "text": "ask - input ( \" Do you want to identify a new year ? Yes / No : \" )"
+      },
+      {
+        "x": 508.0,
+        "y": 1921.0,
+        "w": 275.0,
+        "h": 60.0,
+        "line_num": 21,
+        "text": "print (\" \")"
+      },
+      {
+        "x": 511.0,
+        "y": 2004.0,
+        "w": 801.0,
+        "h": 65.0,
+        "line_num": 22,
+        "text": "if ask == \"Yes \" or ask == \"yes\":"
+      },
+      {
+        "x": 618.0,
+        "y": 2078.0,
+        "w": 542.0,
+        "h": 70.0,
+        "line_num": 23,
+        "text": "identify_ a _ leap - year ( )"
+      },
+      {
+        "x": 509.0,
+        "y": 2170.0,
+        "w": 788.0,
+        "h": 62.0,
+        "line_num": 24,
+        "text": "elif ask == \"No\" or ask = \"no\":"
+      },
+      {
+        "x": 605.0,
+        "y": 2245.0,
+        "w": 837.0,
+        "h": 73.0,
+        "line_num": 25,
+        "text": "print ( \" Thank you . See you again ! \")"
+      },
+      {
+        "x": 611.0,
+        "y": 2324.0,
+        "w": 124.0,
+        "h": 57.0,
+        "line_num": 26,
+        "text": "break"
+      },
+      {
+        "x": 505.0,
+        "y": 2407.0,
+        "w": 1469.0,
+        "h": 65.0,
+        "line_num": 27,
+        "text": "elif ask != \"Yes or ask ! = \"yes\" a ask != \"No\" or ask != \"no\"."
+      },
+      {
+        "x": 613.0,
+        "y": 2483.0,
+        "w": 1325.0,
+        "h": 78.0,
+        "line_num": 28,
+        "text": "print ( \" Wrong keyword . Please type the exact keyword . \")"
+      },
+      {
+        "x": 155.0,
+        "y": 2663.0,
+        "w": 43.0,
+        "h": 56.0,
+        "line_num": 29,
+        "text": "if"
+      },
+      {
+        "x": 202.0,
+        "y": 2674.0,
+        "w": 607.0,
+        "h": 63.0,
+        "line_num": 30,
+        "text": "_ name_ == \" __ main __ \":"
+      },
+      {
+        "x": 327.0,
+        "y": 2765.0,
+        "w": 186.0,
+        "h": 63.0,
+        "line_num": 31,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 30,
+    "image_height": 2447,
+    "image_width": 2798,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 268.0,
+        "y": 249.0,
+        "w": 782.0,
+        "h": 144.0,
+        "line_num": 1,
+        "text": "Sun = D"
+      },
+      {
+        "x": 241.0,
+        "y": 510.0,
+        "w": 1954.0,
+        "h": 197.0,
+        "line_num": 2,
+        "text": "number = input ()"
+      },
+      {
+        "x": 214.0,
+        "y": 861.0,
+        "w": 2085.0,
+        "h": 276.0,
+        "line_num": 3,
+        "text": "for i in number :"
+      },
+      {
+        "x": 831.0,
+        "y": 1226.0,
+        "w": 1590.0,
+        "h": 190.0,
+        "line_num": 4,
+        "text": "Sun + = int (i)"
+      },
+      {
+        "x": 234.0,
+        "y": 1619.0,
+        "w": 1304.0,
+        "h": 297.0,
+        "line_num": 5,
+        "text": "Print (Sum)"
+      }
+    ]
+  },
+  {
+    "image_id": 31,
+    "image_height": 2096,
+    "image_width": 2957,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 138.0,
+        "y": 216.0,
+        "w": 1396.0,
+        "h": 210.0,
+        "line_num": 1,
+        "text": "def factorial (n) :"
+      },
+      {
+        "x": 541.0,
+        "y": 490.0,
+        "w": 809.0,
+        "h": 157.0,
+        "line_num": 2,
+        "text": "if n <= 1 :"
+      },
+      {
+        "x": 830.0,
+        "y": 697.0,
+        "w": 585.0,
+        "h": 128.0,
+        "line_num": 3,
+        "text": "Return 1"
+      },
+      {
+        "x": 578.0,
+        "y": 897.0,
+        "w": 318.0,
+        "h": 123.0,
+        "line_num": 4,
+        "text": "else :"
+      },
+      {
+        "x": 884.0,
+        "y": 995.0,
+        "w": 1802.0,
+        "h": 145.0,
+        "line_num": 5,
+        "text": "Return factorial (n-1) * h"
+      },
+      {
+        "x": 146.0,
+        "y": 1428.0,
+        "w": 1924.0,
+        "h": 171.0,
+        "line_num": 6,
+        "text": "Print (factorial (int (input ())))"
+      }
+    ]
+  },
+  {
+    "image_id": 32,
+    "image_height": 1517,
+    "image_width": 2983,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 145.0,
+        "y": 103.0,
+        "w": 1109.0,
+        "h": 124.0,
+        "line_num": 1,
+        "text": "Year = int (input)"
+      },
+      {
+        "x": 153.0,
+        "y": 381.0,
+        "w": 2735.0,
+        "h": 137.0,
+        "line_num": 2,
+        "text": "if year % n == 4 and year 1/ 140 != / or Year / 400 == 0 ;"
+      },
+      {
+        "x": 457.0,
+        "y": 578.0,
+        "w": 653.0,
+        "h": 144.0,
+        "line_num": 3,
+        "text": "Print (true)"
+      },
+      {
+        "x": 173.0,
+        "y": 852.0,
+        "w": 269.0,
+        "h": 103.0,
+        "line_num": 4,
+        "text": "else :"
+      },
+      {
+        "x": 452.0,
+        "y": 999.0,
+        "w": 618.0,
+        "h": 128.0,
+        "line_num": 5,
+        "text": "Print (False)"
+      }
+    ]
+  },
+  {
+    "image_id": 33,
+    "image_height": 1602,
+    "image_width": 2962,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 189.0,
+        "y": 165.0,
+        "w": 1167.0,
+        "h": 155.0,
+        "line_num": 1,
+        "text": "Word = input ()"
+      },
+      {
+        "x": 199.0,
+        "y": 582.0,
+        "w": 2650.0,
+        "h": 142.0,
+        "line_num": 2,
+        "text": "Word = \"1\". join ([ i for i in word[ -]"
+      },
+      {
+        "x": 223.0,
+        "y": 937.0,
+        "w": 781.0,
+        "h": 196.0,
+        "line_num": 3,
+        "text": "Print (Word)"
+      }
+    ]
+  },
+  {
+    "image_id": 34,
+    "image_height": 1894,
+    "image_width": 2840,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 111.0,
+        "y": 128.0,
+        "w": 1250.0,
+        "h": 157.0,
+        "line_num": 1,
+        "text": "list 1 = [ 1, 2, 3, 4]"
+      },
+      {
+        "x": 153.0,
+        "y": 368.0,
+        "w": 1148.0,
+        "h": 198.0,
+        "line_num": 2,
+        "text": "list 2 = [ 3, 4, 5, 6 ]"
+      },
+      {
+        "x": 136.0,
+        "y": 834.0,
+        "w": 2450.0,
+        "h": 189.0,
+        "line_num": 3,
+        "text": "list 3 = Ji por i in list 1 if i in listz]"
+      },
+      {
+        "x": 153.0,
+        "y": 1192.0,
+        "w": 682.0,
+        "h": 166.0,
+        "line_num": 4,
+        "text": "Print (list 3)"
+      }
+    ]
+  },
+  {
+    "image_id": 35,
+    "image_height": 1621,
+    "image_width": 2971,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 108.0,
+        "y": 159.0,
+        "w": 2078.0,
+        "h": 214.0,
+        "line_num": 1,
+        "text": "list 1 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+      },
+      {
+        "x": 146.0,
+        "y": 602.0,
+        "w": 2714.0,
+        "h": 170.0,
+        "line_num": 2,
+        "text": "even = [\u00e8 for i in list1 if i /2=]"
+      },
+      {
+        "x": 147.0,
+        "y": 877.0,
+        "w": 906.0,
+        "h": 167.0,
+        "line_num": 3,
+        "text": "Print ( even)"
+      }
+    ]
+  },
+  {
+    "image_id": 36,
+    "image_height": 1696,
+    "image_width": 2260,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 122.0,
+        "y": 166.0,
+        "w": 540.0,
+        "h": 95.0,
+        "line_num": 1,
+        "text": "def main ():"
+      },
+      {
+        "x": 318.0,
+        "y": 329.0,
+        "w": 895.0,
+        "h": 85.0,
+        "line_num": 2,
+        "text": "year = int (input()"
+      },
+      {
+        "x": 319.0,
+        "y": 457.0,
+        "w": 1785.0,
+        "h": 97.0,
+        "line_num": 3,
+        "text": "if ( year % 4 == 0 and year % 100 ! = 0):"
+      },
+      {
+        "x": 549.0,
+        "y": 603.0,
+        "w": 614.0,
+        "h": 98.0,
+        "line_num": 4,
+        "text": "print (\"True\")"
+      },
+      {
+        "x": 343.0,
+        "y": 740.0,
+        "w": 1841.0,
+        "h": 105.0,
+        "line_num": 5,
+        "text": "elif (year % 100 == 0 and year % 400=0):"
+      },
+      {
+        "x": 574.0,
+        "y": 895.0,
+        "w": 613.0,
+        "h": 99.0,
+        "line_num": 6,
+        "text": "print (\"True\")"
+      },
+      {
+        "x": 339.0,
+        "y": 1046.0,
+        "w": 262.0,
+        "h": 93.0,
+        "line_num": 7,
+        "text": "else:"
+      },
+      {
+        "x": 592.0,
+        "y": 1158.0,
+        "w": 644.0,
+        "h": 104.0,
+        "line_num": 8,
+        "text": "print (\"False\")"
+      },
+      {
+        "x": 121.0,
+        "y": 1338.0,
+        "w": 104.0,
+        "h": 83.0,
+        "line_num": 9,
+        "text": "if"
+      },
+      {
+        "x": 226.0,
+        "y": 1354.0,
+        "w": 1211.0,
+        "h": 88.0,
+        "line_num": 10,
+        "text": "__ name _== \" __ main_\":"
+      },
+      {
+        "x": 349.0,
+        "y": 1505.0,
+        "w": 317.0,
+        "h": 74.0,
+        "line_num": 11,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 37,
+    "image_height": 4032,
+    "image_width": 3024,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 313.0,
+        "y": 48.0,
+        "w": 1497.0,
+        "h": 76.0,
+        "line_num": 1,
+        "text": "from karel. stanford kavel import *"
+      },
+      {
+        "x": 331.0,
+        "y": 166.0,
+        "w": 522.0,
+        "h": 62.0,
+        "line_num": 2,
+        "text": "def main ():"
+      },
+      {
+        "x": 531.0,
+        "y": 267.0,
+        "w": 599.0,
+        "h": 69.0,
+        "line_num": 3,
+        "text": "build-column ( )"
+      },
+      {
+        "x": 541.0,
+        "y": 360.0,
+        "w": 374.0,
+        "h": 76.0,
+        "line_num": 4,
+        "text": "Step -up ( )"
+      },
+      {
+        "x": 551.0,
+        "y": 479.0,
+        "w": 596.0,
+        "h": 75.0,
+        "line_num": 5,
+        "text": "build - column ()"
+      },
+      {
+        "x": 557.0,
+        "y": 606.0,
+        "w": 358.0,
+        "h": 74.0,
+        "line_num": 6,
+        "text": "Step-up()"
+      },
+      {
+        "x": 567.0,
+        "y": 726.0,
+        "w": 616.0,
+        "h": 74.0,
+        "line_num": 7,
+        "text": "build- column ( )"
+      },
+      {
+        "x": 574.0,
+        "y": 862.0,
+        "w": 358.0,
+        "h": 75.0,
+        "line_num": 8,
+        "text": "Step-up()"
+      },
+      {
+        "x": 579.0,
+        "y": 988.0,
+        "w": 645.0,
+        "h": 76.0,
+        "line_num": 9,
+        "text": "build - column ()"
+      },
+      {
+        "x": 338.0,
+        "y": 1147.0,
+        "w": 128.0,
+        "h": 68.0,
+        "line_num": 10,
+        "text": "def"
+      },
+      {
+        "x": 577.0,
+        "y": 1157.0,
+        "w": 711.0,
+        "h": 80.0,
+        "line_num": 11,
+        "text": "build - column ( ) :"
+      },
+      {
+        "x": 566.0,
+        "y": 1296.0,
+        "w": 510.0,
+        "h": 76.0,
+        "line_num": 12,
+        "text": "turn - left ( )"
+      },
+      {
+        "x": 580.0,
+        "y": 1423.0,
+        "w": 608.0,
+        "h": 77.0,
+        "line_num": 13,
+        "text": "build - beeper ( )"
+      },
+      {
+        "x": 591.0,
+        "y": 1550.0,
+        "w": 602.0,
+        "h": 79.0,
+        "line_num": 14,
+        "text": "build - beeper ( )"
+      },
+      {
+        "x": 588.0,
+        "y": 1682.0,
+        "w": 604.0,
+        "h": 75.0,
+        "line_num": 15,
+        "text": "build - beeper ( )"
+      },
+      {
+        "x": 599.0,
+        "y": 1798.0,
+        "w": 582.0,
+        "h": 74.0,
+        "line_num": 16,
+        "text": "build - beeper ( )"
+      },
+      {
+        "x": 599.0,
+        "y": 1919.0,
+        "w": 527.0,
+        "h": 71.0,
+        "line_num": 17,
+        "text": "put - beeper ()"
+      },
+      {
+        "x": 593.0,
+        "y": 2038.0,
+        "w": 452.0,
+        "h": 69.0,
+        "line_num": 18,
+        "text": "go - back ()"
+      },
+      {
+        "x": 593.0,
+        "y": 2146.0,
+        "w": 470.0,
+        "h": 75.0,
+        "line_num": 19,
+        "text": "turn- left ( )"
+      },
+      {
+        "x": 355.0,
+        "y": 2305.0,
+        "w": 125.0,
+        "h": 70.0,
+        "line_num": 20,
+        "text": "def"
+      },
+      {
+        "x": 590.0,
+        "y": 2291.0,
+        "w": 650.0,
+        "h": 76.0,
+        "line_num": 21,
+        "text": "build - beeper ( ):"
+      },
+      {
+        "x": 612.0,
+        "y": 2414.0,
+        "w": 539.0,
+        "h": 75.0,
+        "line_num": 22,
+        "text": "put- beeper ( )"
+      },
+      {
+        "x": 613.0,
+        "y": 2544.0,
+        "w": 272.0,
+        "h": 54.0,
+        "line_num": 23,
+        "text": "move ()"
+      },
+      {
+        "x": 370.0,
+        "y": 2668.0,
+        "w": 128.0,
+        "h": 72.0,
+        "line_num": 24,
+        "text": "det"
+      },
+      {
+        "x": 625.0,
+        "y": 2682.0,
+        "w": 488.0,
+        "h": 73.0,
+        "line_num": 25,
+        "text": "go - back ():"
+      },
+      {
+        "x": 627.0,
+        "y": 2800.0,
+        "w": 611.0,
+        "h": 68.0,
+        "line_num": 26,
+        "text": "turn- around ( )"
+      },
+      {
+        "x": 630.0,
+        "y": 2919.0,
+        "w": 400.0,
+        "h": 72.0,
+        "line_num": 27,
+        "text": "Step -up ()"
+      },
+      {
+        "x": 394.0,
+        "y": 3068.0,
+        "w": 126.0,
+        "h": 67.0,
+        "line_num": 28,
+        "text": "dex"
+      },
+      {
+        "x": 611.0,
+        "y": 3061.0,
+        "w": 653.0,
+        "h": 71.0,
+        "line_num": 29,
+        "text": "turn- around ( ) :"
+      },
+      {
+        "x": 626.0,
+        "y": 3167.0,
+        "w": 483.0,
+        "h": 67.0,
+        "line_num": 30,
+        "text": "turn - left ()"
+      },
+      {
+        "x": 630.0,
+        "y": 3266.0,
+        "w": 490.0,
+        "h": 67.0,
+        "line_num": 31,
+        "text": "turn - left ()"
+      },
+      {
+        "x": 399.0,
+        "y": 3387.0,
+        "w": 132.0,
+        "h": 67.0,
+        "line_num": 32,
+        "text": "dex"
+      },
+      {
+        "x": 645.0,
+        "y": 3383.0,
+        "w": 446.0,
+        "h": 72.0,
+        "line_num": 33,
+        "text": "step -up():"
+      },
+      {
+        "x": 665.0,
+        "y": 3494.0,
+        "w": 265.0,
+        "h": 60.0,
+        "line_num": 34,
+        "text": "move ( )"
+      },
+      {
+        "x": 660.0,
+        "y": 3572.0,
+        "w": 264.0,
+        "h": 54.0,
+        "line_num": 35,
+        "text": "move ( )"
+      },
+      {
+        "x": 664.0,
+        "y": 3660.0,
+        "w": 278.0,
+        "h": 58.0,
+        "line_num": 36,
+        "text": "move ( )"
+      },
+      {
+        "x": 673.0,
+        "y": 3739.0,
+        "w": 292.0,
+        "h": 58.0,
+        "line_num": 37,
+        "text": "move ( )"
+      },
+      {
+        "x": 407.0,
+        "y": 3836.0,
+        "w": 1187.0,
+        "h": 79.0,
+        "line_num": 38,
+        "text": "if - name _ = = - main _:"
+      },
+      {
+        "x": 641.0,
+        "y": 3940.0,
+        "w": 304.0,
+        "h": 65.0,
+        "line_num": 39,
+        "text": "main ( )"
+      }
+    ]
+  },
+  {
+    "image_id": 38,
+    "image_height": 1400,
+    "image_width": 1050,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 66.0,
+        "y": 58.0,
+        "w": 302.0,
+        "h": 56.0,
+        "line_num": 1,
+        "text": "def main () ;"
+      },
+      {
+        "x": 170.0,
+        "y": 136.0,
+        "w": 835.0,
+        "h": 57.0,
+        "line_num": 2,
+        "text": "input_ string = input ( Input string:')"
+      },
+      {
+        "x": 166.0,
+        "y": 214.0,
+        "w": 230.0,
+        "h": 44.0,
+        "line_num": 3,
+        "text": "ret = \" \""
+      },
+      {
+        "x": 170.0,
+        "y": 280.0,
+        "w": 580.0,
+        "h": 57.0,
+        "line_num": 4,
+        "text": "for ch in input string"
+      },
+      {
+        "x": 273.0,
+        "y": 359.0,
+        "w": 604.0,
+        "h": 58.0,
+        "line_num": 5,
+        "text": "ref = ret + ch.upper()"
+      },
+      {
+        "x": 148.0,
+        "y": 455.0,
+        "w": 229.0,
+        "h": 61.0,
+        "line_num": 6,
+        "text": "print ret"
+      },
+      {
+        "x": 50.0,
+        "y": 587.0,
+        "w": 461.0,
+        "h": 70.0,
+        "line_num": 7,
+        "text": "if __ name __ ="
+      },
+      {
+        "x": 560.0,
+        "y": 560.0,
+        "w": 20.0,
+        "h": 22.0,
+        "line_num": 8,
+        "text": "1"
+      },
+      {
+        "x": 843.0,
+        "y": 543.0,
+        "w": 18.0,
+        "h": 19.0,
+        "line_num": 9,
+        "text": "1"
+      },
+      {
+        "x": 648.0,
+        "y": 578.0,
+        "w": 102.0,
+        "h": 32.0,
+        "line_num": 10,
+        "text": "main"
+      },
+      {
+        "x": 584.0,
+        "y": 605.0,
+        "w": 26.0,
+        "h": 17.0,
+        "line_num": 11,
+        "text": "-"
+      },
+      {
+        "x": 610.0,
+        "y": 592.0,
+        "w": 50.0,
+        "h": 29.0,
+        "line_num": 12,
+        "text": "-"
+      },
+      {
+        "x": 869.0,
+        "y": 555.0,
+        "w": 38.0,
+        "h": 30.0,
+        "line_num": 13,
+        "text": "-"
+      },
+      {
+        "x": 755.0,
+        "y": 586.0,
+        "w": 87.0,
+        "h": 24.0,
+        "line_num": 14,
+        "text": "--"
+      },
+      {
+        "x": 143.0,
+        "y": 672.0,
+        "w": 183.0,
+        "h": 52.0,
+        "line_num": 15,
+        "text": "main ( )"
+      }
+    ]
+  },
+  {
+    "image_id": 39,
+    "image_height": 2048,
+    "image_width": 1536,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 289.0,
+        "y": 182.0,
+        "w": 860.0,
+        "h": 76.0,
+        "line_num": 1,
+        "text": "from Karel. Stanford Karel import"
+      },
+      {
+        "x": 297.0,
+        "y": 393.0,
+        "w": 343.0,
+        "h": 62.0,
+        "line_num": 2,
+        "text": "def main ():"
+      },
+      {
+        "x": 429.0,
+        "y": 508.0,
+        "w": 495.0,
+        "h": 57.0,
+        "line_num": 3,
+        "text": "move_to_beeper ()"
+      },
+      {
+        "x": 446.0,
+        "y": 611.0,
+        "w": 367.0,
+        "h": 59.0,
+        "line_num": 4,
+        "text": "pick_beeper ()"
+      },
+      {
+        "x": 456.0,
+        "y": 692.0,
+        "w": 428.0,
+        "h": 71.0,
+        "line_num": 5,
+        "text": "turn-around()"
+      },
+      {
+        "x": 462.0,
+        "y": 799.0,
+        "w": 524.0,
+        "h": 63.0,
+        "line_num": 6,
+        "text": "return_to_start ()"
+      },
+      {
+        "x": 305.0,
+        "y": 987.0,
+        "w": 637.0,
+        "h": 75.0,
+        "line_num": 7,
+        "text": "def more_to_ beeper () :"
+      },
+      {
+        "x": 432.0,
+        "y": 1089.0,
+        "w": 658.0,
+        "h": 72.0,
+        "line_num": 8,
+        "text": "While front-is-clear ();"
+      },
+      {
+        "x": 585.0,
+        "y": 1205.0,
+        "w": 128.0,
+        "h": 42.0,
+        "line_num": 9,
+        "text": "move"
+      },
+      {
+        "x": 450.0,
+        "y": 1274.0,
+        "w": 353.0,
+        "h": 73.0,
+        "line_num": 10,
+        "text": "turn_right ()"
+      },
+      {
+        "x": 462.0,
+        "y": 1389.0,
+        "w": 193.0,
+        "h": 59.0,
+        "line_num": 11,
+        "text": "more ()"
+      },
+      {
+        "x": 468.0,
+        "y": 1470.0,
+        "w": 313.0,
+        "h": 74.0,
+        "line_num": 12,
+        "text": "turn-left ()"
+      },
+      {
+        "x": 474.0,
+        "y": 1583.0,
+        "w": 183.0,
+        "h": 52.0,
+        "line_num": 13,
+        "text": "Nuove ()"
+      },
+      {
+        "x": 334.0,
+        "y": 1743.0,
+        "w": 611.0,
+        "h": 73.0,
+        "line_num": 14,
+        "text": "def turu_around ();"
+      },
+      {
+        "x": 491.0,
+        "y": 1842.0,
+        "w": 358.0,
+        "h": 77.0,
+        "line_num": 15,
+        "text": "tura_left ()"
+      },
+      {
+        "x": 511.0,
+        "y": 1938.0,
+        "w": 325.0,
+        "h": 77.0,
+        "line_num": 16,
+        "text": "turn left ()"
+      }
+    ]
+  },
+  {
+    "image_id": 40,
+    "image_height": 3936,
+    "image_width": 1980,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 214.0,
+        "y": 72.0,
+        "w": 1087.0,
+        "h": 73.0,
+        "line_num": 1,
+        "text": "from kanel stanfordkard import *"
+      },
+      {
+        "x": 212.0,
+        "y": 254.0,
+        "w": 422.0,
+        "h": 71.0,
+        "line_num": 2,
+        "text": "det main ():"
+      },
+      {
+        "x": 368.0,
+        "y": 346.0,
+        "w": 840.0,
+        "h": 69.0,
+        "line_num": 3,
+        "text": "while front_is_clear ():"
+      },
+      {
+        "x": 514.0,
+        "y": 426.0,
+        "w": 405.0,
+        "h": 75.0,
+        "line_num": 4,
+        "text": "bill_tower ( )"
+      },
+      {
+        "x": 206.0,
+        "y": 634.0,
+        "w": 618.0,
+        "h": 76.0,
+        "line_num": 5,
+        "text": "det fill_tower():"
+      },
+      {
+        "x": 376.0,
+        "y": 728.0,
+        "w": 864.0,
+        "h": 70.0,
+        "line_num": 6,
+        "text": "while front_is_clean ():"
+      },
+      {
+        "x": 517.0,
+        "y": 821.0,
+        "w": 461.0,
+        "h": 72.0,
+        "line_num": 7,
+        "text": "put-beeper ()"
+      },
+      {
+        "x": 524.0,
+        "y": 922.0,
+        "w": 237.0,
+        "h": 58.0,
+        "line_num": 8,
+        "text": "move ()"
+      },
+      {
+        "x": 372.0,
+        "y": 1017.0,
+        "w": 450.0,
+        "h": 71.0,
+        "line_num": 9,
+        "text": "put_beeper ()"
+      },
+      {
+        "x": 381.0,
+        "y": 1109.0,
+        "w": 607.0,
+        "h": 68.0,
+        "line_num": 10,
+        "text": "column_return ()"
+      },
+      {
+        "x": 196.0,
+        "y": 1293.0,
+        "w": 814.0,
+        "h": 84.0,
+        "line_num": 11,
+        "text": "def column_return ():"
+      },
+      {
+        "x": 381.0,
+        "y": 1399.0,
+        "w": 969.0,
+        "h": 74.0,
+        "line_num": 12,
+        "text": "while front_ is_blocked ():"
+      },
+      {
+        "x": 535.0,
+        "y": 1496.0,
+        "w": 499.0,
+        "h": 73.0,
+        "line_num": 13,
+        "text": "turn-around()"
+      },
+      {
+        "x": 383.0,
+        "y": 1596.0,
+        "w": 894.0,
+        "h": 78.0,
+        "line_num": 14,
+        "text": "while front_is_clear () :"
+      },
+      {
+        "x": 552.0,
+        "y": 1707.0,
+        "w": 250.0,
+        "h": 58.0,
+        "line_num": 15,
+        "text": "move ( )"
+      },
+      {
+        "x": 390.0,
+        "y": 1799.0,
+        "w": 515.0,
+        "h": 65.0,
+        "line_num": 16,
+        "text": "next_tower ()"
+      },
+      {
+        "x": 203.0,
+        "y": 1989.0,
+        "w": 741.0,
+        "h": 72.0,
+        "line_num": 17,
+        "text": "det turn-around ():"
+      },
+      {
+        "x": 395.0,
+        "y": 2088.0,
+        "w": 721.0,
+        "h": 72.0,
+        "line_num": 18,
+        "text": "for i in range (2) :"
+      },
+      {
+        "x": 571.0,
+        "y": 2182.0,
+        "w": 411.0,
+        "h": 73.0,
+        "line_num": 19,
+        "text": "turn-left ( )"
+      },
+      {
+        "x": 196.0,
+        "y": 2379.0,
+        "w": 102.0,
+        "h": 72.0,
+        "line_num": 20,
+        "text": "det"
+      },
+      {
+        "x": 381.0,
+        "y": 2383.0,
+        "w": 559.0,
+        "h": 70.0,
+        "line_num": 21,
+        "text": "next_tower ():"
+      },
+      {
+        "x": 395.0,
+        "y": 2480.0,
+        "w": 822.0,
+        "h": 84.0,
+        "line_num": 22,
+        "text": "if right_is_clean ():"
+      },
+      {
+        "x": 577.0,
+        "y": 2580.0,
+        "w": 464.0,
+        "h": 76.0,
+        "line_num": 23,
+        "text": "turn-right ( )"
+      },
+      {
+        "x": 576.0,
+        "y": 2689.0,
+        "w": 246.0,
+        "h": 55.0,
+        "line_num": 24,
+        "text": "move ()"
+      },
+      {
+        "x": 591.0,
+        "y": 2775.0,
+        "w": 468.0,
+        "h": 82.0,
+        "line_num": 25,
+        "text": "turn-right ()"
+      },
+      {
+        "x": 388.0,
+        "y": 2880.0,
+        "w": 178.0,
+        "h": 60.0,
+        "line_num": 26,
+        "text": "else :"
+      },
+      {
+        "x": 584.0,
+        "y": 2974.0,
+        "w": 536.0,
+        "h": 75.0,
+        "line_num": 27,
+        "text": "turn-around ()"
+      },
+      {
+        "x": 590.0,
+        "y": 3072.0,
+        "w": 888.0,
+        "h": 79.0,
+        "line_num": 28,
+        "text": "while front_is_dear ():"
+      },
+      {
+        "x": 776.0,
+        "y": 3179.0,
+        "w": 249.0,
+        "h": 64.0,
+        "line_num": 29,
+        "text": "move( )"
+      },
+      {
+        "x": 193.0,
+        "y": 3365.0,
+        "w": 686.0,
+        "h": 85.0,
+        "line_num": 30,
+        "text": "def turn-right ():"
+      },
+      {
+        "x": 405.0,
+        "y": 3462.0,
+        "w": 679.0,
+        "h": 83.0,
+        "line_num": 31,
+        "text": "for i in range (3):"
+      },
+      {
+        "x": 590.0,
+        "y": 3562.0,
+        "w": 428.0,
+        "h": 76.0,
+        "line_num": 32,
+        "text": "turn_left ()"
+      },
+      {
+        "x": 870.0,
+        "y": 3751.0,
+        "w": 1.0,
+        "h": 3.0,
+        "line_num": 33,
+        "text": "-"
+      },
+      {
+        "x": 204.0,
+        "y": 3762.0,
+        "w": 56.0,
+        "h": 82.0,
+        "line_num": 34,
+        "text": "if"
+      },
+      {
+        "x": 297.0,
+        "y": 3785.0,
+        "w": 560.0,
+        "h": 59.0,
+        "line_num": 35,
+        "text": "- name _ = ="
+      },
+      {
+        "x": 955.0,
+        "y": 3749.0,
+        "w": 352.0,
+        "h": 114.0,
+        "line_num": 36,
+        "text": "main _'"
+      },
+      {
+        "x": 416.0,
+        "y": 3848.0,
+        "w": 272.0,
+        "h": 68.0,
+        "line_num": 37,
+        "text": "main ()"
+      }
+    ]
+  },
+  {
+    "image_id": 41,
+    "image_height": 2456,
+    "image_width": 2303,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 66.0,
+        "y": 31.0,
+        "w": 1573.0,
+        "h": 130.0,
+        "line_num": 1,
+        "text": "def filter-string-a (string);"
+      },
+      {
+        "x": 381.0,
+        "y": 304.0,
+        "w": 845.0,
+        "h": 107.0,
+        "line_num": 2,
+        "text": "string. sort ()"
+      },
+      {
+        "x": 403.0,
+        "y": 493.0,
+        "w": 1383.0,
+        "h": 133.0,
+        "line_num": 3,
+        "text": "filtered- string-list = []"
+      },
+      {
+        "x": 401.0,
+        "y": 744.0,
+        "w": 1176.0,
+        "h": 155.0,
+        "line_num": 4,
+        "text": "fore stry in string:"
+      },
+      {
+        "x": 667.0,
+        "y": 972.0,
+        "w": 1394.0,
+        "h": 130.0,
+        "line_num": 5,
+        "text": "if stru startswith (\"a\") :"
+      },
+      {
+        "x": 928.0,
+        "y": 1169.0,
+        "w": 1302.0,
+        "h": 126.0,
+        "line_num": 6,
+        "text": "filtered-string-lint: append"
+      },
+      {
+        "x": 2061.0,
+        "y": 1260.0,
+        "w": 174.0,
+        "h": 118.0,
+        "line_num": 7,
+        "text": "(strc)"
+      },
+      {
+        "x": 403.0,
+        "y": 1406.0,
+        "w": 1481.0,
+        "h": 125.0,
+        "line_num": 8,
+        "text": "returin filtered-string-list"
+      },
+      {
+        "x": 114.0,
+        "y": 1678.0,
+        "w": 2174.0,
+        "h": 143.0,
+        "line_num": 9,
+        "text": "input_string = \\\"apple\", \"bunana\", \"avacado"
+      },
+      {
+        "x": 1067.0,
+        "y": 1881.0,
+        "w": 1032.0,
+        "h": 138.0,
+        "line_num": 10,
+        "text": "\"chevery \" \"apriest \"]"
+      },
+      {
+        "x": 123.0,
+        "y": 2070.0,
+        "w": 2115.0,
+        "h": 148.0,
+        "line_num": 11,
+        "text": "Output = filter- string-a (input_ string)"
+      },
+      {
+        "x": 132.0,
+        "y": 2269.0,
+        "w": 813.0,
+        "h": 132.0,
+        "line_num": 12,
+        "text": "print (output)"
+      }
+    ]
+  },
+  {
+    "image_id": 42,
+    "image_height": 4032,
+    "image_width": 2268,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 255.0,
+        "y": 1006.0,
+        "w": 588.0,
+        "h": 137.0,
+        "line_num": 1,
+        "text": "def main :"
+      },
+      {
+        "x": 489.0,
+        "y": 1176.0,
+        "w": 1387.0,
+        "h": 140.0,
+        "line_num": 2,
+        "text": "While front- is-clear():"
+      },
+      {
+        "x": 738.0,
+        "y": 1376.0,
+        "w": 446.0,
+        "h": 123.0,
+        "line_num": 3,
+        "text": "move ( )"
+      },
+      {
+        "x": 466.0,
+        "y": 1521.0,
+        "w": 1354.0,
+        "h": 141.0,
+        "line_num": 4,
+        "text": "if front_is_blocked ()."
+      },
+      {
+        "x": 670.0,
+        "y": 1705.0,
+        "w": 852.0,
+        "h": 115.0,
+        "line_num": 5,
+        "text": "turn-around ()"
+      },
+      {
+        "x": 477.0,
+        "y": 1880.0,
+        "w": 464.0,
+        "h": 106.0,
+        "line_num": 6,
+        "text": "move ()"
+      },
+      {
+        "x": 484.0,
+        "y": 2032.0,
+        "w": 678.0,
+        "h": 128.0,
+        "line_num": 7,
+        "text": "turn_left ( )"
+      },
+      {
+        "x": 477.0,
+        "y": 2189.0,
+        "w": 491.0,
+        "h": 132.0,
+        "line_num": 8,
+        "text": "move ()"
+      },
+      {
+        "x": 486.0,
+        "y": 2360.0,
+        "w": 903.0,
+        "h": 133.0,
+        "line_num": 9,
+        "text": "pick-beeper ( )"
+      },
+      {
+        "x": 485.0,
+        "y": 2519.0,
+        "w": 761.0,
+        "h": 136.0,
+        "line_num": 10,
+        "text": "turn- left ()"
+      },
+      {
+        "x": 485.0,
+        "y": 2678.0,
+        "w": 827.0,
+        "h": 132.0,
+        "line_num": 11,
+        "text": "turn_left ()"
+      },
+      {
+        "x": 488.0,
+        "y": 2834.0,
+        "w": 1511.0,
+        "h": 144.0,
+        "line_num": 12,
+        "text": "while front_is_ clear ()!"
+      },
+      {
+        "x": 744.0,
+        "y": 3012.0,
+        "w": 476.0,
+        "h": 129.0,
+        "line_num": 13,
+        "text": "move ()"
+      },
+      {
+        "x": 487.0,
+        "y": 3165.0,
+        "w": 1315.0,
+        "h": 146.0,
+        "line_num": 14,
+        "text": "if front_ is_ blocked ( )."
+      },
+      {
+        "x": 722.0,
+        "y": 3319.0,
+        "w": 833.0,
+        "h": 129.0,
+        "line_num": 15,
+        "text": "turn - around ( )"
+      },
+      {
+        "x": 510.0,
+        "y": 3492.0,
+        "w": 480.0,
+        "h": 121.0,
+        "line_num": 16,
+        "text": "move ( )"
+      },
+      {
+        "x": 538.0,
+        "y": 3576.0,
+        "w": 936.0,
+        "h": 120.0,
+        "line_num": 17,
+        "text": "turn around ()"
+      },
+      {
+        "x": 182.0,
+        "y": 3735.0,
+        "w": 1060.0,
+        "h": 122.0,
+        "line_num": 18,
+        "text": "def turn-around ()."
+      },
+      {
+        "x": 493.0,
+        "y": 3832.0,
+        "w": 1027.0,
+        "h": 102.0,
+        "line_num": 19,
+        "text": "for i in range (3)"
+      },
+      {
+        "x": 1092.0,
+        "y": 3931.0,
+        "w": 422.0,
+        "h": 97.0,
+        "line_num": 20,
+        "text": "Left ()"
+      }
+    ]
+  },
+  {
+    "image_id": 43,
+    "image_height": 1600,
+    "image_width": 1303,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 110.0,
+        "y": 17.0,
+        "w": 670.0,
+        "h": 66.0,
+        "line_num": 1,
+        "text": "def is-leap year (year):"
+      },
+      {
+        "x": 144.0,
+        "y": 143.0,
+        "w": 467.0,
+        "h": 56.0,
+        "line_num": 2,
+        "text": "if year % 4 == 0'"
+      },
+      {
+        "x": 192.0,
+        "y": 203.0,
+        "w": 509.0,
+        "h": 55.0,
+        "line_num": 3,
+        "text": "if years % 100 = = 0:"
+      },
+      {
+        "x": 298.0,
+        "y": 284.0,
+        "w": 460.0,
+        "h": 58.0,
+        "line_num": 4,
+        "text": "year % 400 = = 0:"
+      },
+      {
+        "x": 325.0,
+        "y": 343.0,
+        "w": 339.0,
+        "h": 50.0,
+        "line_num": 5,
+        "text": "return True"
+      },
+      {
+        "x": 249.0,
+        "y": 397.0,
+        "w": 128.0,
+        "h": 48.0,
+        "line_num": 6,
+        "text": "else:"
+      },
+      {
+        "x": 370.0,
+        "y": 453.0,
+        "w": 345.0,
+        "h": 60.0,
+        "line_num": 7,
+        "text": "return False"
+      },
+      {
+        "x": 168.0,
+        "y": 518.0,
+        "w": 143.0,
+        "h": 58.0,
+        "line_num": 8,
+        "text": "else:"
+      },
+      {
+        "x": 271.0,
+        "y": 580.0,
+        "w": 316.0,
+        "h": 58.0,
+        "line_num": 9,
+        "text": "return False"
+      },
+      {
+        "x": 118.0,
+        "y": 700.0,
+        "w": 138.0,
+        "h": 56.0,
+        "line_num": 10,
+        "text": "else:"
+      },
+      {
+        "x": 233.0,
+        "y": 768.0,
+        "w": 324.0,
+        "h": 54.0,
+        "line_num": 11,
+        "text": "return False"
+      },
+      {
+        "x": 72.0,
+        "y": 879.0,
+        "w": 334.0,
+        "h": 59.0,
+        "line_num": 12,
+        "text": "def main ()."
+      },
+      {
+        "x": 174.0,
+        "y": 934.0,
+        "w": 910.0,
+        "h": 62.0,
+        "line_num": 13,
+        "text": "years = int (input (\"Enter a year: \"))"
+      },
+      {
+        "x": 169.0,
+        "y": 1003.0,
+        "w": 779.0,
+        "h": 54.0,
+        "line_num": 14,
+        "text": "is_leap=is_leap-year (year)"
+      },
+      {
+        "x": 168.0,
+        "y": 1060.0,
+        "w": 412.0,
+        "h": 57.0,
+        "line_num": 15,
+        "text": "print (is-leap)"
+      },
+      {
+        "x": 144.0,
+        "y": 1174.0,
+        "w": 603.0,
+        "h": 65.0,
+        "line_num": 16,
+        "text": "name_ = \"_main_\":"
+      },
+      {
+        "x": 157.0,
+        "y": 1241.0,
+        "w": 175.0,
+        "h": 55.0,
+        "line_num": 17,
+        "text": "main()"
+      }
+    ]
+  },
+  {
+    "image_id": 44,
+    "image_height": 2137,
+    "image_width": 2849,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 50.0,
+        "y": 109.0,
+        "w": 807.0,
+        "h": 131.0,
+        "line_num": 1,
+        "text": "def main () :"
+      },
+      {
+        "x": 381.0,
+        "y": 299.0,
+        "w": 1216.0,
+        "h": 120.0,
+        "line_num": 2,
+        "text": "print (\"problem - 5 \")"
+      },
+      {
+        "x": 402.0,
+        "y": 463.0,
+        "w": 552.0,
+        "h": 93.0,
+        "line_num": 3,
+        "text": "print (\") --"
+      },
+      {
+        "x": 390.0,
+        "y": 635.0,
+        "w": 2174.0,
+        "h": 91.0,
+        "line_num": 4,
+        "text": "rumb = int (input ('write an integer number:"
+      },
+      {
+        "x": 2634.0,
+        "y": 482.0,
+        "w": 129.0,
+        "h": 105.0,
+        "line_num": 5,
+        "text": "\")"
+      },
+      {
+        "x": 393.0,
+        "y": 805.0,
+        "w": 2042.0,
+        "h": 117.0,
+        "line_num": 6,
+        "text": "mak_list = [int (x) for x in str (numb)]"
+      },
+      {
+        "x": 416.0,
+        "y": 1024.0,
+        "w": 698.0,
+        "h": 86.0,
+        "line_num": 7,
+        "text": "add-numb = 0"
+      },
+      {
+        "x": 432.0,
+        "y": 1161.0,
+        "w": 1118.0,
+        "h": 108.0,
+        "line_num": 8,
+        "text": "for is in mak-list :"
+      },
+      {
+        "x": 884.0,
+        "y": 1310.0,
+        "w": 762.0,
+        "h": 98.0,
+        "line_num": 9,
+        "text": "add-numb + =;"
+      },
+      {
+        "x": 480.0,
+        "y": 1531.0,
+        "w": 2183.0,
+        "h": 110.0,
+        "line_num": 10,
+        "text": "print (\"Sum of the number's: \", add-numb)"
+      },
+      {
+        "x": 945.0,
+        "y": 1604.0,
+        "w": 239.0,
+        "h": 69.0,
+        "line_num": 11,
+        "text": "digit"
+      },
+      {
+        "x": 176.0,
+        "y": 1826.0,
+        "w": 784.0,
+        "h": 117.0,
+        "line_num": 12,
+        "text": "If_ name __ = = \""
+      },
+      {
+        "x": 1012.0,
+        "y": 1843.0,
+        "w": 511.0,
+        "h": 74.0,
+        "line_num": 13,
+        "text": "-main __:"
+      },
+      {
+        "x": 360.0,
+        "y": 2003.0,
+        "w": 308.0,
+        "h": 70.0,
+        "line_num": 14,
+        "text": "main()"
+      }
+    ]
+  },
+  {
+    "image_id": 45,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 105.0,
+        "y": 139.0,
+        "w": 644.0,
+        "h": 73.0,
+        "line_num": 1,
+        "text": "list = [6, 11,5,8,9]"
+      },
+      {
+        "x": 96.0,
+        "y": 298.0,
+        "w": 602.0,
+        "h": 76.0,
+        "line_num": 2,
+        "text": "for elem in list :"
+      },
+      {
+        "x": 289.0,
+        "y": 447.0,
+        "w": 242.0,
+        "h": 59.0,
+        "line_num": 3,
+        "text": "max=0"
+      },
+      {
+        "x": 257.0,
+        "y": 544.0,
+        "w": 625.0,
+        "h": 93.0,
+        "line_num": 4,
+        "text": "if elem> max :"
+      },
+      {
+        "x": 402.0,
+        "y": 673.0,
+        "w": 354.0,
+        "h": 56.0,
+        "line_num": 5,
+        "text": "max = elem"
+      },
+      {
+        "x": 83.0,
+        "y": 826.0,
+        "w": 396.0,
+        "h": 65.0,
+        "line_num": 6,
+        "text": "return max"
+      }
+    ]
+  },
+  {
+    "image_id": 46,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 53.0,
+        "y": 269.0,
+        "w": 587.0,
+        "h": 66.0,
+        "line_num": 1,
+        "text": "def palindroomic (stro):"
+      },
+      {
+        "x": 195.0,
+        "y": 400.0,
+        "w": 831.0,
+        "h": 73.0,
+        "line_num": 2,
+        "text": "for i in range (int (len(str)/2)):"
+      },
+      {
+        "x": 312.0,
+        "y": 501.0,
+        "w": 813.0,
+        "h": 63.0,
+        "line_num": 3,
+        "text": "if stro [i] ! = str [len (st) -i]:"
+      },
+      {
+        "x": 351.0,
+        "y": 620.0,
+        "w": 31.0,
+        "h": 48.0,
+        "line_num": 4,
+        "text": "."
+      },
+      {
+        "x": 408.0,
+        "y": 613.0,
+        "w": 319.0,
+        "h": 53.0,
+        "line_num": 5,
+        "text": "return False"
+      },
+      {
+        "x": 202.0,
+        "y": 719.0,
+        "w": 332.0,
+        "h": 58.0,
+        "line_num": 6,
+        "text": "return True"
+      }
+    ]
+  },
+  {
+    "image_id": 47,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 86.0,
+        "y": 128.0,
+        "w": 515.0,
+        "h": 71.0,
+        "line_num": 1,
+        "text": "def factorial (n):"
+      },
+      {
+        "x": 235.0,
+        "y": 237.0,
+        "w": 823.0,
+        "h": 54.0,
+        "line_num": 2,
+        "text": "result = n * factorial (n-1)"
+      },
+      {
+        "x": 239.0,
+        "y": 342.0,
+        "w": 573.0,
+        "h": 56.0,
+        "line_num": 3,
+        "text": "return result"
+      }
+    ]
+  },
+  {
+    "image_id": 48,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 97.0,
+        "y": 51.0,
+        "w": 366.0,
+        "h": 49.0,
+        "line_num": 1,
+        "text": "def fibonacci (n):"
+      },
+      {
+        "x": 189.0,
+        "y": 117.0,
+        "w": 289.0,
+        "h": 48.0,
+        "line_num": 2,
+        "text": "sequence = [0,1]"
+      },
+      {
+        "x": 187.0,
+        "y": 185.0,
+        "w": 82.0,
+        "h": 36.0,
+        "line_num": 3,
+        "text": "1 = 0"
+      },
+      {
+        "x": 182.0,
+        "y": 237.0,
+        "w": 468.0,
+        "h": 51.0,
+        "line_num": 4,
+        "text": "while len (sequence> <= n:"
+      },
+      {
+        "x": 272.0,
+        "y": 311.0,
+        "w": 870.0,
+        "h": 48.0,
+        "line_num": 5,
+        "text": "sequence. append (sequence [+]+ sequence [i+2]"
+      },
+      {
+        "x": 269.0,
+        "y": 379.0,
+        "w": 111.0,
+        "h": 40.0,
+        "line_num": 6,
+        "text": "it = 1"
+      },
+      {
+        "x": 176.0,
+        "y": 456.0,
+        "w": 334.0,
+        "h": 44.0,
+        "line_num": 7,
+        "text": "return sequence"
+      },
+      {
+        "x": 110.0,
+        "y": 551.0,
+        "w": 436.0,
+        "h": 55.0,
+        "line_num": 8,
+        "text": "result = fibonacci (5)"
+      },
+      {
+        "x": 120.0,
+        "y": 624.0,
+        "w": 283.0,
+        "h": 53.0,
+        "line_num": 9,
+        "text": "print (result)"
+      }
+    ]
+  },
+  {
+    "image_id": 49,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 106.0,
+        "y": 72.0,
+        "w": 754.0,
+        "h": 63.0,
+        "line_num": 1,
+        "text": "def CountFrequency (my-list):"
+      },
+      {
+        "x": 238.0,
+        "y": 167.0,
+        "w": 259.0,
+        "h": 82.0,
+        "line_num": 2,
+        "text": "freq = {}"
+      },
+      {
+        "x": 227.0,
+        "y": 286.0,
+        "w": 553.0,
+        "h": 64.0,
+        "line_num": 3,
+        "text": "for item in my-list:"
+      },
+      {
+        "x": 460.0,
+        "y": 389.0,
+        "w": 381.0,
+        "h": 66.0,
+        "line_num": 4,
+        "text": "freq [item]+=1"
+      },
+      {
+        "x": 231.0,
+        "y": 494.0,
+        "w": 302.0,
+        "h": 59.0,
+        "line_num": 5,
+        "text": "return freq"
+      }
+    ]
+  },
+  {
+    "image_id": 50,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 51.0,
+        "y": 35.0,
+        "w": 728.0,
+        "h": 80.0,
+        "line_num": 1,
+        "text": "def two Sam (nums, target):"
+      },
+      {
+        "x": 174.0,
+        "y": 137.0,
+        "w": 776.0,
+        "h": 68.0,
+        "line_num": 2,
+        "text": "for i in range (len (namA) :"
+      },
+      {
+        "x": 298.0,
+        "y": 242.0,
+        "w": 768.0,
+        "h": 64.0,
+        "line_num": 3,
+        "text": "for p in range (i) Lon (namp) :"
+      },
+      {
+        "x": 380.0,
+        "y": 345.0,
+        "w": 732.0,
+        "h": 63.0,
+        "line_num": 4,
+        "text": "if (name [i] + numa [P] == fanget):"
+      },
+      {
+        "x": 489.0,
+        "y": 427.0,
+        "w": 278.0,
+        "h": 66.0,
+        "line_num": 5,
+        "text": "netann [i, P]"
+      }
+    ]
+  },
+  {
+    "image_id": 51,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 69.0,
+        "y": 122.0,
+        "w": 596.0,
+        "h": 75.0,
+        "line_num": 1,
+        "text": "def Remove (duplicate):"
+      },
+      {
+        "x": 221.0,
+        "y": 234.0,
+        "w": 594.0,
+        "h": 70.0,
+        "line_num": 2,
+        "text": "for wam in duplicate:"
+      },
+      {
+        "x": 235.0,
+        "y": 334.0,
+        "w": 349.0,
+        "h": 76.0,
+        "line_num": 3,
+        "text": "Sinal-Lint =[]"
+      },
+      {
+        "x": 255.0,
+        "y": 430.0,
+        "w": 598.0,
+        "h": 70.0,
+        "line_num": 4,
+        "text": "if num not in final-list:"
+      },
+      {
+        "x": 420.0,
+        "y": 519.0,
+        "w": 516.0,
+        "h": 66.0,
+        "line_num": 5,
+        "text": "final-lint append (num)"
+      },
+      {
+        "x": 303.0,
+        "y": 600.0,
+        "w": 436.0,
+        "h": 64.0,
+        "line_num": 6,
+        "text": "return final-lint"
+      }
+    ]
+  },
+  {
+    "image_id": 52,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 155.0,
+        "y": 118.0,
+        "w": 781.0,
+        "h": 75.0,
+        "line_num": 1,
+        "text": "det even-on-odd (number):"
+      },
+      {
+        "x": 293.0,
+        "y": 221.0,
+        "w": 522.0,
+        "h": 68.0,
+        "line_num": 2,
+        "text": "if number /2=0:"
+      },
+      {
+        "x": 401.0,
+        "y": 326.0,
+        "w": 345.0,
+        "h": 60.0,
+        "line_num": 3,
+        "text": "Detann \"Even\""
+      },
+      {
+        "x": 297.0,
+        "y": 427.0,
+        "w": 527.0,
+        "h": 63.0,
+        "line_num": 4,
+        "text": "if number 12 != 0:"
+      },
+      {
+        "x": 418.0,
+        "y": 521.0,
+        "w": 393.0,
+        "h": 58.0,
+        "line_num": 5,
+        "text": "return \"Odd\""
+      }
+    ]
+  },
+  {
+    "image_id": 53,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 267.0,
+        "y": 93.0,
+        "w": 632.0,
+        "h": 88.0,
+        "line_num": 1,
+        "text": "upper-lower-count (sto):"
+      },
+      {
+        "x": 282.0,
+        "y": 235.0,
+        "w": 399.0,
+        "h": 62.0,
+        "line_num": 2,
+        "text": "Upper-case = 0"
+      },
+      {
+        "x": 283.0,
+        "y": 320.0,
+        "w": 407.0,
+        "h": 63.0,
+        "line_num": 3,
+        "text": "lower-case = 0"
+      },
+      {
+        "x": 284.0,
+        "y": 416.0,
+        "w": 507.0,
+        "h": 61.0,
+        "line_num": 4,
+        "text": "for char in str."
+      },
+      {
+        "x": 432.0,
+        "y": 505.0,
+        "w": 482.0,
+        "h": 59.0,
+        "line_num": 5,
+        "text": "if chan, inupper():"
+      },
+      {
+        "x": 580.0,
+        "y": 595.0,
+        "w": 349.0,
+        "h": 52.0,
+        "line_num": 6,
+        "text": "upper-cane +=1"
+      },
+      {
+        "x": 436.0,
+        "y": 654.0,
+        "w": 109.0,
+        "h": 56.0,
+        "line_num": 7,
+        "text": "elpe:"
+      },
+      {
+        "x": 526.0,
+        "y": 725.0,
+        "w": 367.0,
+        "h": 65.0,
+        "line_num": 8,
+        "text": "lower-case += 1"
+      },
+      {
+        "x": 325.0,
+        "y": 831.0,
+        "w": 729.0,
+        "h": 70.0,
+        "line_num": 9,
+        "text": "return upper-care, lowercase"
+      }
+    ]
+  },
+  {
+    "image_id": 54,
+    "image_height": 1560,
+    "image_width": 1170,
+    "ocr_provider": "Azure",
+    "ocr_ouptut": [
+      {
+        "x": 141.0,
+        "y": 213.0,
+        "w": 662.0,
+        "h": 101.0,
+        "line_num": 1,
+        "text": "det multiply (numbon);"
+      },
+      {
+        "x": 314.0,
+        "y": 373.0,
+        "w": 279.0,
+        "h": 73.0,
+        "line_num": 2,
+        "text": "total = 0"
+      },
+      {
+        "x": 325.0,
+        "y": 485.0,
+        "w": 558.0,
+        "h": 72.0,
+        "line_num": 3,
+        "text": "for se in numbers;"
+      },
+      {
+        "x": 476.0,
+        "y": 603.0,
+        "w": 301.0,
+        "h": 70.0,
+        "line_num": 4,
+        "text": "total* * = Je"
+      },
+      {
+        "x": 351.0,
+        "y": 698.0,
+        "w": 440.0,
+        "h": 66.0,
+        "line_num": 5,
+        "text": "return total"
+      },
+      {
+        "x": 800.0,
+        "y": 667.0,
+        "w": 247.0,
+        "h": 52.0,
+        "line_num": 6,
+        "text": "moppepo"
+      },
+      {
+        "x": 653.0,
+        "y": 1054.0,
+        "w": 299.0,
+        "h": 67.0,
+        "line_num": 7,
+        "text": "ppor care."
+      }
+    ]
+  }
+]
