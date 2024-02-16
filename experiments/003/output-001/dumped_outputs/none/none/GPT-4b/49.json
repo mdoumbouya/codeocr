@@ -1,1 +1,0 @@
-{"image_id": 49, "ocr_provider": "none", "ocr_ouptut": "none", "ir_algo_name": "none", "ir_algo_output_code": "none", "ir_algo_output_edit_distance": 0, "prompting_method": "GPT-4b", "lm_post_processed_code": "def CountFrequency(my_list):\n    freq = {}\n    for item in my_list:\n        freq[item] += 1\n    return freq\n", "lm_post_processed_edit_distance": 0}

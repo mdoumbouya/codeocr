@@ -1,1 +1,0 @@
-{"image_id": 54, "ocr_provider": "none", "ocr_ouptut": "none", "ir_algo_name": "none", "ir_algo_output_code": "none", "ir_algo_output_edit_distance": 0, "prompting_method": "GPT-4b", "lm_post_processed_code": "def multiply(numbers):\n    total = 0\n    for x in numbers:\n        total *= x\n    return total\n", "lm_post_processed_edit_distance": 0}
