@@ -49,7 +49,6 @@ output/dumped_outputs: output/lm_post_processed.json
 		--images-dir ../images \
 		--output-dir output/dumped_outputs
 
-
 # Running this one runs the entire pipeline and then Gives the evaluation results(No Dumping results)
 output/eval_results.txt: output/lm_post_processed.json
 	python generate_evaluation_results.py \
@@ -57,9 +56,27 @@ output/eval_results.txt: output/lm_post_processed.json
 		--output-file output/eval_results.txt
 
 
+output/lm_post_processed_filtered.json: output/lm_post_processed.json
+	python filter_results.py \
+		--input-file output/lm_post_processed.json \
+		--output-file output/lm_post_processed_filtered.json \
+		--filter-out 1 4 7 9 11 17 21 24 26 27 28 32 39 47 48 51
+
+# Running this one runs the entire pipeline and then Gives the evaluation results(No Dumping results)
+output/eval_results_filtered.txt: output/lm_post_processed_filtered.json
+	python generate_evaluation_results.py \
+		--input-file output/lm_post_processed_filtered.json \
+		--output-file output/eval_results_filtered.txt 
+		
+
+
+
+
+
 .PHONY: force-remove-results
 force-remove-results:
 	rm -f output/eval_results.txt
+	rm -f output/eval_results_filtered.txt
 	rm -rf output/dumped_outputs
 
 .PHONY: force-remove-output
@@ -74,7 +91,7 @@ force-remove-all:
 
 
 .PHONY: all-results
-all-results: output/eval_results.txt output/dumped_outputs
+all-results: output/eval_results.txt output/eval_results_filtered.txt output/dumped_outputs
 
 
 # Safeguards
