@@ -13,9 +13,15 @@ This is the codebase for the [NAME] paper, submitted to [ACM Learning @ Scale 20
 
 ## Getting Started
 
+To get started clone the repository and follow the instructions below.
+
+```bash
+git clone https://github.com/mdoumbouya/codeocr.git
+```
+
 ### Prerequisites
 
-- Python 3.6 or higher
+- Python 3.9 or higher
 
 ### Installation
 
