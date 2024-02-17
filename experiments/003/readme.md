@@ -106,7 +106,7 @@ For detailed results showcased in our paper, please refer to the following direc
   ```bash
   output/dumped_outputs/Azure/gaussian-v1ir_algo_param_negative_delta_cluster_method_nearest_ancestor/cot-test5
   ```
-  
+
 - **Simple Post Correction Method:**
   ```bash
   output/dumped_outputs/Azure/gaussian-v1ir_algo_param_negative_delta_cluster_method_nearest_ancestor/simple-test2
