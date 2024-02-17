@@ -1190,7 +1190,7 @@ Only fix typos in the code.
             ],
             }
         ],
-            "max_tokens": 500
+            "max_tokens": 1500
         }
 
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload, timeout=15)

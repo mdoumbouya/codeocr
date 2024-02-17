@@ -91,7 +91,7 @@ force-remove-all:
 
 
 .PHONY: all-results
-all-results: output/eval_results.txt output/eval_results_filtered.txt output/dumped_outputs
+all-results: output/eval_results.txt output/dumped_outputs output/eval_results_filtered.txt 
 
 
 # Safeguards
