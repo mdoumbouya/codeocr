@@ -76,6 +76,7 @@ output/eval_results_filtered.txt: output/lm_post_processed_filtered.json
 .PHONY: force-remove-results
 force-remove-results:
 	rm -f output/eval_results.txt
+	rm -f output/eval_results_filtered.txt
 	rm -rf output/dumped_outputs
 
 .PHONY: force-remove-output
@@ -90,7 +91,7 @@ force-remove-all:
 
 
 .PHONY: all-results
-all-results: output/eval_results.txt output/dumped_outputs
+all-results: output/eval_results.txt output/eval_results_filtered.txt output/dumped_outputs
 
 
 # Safeguards
