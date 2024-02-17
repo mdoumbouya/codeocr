@@ -96,6 +96,7 @@ make all-results
 Once the commands have been executed, the results will be saved in the `output` directory. This includes:
 
 - Evaluation table: `output/eval_results.txt`
+- Filtered Evaluation table: `output/eval_results_filtered.txt`
 - Annotated images and post-corrected code: `output/dumped_outputs`
 
 ### Specific Results in Our Paper
