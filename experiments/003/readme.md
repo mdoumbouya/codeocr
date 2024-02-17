@@ -93,6 +93,27 @@ Recreate all results:
 make all-results
 ```
 
+Once the commands have been executed, the results will be saved in the `output` directory. This includes:
+
+- Evaluation table: `output/eval_results.txt`
+- Annotated images and post-corrected code: `output/dumped_outputs`
+
+### Specific Results in Our Paper
+
+For detailed results showcased in our paper, please refer to the following directories:
+
+- **COT Post Correction Method:**
+  ```bash
+  output/dumped_outputs/Azure/gaussian-v1ir_algo_param_negative_delta_cluster_method_nearest_ancestor/cot-test5
+  ```
+  
+- **Simple Post Correction Method:**
+  ```bash
+  output/dumped_outputs/Azure/gaussian-v1ir_algo_param_negative_delta_cluster_method_nearest_ancestor/simple-test2
+  ```
+
+These paths lead to the specific results for the respective post-correction methods as discussed in our paper.
+
 ## Detailed Reproduction Steps
 
 ### Setup
