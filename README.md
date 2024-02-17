@@ -1,54 +1,75 @@
-# Code OCR Demo
+# Codebase Info
 
-This is our prototype Flask-based web application to test out the Handwritten Code Recognition System. Users can upload images of code snippets, and the application will extract the source code and display it, along with the compilation results.
+This is the codebase for the [NAME] paper, submitted to [ACM Learning @ Scale 2024](https://learningatscale.hosting.acm.org/las2024/).
 
 ## Table of Contents
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Application Structure](#application-structure)
+- [Codebase Structure](#codebase-structure)
   - [Directory Layout](#directory-layout)
-  - [Code Components](#code-components)
-- [Usage](#usage)
-- [Contributing](#contributing)
+
 
 ## Getting Started
-
-These instructions will help you set up the project on your local machine.
 
 ### Prerequisites
 
 - Python 3.6 or higher
-- Flask web framework
 
 ### Installation
 
-1. [Clone this repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your local machine.
+We recomend starting by creating a virtual environment and installing the dependencies. Here are the steps to do so: 
 
-2. (Optional) Create a virtual environment and activate it:
 
+1. **Navigate to the Project's Root Directory:**
+   Open a terminal (macOS/Linux) or a command prompt (Windows) and navigate to the root directory of the repository where you want to set up the virtual environment.
+
+2. **Create the Virtual Environment:**
+   Run the following command to create a virtual environment named `env` within the project directory:
+   
+   - **macOS/Linux:**
+     ```sh
+     python3 -m venv env
+     ```
+   - **Windows:**
+     ```cmd
+     python -m venv env
+     ```
+
+3. **Activate the Virtual Environment:**
+   Before you can start installing or using packages in your virtual environment, you need to activate it.
+    
+   - **macOS/Linux:**
+     ```sh
+     source env/bin/activate
+     ```
+   - **Windows:**
+     ```cmd
+     .\env\Scripts\activate
+     ```
+
+   You'll know that the virtual environment is activated because the command prompt will now show the name of the virtual environment (in this case, `env`).
+
+Now from the root directory of the repository, you can install the dependencies by running the following commands:
 ```bash
-python -m venv venv
-source venv/bin/activate  # For Linux or macOS
-venv\Scripts\activate  # For Windows, in CMD
-```
-
-3. Install the required packages:
-
-```bash
+pip install -e .
 pip install -r requirements.txt
 ```
 
-4. Run the application:
+or simply run the following command in **root directory** of the repository:
 
 ```bash
-python run.py
+make install
 ```
 
-The application will start on `http://localhost:4444`. Open this URL in your browser to access the Code OCR Demo.
+Once the installation is complete, just move to `experiments/003` direcotry to reporduce the results in the paper. Further instruction are provided in the `README.md` file in the `experiments/003` directory.
 
-## Application Structure
+```bash
+cd experiments/003
+```
+
+## Codebase Structure
 
 ### Directory Layout
 
@@ -90,24 +111,3 @@ codeocr/
 
 ```
 
-### Code Components
-
-- `app/__init__.py` initializes the Flask app and brings together all the components like routes, models, etc.
-- `app/blueprints/ocr_compiler/` contains the core functionality of the OCR compiler.
-  - `__init__.py` initializes and registers the `ocr_compiler` Blueprint.
-  - `routes.py` contains the route functions for the OCR compiler, including handling image uploads, OCR processing, and displaying results.
-- `app/templates/` holds the HTML templates.
-  - `index.html` is the main template that contains the form for image uploads and displays the OCR and compilation results.
-- `config.py` contains the configuration settings for the Flask app.
-- `requirements.txt` lists all the packages required by the Flask app, which can be installed via pip.
-
-## Usage
-
-- Users can upload images of code snippets through the "Take a picture of your code" input field.
-- Once the image is uploaded and processed, the application will display the extracted source code and compilation results.
-
-## Contributing
-
-This app is following the standard flas app structure. To add new features, you can create new Blueprints for specific functionalities and register them in `app/__init__.py`. Intention behind this was to make it easier to maintain, and debug as there is a lot of moving pieces.
-
-Let's update the README file and document our changes accordingly.
