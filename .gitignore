@@ -137,4 +137,5 @@ app/static/uploaded_images/
 # Stopping the upload of experiment output
 # experiments/003/output/dumped_outputs
 .venv310
+venv310
 # experiments/003/output/eval_results.txt
