@@ -30,7 +30,7 @@ from firebase_admin import firestore
 from flask import session
 
 from code_ocr.indentation_recognition import MeanShiftIndentRecognitionAlgo, GaussianIndentationRecognitionAlgo
-from code_ocr.post_correction import COTprompting, SIMPLEprompting
+from code_ocr.post_correction import COTprompting, SIMPLEprompting, SIMPLEprompting_test2, COTprompting_test5
 
 load_dotenv()
 
@@ -119,11 +119,11 @@ def index():
         json_LMresponse = None # Adding this just for the time being, plan on adding the json response from LM down the way
         print("LM_dropdown: ", LM_dropdown)
         if LM_dropdown == "COT":
-            source_code = COTprompting().post_correction(ir_output)
+            source_code = COTprompting_test5().post_correction(ir_output)
         elif LM_dropdown == "SIMPLE":
-            source_code = SIMPLEprompting().post_correction(ir_output)
+            source_code = SIMPLEprompting_test2().post_correction(ir_output)
         else:
-            source_code = SIMPLEprompting().post_correction(ir_output)
+            source_code = SIMPLEprompting_test2().post_correction(ir_output)
         lm_end = timer()
         
         print("source_code: ", source_code)
