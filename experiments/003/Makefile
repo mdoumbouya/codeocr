@@ -67,8 +67,6 @@ output/eval_results_filtered.txt: output/lm_post_processed_filtered.json
 	python generate_evaluation_results.py \
 		--input-file output/lm_post_processed_filtered.json \
 		--output-file output/eval_results_filtered.txt 
-		
-
 
 
 
