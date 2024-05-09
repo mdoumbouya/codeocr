@@ -8,8 +8,12 @@ SAMPLES_FLAG=--random-sample-size=-1
 # Specify the size one in this one to run this over a subset of the data.
 # SAMPLES_FLAG=--random-sample-size=2
 
+# Collect Api Payload
+../apipayload.json:
+	python ../collect_api_payload.py
 
-output/postprocessed_ocr_provider_data.json:
+
+output/postprocessed_ocr_provider_data.json: ../apipayload.json
 	mkdir -p output
 	python post_process_ocr_results.py \
 		--input-file ../apipayload.json \
@@ -45,10 +49,74 @@ output/dumped_outputs: output/lm_post_processed.json
 		--images-dir ../images \
 		--output-dir output/dumped_outputs
 
-
 # Running this one runs the entire pipeline and then Gives the evaluation results(No Dumping results)
 output/eval_results.txt: output/lm_post_processed.json
 	python generate_evaluation_results.py \
 		--input-file output/lm_post_processed.json \
 		--output-file output/eval_results.txt
 
+
+output/lm_post_processed_filtered.json: output/lm_post_processed.json
+	python filter_results.py \
+		--input-file output/lm_post_processed.json \
+		--output-file output/lm_post_processed_filtered.json \
+		--filter-out 1 4 7 9 11 17 21 24 26 27 28 32 39 47 48 51
+
+# Running this one runs the entire pipeline and then Gives the evaluation results(No Dumping results)
+output/eval_results_filtered.txt: output/lm_post_processed_filtered.json
+	python generate_evaluation_results.py \
+		--input-file output/lm_post_processed_filtered.json \
+		--output-file output/eval_results_filtered.txt 
+
+
+
+
+.PHONY: force-remove-results
+force-remove-results:
+	rm -f output/eval_results.txt
+	rm -f output/eval_results_filtered.txt
+	rm -rf output/dumped_outputs
+
+.PHONY: force-remove-output
+force-remove-output:
+	rm -rf output/*
+
+
+.PHONY: force-remove-all-data
+force-remove-all:
+	rm -rf output/*
+	rm -f ../apipayload.json
+
+
+.PHONY: all-results
+all-results: output/eval_results.txt output/dumped_outputs output/eval_results_filtered.txt 
+
+
+# Safeguards
+.PHONY: remove-results
+remove-results:
+	@read -p "Are you sure you want to delete evaluation results and dumped outputs? [y/N] " confirm; \
+	if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
+		make force-remove-results; \
+	else \
+		echo "Deletion of results cancelled."; \
+	fi
+
+
+.PHONY: remove-output
+remove-output:
+	@read -p "Are you sure you want to delete all contents in the output directory? This action is irreversible. [y/N] " confirm; \
+	if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
+		make force-remove-output; \
+	else \
+		echo "Deletion of output contents cancelled."; \
+	fi
+
+.PHONY: remove-all-data
+remove-all-data:
+	@read -p "WARNING: You are about to delete ALL data including output contents and the API payload. Are you absolutely sure? [y/N] " confirm; \
+	if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
+		make force-remove-all; \
+	else \
+		echo "Deletion of all data cancelled."; \
+	fi
