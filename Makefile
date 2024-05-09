@@ -9,3 +9,22 @@ start-dev-server:
 	flask --app main run
 
 TODO:
+
+
+
+# installing dependencies
+.PHONY: install
+install:
+	pip install -r requirements.txt
+	pip install -e .
+
+
+# Git push simplification
+.PHONY: gitpush
+
+gitpush:
+	git fetch
+	git pull
+	git add .
+	git commit -m "$(m)"
+	git push

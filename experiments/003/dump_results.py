@@ -114,7 +114,7 @@ def main(args):
         with open(output_dir / f"{image_id}_ground_truth.py", "w") as f:
             f.write(ground_truth)
         
-        if document_metadata['prompting_method'] != "gpt4-vision": # Because this version do not have any intermediate results.
+        if document_metadata['ocr_provider'] != "GPT4-vision": # Because this version do not have any intermediate results.
             # dump output code
             with open(output_dir / f"{image_id}_ir_algo_output.py", "w") as f:
                 f.write(document_metadata["ir_algo_output_code"])

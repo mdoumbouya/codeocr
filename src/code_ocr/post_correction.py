@@ -305,7 +305,7 @@ class SIMPLEprompting_test2(LMPostCorrectionAlgorithm):
             {
                 "role": "user",
                 "content": f"""
-Only fix typos in the following code, and errors, and garbage text that may come from a Optical Charracter Recongnition system. Do not change anything else about the code. Here is the code:
+Only fix typos in the following code, and errors, and garbage text that may come from a Optical Character Recongnition system. Do not change anything else about the code. Here is the code:
 {ir_algo_output_code}
 
 return code in the following format:
@@ -1180,8 +1180,6 @@ Only fix typos in the code.
 *VERY STRICT RULE*
 - Do not fix any logical, or numerical error of the original code. KEEP THE LOGIC EXACTLY AS IT IS, even if it is wrong. 
 - Do not change any indentation from the original image. KEEP THE INDENTATION EXACTLY AS IT IS, even if it is wrong.
-re
-
 """},
                 {
                     "type": "image_url",
@@ -1192,7 +1190,7 @@ re
             ],
             }
         ],
-            "max_tokens": 500
+            "max_tokens": 1500
         }
 
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload, timeout=15)

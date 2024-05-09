@@ -3,7 +3,7 @@ from sklearn.cluster import MeanShift, estimate_bandwidth
 import numpy as np
 from code_ocr.global_utils import avg_list
 from scipy.stats import norm
-
+from tqdm.auto import tqdm
 
 class IndentationRecognitionAlgorithm(object):
     def __init__(self, name):
@@ -55,17 +55,64 @@ class MeanShiftIndentRecognitionAlgo(IndentationRecognitionAlgorithm):
         box_heights = np.array([box["h"] for box in document_metadata['ocr_ouptut']])
         return np.mean(box_heights)*1.5
             
-
-
+            
 class GaussianIndentationRecognitionAlgo(IndentationRecognitionAlgorithm):
-    def __init__(self, negative_delta_cluster_method):
-        super().__init__("gaussian-v1")
-        self.negative_delta_cluster_method = negative_delta_cluster_method # Possible values: "mean", "nearest_ancestor"
-
+    def __init__(self, 
+                negative_delta_cluster_method="nearest_ancestor", 
+                neutral_mean=0.0072602999579008815 , 
+                neutral_std=0.008279078889046027,
+                increment_mean=0.0777810811891604, 
+                increment_std=0.024844347044055918): # These values are the default values, collected from the experiments
         
+        super().__init__("gaussian-v1")
+        self.negative_delta_cluster_method = negative_delta_cluster_method
+        self.neutral_mean = neutral_mean
+        self.neutral_std = neutral_std
+        self.increment_mean = increment_mean
+        self.increment_std = increment_std
+    
+    def fit(self, image_widths, document_metadatas):
+        """fit this takes input forom the labeled_data.json, and fits the model to the data
+
+        :param image_widths: Width of the corresponding image
+        :type image_widths: dictionary
+        :param document_metadatas: metadat of the image
+        :type document_metadatas: json list
+        """
+        neutral_list = []
+        increment_list = []
+        
+        for document_metadata in document_metadatas:
+            lines = document_metadata["ocr_ouptut"]
+            
+            for i in range(len(lines)):
+                
+                if i != 0:
+                    
+                    if lines[i]['positive_indentation'] == '0':
+                        delta = lines[i]['x'] - lines[i - 1]['x']
+                        normalized_delta = delta / image_widths[str(document_metadata['image_id'])]
+                        
+                        neutral_list.append(normalized_delta) 
+                        
+                    elif lines[i]['positive_indentation'] == '1':
+                        delta = lines[i]['x'] - lines[i - 1]['x']
+                        normalized_delta = delta / image_widths[str(document_metadata['image_id'])]
+                        
+                        increment_list.append(normalized_delta)
+        
+        self.neutral_mean = np.mean(neutral_list)
+        self.neutral_std = np.std(neutral_list)
+        self.increment_mean = np.mean(increment_list)
+        self.increment_std = np.std(increment_list)
+    
     def recognize_indents(self, document_metadata):
         params={
             "negative_delta_cluster_method": self.negative_delta_cluster_method, # If someone does not pass in a specific value from the possible values, the code will deafualt to "nearest_ancestor"
+            "neutral_mean": self.neutral_mean,
+            "neutral_std": self.neutral_std,
+            "increment_mean": self.increment_mean,
+            "increment_std": self.increment_std
         }
         
         image_width = document_metadata["image_width"]
@@ -80,7 +127,7 @@ class GaussianIndentationRecognitionAlgo(IndentationRecognitionAlgorithm):
         lines = annotate_deltas(lines, deltas)
 
         # Get the Gaussian predictions for the 'delta' values of the data points where 'delta_type' is 'positive'.
-        gaussian_prediction = get_gaussian_prediction(lines, image_width)
+        gaussian_prediction = get_gaussian_prediction(lines, image_width, self.neutral_mean, self.neutral_std, self.increment_mean, self.increment_std)
         
         # Add Gaussian prediction labels to the data points.
         lines = add_gaussian_prediction_labels(lines, gaussian_prediction)
@@ -100,10 +147,6 @@ class GaussianIndentationRecognitionAlgo(IndentationRecognitionAlgorithm):
                 "indented_lines": lines
             }
         )
-    
-
-    # Add any additional methods needed for your algorithm
-    # ...
 
 
 
@@ -247,7 +290,7 @@ def annotate_deltas(lines, deltas):
 
 
 
-def get_gaussian_prediction(lines, image_width):
+def get_gaussian_prediction(lines, image_width, neutral_mean, neutral_std, increment_mean, increment_std):
     """
     This function performs Gaussian  prediction on the 'delta' values of the 
     data points where 'delta_type' is 'positive'.
@@ -266,16 +309,7 @@ def get_gaussian_prediction(lines, image_width):
         if data['delta_type'] == 'positive':
             positive_list.append(data['delta'])
     
-    # This is the Model Parameters
-    neautral_mean = 0.0072602999579008815 
-    neutral_var = 2.6859744231825193e-05
-    neutral_std = 0.008279078889046027
-
-    increment_mean = 0.0777810811891604 
-    increment_var = 0.0006160921671065933
-    increment_std = 0.024844347044055918
-    
-    neutral_gaussian = norm(loc=neautral_mean, scale=neutral_std)
+    neutral_gaussian = norm(loc=neutral_mean, scale=neutral_std)
     increment_gaussian = norm(loc=increment_mean, scale=increment_std)
     
     gaussian_prediction = []
