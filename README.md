@@ -119,4 +119,4 @@ codeocr/
 
 ## Downloading the Dataset
 
-Link to downloading the dataset: [codeocr-dataset](https://github.com/mdoumbouya/codeocr/blob/main/dataset.zip)
+Link for downloading the dataset: [codeocr-dataset](https://github.com/mdoumbouya/codeocr/blob/main/dataset.zip)
