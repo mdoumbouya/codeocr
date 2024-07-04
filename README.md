@@ -1,6 +1,6 @@
 # Codebase Info
 
-This is the codebase for the [NAME] paper, submitted to [ACM Learning @ Scale 2024](https://learningatscale.hosting.acm.org/las2024/).
+This is the codebase for the paper titled **"Handwritten Code Recognition for Pen-and-Paper CS Education"**, accepted in [ACM Learning @ Scale 2024](https://learningatscale.hosting.acm.org/las2024/).
 
 ## Table of Contents
 
